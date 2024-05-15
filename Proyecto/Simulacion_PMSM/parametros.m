@@ -16,6 +16,7 @@ C_ts = 0.818;
 R_ts_amb = 146.7;
 T_sREF = 40;
 R_sREF = 1.02;
+T_amb = 25;
 
 J_eq = J_m + J_l/(r^2);
 b_eq = b_m + b_l/(r^2);
