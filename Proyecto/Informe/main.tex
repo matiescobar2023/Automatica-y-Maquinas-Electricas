@@ -215,18 +215,18 @@ Rotor referido a Estator estacionario (fijo a sistema inercial de referencia).
     \item Torque electromagnético:
     \begin{flalign}
         \resizebox{0.88125\linewidth}{!}{
-            $T_m(t) = \frac{3}{2} P_p [\lambda'_{mr} i_{qsr}(t) + (L_d - L_q) i_{dsr}(t) i_{qsr}(t)$]}&
+            $T_m(t) = \frac{3}{2} P_p [\lambda'^r_{m} i^r_{qs}(t) + (L_d - L_q) i^r_{ds}(t) i^r_{qs}(t)$]}&
         \label{torque electromagnético}
     \end{flalign}
     \item Balance de tensiones eléctricas equivalentes de estator (referido a coordenadas $qd0^{r}$):
     \begin{flalign}
         \resizebox{0.88125\linewidth}{!}{
-            $v_{qsr}(t) = R_s(t) i_{qsr}(t) + L_q \frac{di_{qsr}(t)}{dt} + [\lambda'_{mr} + L_d i_{dsr}(t)] \omega_r(t)$} &
+            $v^r_{qs}(t) = R_s(t) i^r_{qs}(t) + L_q \frac{di^r_{qs}(t)}{dt} + [\lambda'^r_{m} + L_d i^r_{ds}(t)] \omega_r(t)$} &
         \label{balance de tensiones q}
     \end{flalign}
     \begin{flalign}
         \resizebox{0.88125\linewidth}{!}{
-            $v_{dsr}(t) = R_s(t) i_{dsr}(t) + L_d \frac{di_{dsr}(t)}{dt} - L_q i_{qsr}(t) \omega_r(t)$} &
+            $v^r_{ds}(t) = R_s(t) i^r_{ds}(t) + L_d \frac{di^r_{ds}(t)}{dt} - L_q i^r_{qs}(t) \omega_r(t)$} &
         \label{balance de tensiones d}
     \end{flalign}
     \begin{equation}
@@ -378,6 +378,12 @@ el diagrama de bloques del sistema físico completo, el cual está compuesto por
 \ref{subsistema electromagnético} se muestran los diagramas de bloques de los subsistemas térmico, mecánico y electromagnético respectivamente. A su vez, los componentes del sub-sistema electromagnético se detallan
 en las figuras \ref{diagrama de bloques I_qs}, \ref{diagrama de bloques I_ds}, \ref{diagrama de bloques I_0s}, para las corrientes ($i_{qs}$, $i_{ds}$, $i_{0s}$ respectivamente) y \ref{diagrama de bloques T_m} para el torque motor.
 En las figuras \ref{transformación de park} y \ref{transformación de park inversa} se detallan las transformaciones de Park directa e inversa respecticamente.
+
+\begin{multicols}{2}
+    \begin{align*}
+        \frac{d}{dt} \begin{bmatrix} \theta_m \\ \omega_m \\ i^r_{qs} \\ i^r_{ds} \\ i_{0s} \\ T_s \end{bmatrix} &= \begin{bmatrix} \omega_m \\ \frac{3}{2} \frac{P_p i^r_{qs}(t)}{J_{eq}} \left[ \lambda'^r_{m} + (L_d - L_q) i^r_{ds}(t) \right] - \frac{b_{eq}}{J_{eq}} \omega_m(t) - \frac{T_l(t)}{J_{eq}r} \\ \frac{1}{L_q} \left( v^r_{qs}(t) - R_s(t) i^r_{qs} - [\lambda'^r_m + L_d i^r_{ds}] \omega_r(t) \right) \\ \frac{1}{L_d} \left( v^r_{ds}(t) - R_s(t) i^r_{ds} + L_q i^r_{qs} \omega_r(t) \right) \\ \frac{1}{L_{ls}} \left( v_{0s}(t) - R_s(t) i_{0s} \right) \\ \frac{3}{2} \frac{R_s(t)}{C_{ts}} \left( i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right) - \frac{1}{C_{ts}R_{ts-amb}} (T_s - T_{amb}) \end{bmatrix}
+    \end{align*}
+\end{multicols}
 
 
 \begin{figure}[thpb]
