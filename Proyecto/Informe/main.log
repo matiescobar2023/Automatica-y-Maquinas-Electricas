@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.16)  16 MAY 2024 00:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.16)  16 MAY 2024 20:20
 entering extended mode
 **"c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex"
 (c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex
@@ -14,8 +14,8 @@ LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 79
 (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
+** ATTENTION: Single column mode is not normally used with IEEE publications.
 \@IEEEnormalsizefontbaselineskip=\skip47
-
 -- This is a 10 point document.
 \normalsizebaselineskip=\skip48
 \normaljot=\skip49
@@ -235,98 +235,185 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \sift@deathcycles=\count271
 \@vwid@loff=\dimen172
 \@vwid@roff=\dimen173
-)) (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count272
-\l__pdf_internal_box=\box52
-) (main.aux)
-\openout1 = `main.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
- (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count273
-\scratchdimen=\dimen174
-\scratchbox=\box53
-\nofMPsegments=\count274
-\nofMParguments=\count275
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count276
-\MPscratchDim=\dimen175
-\MPnumerator=\count277
-\makeMPintoPDFobject=\count278
-\everyMPtoPDFconversion=\toks27
+)) (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count272
+\mult@box=\box52
+\multicol@leftmargin=\dimen174
+\c@unbalance=\count273
+\c@collectmore=\count274
+\doublecol@number=\count275
+\multicoltolerance=\count276
+\multicolpretolerance=\count277
+\full@width=\dimen175
+\page@free=\dimen176
+\premulticols=\dimen177
+\postmulticols=\dimen178
+\multicolsep=\skip65
+\multicolbaselineskip=\skip66
+\partial@page=\box53
+\last@line=\box54
+\maxbalancingoverflow=\dimen179
+\mult@rightbox=\box55
+\mult@grightbox=\box56
+\mult@gfirstbox=\box57
+\mult@firstbox=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\c@minrows=\count278
+\c@columnbadness=\count279
+\c@finalcolumnbadness=\count280
+\last@try=\dimen180
+\multicolovershoot=\dimen181
+\multicolundershoot=\dimen182
+\mult@nat@firstbox=\box96
+\colbreak@box=\box97
+\mc@col@check@num=\count281
+) (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf.sty
+Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
+ (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+ (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
 ) (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.eps,.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2]
+(grfext)             \PrependGraphicsExtensions on input line 158.
+)
 
-LaTeX Warning: Citation `c1' on page 1 undefined on input line 60.
+c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex:15: Package xkeyval Error: `dpi' undefined in families `ETE'.
+
+See the xkeyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \epstopdfsetup{update, dpi=600}
+                                    
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count282
+\l__pdf_internal_box=\box98
+) (main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+ (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count283
+\scratchdimen=\dimen183
+\scratchbox=\box99
+\nofMPsegments=\count284
+\nofMParguments=\count285
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count286
+\MPscratchDim=\dimen184
+\MPnumerator=\count287
+\makeMPintoPDFobject=\count288
+\everyMPtoPDFconversion=\toks27
+)
+
+LaTeX Warning: Citation `c1' on page 1 undefined on input line 63.
 
 
-LaTeX Warning: Reference `brazo' on page 1 undefined on input line 60.
+LaTeX Warning: Reference `brazo' on page 1 undefined on input line 63.
 
 
-LaTeX Warning: Reference `subsistema mecánico referido a eje de salida' on page 1 undefined on input line 60.
+LaTeX Warning: Reference `subsistema mecánico referido a eje de salida' on page 1 undefined on input line 63.
 
 <imágenes//1-Brazo.PNG, id=1, 320.69812pt x 257.46187pt>
 File: imágenes//1-Brazo.PNG Graphic file (type png)
 <use imágenes//1-Brazo.PNG>
-Package pdftex.def Info: imágenes//1-Brazo.PNG  used on input line 67.
-(pdftex.def)             Requested size: 245.71811pt x 197.27196pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+Package pdftex.def Info: imágenes//1-Brazo.PNG  used on input line 70.
+(pdftex.def)             Requested size: 505.89pt x 406.14885pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
 (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
  (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-LaTeX Warning: Citation `c2' on page 1 undefined on input line 69.
+LaTeX Warning: Citation `c2' on page 1 undefined on input line 72.
 
+[1{C:/Users/Juan/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./imágenes//1-Brazo.PNG>]
 
-LaTeX Warning: Citation `c2' on page 1 undefined on input line 69.
-
-
-Underfull \hbox (badness 1424) in paragraph at lines 75--76
- \T1/ptm/m/it/10 1) \T1/ptm/b/it/10 Mod-elo\T1/ptm/m/it/10 : [][] \T1/ptm/m/n/10 sim-pli-fi-cado equiv-a-lente (No Lin-eal con
- []
-
-
-Overfull \hbox (11.36914pt too wide) detected at line 121
-\OML/cmm/m/it/10 J[] \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 m \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 l[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 J[]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 m[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 l[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 0833 + [0  []  0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 375] [][]
- []
-
-[1{C:/Users/Juan/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
-
-
- <./imágenes//1-Brazo.PNG>]
-
-LaTeX Warning: Citation `c3' on page 2 undefined on input line 204.
-
-
-Underfull \hbox (badness 4739) in paragraph at lines 204--206
- \T1/ptm/m/it/10 2) \T1/ptm/b/it/10 Sub-sis-tema elec-tro-mag-n�tico\T1/ptm/m/it/10 : [][] \T1/ptm/m/n/10 Mod-elo ide-al-izado
- []
-
-
-LaTeX Warning: Reference `Rs' on page 2 undefined on input line 278.
+LaTeX Warning: Citation `c3' on page 2 undefined on input line 207.
 
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -336,263 +423,246 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 285.
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 209.
 
 [2]
 
-LaTeX Warning: Reference `subsistema mecánico máquina eléctrica' on page 3 undefined on input line 328.
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 
-LaTeX Warning: Reference `subsistema mecánico referido a eje de salida' on page 3 undefined on input line 328.
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 276.
+
+[3]
+
+LaTeX Warning: Reference `Rs' on page 4 undefined on input line 277.
 
 
-LaTeX Warning: Reference `relación de torque en caja' on page 3 undefined on input line 328.
+LaTeX Warning: Reference `subsistema mecánico máquina eléctrica' on page 4 undefined on input line 327.
 
 
-LaTeX Warning: Reference `relación de velocidad en caja' on page 3 undefined on input line 336.
+LaTeX Warning: Reference `subsistema mecánico referido a eje de salida' on page 4 undefined on input line 327.
 
 
-LaTeX Warning: Reference `inercia equivalente' on page 3 undefined on input line 353.
+LaTeX Warning: Reference `relación de torque en caja' on page 4 undefined on input line 327.
 
 
-LaTeX Warning: Reference `amortiguamiento equivalente' on page 3 undefined on input line 353.
+LaTeX Warning: Reference `relación de velocidad en caja' on page 4 undefined on input line 332.
 
 
-LaTeX Warning: Reference `subsistema mecánico con parametros desarrollados' on page 3 undefined on input line 353.
+LaTeX Warning: Reference `inercia equivalente' on page 4 undefined on input line 346.
 
 
-LaTeX Warning: Reference `diagrama de bloques sub-sistema mecánico completo' on page 3 undefined on input line 353.
+LaTeX Warning: Reference `amortiguamiento equivalente' on page 4 undefined on input line 346.
+
+
+LaTeX Warning: Reference `subsistema mecánico con parametros desarrollados' on page 4 undefined on input line 346.
+
+
+LaTeX Warning: Reference `diagrama de bloques sub-sistema mecánico completo' on page 4 undefined on input line 346.
 
 Package epstopdf Info: Source file: <imágenes//2-Subsistema_Mecánico_Completo.eps>
 (epstopdf)                    date: 2024-05-15 17:07:40
 (epstopdf)                    size: 193076 bytes
 (epstopdf)             Output file: <imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-15 17:18:55
+(epstopdf)                    date: 2024-05-16 20:15:45
 (epstopdf)                    size: 8685 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf imágenes//2-Subsistema_Mecánico_Completo.eps>
-(epstopdf)             \includegraphics on input line 364.
+(epstopdf)             \includegraphics on input line 354.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf, id=25, 306.14375pt x 170.6375pt>
+<imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf, id=26, 306.14375pt x 170.6375pt>
 File: imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf Graphic file (type pdf)
 <use imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf  used on input line 364.
+Package pdftex.def Info: imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf  used on input line 354.
 (pdftex.def)             Requested size: 306.14299pt x 170.63707pt.
 
-LaTeX Warning: Reference `diagrama de bloques del sistema físico' on page 3 undefined on input line 376.
+LaTeX Warning: Reference `diagrama de bloques del sistema físico' on page 4 undefined on input line 366.
 
 
-LaTeX Warning: Reference `subsistema térmico' on page 3 undefined on input line 377.
+LaTeX Warning: Reference `subsistema térmico' on page 4 undefined on input line 367.
 
 
-LaTeX Warning: Reference `diagrama de bloques sub-sistema mecánico completo' on page 3 undefined on input line 377.
+LaTeX Warning: Reference `diagrama de bloques sub-sistema mecánico completo' on page 4 undefined on input line 367.
 
 
-LaTeX Warning: Reference `subsistema electromagnético' on page 3 undefined on input line 378.
+LaTeX Warning: Reference `subsistema electromagnético' on page 4 undefined on input line 368.
 
 
-LaTeX Warning: Reference `diagrama de bloques I_qs' on page 3 undefined on input line 379.
+LaTeX Warning: Reference `diagrama de bloques I_qs' on page 4 undefined on input line 369.
 
 
-LaTeX Warning: Reference `diagrama de bloques I_ds' on page 3 undefined on input line 379.
+LaTeX Warning: Reference `diagrama de bloques I_ds' on page 4 undefined on input line 369.
 
 
-LaTeX Warning: Reference `diagrama de bloques I_0s' on page 3 undefined on input line 379.
+LaTeX Warning: Reference `diagrama de bloques I_0s' on page 4 undefined on input line 369.
 
 
-LaTeX Warning: Reference `diagrama de bloques T_m' on page 3 undefined on input line 379.
+LaTeX Warning: Reference `diagrama de bloques T_m' on page 4 undefined on input line 369.
 
 
-LaTeX Warning: Reference `transformación de park' on page 3 undefined on input line 380.
+LaTeX Warning: Reference `transformación de park' on page 4 undefined on input line 370.
 
 
-LaTeX Warning: Reference `transformación de park inversa' on page 3 undefined on input line 380.
-
-
-c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex:382: LaTeX Error: Environment multicols undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.382 \begin{multicols}
-                       {2}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Overfull \hbox (68.31322pt too wide) detected at line 385
-[]
- []
-
-
-c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex:386: LaTeX Error: \begin{document} ended by \end{multicols}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.386 \end{multicols}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Warning: Reference `transformación de park inversa' on page 4 undefined on input line 370.
 
 Package epstopdf Info: Source file: <imágenes//9-Sistema_Físico_Completo.eps>
 (epstopdf)                    date: 2024-05-15 17:14:21
 (epstopdf)                    size: 604058 bytes
 (epstopdf)             Output file: <imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-15 17:18:58
+(epstopdf)                    date: 2024-05-16 20:15:48
 (epstopdf)                    size: 21978 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf imágenes//9-Sistema_Físico_Completo.eps>
-(epstopdf)             \includegraphics on input line 392.
+(epstopdf)             \includegraphics on input line 380.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf, id=26, 562.1pt x 297.11pt>
+<imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf, id=27, 562.1pt x 297.11pt>
 File: imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf Graphic file (type pdf)
 <use imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf  used on input line 392.
+Package pdftex.def Info: imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf  used on input line 380.
 (pdftex.def)             Requested size: 562.09863pt x 297.10927pt.
 Package epstopdf Info: Source file: <imágenes//3-Subsistema_Térmico.eps>
 (epstopdf)                    date: 2024-05-15 17:07:40
 (epstopdf)                    size: 444699 bytes
 (epstopdf)             Output file: <imágenes//3-Subsistema_Térmico-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-15 17:47:36
+(epstopdf)                    date: 2024-05-16 20:15:51
 (epstopdf)                    size: 13612 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//3-Subsistema_Térmico-eps-converted-to.pdf imágenes//3-Subsistema_Térmico.eps>
-(epstopdf)             \includegraphics on input line 400.
+(epstopdf)             \includegraphics on input line 388.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./imágenes//3-Subsistema_Térmico-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//3-Subsistema_Térmico-eps-converted-to.pdf, id=27, 462.72874pt x 264.99pt>
+<imágenes//3-Subsistema_Térmico-eps-converted-to.pdf, id=28, 462.72874pt x 264.99pt>
 File: imágenes//3-Subsistema_Térmico-eps-converted-to.pdf Graphic file (type pdf)
 <use imágenes//3-Subsistema_Térmico-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//3-Subsistema_Térmico-eps-converted-to.pdf  used on input line 400.
+Package pdftex.def Info: imágenes//3-Subsistema_Térmico-eps-converted-to.pdf  used on input line 388.
 (pdftex.def)             Requested size: 462.72762pt x 264.98935pt.
 Package epstopdf Info: Source file: <imágenes//8-Subsistema_Electromagnético.eps>
 (epstopdf)                    date: 2024-05-15 17:14:11
 (epstopdf)                    size: 353497 bytes
 (epstopdf)             Output file: <imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-15 17:47:39
+(epstopdf)                    date: 2024-05-16 20:15:54
 (epstopdf)                    size: 12812 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf imágenes//8-Subsistema_Electromagnético.eps>
-(epstopdf)             \includegraphics on input line 408.
+(epstopdf)             \includegraphics on input line 396.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf, id=28, 325.215pt x 299.1175pt>
+<imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf, id=29, 325.215pt x 299.1175pt>
 File: imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf Graphic file (type pdf)
 <use imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf  used on input line 408.
+Package pdftex.def Info: imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf  used on input line 396.
 (pdftex.def)             Requested size: 325.2142pt x 299.11676pt.
 Package epstopdf Info: Source file: <imágenes//4-I_qs.eps>
 (epstopdf)                    date: 2024-05-15 17:09:43
 (epstopdf)                    size: 196821 bytes
 (epstopdf)             Output file: <imágenes//4-I_qs-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-15 20:54:37
+(epstopdf)                    date: 2024-05-16 20:15:57
 (epstopdf)                    size: 7747 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//4-I_qs-eps-converted-to.pdf imágenes//4-I_qs.eps>
-(epstopdf)             \includegraphics on input line 416.
+(epstopdf)             \includegraphics on input line 404.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./imágenes//4-I_qs-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//4-I_qs-eps-converted-to.pdf, id=29, 373.395pt x 143.53625pt>
+<imágenes//4-I_qs-eps-converted-to.pdf, id=30, 373.395pt x 143.53625pt>
 File: imágenes//4-I_qs-eps-converted-to.pdf Graphic file (type pdf)
 <use imágenes//4-I_qs-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//4-I_qs-eps-converted-to.pdf  used on input line 416.
+Package pdftex.def Info: imágenes//4-I_qs-eps-converted-to.pdf  used on input line 404.
 (pdftex.def)             Requested size: 373.39409pt x 143.53589pt.
 Package epstopdf Info: Source file: <imágenes//5-I_ds.eps>
 (epstopdf)                    date: 2024-05-15 17:09:54
 (epstopdf)                    size: 88739 bytes
 (epstopdf)             Output file: <imágenes//5-I_ds-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-15 20:54:41
+(epstopdf)                    date: 2024-05-16 20:16:00
 (epstopdf)                    size: 6423 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//5-I_ds-eps-converted-to.pdf imágenes//5-I_ds.eps>
-(epstopdf)             \includegraphics on input line 424.
+(epstopdf)             \includegraphics on input line 412.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./imágenes//5-I_ds-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//5-I_ds-eps-converted-to.pdf, id=30, 268.00125pt x 86.3225pt>
+<imágenes//5-I_ds-eps-converted-to.pdf, id=31, 268.00125pt x 86.3225pt>
 File: imágenes//5-I_ds-eps-converted-to.pdf Graphic file (type pdf)
 <use imágenes//5-I_ds-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//5-I_ds-eps-converted-to.pdf  used on input line 424.
+Package pdftex.def Info: imágenes//5-I_ds-eps-converted-to.pdf  used on input line 412.
 (pdftex.def)             Requested size: 268.00058pt x 86.32227pt.
 Package epstopdf Info: Source file: <imágenes//6-I_0s.eps>
 (epstopdf)                    date: 2024-05-15 17:12:09
 (epstopdf)                    size: 70408 bytes
 (epstopdf)             Output file: <imágenes//6-I_0s-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-15 20:54:46
+(epstopdf)                    date: 2024-05-16 20:16:02
 (epstopdf)                    size: 5394 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//6-I_0s-eps-converted-to.pdf imágenes//6-I_0s.eps>
-(epstopdf)             \includegraphics on input line 432.
+(epstopdf)             \includegraphics on input line 420.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./imágenes//6-I_0s-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//6-I_0s-eps-converted-to.pdf, id=31, 239.89626pt x 75.28125pt>
+<imágenes//6-I_0s-eps-converted-to.pdf, id=32, 239.89626pt x 75.28125pt>
 File: imágenes//6-I_0s-eps-converted-to.pdf Graphic file (type pdf)
 <use imágenes//6-I_0s-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//6-I_0s-eps-converted-to.pdf  used on input line 432.
+Package pdftex.def Info: imágenes//6-I_0s-eps-converted-to.pdf  used on input line 420.
 (pdftex.def)             Requested size: 239.89566pt x 75.28105pt.
 Package epstopdf Info: Source file: <imágenes//7-T_m.eps>
 (epstopdf)                    date: 2024-05-15 17:12:21
 (epstopdf)                    size: 92571 bytes
 (epstopdf)             Output file: <imágenes//7-T_m-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-15 20:55:24
+(epstopdf)                    date: 2024-05-16 20:16:04
 (epstopdf)                    size: 6317 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//7-T_m-eps-converted-to.pdf imágenes//7-T_m.eps>
-(epstopdf)             \includegraphics on input line 440.
+(epstopdf)             \includegraphics on input line 428.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./imágenes//7-T_m-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//7-T_m-eps-converted-to.pdf, id=32, 285.065pt x 85.31876pt>
+<imágenes//7-T_m-eps-converted-to.pdf, id=33, 285.065pt x 85.31876pt>
 File: imágenes//7-T_m-eps-converted-to.pdf Graphic file (type pdf)
 <use imágenes//7-T_m-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//7-T_m-eps-converted-to.pdf  used on input line 440.
+Package pdftex.def Info: imágenes//7-T_m-eps-converted-to.pdf  used on input line 428.
 (pdftex.def)             Requested size: 285.0643pt x 85.31853pt.
 Package epstopdf Info: Source file: <imágenes//10-Transformación_de_Park.eps>
 (epstopdf)                    date: 2024-05-15 20:50:26
 (epstopdf)                    size: 245561 bytes
 (epstopdf)             Output file: <imágenes//10-Transformación_de_Park-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-15 20:54:56
+(epstopdf)                    date: 2024-05-16 20:16:07
 (epstopdf)                    size: 27329 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//10-Transformación_de_Park-eps-converted-to.pdf imágenes//10-Transformación_de_Park.eps>
-(epstopdf)             \includegraphics on input line 448.
+(epstopdf)             \includegraphics on input line 436.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./imágenes//10-Transformación_de_Park-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//10-Transformación_de_Park-eps-converted-to.pdf, id=33, 589.20125pt x 336.25626pt>
+<imágenes//10-Transformación_de_Park-eps-converted-to.pdf, id=34, 589.20125pt x 336.25626pt>
 File: imágenes//10-Transformación_de_Park-eps-converted-to.pdf Graphic file (type pdf)
 <use imágenes//10-Transformación_de_Park-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//10-Transformación_de_Park-eps-converted-to.pdf  used on input line 448.
+Package pdftex.def Info: imágenes//10-Transformación_de_Park-eps-converted-to.pdf  used on input line 436.
 (pdftex.def)             Requested size: 589.1998pt x 336.25543pt.
 Package epstopdf Info: Source file: <imágenes//11-Transformación_de_Park_Inversa.eps>
 (epstopdf)                    date: 2024-05-15 20:50:26
 (epstopdf)                    size: 234171 bytes
 (epstopdf)             Output file: <imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-15 20:55:00
+(epstopdf)                    date: 2024-05-16 20:16:10
 (epstopdf)                    size: 24177 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf imágenes//11-Transformación_de_Park_Inversa.eps>
-(epstopdf)             \includegraphics on input line 456.
+(epstopdf)             \includegraphics on input line 444.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf, id=34, 561.09625pt x 336.25626pt>
+<imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf, id=35, 561.09625pt x 336.25626pt>
 File: imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf Graphic file (type pdf)
 <use imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf  used on input line 456.
+Package pdftex.def Info: imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf  used on input line 444.
 (pdftex.def)             Requested size: 561.09488pt x 336.25543pt.
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -602,9 +672,12 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 498.
+LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 486.
 
-[3 <./imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf> <./imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf> <./imágenes//3-Subsistema_Térmico-eps-converted-to.pdf>]
+[4]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -613,15 +686,77 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 551.
+LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 539.
 
-[4 <./imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf> <./imágenes//4-I_qs-eps-converted-to.pdf> <./imágenes//5-I_ds-eps-converted-to.pdf> <./imágenes//6-I_0s-eps-converted-to.pdf> <./imágenes//7-T_m-eps-converted-to.pdf> <./imágenes//10-Transformación_de_Park-eps-converted-to.pdf> <./imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf>]
-Overfull \hbox (260.18224pt too wide) detected at line 570
-[][]
- []
+[5 <./imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf> <./imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 
-Package lastpage Warning: Rerun to get the references right on input line 573.
+LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 539.
+
+[6 <./imágenes//3-Subsistema_Térmico-eps-converted-to.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+
+LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 539.
+
+[7 <./imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+
+LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 539.
+
+[8 <./imágenes//4-I_qs-eps-converted-to.pdf> <./imágenes//5-I_ds-eps-converted-to.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+
+LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 558.
+
+[9 <./imágenes//6-I_0s-eps-converted-to.pdf> <./imágenes//7-T_m-eps-converted-to.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+
+LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 558.
+
+[10 <./imágenes//10-Transformación_de_Park-eps-converted-to.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+
+LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 558.
+
+[11 <./imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf>]
+
+Package lastpage Warning: Rerun to get the references right on input line 561.
 
 
 AED: lastpage setting LastPage
@@ -633,11 +768,9 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 573.
+LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 561.
 
-[5
-
-] (main.aux)
+[12] (main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -646,17 +779,17 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 4624 strings out of 479321
- 72764 string characters out of 2857060
- 380437 words of memory out of 3000000
- 21998 multiletter control sequences out of 15000+600000
- 517961 words of font info for 141 fonts, out of 8000000 for 9000
+ 5251 strings out of 479321
+ 83830 string characters out of 2857060
+ 390784 words of memory out of 3000000
+ 22588 multiletter control sequences out of 15000+600000
+ 516865 words of font info for 140 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,15n,74p,898b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,15n,74p,894b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (5 pages, 354743 bytes).
+Output written on main.pdf (12 pages, 359659 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
+ 167 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

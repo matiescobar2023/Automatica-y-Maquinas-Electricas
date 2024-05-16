@@ -1,6 +1,6 @@
 
 % Paquetes
-\documentclass[a4paper, 10pt, journal]{ieeeconf}
+\documentclass[a4paper, 10pt, onecolumn,journal]{ieeeconf}
 \overrideIEEEmargins
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -10,6 +10,9 @@
 \usepackage{amsmath}
 \usepackage{amssymb} % Para símbolos matemáticos adicionales
 \usepackage{adjustbox}
+\usepackage{multicol}
+\usepackage[prepend]{epstopdf}
+\epstopdfsetup{update, dpi=600}
 \graphicspath{{imágenes/}} 
 
 
@@ -61,7 +64,7 @@ Aplicación simplificada de referencia (adaptado de \cite{c1}): control de movim
 
 \begin{figure}[thpb]
     \centering
-    \begin{adjustbox}{max width=\columnwidth}
+    \begin{adjustbox}{max width=0.5\columnwidth}
         \framebox{\parbox{\columnwidth}{
             \includegraphics[width=\columnwidth]{1-Brazo.PNG}
         }}
@@ -214,19 +217,16 @@ Rotor referido a Estator estacionario (fijo a sistema inercial de referencia).
     \end{equation}
     \item Torque electromagnético:
     \begin{flalign}
-        \resizebox{0.88125\linewidth}{!}{
-            $T_m(t) = \frac{3}{2} P_p [\lambda'^r_{m} i^r_{qs}(t) + (L_d - L_q) i^r_{ds}(t) i^r_{qs}(t)$]}&
+        T_m(t) = \frac{3}{2} P_p [\lambda'^r_{m} i^r_{qs}(t) + (L_d - L_q) i^r_{ds}(t) i^r_{qs}(t)]
         \label{torque electromagnético}
     \end{flalign}
     \item Balance de tensiones eléctricas equivalentes de estator (referido a coordenadas $qd0^{r}$):
     \begin{flalign}
-        \resizebox{0.88125\linewidth}{!}{
-            $v^r_{qs}(t) = R_s(t) i^r_{qs}(t) + L_q \frac{di^r_{qs}(t)}{dt} + [\lambda'^r_{m} + L_d i^r_{ds}(t)] \omega_r(t)$} &
+            v^r_{qs}(t) = R_s(t) i^r_{qs}(t) + L_q \frac{di^r_{qs}(t)}{dt} + [\lambda'^r_{m} + L_d i^r_{ds}(t)] \omega_r(t)
         \label{balance de tensiones q}
     \end{flalign}
     \begin{flalign}
-        \resizebox{0.88125\linewidth}{!}{
-            $v^r_{ds}(t) = R_s(t) i^r_{ds}(t) + L_d \frac{di^r_{ds}(t)}{dt} - L_q i^r_{qs}(t) \omega_r(t)$} &
+            v^r_{ds}(t) = R_s(t) i^r_{ds}(t) + L_d \frac{di^r_{ds}(t)}{dt} - L_q i^r_{qs}(t) \omega_r(t)
         \label{balance de tensiones d}
     \end{flalign}
     \begin{equation}
@@ -251,8 +251,7 @@ en el núcleo; transferencia de calor por conducción y convección natural, sin
     \end{align}
     \item Balance térmico de estator:
     \begin{flalign}
-        \resizebox{0.88125\linewidth}{!}{
-            $P_{s\ perd}(t) = C_{ts} \frac{dT_s^{\circ}(t)}{dt} + \frac{1}{R_{ts-amb}} \left(T_s^{\circ}(t) - T_{amb}^{\circ}(t)\right)$}
+            P_{s\ perd}(t) = C_{ts} \frac{dT_s^{\circ}(t)}{dt} + \frac{1}{R_{ts-amb}} \left(T_s^{\circ}(t) - T_{amb}^{\circ}(t)\right)
         \label{balance térmico estator}
     \end{flalign}
 \end{itemize}
@@ -328,17 +327,11 @@ Abierto” (Sin Controlador externo de Movimiento)}}
 Multiplicando por $r$ ambos miembros de la ecuación (\ref{subsistema mecánico máquina eléctrica}), sumando miembro a miembro con la ecuación (\ref{subsistema mecánico referido a eje de salida}) y tomando en cuenta $T_q(t)$ según la ecuación (\ref{relación de torque en caja}) obtenemos:
 
 \begin{flalign*}
-    \resizebox{0.95\linewidth}{!}{
-        $
-        J_{l}\,\frac{d\omega _{l}\left(t\right)}{dt} +J_{m}\,r\,\frac{d\omega _{m}\left(t\right)}{dt} =r\,T_{m}\left(t\right)-T_{l}\left(t\right)-b_{l}\,\omega _{l}\left(t\right)-b_{m}\,r\,\omega _{m}\left(t\right)
-        $}
+    J_{l}\,\frac{d\omega _{l}\left(t\right)}{dt} +J_{m}\,r\,\frac{d\omega _{m}\left(t\right)}{dt} =r\,T_{m}\left(t\right)-T_{l}\left(t\right)-b_{l}\,\omega _{l}\left(t\right)-b_{m}\,r\,\omega _{m}\left(t\right)
 \end{flalign*}
 Reemplazando en la anterior $\omega_{l}(t)$ según la ecuación (\ref{relación de velocidad en caja}), agrupando términos y diviendo entre $r$ a ambos miembros, obtenemos:
 \begin{flalign}
-    \resizebox{0.89125\linewidth}{!}{
-        $
-        \left(J_{m}+\frac{J_{l}}{r^2}\right)\,\frac{d \omega _{m}\left(t\right)}{dt}=T_{m}\left(t\right)-\left(b_{m}+\frac{b_{l}}{r^2}\right)\,\omega _{m}\left(t\right)-\frac{T_{l}\left(t\right)}{r}
-        $}
+    \left(J_{m}+\frac{J_{l}}{r^2}\right)\,\frac{d \omega _{m}\left(t\right)}{dt}=T_{m}\left(t\right)-\left(b_{m}+\frac{b_{l}}{r^2}\right)\,\omega _{m}\left(t\right)-\frac{T_{l}\left(t\right)}{r}
     \label{subsistema mecánico con parametros desarrollados}
 \end{flalign}
 Definimos ahora la inercia equivalente y el amoriguamiento equivalente respectivamente como:
@@ -352,11 +345,8 @@ Definimos ahora la inercia equivalente y el amoriguamiento equivalente respectiv
 \end{equation}
 Reemplazando (\ref{inercia equivalente}) y (\ref{amortiguamiento equivalente}) en (\ref{subsistema mecánico con parametros desarrollados}) obtenemos el modelo matemático equivalente del sub-sistema mecánico completo con parámetros equivalentes referido aleje del motor (veasé diagrama de bloques de la fig. \ref{diagrama de bloques sub-sistema mecánico completo}):
 \begin{flalign}
-    \resizebox{0.89125\linewidth}{!}{
-        $
-        J_{eq}\,\frac{d \omega _{m}\left(t\right)}{dt}=T_{m}\left(t\right)-b_{eq}\, \omega _{m}\left(t\right)-\frac{T_{l}\left(t\right)}{r}
-        $}
-        \label{subsistema mecánico con parametros equivalentes}
+    J_{eq}\,\frac{d \omega _{m}\left(t\right)}{dt}=T_{m}\left(t\right)-b_{eq}\, \omega _{m}\left(t\right)-\frac{T_{l}\left(t\right)}{r}
+    \label{subsistema mecánico con parametros equivalentes}
 \end{flalign}
 \begin{figure}[thpb]
     \centering
@@ -379,12 +369,10 @@ el diagrama de bloques del sistema físico completo, el cual está compuesto por
 en las figuras \ref{diagrama de bloques I_qs}, \ref{diagrama de bloques I_ds}, \ref{diagrama de bloques I_0s}, para las corrientes ($i_{qs}$, $i_{ds}$, $i_{0s}$ respectivamente) y \ref{diagrama de bloques T_m} para el torque motor.
 En las figuras \ref{transformación de park} y \ref{transformación de park inversa} se detallan las transformaciones de Park directa e inversa respecticamente.
 
-\begin{multicols}{2}
-    \begin{align*}
-        \frac{d}{dt} \begin{bmatrix} \theta_m \\ \omega_m \\ i^r_{qs} \\ i^r_{ds} \\ i_{0s} \\ T_s \end{bmatrix} &= \begin{bmatrix} \omega_m \\ \frac{3}{2} \frac{P_p i^r_{qs}(t)}{J_{eq}} \left[ \lambda'^r_{m} + (L_d - L_q) i^r_{ds}(t) \right] - \frac{b_{eq}}{J_{eq}} \omega_m(t) - \frac{T_l(t)}{J_{eq}r} \\ \frac{1}{L_q} \left( v^r_{qs}(t) - R_s(t) i^r_{qs} - [\lambda'^r_m + L_d i^r_{ds}] \omega_r(t) \right) \\ \frac{1}{L_d} \left( v^r_{ds}(t) - R_s(t) i^r_{ds} + L_q i^r_{qs} \omega_r(t) \right) \\ \frac{1}{L_{ls}} \left( v_{0s}(t) - R_s(t) i_{0s} \right) \\ \frac{3}{2} \frac{R_s(t)}{C_{ts}} \left( i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right) - \frac{1}{C_{ts}R_{ts-amb}} (T_s - T_{amb}) \end{bmatrix}
-    \end{align*}
-\end{multicols}
-
+\begin{align}
+    \frac{d}{dt} \begin{bmatrix} \theta_m \\ \omega_m \\ i^r_{qs} \\ i^r_{ds} \\ i_{0s} \\ T_s \end{bmatrix} &= \begin{bmatrix} \omega_m \\ \frac{3}{2} \frac{P_p i^r_{qs}(t)}{J_{eq}} \left[ \lambda'^r_{m} + (L_d - L_q) i^r_{ds}(t) \right] - \frac{b_{eq}}{J_{eq}} \omega_m(t) - \frac{T_l(t)}{J_{eq}r} \\ \frac{1}{L_q} \left( v^r_{qs}(t) - R_s(t) i^r_{qs} - [\lambda'^r_m + L_d i^r_{ds}] \omega_r(t) \right) \\ \frac{1}{L_d} \left( v^r_{ds}(t) - R_s(t) i^r_{ds} + L_q i^r_{qs} \omega_r(t) \right) \\ \frac{1}{L_{ls}} \left( v_{0s}(t) - R_s(t) i_{0s} \right) \\ \frac{3}{2} \frac{R_s(t)}{C_{ts}} \left( i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right) - \frac{1}{C_{ts}R_{ts-amb}} (T_s - T_{amb}) \end{bmatrix}
+    \label{sistema vectorial de ecuaciones}
+\end{align}
 
 \begin{figure}[thpb]
     \centering
