@@ -372,6 +372,14 @@ El modelo resultante tiene un solo grado de libertad, tal como sucede en el mode
 
 
 \subsubsection{\textbf{Modelo dinámico del sistema físico completo}}
+\paragraph{\textbf{Modelo Global No Lineal}}
+En la Figura \ref{diagrama de bloques del sistema físico} se muestra
+el diagrama de bloques del sistema físico completo, el cual está compuesto por varios subsistemas. En las Figuras \ref{subsistema térmico}, \ref{diagrama de bloques sub-sistema mecánico completo},
+\ref{subsistema electromagnético} se muestran los diagramas de bloques de los subsistemas térmico, mecánico y electromagnético respectivamente. A su vez, los componentes del sub-sistema electromagnético se detallan
+en las figuras \ref{diagrama de bloques I_qs}, \ref{diagrama de bloques I_ds}, \ref{diagrama de bloques I_0s}, para las corrientes ($i_{qs}$, $i_{ds}$, $i_{0s}$ respectivamente) y \ref{diagrama de bloques T_m} para el torque motor.
+En las figuras \ref{transformación de park} y \ref{transformación de park inversa} se detallan las transformaciones de Park directa e inversa respecticamente.
+
+
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
@@ -380,8 +388,70 @@ El modelo resultante tiene un solo grado de libertad, tal como sucede en el mode
     \caption{Diagrama de bloques del sistema físico completo.}
     \label{diagrama de bloques del sistema físico}
 \end{figure}
-
-
+\begin{figure}[thpb]
+    \centering
+    \begin{adjustbox}{max width=\columnwidth}
+        \framebox{\includegraphics{3-Subsistema_Térmico.eps}}
+    \end{adjustbox}
+    \caption{Diagrama de bloques del sub-sistema térmico}
+    \label{subsistema térmico}
+\end{figure}
+\begin{figure}[thpb]
+    \centering
+    \begin{adjustbox}{max width=\columnwidth}
+        \framebox{\includegraphics{8-Subsistema_Electromagnético.eps}}
+    \end{adjustbox}
+    \caption{Diagrama de bloques del sub-sistema electromagnético}
+    \label{subsistema electromagnético}
+\end{figure}
+\begin{figure}[thpb]
+    \centering
+    \begin{adjustbox}{max width=\columnwidth}
+        \framebox{\includegraphics{4-I_qs.eps}}
+    \end{adjustbox}
+    \caption{Diagrama de bloques $I_{qs}$}
+    \label{diagrama de bloques I_qs}
+\end{figure}
+\begin{figure}[thpb]
+    \centering
+    \begin{adjustbox}{max width=\columnwidth}
+        \framebox{\includegraphics{5-I_ds.eps}}
+    \end{adjustbox}
+    \caption{Diagrama de bloques $I_{ds}$}
+    \label{diagrama de bloques I_ds}
+\end{figure}
+\begin{figure}[thpb]
+    \centering
+    \begin{adjustbox}{max width=\columnwidth}
+        \framebox{\includegraphics{6-I_0s.eps}}
+    \end{adjustbox}
+    \caption{Diagrama de bloques $I_{0s}$}
+    \label{diagrama de bloques I_0s}
+\end{figure}
+\begin{figure}[thpb]
+    \centering
+    \begin{adjustbox}{max width=\columnwidth}
+        \framebox{\includegraphics{7-T_m.eps}}
+    \end{adjustbox}
+    \caption{Diagrama de bloques $T_m$}
+    \label{diagrama de bloques T_m}
+\end{figure}
+\begin{figure}[thpb]
+    \centering
+    \begin{adjustbox}{max width=\columnwidth}
+        \framebox{\includegraphics{10-Transformación_de_Park.eps}}
+    \end{adjustbox}
+    \caption{Transformación de Park Directa}
+    \label{transformación de park}
+\end{figure}
+\begin{figure}[thpb]
+    \centering
+    \begin{adjustbox}{max width=\columnwidth}
+        \framebox{\includegraphics{11-Transformación_de_Park_Inversa.eps}}
+    \end{adjustbox}
+    \caption{Transformación de Park Inversa}
+    \label{transformación de park inversa}
+\end{figure}
 
 
 
