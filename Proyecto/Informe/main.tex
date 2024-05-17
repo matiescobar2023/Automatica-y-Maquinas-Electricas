@@ -1,5 +1,4 @@
-
-% Paquetes
+% PAQUETES
 \documentclass[a4paper, 10pt, onecolumn,journal]{ieeeconf}
 \overrideIEEEmargins
 \usepackage[utf8]{inputenc}
@@ -12,7 +11,6 @@
 \usepackage{adjustbox}
 \usepackage{multicol}
 \usepackage[prepend]{epstopdf}
-\epstopdfsetup{update, dpi=600}
 \graphicspath{{imágenes/}} 
 
 
@@ -34,14 +32,16 @@
 % Línea en la parte inferior del pie de página
 \renewcommand{\footrulewidth}{0.4pt}
 
-% Título
+% TÍTULO
 \title{\LARGE \bf
 Proyecto Global Integrador: Control de Accionamiento de CA con
 Motor Sincrónico de Imanes Permanentes
 }
 
+% AUTORES
 \author{Borquez Juan y Escobar Matías}
 
+% INICIO DEL DOCUMENTO
 \begin{document}
 
 \maketitle
@@ -56,11 +56,138 @@ Motor Sincrónico de Imanes Permanentes
 \section{INTRODUCCIÓN}
 Modelado, simulación, diseño y análisis de desempeño de un Sistema de Control Automático de Posición y Movimiento para un Accionamiento electromecánico de 4 cuadrantes, compuesto por: máquina eléctrica de corriente alterna (CA) trifásica sincrónica con excitación por imanes permanentes (PMSM), alimentada por inversor trifásico desde fuente de corriente continua (CC); reductor de velocidad de engranajes planetarios de salida hacia la carga mecánica; realimentación con 1 sensor de posición en el eje del motor, más 3 sensores de corriente instantánea de fases en la salida del inversor trifásico al estator de la máquina (PMSM) y 1 sensor de temperatura del bobinado de estator.
 
+% ECUACIONES
+\section{ECUACIONES}
+Se detallan en esta sección las ecuaciones que modelan las distintas partes del sistema, obtenidas de la guía de referencia (\cite{c1}) en donde también se detalla claramente el significado de cada uno de los términos en las ecuaciones.
+
+
+\begin{itemize}
+    % carga
+    \item Modelo matemático simplificado equivalente no lineal de parámetros variables referido al eje de salida del tren de transmisión:
+    \begin{equation}
+        J_l \frac{d\omega_l(t)}{dt} = T_q(t) - b_l \omega_l(t) - T_l(t)
+        \label{carga mecánica}
+    \end{equation}
+    \begin{equation}
+        T_l(t) = k_l \sin(\theta_l(t)) + T_d(t)
+        \label{torque de carga}
+    \end{equation}
+    \begin{equation}
+        \frac{d\theta_l(t)}{dt} \equiv \omega_l(t) \Leftrightarrow \theta_l(t) = \int_{0}^{t} \omega_l(\zeta) \, d\zeta + \theta_l(0))
+        \label{velocidad y posición de la carga}
+    \end{equation}
+
+    % transmisión
+    \item Modelo equivalente rígido del tren de transmisión:
+    \begin{equation}
+        \omega_l(t) = 1/r \cdot \omega_m(t)
+        \label{relación de velocidad en caja}
+    \end{equation}
+    \begin{equation}
+        T_q(t) = r \cdot T_{dm}(t)
+        \label{relación de torque en caja}
+    \end{equation}
+
+    % sub-sistema mecánico PMSM
+    \item Modelo matemático equivalente del sub-sistema mecánico de la máquina eléctrica.
+    \begin{equation}
+        J_m \frac{d\omega_m(t)}{dt} = T_m(t) - b_m \omega_m(t) - T_{dm}(t)
+        \label{subsistema mecánico máquina eléctrica}
+    \end{equation}
+    \begin{equation}
+        \frac{d\theta_m(t)}{dt} \equiv \omega_m(t) \Leftrightarrow \theta_m(t) = \int_{0}^{t} \omega_m(\tau) d\tau + \theta_m(0)
+        \label{posición y velocidad motor}
+    \end{equation}
+
+    % sub-sistema electromagnético PMSM
+    \item Coordenadas eléctricas de entrehierro $qd0^{r}$ (marco de referencia de rotor $\neq$ “sincrónico”):
+    \begin{equation}
+        \frac{d\theta_r(t)}{dt} \equiv \omega_r(t) \Leftrightarrow \theta_r(t) = \int_{0}^{t} \omega_r(\tau) d\tau + \theta_r(0)
+        \label{Relación coordenadas eléctricas y mecánicas}
+    \end{equation}
+    \begin{equation}
+        \theta_r(t) \equiv P_p \theta_m(t) \therefore  \omega_r(t) = P_p \omega_m(t)
+        \label{posicion y velocidad rotor}
+    \end{equation}
+    \item Torque electromagnético:
+    \begin{equation}
+        T_m(t) = \frac{3}{2} P_p [\lambda'^r_{m} i^r_{qs}(t) + (L_d - L_q) i^r_{ds}(t) i^r_{qs}(t)]
+        \label{torque electromagnético}
+    \end{equation}
+    \item Balance de tensiones eléctricas equivalentes de estator (referido a coordenadas $qd0^{r}$):
+    \begin{equation}
+        v^r_{qs}(t) = R_s(t) i^r_{qs}(t) + L_q \frac{di^r_{qs}(t)}{dt} + [\lambda'^r_{m} + L_d i^r_{ds}(t)] \omega_r(t)
+        \label{balance de tensiones q}
+    \end{equation}
+    \begin{equation}
+        v^r_{ds}(t) = R_s(t) i^r_{ds}(t) + L_d \frac{di^r_{ds}(t)}{dt} - L_q i^r_{qs}(t) \omega_r(t)
+        \label{balance de tensiones d}
+    \end{equation}
+    \begin{equation}
+        v_{0s}(t) = R_s(t) i_{0s}(t) + L_{ls} \frac{di_{0s}(t)}{dt}
+        \label{balance de tensiones 0}
+    \end{equation}
+
+    % Sub-sistema térmico
+    \item Modelo matemático de variación de la resistencia eléctrica del bobinado con la temperatura.
+    \begin{equation}
+        R_s(t) = R_{sREF} \left(1 + \alpha_{Cu} (T_s^{\circ}(t) - T_{sREF}^{\circ})\right)
+        \label{Rs}
+    \end{equation}
+
+    \item Potencia de pérdidas calóricas:
+    \begin{equation}
+        P_{s\ perd}(t) = R_s(t) \left(i_{as}^2(t) + i_{bs}^2(t) + i_{cs}^2(t)\right) \nonumber = \frac{3}{2} R_s(t) \left(i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t)\right)
+        \label{potencia de perdidas}
+    \end{equation}
+    \item Balance térmico de estator:
+    \begin{equation}
+        P_{s\ perd}(t) = C_{ts} \frac{dT_s^{\circ}(t)}{dt} + \frac{1}{R_{ts-amb}} \left(T_s^{\circ}(t) - T_{amb}^{\circ}(t)\right)
+        \label{balance térmico estator}
+    \end{equation}
+
+    % Variables del modelo
+    \item Vector de estado del sistema físico completo.
+    \begin{equation}
+        X = \begin{bmatrix} \theta_m \\ \omega_m \\ i^r_{qs} \\ i^r_{ds} \\ i_{0s} \\ T_s \end{bmatrix}
+    \end{equation}
+    \item Vector de entradas de manipulación al modelo dinámico del sistema físico completo en coordenadas virtuales y reales respectivamente
+    \begin{equation}
+        u_{c(qd0)} = \begin{bmatrix} v^r_{qs}(t) \\ v^r_{ds}(t) \\ v^r_{0s}(t)\end{bmatrix}
+        u_{c(abc)} = \begin{bmatrix} v_{as}(t) \\ v_{bs}(t) \\ v_{cs}(t)\end{bmatrix}
+    \end{equation}
+    \item Vector de entradas de perturbación al modelo dinámico del sistema físico completo.
+    \begin{equation}
+        u_{d} = \begin{bmatrix} T_l(t) \\ T_{amb}^{\circ}(t)\end{bmatrix}
+    \end{equation}
+    % Inversor trifásico.
+    \item Sistema de tensiones trifásico a la salida del inversor.
+    \begin{align}
+        v_{as}(t) &\approx \frac{\sqrt{2}}{\sqrt{2}} \cdot V_{sl}(t) \cdot \cos(\theta_{ev}(t)) \quad \text{(Ec. 4.1)} \\
+        v_{bs}(t) &\approx \frac{\sqrt{2}}{\sqrt{2}} \cdot V_{sl}(t) \cdot \cos\left(\theta_{ev}(t) - \frac{2\pi}{3}\right) \quad \text{(Ec. 4.2)} \\
+        v_{cs}(t) &\approx \frac{\sqrt{2}}{\sqrt{2}} \cdot V_{sl}(t)\cdot \cos\left(\theta_{ev}(t) + \frac{2\pi}{3}\right) \quad \text{(Ec. 4.3)} \\
+        \label{sistema de tensiones trifásico real}
+    \end{align}
+    \item Frecuencia eléctrica del sistema de tensiones trifásico y ángulo eléctrica
+    \begin{align}
+        \omega_e(t) &\equiv 2\pi \cdot f_e(t) \equiv \frac{d\theta_{ev}(t)}{dt} \iff \theta_{ev}(t) = \int_{0}^{t} \omega_e(\xi) \, d\xi + \theta_{ev}(0)
+        \label{frecuencia eléctrica y ángulo eléctrico}
+    \end{align}
+    \item Ángulo de carga de la máquina eléctrica:
+    \begin{equation}
+        \delta(t) \equiv \theta_r(t) - \theta_{ev}(t) = \int_{0}^{t} [\omega_r(\xi) - \omega_e(\xi)] \, d\xi + \theta_r(0) - \theta_{ev}(0)
+        \label{ángulo de carga}
+    \end{equation}
+\end{itemize}
+
 
 % DESARROLLO - PRESENTACIÓN DEL PROBLEMA
 \section{PRESENTACIÓN DEL PROBLEMA}
+El problema bajo estudio se encuentra bien detallado en la guía de referencia (\cite{c1}), por lo que en esta sección se indican solo los aspectos más relevantes de cada una de las partes del problema, sin hacer énfasis en las ecuaciones que describen los modelos de cada una de las partes ni en los parámetros de cada uno de los subsistemas.
+
+% Carga mecánica
 \subsection{\textbf{Carga Mecánica}}
-Aplicación simplificada de referencia (adaptado de \cite{c1}): control de movimiento de 1 eje (descentralizado) para articulación de brazo manipulador robótico elemental de un grado de libertad (1 g.d.l.) rotacional de eje horizontal sometido a la acción de la aceleración de gravedad (péndulo rígido actuado), con eje de rotación fijo a base en sistema de referencia inercial (Fig. \ref{brazo}); con parámetros equivalentes variables según sea la carga útil transportada en el extremo (ver Ec. \ref{subsistema mecánico referido a eje de salida}).
+Aplicación simplificada de referencia (adaptado de \cite{c2}): control de movimiento de 1 eje (descentralizado) para articulación de brazo manipulador robótico elemental de un grado de libertad (1 g.d.l.) rotacional de eje horizontal sometido a la acción de la aceleración de gravedad (péndulo rígido actuado), con eje de rotación fijo a base en sistema de referencia inercial (Fig. \ref{brazo}); con parámetros equivalentes variables según sea la carga útil transportada en el extremo.
 
 \begin{figure}[thpb]
     \centering
@@ -72,216 +199,65 @@ Aplicación simplificada de referencia (adaptado de \cite{c1}): control de movim
     \caption{Robot manipulador elemental de 1 g.d.l. en plano vertical (péndulo rígido actuado) \cite{c2}.}
     \label{brazo}
 \end{figure}
-\bigskip
 
-
-\subsubsection{\textbf{Modelo}} simplificado equivalente (No Lineal con parámetros variables), referido al eje de salida del tren de transmisión: coordenada articular de eje de la articulación $q(t) \equiv \theta_l(t)$, referida a la vertical hacia abajo, positiva en sentido antihorario; torque impulsor $\tau(t) \equiv T_q(t)$.
-
-\begin{equation}
-    J_l \frac{d\omega_l(t)}{dt} = T_q(t) - b_l \omega_l(t) - T_l(t)
-    \label{subsistema mecánico referido a eje de salida}
-\end{equation}
-\begin{equation}
-    T_l(t) = k_l \sin(\theta_l(t)) + T_d(t)
-    \label{torque de carga}
-\end{equation}
-\begin{equation}
-    \frac{d\theta_l(t)}{dt} \equiv \omega_l(t) \Leftrightarrow \theta_l(t) = \int_{0}^{t} \omega_l(\zeta) \, d\zeta + \theta_l(0))
-    \label{velocidad y posición de la carga}
-\end{equation}
-
-
-
-\subsubsection{\textbf{Parámetros Equivalentes Variables}}
-\begin{itemize}
-    \item Coeficiente de fricción viscosa en articulación:
-    \[
-    b_l \approx (0.1 \pm 0.03) \, \text{N.m rad/s} \text{(incertidumbre)}
-    \]
-    \item Aceleración de gravedad:
-    \[
-    g = 9.80665 \, \text{m/s}^2
-    \]
-    \item Masa del brazo manipulador:
-    \[m = 1.0 \, \text{kg}
-    \]
-    \item Longitud e Inercia equivalente (resepcto al centro de masa):
-    \begin{align*}
-    l_{\text{cm}} &= 0.25 \, \text{m} \\
-    J_{\text{cm}} &= 0.0208 \, \text{kg}\cdot\text{m}^2
-    \end{align*}
-    \item Longitud total (extremo):
-    \[
-    l_l = 0.50 \, \text{m}
-    \]
-    \item Masa de carga útil en el extremo (variable):
-    \[
-    m_l = [0 \, \ldots \, 1.5] \, \text{kg}
-    \]
-    \item Momento de inercia total (respecto al eje de rotación): 
-    \[
-    J_l = (m \cdot l_{cm}^2 + J_{cm}) + m_l \cdot l_l^2 = 0.0833 + [0 \, \ldots \, 0.375] \, \text{kg.m}^2
-    \]
-    \item Coeficiente de torque recuperador gravitacional: 
-    \[
-    k_l = m \cdot g \cdot l_{cm} + m_l \cdot g \cdot l_l = 2.452 + [0 \, \ldots \, 7.355] \, \text{N.m}
-    \]
-\end{itemize}
-
-
-
-\subsubsection{\textbf{Especificaciones de Operación}}
-\begin{itemize}
-    \item Torque de perturbación externo:
-    \[T_d(t) \approx (0 \pm 5.0) \, \text{N.m}
-    \]
-\end{itemize}
-
-
-
+% Caja reductora
 \subsection{\textbf{Caja Reductora}}
 Caja reductora reversible con sistema de engranajes planetarios, asumiendo acoplamiento rígido (sin elasticidad torsional y sin juego, holgura o ``backlash''); momento de inercia equivalente y pérdidas de energía por fricción interna, reflejados al eje de entrada y considerados junto con el motor
-\bigskip
 
-
-
-\subsubsection{\textbf{Modelo equivalente (rígido)}}
-\begin{equation}
-    \omega_l(t) = 1/r \cdot \omega_m(t)
-    \label{relación de velocidad en caja}
-\end{equation}
-\begin{equation}
-    T_q(t) = r \cdot T_{dm}(t)
-    \label{relación de torque en caja}
-\end{equation}
-
-
-
-\subsubsection{\textbf{Parámetros}}
-\begin{itemize}
-    \item Relación de reducción total:
-    \[
-    r = 120.0 : 1
-    \]
-\end{itemize}
-
-
-
-\subsubsection{\textbf{Especificaciones de operación}}:
-\begin{itemize}
-    \item Velocidad nominal (salida):
-    \[
-    n_{lnom} = 60\ rpm \ (\omega_{lnom} = 6.28 \ rad/s)
-    \]
-    \item Torque nominal (salida):
-    \[
-    T_{qnom} = 17.0 \, N.m \ \text{(régimen continuo o rms)}
-    \]
-    \item Torque pico (salida):
-    \[
-    T_{qmax} = 45.0 \, N.m \ \text{(corta duración, aceleración)}
-    \]
-\end{itemize}
-
-
-
+% Máquina eléctrica PMSM
 \subsection{\textbf{Máquina Eléctrica PMSM}}
 Máquina eléctrica de CA trifásica sincrónica con excitación por imanes permanentes (PMSM) y estator conectado en estrella (simétrico y equilibrado) accesible en bornes de fases $abc$, con centro de estrella (punto “neutro”) flotante (no accesible).
 
-
-
-\subsubsection{\textbf{Subsistema mecánico}}
-Rotor referido a Estator estacionario (fijo a sistema inercial de referencia).
-
-\begin{equation}
-    J_m \frac{d\omega_m(t)}{dt} = T_m(t) - b_m \omega_m(t) - T_{dm}(t)
-    \label{subsistema mecánico máquina eléctrica}
-\end{equation}
-\begin{equation}
-    \frac{d\theta_m(t)}{dt} \equiv \omega_m(t) \Leftrightarrow \theta_m(t) = \int_{0}^{t} \omega_m(\tau) d\tau + \theta_m(0)
-    \label{posición y velocidad motor}
-\end{equation}
-
-
-
-\subsubsection{\textbf{Subsistema electromagnético}} Modelo idealizado equivalente en coordenadas eléctricas de entrehierro $qd0^{r}$ fijas a rotor, aplicando Transformación de Park a circuito estator estacionario (\cite{c3}).
-\begin{itemize}
-    \item Coordenadas eléctricas de entrehierro $qd0^{r}$ (marco de referencia de rotor $\neq$ “sincrónico”):
-    \begin{equation}
-        \frac{d\theta_r(t)}{dt} \equiv \omega_r(t) \Leftrightarrow \theta_r(t) = \int_{0}^{t} \omega_r(\tau) d\tau + \theta_r(0)
-        \label{Relación coordenadas eléctricas y mecánicas}
-    \end{equation}
-    \begin{equation}
-        \theta_r(t) \equiv P_p \theta_m(t) \therefore  \omega_r(t) = P_p \omega_m(t)
-        \label{posicion y velocidad rotor}
-    \end{equation}
-    \item Torque electromagnético:
-    \begin{flalign}
-        T_m(t) = \frac{3}{2} P_p [\lambda'^r_{m} i^r_{qs}(t) + (L_d - L_q) i^r_{ds}(t) i^r_{qs}(t)]
-        \label{torque electromagnético}
-    \end{flalign}
-    \item Balance de tensiones eléctricas equivalentes de estator (referido a coordenadas $qd0^{r}$):
-    \begin{flalign}
-            v^r_{qs}(t) = R_s(t) i^r_{qs}(t) + L_q \frac{di^r_{qs}(t)}{dt} + [\lambda'^r_{m} + L_d i^r_{ds}(t)] \omega_r(t)
-        \label{balance de tensiones q}
-    \end{flalign}
-    \begin{flalign}
-            v^r_{ds}(t) = R_s(t) i^r_{ds}(t) + L_d \frac{di^r_{ds}(t)}{dt} - L_q i^r_{qs}(t) \omega_r(t)
-        \label{balance de tensiones d}
-    \end{flalign}
-    \begin{equation}
-        v_{0s}(t) = R_s(t) i_{0s}(t) + L_{ls} \frac{di_{0s}(t)}{dt}
-        \label{balance de tensiones 0}
-    \end{equation}
-    \begin{equation}
-        R_s(t) = R_{sREF} \left(1 + \alpha_{Cu} (T_s^{\circ}(t) - T_{sREF}^{\circ})\right)
-        \label{Rs}
-    \end{equation}
-\end{itemize}
-
+% Subsistema térmico de la máquina eléctrica
+\vspace*{0.2cm}
 \subsubsection{\textbf{Subsistema Térmico}} Modelo simplificado equivalente de primer orden, considerando sólo pérdidas
 eléctricas resistivas por efecto Joule en bobinado de estator, despreciando pérdidas magnéticas
-en el núcleo; transferencia de calor por conducción y convección natural, sin ventilación forzada:
+en el núcleo; transferencia de calor por conducción y convección natural, sin ventilación forzada.
+
+% Inversor trifásico
+\subsection{\textbf{Inversor trifásico de alimentación (modulador de tensión)}}
+
+Inversor trifásico de 4 cuadrantes (regenerativo), consistente en puente trifásico con llaves electrónicas semiconductoras alimentado desde fuente de CC de tensión constante, conmutado con modulación de ancho de pulso.
+
+No es parte de este proyecto el análisis del detalle de operación del inversor ni su fuente de energía de CC. Se considera al inversor trifásico y la fuente de CC como un Modulador idealizado de tensión trifásico (vectorial) (modelo promediado que se indica a continuación) para alimentación al estator de la Máq. Eléctrica.
+
+\vspace*{0.2cm}
+\subsubsection{\textbf{Modelo Promediado}}
+Se considera un modelo promediado equivalente de tensiones sintetizadas de salida (componente fundamental, sin armónicos). Se trata de un sistema trifásico de tensiones de fase en bornes de estator, senoidales de secuencia positiva $abc$, equilibrado o balanceado, variable en Módulo $V_{sl}(t)$ y Frecuencia $\omega_e(t)$.
+
+% SENSORES
+\subsection{\textbf{Sensores de retroalimentación}}
+
+El sistema cuenta con los siguientes dispositivos físicos y sus canales de medición y acondicionamiento:
 \begin{itemize}
-    \item Potencia de pérdidas calóricas:
-    \begin{align}
-        P_{s\ perd}(t) &= R_s(t) \left(i_{as}^2(t) + i_{bs}^2(t) + i_{cs}^2(t)\right) \nonumber \\
-        &= \frac{3}{2} R_s(t) \left(i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t)\right)
-        \label{potencia de perdidas}
-    \end{align}
-    \item Balance térmico de estator:
-    \begin{flalign}
-            P_{s\ perd}(t) = C_{ts} \frac{dT_s^{\circ}(t)}{dt} + \frac{1}{R_{ts-amb}} \left(T_s^{\circ}(t) - T_{amb}^{\circ}(t)\right)
-        \label{balance térmico estator}
-    \end{flalign}
+    \item 1 sensor de posición angular (codificador incremental o “encoder”) montado en el eje de motor, asumiendo proceso de “homing” y decodificación idealizados. Se logra la medición de la posición angular absoluta “rectificada” (al girar más de una revolución)
+    \[\rightarrow \text{variable medida}: \theta_m(t)\]
+    \item 3 sensores de corriente instantánea de fase, montados en salida trifásica del inversor hacia bornes del estator.
+    \[\rightarrow \text{variables medidas}: i_{as}(t), i_{bs}(t), i_{cs}(t)\]
+    \item 1 sensor de temperatura (ej. RTD) en bobinado de estator. Se mide la temperatur para monitoreo de calentamiento y estimación de resistencia de estator $R_s(t)$.
+    \[\rightarrow \text{variable medida}: T_s^{\circ}(t)\]
 \end{itemize}
 
-\subsubsection{\textbf{Parámetros}} Valores nominales medidos, tolerancia error $\pm$ 1\%; salvo aclaración específica:
+% VARIABLES DE ESTADO UTILIZADAS EN EL MODELO
+\subsection{\textbf{Variables principales en el Modelo Dinámico completo}}
+Se utilizan las siguientes variables para representar el estado, las entradas y las salidas en el modelo del sistema dinámico completo.
+
+\textbf{a) Excitaciones (entradas) externas:}
 \begin{itemize}
-    \item Momento de inercia (motor y caja):
-    \[J_m \approx 1.4 \times 10^{-5} \, \text{kg} \cdot \text{m}^2\]
-    \item Coef. de fricción viscosa (motor y caja):
-    \[b_m \approx 1.5 \times 10^{-5} \, \text{N} \cdot \text{m} \cdot \text{s}^{-1} \cdot \text{rad}^{-1}\]
-    \item Pares de Polos magnéticos: 
-    \[P_p = 3\]
-    \item Flujo magnético equivalente de imanes concatenado por espiras del bobinado de estator:
-    \[\lambda_m'^{r} \approx 0.016 \, \text{Wb} \\-\\ \left(\frac{V}{rad/s}\right)\]
-    \item Inductancia de estator (eje en cuadratura):
-    \[L_q \approx 5.8 \, \text{mH}\]
-    \item Inductancia de estator (eje directo):
-    \[L_d \approx 6.6 \, \text{mH}\]
-    \item Inductancia de dispersión de estator:
-    \[L_{ls} \approx 0.8 \, \text{mH}\]
-    \item Resistencia de estator, por fase (Ec. 3.9):
-    \[R_s \approx 1.02 \, \Omega \ (@40 ^\circ C) \rightarrow 1.32 \Omega \ (@115 ^\circ C)\]
-    \item Coef. aumento de $R_s$ con $T_s^\circ(t)$ (\ref{Rs}): \[\alpha_C = 3.9 \times 10^{-3} \, ^{\circ}\text{C}^{-1}\]
-    \item Capacitancia térmica de estator:
-    \[C_{ts} \approx 0.818 \, \text{W} \cdot ^{\circ}\text{C}^{-1} \cdot \text{s}^{-1}\]
-    \item Resistencia térmica estator-ambiente:
-    \[R_{ts-\text{amb}} \approx 146.7 \, ^{\circ}\text{C} \cdot \text{W}^{-1}\]
+    \item Variable manipulada (vectorial): Sistema trifásico de tensiones de fase reales en bornes de estator $v_{abc}(t)$, con $V_{sl}(t)$ y $\omega_e(t)$ ajustables a través de manipulación de la modulación PWM del inversor.
+    \item Variables de perturbación: Torque externo de carga mecánica $T_l(t)$ aplicado en la articulación del brazo manipulador. Temperatura ambiente $T_{amb}^{\circ}(t)$.
 \end{itemize}
-Nota: Constante de tiempo térmica:
-\[\tau_{ts-\text{amb}} = R_{ts-\text{amb}} \cdot C_{ts} \approx 120 \, \text{s}\]
+
+\textbf{b) Estado interno:}
+\begin{itemize}
+    \item Posición $\theta_m(t)$ y velocidad $\omega_m(t)$ en eje del motor. Corrientes virtuales equivalentes de estator $i_{qd0s}^r(t)$; temperatura de estator $T_s^{\circ}(t)$.
+\end{itemize}
+
+\textbf{c) Respuestas (salidas) externas:}
+\begin{itemize}
+    \item Variable controlada, no medida directamente (efector final): Posición angular de eje de la carga $q(t) \equiv \theta_l(t)$.
+    \item Variables medidas (para realimentación): Posición angular de eje del motor $\theta_m(t)$. Sistema trifásico de corrientes de fase reales en bornes de estator $i_{abc}(t)$. Temperatura de estator $T_s^{\circ}(t)$.
+\end{itemize}
 
 
 
@@ -299,33 +275,17 @@ Nota: Constante de tiempo térmica:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+% DESARROLLO DE LAS TAREAS
 \section{DESARROLLO DE TAREAS}
 
-
+%5.1
 \subsection{\textbf{Modelado, Análisis y Simulación dinámica del SISTEMA FÍSICO a “Lazo
 Abierto” (Sin Controlador externo de Movimiento)}}
 
+%5.1.1
+\subsubsection{\textbf{Modelo sub-sistema mecánico completo referido al eje de la máquina eléctrica}}
 
-
-\subsubsection{\textbf{Modelo sub-sistema mecánico completo}}
-Multiplicando por $r$ ambos miembros de la ecuación (\ref{subsistema mecánico máquina eléctrica}), sumando miembro a miembro con la ecuación (\ref{subsistema mecánico referido a eje de salida}) y tomando en cuenta $T_q(t)$ según la ecuación (\ref{relación de torque en caja}) obtenemos:
-
+Multiplicando por $r$ ambos miembros de la ecuación (\ref{subsistema mecánico máquina eléctrica}), sumando miembro a miembro con la ecuación (\ref{carga mecánica}) y tomando en cuenta $T_q(t)$ según la ecuación (\ref{relación de torque en caja}) obtenemos:
 \begin{flalign*}
     J_{l}\,\frac{d\omega _{l}\left(t\right)}{dt} +J_{m}\,r\,\frac{d\omega _{m}\left(t\right)}{dt} =r\,T_{m}\left(t\right)-T_{l}\left(t\right)-b_{l}\,\omega _{l}\left(t\right)-b_{m}\,r\,\omega _{m}\left(t\right)
 \end{flalign*}
@@ -343,7 +303,7 @@ Definimos ahora la inercia equivalente y el amoriguamiento equivalente respectiv
     b_{eq}=\left(b_{m}+\frac{b_{l}}{r^2}\right)
     \label{amortiguamiento equivalente}
 \end{equation}
-Reemplazando (\ref{inercia equivalente}) y (\ref{amortiguamiento equivalente}) en (\ref{subsistema mecánico con parametros desarrollados}) obtenemos el modelo matemático equivalente del sub-sistema mecánico completo con parámetros equivalentes referido aleje del motor (veasé diagrama de bloques de la fig. \ref{diagrama de bloques sub-sistema mecánico completo}):
+Reemplazando (\ref{inercia equivalente}) y (\ref{amortiguamiento equivalente}) en (\ref{subsistema mecánico con parametros desarrollados}) obtenemos el modelo matemático equivalente del sub-sistema mecánico completo con parámetros equivalentes referido al eje del motor (veasé diagrama de bloques de la fig. \ref{diagrama de bloques sub-sistema mecánico completo}):
 \begin{flalign}
     J_{eq}\,\frac{d \omega _{m}\left(t\right)}{dt}=T_{m}\left(t\right)-b_{eq}\, \omega _{m}\left(t\right)-\frac{T_{l}\left(t\right)}{r}
     \label{subsistema mecánico con parametros equivalentes}
@@ -359,15 +319,20 @@ Reemplazando (\ref{inercia equivalente}) y (\ref{amortiguamiento equivalente}) e
 
 El modelo resultante tiene un solo grado de libertad, tal como sucede en el modelo de la carga y del subsistema mecánico de la máquina eléctrica sin la transmisión. Esto se debe a la rigidez y la ausencia de "backlash" en la reducción, permitiendo un "acoplamiento directo" de la carga al eje de la máquina. Dicho de otra manera, la transmisión no incorpora dinámica al subsistema mecánico completo.
 
-
-
-\subsubsection{\textbf{Modelo dinámico del sistema físico completo}}
+%5.1.2
+\subsubsection{\textbf{Modelo dinámico del sistema físico completo}} este incorpora los sub-sistemas electromagnético, mecánico y térmico.
 \paragraph{\textbf{Modelo Global No Lineal}}
 En la Figura \ref{diagrama de bloques del sistema físico} se muestra
 el diagrama de bloques del sistema físico completo, el cual está compuesto por varios subsistemas. En las Figuras \ref{subsistema térmico}, \ref{diagrama de bloques sub-sistema mecánico completo},
-\ref{subsistema electromagnético} se muestran los diagramas de bloques de los subsistemas térmico, mecánico y electromagnético respectivamente. A su vez, los componentes del sub-sistema electromagnético se detallan
-en las figuras \ref{diagrama de bloques I_qs}, \ref{diagrama de bloques I_ds}, \ref{diagrama de bloques I_0s}, para las corrientes ($i_{qs}$, $i_{ds}$, $i_{0s}$ respectivamente) y \ref{diagrama de bloques T_m} para el torque motor.
-En las figuras \ref{transformación de park} y \ref{transformación de park inversa} se detallan las transformaciones de Park directa e inversa respecticamente.
+y \ref{subsistema electromagnético} se muestran los diagramas de bloques de los subsistemas térmico, mecánico y electromagnético respectivamente. A su vez, los componentes del sub-sistema electromagnético se detallan
+en las Figuras \ref{diagrama de bloques I_qs}, \ref{diagrama de bloques I_ds}, \ref{diagrama de bloques I_0s}, para las corrientes ($i_{qs}$, $i_{ds}$, $i_{0s}$ respectivamente) y en la Figura \ref{diagrama de bloques T_m} para el torque motor.
+En las Figuras \ref{transformación de park} y \ref{transformación de park inversa} se detallan las transformaciones de Park directa e inversa que se incorporan al modelo respecticamente.
+
+Al tratarse de un sistema no lineal de parámetros variables y con no-linealidades en las variables de estado, no se puede obtener una expresión
+de la ecuación de estado y de salida del sistema en la forma:
+
+Sin embargo, se puede obtener una expresión del modelo matemático vectorial en la forma más general:
+La \ref{sistema vectorial de ecuaciones} corresponde a la ecuación de estado del sistema mientras que la ecuación \ref{sistema vectorial de ecuaciones} corresponde a la ecuación de salida del sistema.
 
 \begin{align}
     \frac{d}{dt} \begin{bmatrix} \theta_m \\ \omega_m \\ i^r_{qs} \\ i^r_{ds} \\ i_{0s} \\ T_s \end{bmatrix} &= \begin{bmatrix} \omega_m \\ \frac{3}{2} \frac{P_p i^r_{qs}(t)}{J_{eq}} \left[ \lambda'^r_{m} + (L_d - L_q) i^r_{ds}(t) \right] - \frac{b_{eq}}{J_{eq}} \omega_m(t) - \frac{T_l(t)}{J_{eq}r} \\ \frac{1}{L_q} \left( v^r_{qs}(t) - R_s(t) i^r_{qs} - [\lambda'^r_m + L_d i^r_{ds}] \omega_r(t) \right) \\ \frac{1}{L_d} \left( v^r_{ds}(t) - R_s(t) i^r_{ds} + L_q i^r_{qs} \omega_r(t) \right) \\ \frac{1}{L_{ls}} \left( v_{0s}(t) - R_s(t) i_{0s} \right) \\ \frac{3}{2} \frac{R_s(t)}{C_{ts}} \left( i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right) - \frac{1}{C_{ts}R_{ts-amb}} (T_s - T_{amb}) \end{bmatrix}
