@@ -10,6 +10,7 @@
 \usepackage{amssymb} % Para símbolos matemáticos adicionales
 \usepackage{adjustbox}
 \usepackage{multicol}
+\usepackage{cleveref}
 \usepackage[prepend]{epstopdf}
 \graphicspath{{imágenes/}} 
 
@@ -66,7 +67,7 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
     \item Modelo matemático simplificado equivalente no lineal de parámetros variables referido al eje de salida del tren de transmisión:
     \begin{equation}
         J_l \frac{d\omega_l(t)}{dt} = T_q(t) - b_l \omega_l(t) - T_l(t)
-        \label{carga mecánica}
+        \label{carga mecanica}
     \end{equation}
     \begin{equation}
         T_l(t) = k_l \sin(\theta_l(t)) + T_d(t)
@@ -81,18 +82,18 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
     \item Modelo equivalente rígido del tren de transmisión:
     \begin{equation}
         \omega_l(t) = 1/r \cdot \omega_m(t)
-        \label{relación de velocidad en caja}
+        \label{relacion de velocidad en caja}
     \end{equation}
     \begin{equation}
         T_q(t) = r \cdot T_{dm}(t)
-        \label{relación de torque en caja}
+        \label{relacion de torque en caja}
     \end{equation}
 
     % sub-sistema mecánico PMSM
     \item Modelo matemático equivalente del sub-sistema mecánico de la máquina eléctrica.
     \begin{equation}
         J_m \frac{d\omega_m(t)}{dt} = T_m(t) - b_m \omega_m(t) - T_{dm}(t)
-        \label{subsistema mecánico máquina eléctrica}
+        \label{subsistema mecanico maquina electrica}
     \end{equation}
     \begin{equation}
         \frac{d\theta_m(t)}{dt} \equiv \omega_m(t) \Leftrightarrow \theta_m(t) = \int_{0}^{t} \omega_m(\tau) d\tau + \theta_m(0)
@@ -186,8 +187,8 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
 El problema bajo estudio se encuentra bien detallado en la guía de referencia (\cite{c1}), por lo que en esta sección se indican solo los aspectos más relevantes de cada una de las partes del problema, sin hacer énfasis en las ecuaciones que describen los modelos de cada una de las partes ni en los parámetros de cada uno de los subsistemas.
 
 % Carga mecánica
-\subsection{\textbf{Carga Mecánica}}
-Aplicación simplificada de referencia (adaptado de \cite{c2}): control de movimiento de 1 eje (descentralizado) para articulación de brazo manipulador robótico elemental de un grado de libertad (1 g.d.l.) rotacional de eje horizontal sometido a la acción de la aceleración de gravedad (péndulo rígido actuado), con eje de rotación fijo a base en sistema de referencia inercial (Fig. \ref{brazo}); con parámetros equivalentes variables según sea la carga útil transportada en el extremo.
+\subsection{\textbf{carga mecanica}}
+Aplicación simplificada de referencia (adaptado de \cite{c2}): control de movimiento de 1 eje (descentralizado) para articulación de brazo manipulador robótico elemental de un grado de libertad (1 g.d.l.) rotacional de eje horizontal sometido a la acción de la aceleración de gravedad (péndulo rígido actuado), con eje de rotación fijo a base en sistema de referencia inercial (\cref{brazo}); con parámetros equivalentes variables según sea la carga útil transportada en el extremo.
 
 \begin{figure}[thpb]
     \centering
@@ -210,7 +211,7 @@ Máquina eléctrica de CA trifásica sincrónica con excitación por imanes perm
 
 % Subsistema térmico de la máquina eléctrica
 \vspace*{0.2cm}
-\subsubsection{\textbf{Subsistema Térmico}} Modelo simplificado equivalente de primer orden, considerando sólo pérdidas
+\subsubsection{\textbf{subsistema termico}} Modelo simplificado equivalente de primer orden, considerando sólo pérdidas
 eléctricas resistivas por efecto Joule en bobinado de estator, despreciando pérdidas magnéticas
 en el núcleo; transferencia de calor por conducción y convección natural, sin ventilación forzada.
 
@@ -285,14 +286,14 @@ Abierto” (Sin Controlador externo de Movimiento)}}
 %5.1.1
 \subsubsection{\textbf{Modelo sub-sistema mecánico completo referido al eje de la máquina eléctrica}}
 
-Multiplicando por $r$ ambos miembros de la ecuación (\ref{subsistema mecánico máquina eléctrica}), sumando miembro a miembro con la ecuación (\ref{carga mecánica}) y tomando en cuenta $T_q(t)$ según la ecuación (\ref{relación de torque en caja}) obtenemos:
+Multiplicando por $r$ ambos miembros de la \cref{subsistema mecanico maquina electrica}, sumando miembro a miembro con la \cref{carga mecanica} y tomando en cuenta $T_q(t)$ según \cref{relacion de torque en caja} obtenemos:
 \begin{flalign*}
     J_{l}\,\frac{d\omega _{l}\left(t\right)}{dt} +J_{m}\,r\,\frac{d\omega _{m}\left(t\right)}{dt} =r\,T_{m}\left(t\right)-T_{l}\left(t\right)-b_{l}\,\omega _{l}\left(t\right)-b_{m}\,r\,\omega _{m}\left(t\right)
 \end{flalign*}
-Reemplazando en la anterior $\omega_{l}(t)$ según la ecuación (\ref{relación de velocidad en caja}), agrupando términos y diviendo entre $r$ a ambos miembros, obtenemos:
+Reemplazando en la anterior $\omega_{l}(t)$ según \cref{relacion de velocidad en caja}, agrupando términos y diviendo entre $r$ a ambos miembros, obtenemos:
 \begin{flalign}
     \left(J_{m}+\frac{J_{l}}{r^2}\right)\,\frac{d \omega _{m}\left(t\right)}{dt}=T_{m}\left(t\right)-\left(b_{m}+\frac{b_{l}}{r^2}\right)\,\omega _{m}\left(t\right)-\frac{T_{l}\left(t\right)}{r}
-    \label{subsistema mecánico con parametros desarrollados}
+    \label{subsistema mecanico con parametros desarrollados}
 \end{flalign}
 Definimos ahora la inercia equivalente y el amoriguamiento equivalente respectivamente como:
 \begin{equation}
@@ -303,10 +304,10 @@ Definimos ahora la inercia equivalente y el amoriguamiento equivalente respectiv
     b_{eq}=\left(b_{m}+\frac{b_{l}}{r^2}\right)
     \label{amortiguamiento equivalente}
 \end{equation}
-Reemplazando (\ref{inercia equivalente}) y (\ref{amortiguamiento equivalente}) en (\ref{subsistema mecánico con parametros desarrollados}) obtenemos el modelo matemático equivalente del sub-sistema mecánico completo con parámetros equivalentes referido al eje del motor (veasé diagrama de bloques de la fig. \ref{diagrama de bloques sub-sistema mecánico completo}):
+Reemplazando \cref{inercia equivalente} y \cref{amortiguamiento equivalente} en \cref{subsistema mecanico con parametros desarrollados} obtenemos el modelo matemático equivalente del sub-sistema mecánico completo con parámetros equivalentes referido al eje del motor (veasé diagrama de bloques de la \cref{diagrama de bloques sub-sistema mecanico completo}):
 \begin{flalign}
     J_{eq}\,\frac{d \omega _{m}\left(t\right)}{dt}=T_{m}\left(t\right)-b_{eq}\, \omega _{m}\left(t\right)-\frac{T_{l}\left(t\right)}{r}
-    \label{subsistema mecánico con parametros equivalentes}
+    \label{subsistema mecanico con parametros equivalentes}
 \end{flalign}
 \begin{figure}[thpb]
     \centering
@@ -314,28 +315,44 @@ Reemplazando (\ref{inercia equivalente}) y (\ref{amortiguamiento equivalente}) e
         \framebox{\includegraphics{2-Subsistema_Mecánico_Completo.eps}}
     \end{adjustbox}
     \caption{Diagrama de bloques del sub-sistema mecánico completo.}
-    \label{diagrama de bloques sub-sistema mecánico completo}
+    \label{diagrama de bloques sub-sistema mecanico completo}
 \end{figure}
 
 El modelo resultante tiene un solo grado de libertad, tal como sucede en el modelo de la carga y del subsistema mecánico de la máquina eléctrica sin la transmisión. Esto se debe a la rigidez y la ausencia de "backlash" en la reducción, permitiendo un "acoplamiento directo" de la carga al eje de la máquina. Dicho de otra manera, la transmisión no incorpora dinámica al subsistema mecánico completo.
 
 %5.1.2
+\vspace*{0.2cm}
 \subsubsection{\textbf{Modelo dinámico del sistema físico completo}} este incorpora los sub-sistemas electromagnético, mecánico y térmico.
+\vspace*{0.1cm}
 \paragraph{\textbf{Modelo Global No Lineal}}
-En la Figura \ref{diagrama de bloques del sistema físico} se muestra
-el diagrama de bloques del sistema físico completo, el cual está compuesto por varios subsistemas. En las Figuras \ref{subsistema térmico}, \ref{diagrama de bloques sub-sistema mecánico completo},
-y \ref{subsistema electromagnético} se muestran los diagramas de bloques de los subsistemas térmico, mecánico y electromagnético respectivamente. A su vez, los componentes del sub-sistema electromagnético se detallan
-en las Figuras \ref{diagrama de bloques I_qs}, \ref{diagrama de bloques I_ds}, \ref{diagrama de bloques I_0s}, para las corrientes ($i_{qs}$, $i_{ds}$, $i_{0s}$ respectivamente) y en la Figura \ref{diagrama de bloques T_m} para el torque motor.
-En las Figuras \ref{transformación de park} y \ref{transformación de park inversa} se detallan las transformaciones de Park directa e inversa que se incorporan al modelo respecticamente.
+En la \cref{diagrama de bloques del sistema fisico} se muestra
+el diagrama de bloques del sistema físico completo. En las Figuras \cref{subsistema termico}, \cref{diagrama de bloques sub-sistema mecanico completo},
+y \cref{sub-sistema electromagnetico} se muestran los diagramas de bloques de los subsistemas térmico, mecánico y electromagnético respectivamente. A su vez, los componentes del sub-sistema electromagnético se detallan
+en las Figuras \cref{diagrama de bloques I_qs}, \cref{diagrama de bloques I_ds}, \cref{diagrama de bloques I_0s}, para las corrientes ($i_{qs}$, $i_{ds}$, $i_{0s}$ respectivamente) y en la Figura \cref{diagrama de bloques T_m} para el torque motor.
+Finalmente, en las Figuras \cref{transformacion de Park} y \cref{transformacion de Park inversa} se detallan las transformaciones de Park directa e inversa respecticamente.
 
 Al tratarse de un sistema no lineal de parámetros variables y con no-linealidades en las variables de estado, no se puede obtener una expresión
 de la ecuación de estado y de salida del sistema en la forma:
 
+\begin{equation*}
+    \dot{x}(t) = A x(t) + B u(t)
+\end{equation*}    
+\begin{equation*}
+    y(t) = C x(t) + D u(t)
+\end{equation*}
+
 Sin embargo, se puede obtener una expresión del modelo matemático vectorial en la forma más general:
-La \ref{sistema vectorial de ecuaciones} corresponde a la ecuación de estado del sistema mientras que la ecuación \ref{sistema vectorial de ecuaciones} corresponde a la ecuación de salida del sistema.
+\begin{equation*}
+    \dot{x}(t) = f(x(t), u(t), t)
+\end{equation*}
+\begin{equation*}
+    y(t) = g(x(t), u(t), t)
+\end{equation*}
+
+En esta última forma, el sistema queda expresado como se muestra en las ecuaciones \cref{sistema vectorial de ecuaciones} y \cref{sistema vectorial de ecuaciones} para el estado y la salida respectivamente.
 
 \begin{align}
-    \frac{d}{dt} \begin{bmatrix} \theta_m \\ \omega_m \\ i^r_{qs} \\ i^r_{ds} \\ i_{0s} \\ T_s \end{bmatrix} &= \begin{bmatrix} \omega_m \\ \frac{3}{2} \frac{P_p i^r_{qs}(t)}{J_{eq}} \left[ \lambda'^r_{m} + (L_d - L_q) i^r_{ds}(t) \right] - \frac{b_{eq}}{J_{eq}} \omega_m(t) - \frac{T_l(t)}{J_{eq}r} \\ \frac{1}{L_q} \left( v^r_{qs}(t) - R_s(t) i^r_{qs} - [\lambda'^r_m + L_d i^r_{ds}] \omega_r(t) \right) \\ \frac{1}{L_d} \left( v^r_{ds}(t) - R_s(t) i^r_{ds} + L_q i^r_{qs} \omega_r(t) \right) \\ \frac{1}{L_{ls}} \left( v_{0s}(t) - R_s(t) i_{0s} \right) \\ \frac{3}{2} \frac{R_s(t)}{C_{ts}} \left( i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right) - \frac{1}{C_{ts}R_{ts-amb}} (T_s - T_{amb}) \end{bmatrix}
+    \frac{d}{dt} \begin{bmatrix} \dot{\theta_m}(t) \\ \dot{\omega_m}(t) \\ \dot{i^r_{qs}}(t) \\ \dot{i^r_{ds}}(t) \\ \dot{i_{0s}}(t) \\ \dot{T_s}(t) \end{bmatrix} &= \begin{bmatrix} \omega_m \\ \frac{3}{2} \frac{P_p i^r_{qs}(t)}{J_{eq}} \left[ \lambda'^r_{m} + (L_d - L_q) i^r_{ds}(t) \right] - \frac{b_{eq}}{J_{eq}} \omega_m(t) - \frac{T_l(t)}{J_{eq}r} \\ \frac{1}{L_q} \left( v^r_{qs}(t) - R_s(t) i^r_{qs} - [\lambda'^r_m + L_d i^r_{ds}] \omega_r(t) \right) \\ \frac{1}{L_d} \left( v^r_{ds}(t) - R_s(t) i^r_{ds} + L_q i^r_{qs} \omega_r(t) \right) \\ \frac{1}{L_{ls}} \left( v_{0s}(t) - R_s(t) i_{0s} \right) \\ \frac{3}{2} \frac{R_s(t)}{C_{ts}} \left( i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right) - \frac{1}{C_{ts}R_{ts-amb}} (T_s - T_{amb}) \end{bmatrix}
     \label{sistema vectorial de ecuaciones}
 \end{align}
 
@@ -345,7 +362,7 @@ La \ref{sistema vectorial de ecuaciones} corresponde a la ecuación de estado de
         \framebox{\includegraphics{9-Sistema_Físico_Completo.eps}}
     \end{adjustbox}
     \caption{Diagrama de bloques del sistema físico completo.}
-    \label{diagrama de bloques del sistema físico}
+    \label{diagrama de bloques del sistema fisico}
 \end{figure}
 \begin{figure}[thpb]
     \centering
@@ -353,7 +370,7 @@ La \ref{sistema vectorial de ecuaciones} corresponde a la ecuación de estado de
         \framebox{\includegraphics{3-Subsistema_Térmico.eps}}
     \end{adjustbox}
     \caption{Diagrama de bloques del sub-sistema térmico}
-    \label{subsistema térmico}
+    \label{subsistema termico}
 \end{figure}
 \begin{figure}[thpb]
     \centering
@@ -361,7 +378,7 @@ La \ref{sistema vectorial de ecuaciones} corresponde a la ecuación de estado de
         \framebox{\includegraphics{8-Subsistema_Electromagnético.eps}}
     \end{adjustbox}
     \caption{Diagrama de bloques del sub-sistema electromagnético}
-    \label{subsistema electromagnético}
+    \label{sub-sistema electromagnetico}
 \end{figure}
 \begin{figure}[thpb]
     \centering
@@ -401,15 +418,15 @@ La \ref{sistema vectorial de ecuaciones} corresponde a la ecuación de estado de
         \framebox{\includegraphics{10-Transformación_de_Park.eps}}
     \end{adjustbox}
     \caption{Transformación de Park Directa}
-    \label{transformación de park}
+    \label{transformacion de Park}
 \end{figure}
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
         \framebox{\includegraphics{11-Transformación_de_Park_Inversa.eps}}
     \end{adjustbox}
-    \caption{Transformación de Park Inversa}
-    \label{transformación de park inversa}
+    \caption{transformacion de Park inversa}
+    \label{transformacion de Park inversa}
 \end{figure}
 
 

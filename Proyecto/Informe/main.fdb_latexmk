@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1715966848 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" "main.pdf" "main" 1715966861 0
+["pdflatex"] 1716070250 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" "main.pdf" "main" 1716070261 0
   "C:/Users/Juan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1621213614 9524100 244f43f4c56583d0402c50877a6e09f3 ""
-  "C:/Users/Juan/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1715796568 83459 04a0cb00e5823ad02954c9048feb15f3 ""
+  "C:/Users/Juan/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1716068930 83459 04a0cb00e5823ad02954c9048feb15f3 ""
   "C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 1194fb36dfcb11d9ae9802f2b00b60a3 ""
   "C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/times/ptmb7t.tfm" 1136783054 2172 fd0c924230362ff848a33632ed45dc23 ""
   "C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/times/ptmb8r.tfm" 1136783054 4524 6bce29db5bc272ba5f332261583fee9c ""
@@ -77,6 +77,7 @@
   "C:/Users/Juan/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty" 1601808553 2508 2fba5d49a3080da7d53f11095c5bd6bd ""
   "C:/Users/Juan/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty" 1610120746 4947 8cb7717f0cc771eca0fda15160c7fee9 ""
   "C:/Users/Juan/AppData/Local/Programs/MiKTeX/tex/latex/base/inputenc.sty" 1610120746 5050 0d3b77275060ca09a40635b830c3c904 ""
+  "C:/Users/Juan/AppData/Local/Programs/MiKTeX/tex/latex/cleveref/cleveref.sty" 1524385854 337536 bc0e94b7e07585356f93644b682be5f7 ""
   "C:/Users/Juan/AppData/Local/Programs/MiKTeX/tex/latex/collectbox/collectbox.sty" 1667300686 9124 59c3b56f1a073de66e3eea35f9c173c8 ""
   "C:/Users/Juan/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1580041542 14411 d751e0af939150cc9d161f3ebc592c61 ""
   "C:/Users/Juan/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf.sty" 1580041542 4555 2e75607e9dfd0f2455671ffe749f94a9 ""
@@ -100,7 +101,7 @@
   "C:/Users/Juan/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/t1ptm.fd" 1585253778 817 8cd6152a28b34e24c35ade83b9bcf4f1 ""
   "C:/Users/Juan/AppData/Local/Programs/MiKTeX/tex/latex/varwidth/varwidth.sty" 1238469540 10894 d359a13923460b2a73d4312d613554c8 ""
   "C:/Users/Juan/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1606298686 4902 efb3d66683a2da2a232f71e3a571a899 ""
-  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" 1715966818 26800 8250c39019683b399cb7de84e87502bb ""
+  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" 1716070236 27025 7f2f19691804e1f3fb5babf9a58b7b03 ""
   "ieeeconf.cls" 1715806390 197436 d14bf51944476a96980006fc77247192 ""
   "imágenes//1-Brazo.PNG" 1715350381 14666 dbbf8840aa69c12071ab2a0a9be19378 ""
   "imágenes//10-Transformación_de_Park.eps" 1715817026 245561 87c344091cc99127c365c967deb2cc6f ""
@@ -113,7 +114,7 @@
   "imágenes//7-T_m.eps" 1715803941 92571 6bfb1c2bb4397721d535713b4ebd11f1 ""
   "imágenes//8-Subsistema_Electromagnético.eps" 1715804051 353497 93fd89198a6c79fa15e3d8785cf3101c ""
   "imágenes//9-Sistema_Físico_Completo.eps" 1715804061 604058 b6d4b913654f15f978efb6bbd0e11bd4 ""
-  "main.aux" 1715966860 6732 03462c30f8ff9c3f4215a835b693fa6a "pdflatex"
+  "main.aux" 1716070260 9537 f0d80f5347d8bf0f1e3501470c5f5981 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
