@@ -140,7 +140,7 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
 
     \item Potencia de pérdidas calóricas:
     \begin{equation}
-        P_{s\ perd}(t) = R_s(t) \left(i_{as}^2(t) + i_{bs}^2(t) + i_{cs}^2(t)\right) \nonumber = \frac{3}{2} R_s(t) \left(i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t)\right)
+        P_{s\ perd}(t) = R_s(t) \left(i_{as}^2(t) + i_{bs}^2(t) + i_{cs}^2(t)\right) = \frac{3}{2} R_s(t) \left(i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t)\right)
         \label{potencia de perdidas}
     \end{equation}
     \item Balance térmico de estator:
@@ -357,7 +357,7 @@ Reemplazando esta ecuación en la \cref{subsistema mecanico con parametros equiv
 obtenemos la segunda ecuación de estado del sistema:
 
 \begin{equation}
-    \dot{\omega}_m(t) = \frac{3}{2} \frac{P_p i^r_{qs}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds}(t) \right]}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} 
+    \dot{\omega}_m(t) = \frac{3}{2} \frac{P_p i^r_{qs}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds}(t) \right]}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} - \frac{T_l(t)}{r J_{eq}}
     \label{ecuacion de estado 2}
 \end{equation}
 
@@ -366,71 +366,75 @@ en coordenadas virtuales (\cref{balance de tensiones q} \cref{balance de tension
 Reemplazando en estas la relación entre $\omega_m(t)$ y $\omega_r(t)$ dada por la \cref{Relacion coordenadas electricas y mecanicas} obtenemos:
 
 \begin{align}
-    \dot{i}^r_{qs}(t) &=  \frac{-R_s(t) i^r_{qs}(t)}{L_q} - \frac{\omega_m(t) \left[\lambda'^r_m - L_d P_p i^r_{ds}(t)\right]}{L_q}\\
-    \dot{i}^r_{ds}(t) &=  \frac{- R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p i^r_{qs}(t)\omega_m(t)}{L_d}  \\ 
-    \dot{i}_{0s}(t)   &= -\frac{1}{L_{ls}} R_s(t) i_{0s}(t)
+    \dot{i}^r_{qs}(t) &= -\frac{R_s(t) i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \left[\lambda'^r_m + L_d i^r_{ds}(t)\right]}{L_q} + \frac{v^r_{qs}(t)}{L_q}\\
+    \dot{i}^r_{ds}(t) &= -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t)i^r_{qs}(t)}{L_d}  + \frac{v^r_{ds}(t)}{L_d}\\ 
+    \dot{i}_{0s}(t)   &= -\frac{R_s(t) i_{0s}(t)}{L_{ls}} + \frac{v_{0s}(t)}{L_ls}
     \label{ecuaciones de estado 3 4 y 5}
 \end{align}
 
-La última ecuación de estado se obtiene relacionando las \cref{balance termico estator} y \cref{potencia de perdidas} obteniendose:
+La última ecuación de estado se obtiene relacionando las \cref{potencia de perdidas} y \cref{balance termico estator} obteniendose:
 \begin{equation}
-    \dot{T}^\circ_s(t) = \frac{3}{2} \frac{R_s(t) \left[ i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right]}{C_{ts}}
+    \dot{T}^\circ_s(t) = \frac{3}{2} \frac{R_s(t) \left[ i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right]}{C_{ts}} - \frac{\left[T_s^{\circ}(t) - T_{amb}^{\circ}(t)\right]}{R_{ts}C_{ts}} 
     \label{ecuacion de estado 6}
 \end{equation}
 
 Cabe mencionar, para las útlimas ecuaciones de estado, que aunque se tiene un modelo lineal de evolución de la $R_S(t)$ con la $T^\circ_s(t)$ dado en la \cref{Rs}
 se decide no desarrollar la misma en las ecuaciones anteriores y se deja la dependencia explicita de $R_S$ con $t$ con el objeto de simplificar la notación
-y no oscurecer la explicación.
+y no oscurecer la explicación. Con el mismo objeto, se simplifica la notación de $R_{ts-amb}$ a simplemente $R_{ts}$
 
 % Ecuación vectorial de estado del sistema
 \textbf{Ecuación vectorial de estado del sistema}: se obtiene expresando en forma vectorial las ecuaciones obtenidas
 \begin{equation}
-    \begin{bmatrix} 
-    \dot{\theta}_m(t) \\ 
-    \dot{\omega}_m(t) \\ 
-    \dot{i}^r_{qs}(t) \\ 
-    \dot{i}^r_{ds}(t) \\ 
-    \dot{i}_{0s}(t) \\ 
-    \dot{T}^\circ_s(t) 
-    \end{bmatrix} 
-    = 
-    \begin{bmatrix} 
-    \omega_m(t) \\ 
-    \frac{3}{2} \frac{P_p i^r_{qs}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds}(t) \right]}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} \\ 
-    \frac{-R_s(t) i^r_{qs}(t)}{L_q} - \frac{\omega_m(t) \left[\lambda'^r_m - L_d P_p i^r_{ds}(t)\right]}{L_q}\\ 
-    \frac{- R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p i^r_{qs}(t)\omega_m(t)}{L_d}  \\ 
-    -\frac{1}{L_ls} R_s(t) i_{0s}(t)  \\ 
-    \frac{3}{2} \frac{R_s(t) \left[ i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right]}{C_{ts}}
-    \end{bmatrix}
-    + 
-    \begin{bmatrix} 
-    0 & 0 & 0 \\ 
-    0 & 0 & 0 \\ 
-    \frac{1}{L_q} & 0 & 0 \\ 
-    0 & \frac{1}{L_d} & 0  \\ 
-    0 & 0 & \frac{1}{L_{ls}}  \\ 
-    0 & 0 & 0
-    \end{bmatrix} 
-    \begin{bmatrix} 
-    v^r_{qs}(t) \\ 
-    v^r_{ds}(t) \\ 
-    v_{0s}(t)
-    \end{bmatrix}
-    - 
-    \begin{bmatrix} 
-    & 0 & 0 \\
-    & \frac{1}{J_{eq}} & 0 \\
-    & 0 & 0 \\
-    & 0 & 0 \\
-    & 0 & 0 \\
-    & 0 & \frac{1}{C_{ts} R_{ts-amb}}
-    \end{bmatrix}
-    \begin{bmatrix} 
-    T_l(t) \\ 
-    T_{amb}(t) 
-    \end{bmatrix}
+    \begin{aligned}
+        \begin{bmatrix} 
+        \dot{\theta}_m(t) \\ 
+        \dot{\omega}_m(t) \\ 
+        \dot{i}^r_{qs}(t) \\ 
+        \dot{i}^r_{ds}(t) \\ 
+        \dot{i}_{0s}(t) \\ 
+        \dot{T}^\circ_s(t) 
+        \end{bmatrix} 
+        &= 
+        \begin{bmatrix} 
+        \omega_m(t) \\ 
+        \frac{\frac{3}{2} P_p i^r_{qs}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds}(t) \right]}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} \\ 
+        -\frac{R_s(t) i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \left[\lambda'^r_m + L_d i^r_{ds}(t)\right]}{L_q}\\ 
+        -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t) i^r_{qs}(t)}{L_d}  \\ 
+        -\frac{R_s(t) i_{0s}(t) }{L_ls} \\ 
+        \frac{\frac{3}{2} R_s(t) \left[ i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right]}{C_{ts}} - \frac{T_s^{\circ}(t)}{R_{ts}C_{ts}}
+        \end{bmatrix}
+        + 
+        \begin{bmatrix} 
+        0 & 0 & 0 \\ 
+        0 & 0 & 0 \\ 
+        \frac{1}{L_q} & 0 & 0 \\ 
+        0 & \frac{1}{L_d} & 0  \\ 
+        0 & 0 & \frac{1}{L_{ls}}  \\ 
+        0 & 0 & 0
+        \end{bmatrix} 
+        \begin{bmatrix} 
+        v^r_{qs}(t) \\ 
+        v^r_{ds}(t) \\ 
+        v_{0s}(t)
+        \end{bmatrix}
+        + 
+        \begin{bmatrix} 
+        & 0 & 0 \\
+        & \frac{-1}{r J_{eq}} & 0 \\
+        & 0 & 0 \\
+        & 0 & 0 \\
+        & 0 & 0 \\
+        & 0 & \frac{1}{C_{ts} R_{ts}}
+        \end{bmatrix}
+        \begin{bmatrix} 
+        T_l(t) \\ 
+        T_{amb}(t) 
+        \end{bmatrix}\\
+        \mathbf{X(0)} \quad&= \mathbf{X_0}
+    \end{aligned}
     \label{ecuacion vectorial de estado del sistema}
 \end{equation}
+
 
 
 En la \cref{ecuacion vectorial de estado del sistema} se han separado
@@ -636,7 +640,7 @@ Matrices Modelo linealizado
 $A = \left(\begin{array}{cccccc} 
 0 & 1 & 0 & 0 & 0 & 0\\ 
 -\frac{K_{l}\,\cos\left(\frac{\theta _{m}}{r}\right)}{J_{\mathrm{eq}}\,r^2} & -\frac{b_{\mathrm{eq}}}{J_{\mathrm{eq}}} & \frac{3\,\mathrm{Pp}\,\left(\lambda _{m}+i_{\mathrm{ds}}\,\left(L_{d}-L_{q}\right)\right)}{2\,J_{\mathrm{eq}}} & \frac{3\,\mathrm{Pp}\,i_{\mathrm{qs}}\,\left(L_{d}-L_{q}\right)}{2\,J_{\mathrm{eq}}} & 0 & 0\\ 
-0 & -\frac{3\,\mathrm{Pp}\,i_{\mathrm{ds}}\,\left(L_{d}+\lambda _{m}\right)}{2\,L_{q}} & -\frac{R_{\mathrm{sref}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{L_{q}} & -\frac{L_{d}\,\mathrm{Pp}\,\omega _{m}}{L_{q}} & 0 & -\frac{R_{\mathrm{sref}}\,\alpha _{\mathrm{cu}}\,i_{\mathrm{qs}}}{L_{q}}\\ 
+0 & -\frac{3\,\mathrm{Pp}\,\left(i_{\mathrm{ds}}\,L_{d}+\lambda _{m}\right)}{2\,L_{q}} & -\frac{R_{\mathrm{sref}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{L_{q}} & -\frac{L_{d}\,\mathrm{Pp}\,\omega _{m}}{L_{q}} & 0 & -\frac{R_{\mathrm{sref}}\,\alpha _{\mathrm{cu}}\,i_{\mathrm{qs}}}{L_{q}}\\ 
 0 & \frac{L_{q}\,\mathrm{Pp}\,i_{\mathrm{qs}}}{L_{d}} & \frac{L_{q}\,\mathrm{Pp}\,\omega _{m}}{L_{d}} & -\frac{R_{\mathrm{sref}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{L_{d}} & 0 & -\frac{R_{\mathrm{sref}}\,\alpha _{\mathrm{cu}}\,i_{\mathrm{ds}}}{L_{d}}\\ 
 0 & 0 & 0 & 0 & -\frac{R_{\mathrm{sref}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{L_{\mathrm{ls}}} & -\frac{R_{\mathrm{sref}}\,\alpha _{\mathrm{cu}}\,i_{\mathrm{os}}}{L_{\mathrm{ls}}}\\ 
 0 & 0 & \frac{3\,R_{\mathrm{sref}}\,i_{\mathrm{qs}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{C_{\mathrm{ts}}} & \frac{3\,R_{\mathrm{sref}}\,i_{\mathrm{ds}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{C_{\mathrm{ts}}} & \frac{6\,R_{\mathrm{sref}}\,i_{\mathrm{os}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{C_{\mathrm{ts}}} & \frac{R_{\mathrm{sref}}\,\alpha _{\mathrm{cu}}\,\left(3\,{i_{\mathrm{ds}}}^2+6\,{i_{\mathrm{os}}}^2+3\,{i_{\mathrm{qs}}}^2\right)}{2\,C_{\mathrm{ts}}}-\frac{1}{C_{\mathrm{ts}}\,R_{\mathrm{ts},\mathrm{amb}}} 
@@ -644,5 +648,17 @@ $A = \left(\begin{array}{cccccc}
 }
 \end{equation*}
 
+\begin{equation*}\label{eq:matriz_A}
+    \resizebox{\textwidth}{!}{
+    $A = \left(\begin{array}{cccccc} 
+    0 & 1 & 0 & 0 & 0 & 0\\ 
+    \frac{-K_{l} \cos\left(\frac{\theta_m(t)}{r}\right)}{J_{eq} r^2} & \frac{-b_{eq}}{J_{eq}} & \frac{3 P_p \left(\lambda_m+i^r_{ds}(t) \left(L_d-L_q\right)\right)}{2 J_{eq}} & \frac{3 P_p i^r_{qs}(t) \left(L_d-L_q\right)}{2 J_{eq}} & 0 & 0\\ 
+    0 & \frac{-3 P_p \left(i^r_{ds}(t) L_d+\lambda_m\right)}{2 L_q} & \frac{-R_s(t)}{L_q} & \frac{-L_d P_p \omega_m(t)}{L_q} & 0 & \frac{-R_{sREF} \alpha_{cu} i^r_{qs}(t)}{L_q}\\ 
+    0 & \frac{L_q P_p i^r_{qs}(t)}{L_d} & \frac{L_q P_p \omega_m(t)}{L_d} & \frac{-R_s(t)}{L_d} & 0 & \frac{-R_{sREF} \alpha_{cu} i^r_{ds}(t)}{L_d}\\ 
+    0 & 0 & 0 & 0 & \frac{-R_s(t)}{L_{ls}} & \frac{-R_{sREF} \alpha_{cu} i_{0s}(t)}{L_{ls}}\\ 
+    0 & 0 & \frac{3 R_s(t) i^r_{qs}(t)}{C_{ts}} & \frac{3 R_s(t) i^r_{ds}(t)}{C_{ts}} & \frac{6 R_s(t) i^r_{0s}(t)}{C_{ts}} & \frac{3 R_{sREF} \alpha_{cu} \left({i^r_{ds}(t)}^2+2 {i^r_{0s}(t)}^2+{i^r_{qs}(t)}^2\right)}{2 C_{ts}}-\frac{1}{C_{ts} R_{ts}} 
+    \end{array}\right)$
+    }
+    \end{equation*}
 
 \end{document}
