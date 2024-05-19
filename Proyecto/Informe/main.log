@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.16)  18 MAY 2024 19:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.16)  18 MAY 2024 22:28
 entering extended mode
 **"c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex"
 (c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex
@@ -235,77 +235,17 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \sift@deathcycles=\count271
 \@vwid@loff=\dimen172
 \@vwid@roff=\dimen173
-)) (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\multicol.sty
-Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count272
-\mult@box=\box52
-\multicol@leftmargin=\dimen174
-\c@unbalance=\count273
-\c@collectmore=\count274
-\doublecol@number=\count275
-\multicoltolerance=\count276
-\multicolpretolerance=\count277
-\full@width=\dimen175
-\page@free=\dimen176
-\premulticols=\dimen177
-\postmulticols=\dimen178
-\multicolsep=\skip65
-\multicolbaselineskip=\skip66
-\partial@page=\box53
-\last@line=\box54
-\maxbalancingoverflow=\dimen179
-\mult@rightbox=\box55
-\mult@grightbox=\box56
-\mult@gfirstbox=\box57
-\mult@firstbox=\box58
-\@tempa=\box59
-\@tempa=\box60
-\@tempa=\box61
-\@tempa=\box62
-\@tempa=\box63
-\@tempa=\box64
-\@tempa=\box65
-\@tempa=\box66
-\@tempa=\box67
-\@tempa=\box68
-\@tempa=\box69
-\@tempa=\box70
-\@tempa=\box71
-\@tempa=\box72
-\@tempa=\box73
-\@tempa=\box74
-\@tempa=\box75
-\@tempa=\box76
-\@tempa=\box77
-\@tempa=\box78
-\@tempa=\box79
-\@tempa=\box80
-\@tempa=\box81
-\@tempa=\box82
-\@tempa=\box83
-\@tempa=\box84
-\@tempa=\box85
-\@tempa=\box86
-\@tempa=\box87
-\@tempa=\box88
-\@tempa=\box89
-\@tempa=\box90
-\@tempa=\box91
-\@tempa=\box92
-\@tempa=\box93
-\@tempa=\box94
-\@tempa=\box95
-\c@minrows=\count278
-\c@columnbadness=\count279
-\c@finalcolumnbadness=\count280
-\last@try=\dimen180
-\multicolovershoot=\dimen181
-\multicolundershoot=\dimen182
-\mult@nat@firstbox=\box96
-\colbreak@box=\box97
-\mc@col@check@num=\count281
-) (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/cleveref\cleveref.sty
+)) (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/cleveref\cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+) (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen174
+\ar@mcellbox=\box52
+\extrarowheight=\dimen175
+\NC@list=\toks26
+\extratabsurround=\skip65
+\backup@length=\skip66
+\ar@cellbox=\box53
 ) (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf.sty
 Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
  (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
@@ -342,51 +282,51 @@ Package grfext Info: Graphics extension search list:
 (grfext)             \PrependGraphicsExtensions on input line 158.
 ) (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count282
-\l__pdf_internal_box=\box98
+\l__color_backend_stack_int=\count272
+\l__pdf_internal_box=\box54
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
  (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count283
-\scratchdimen=\dimen183
-\scratchbox=\box99
-\nofMPsegments=\count284
-\nofMParguments=\count285
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count286
-\MPscratchDim=\dimen184
-\MPnumerator=\count287
-\makeMPintoPDFobject=\count288
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count273
+\scratchdimen=\dimen176
+\scratchbox=\box55
+\nofMPsegments=\count274
+\nofMParguments=\count275
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count276
+\MPscratchDim=\dimen177
+\MPnumerator=\count277
+\makeMPintoPDFobject=\count278
+\everyMPtoPDFconversion=\toks28
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
  (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
  (C:\Users\Juan\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{C:/Users/Juan/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 <imágenes//1-Brazo.PNG, id=15, 320.69812pt x 257.46187pt>
 File: imágenes//1-Brazo.PNG Graphic file (type png)
 <use imágenes//1-Brazo.PNG>
-Package pdftex.def Info: imágenes//1-Brazo.PNG  used on input line 198.
+Package pdftex.def Info: imágenes//1-Brazo.PNG  used on input line 203.
 (pdftex.def)             Requested size: 505.89pt x 406.14885pt.
 
 
@@ -412,7 +352,7 @@ Package epstopdf Info: Source file: <imágenes//2-Subsistema_Mecánico_Completo.
 (epstopdf)                    date: 2024-05-16 20:15:45
 (epstopdf)                    size: 8685 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf imágenes//2-Subsistema_Mecánico_Completo.eps>
-(epstopdf)             \includegraphics on input line 315.
+(epstopdf)             \includegraphics on input line 320.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -420,7 +360,7 @@ pdfTeX warning: pdflatex.exe (file ./imágenes//2-Subsistema_Mecánico_Completo-
 <imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf, id=26, 306.14375pt x 170.6375pt>
 File: imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf Graphic file (type pdf)
 <use imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf  used on input line 315.
+Package pdftex.def Info: imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf  used on input line 320.
 (pdftex.def)             Requested size: 306.14299pt x 170.63707pt.
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -430,159 +370,6 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [4]
-Package epstopdf Info: Source file: <imágenes//9-Sistema_Físico_Completo.eps>
-(epstopdf)                    date: 2024-05-15 17:14:21
-(epstopdf)                    size: 604058 bytes
-(epstopdf)             Output file: <imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-16 20:15:48
-(epstopdf)                    size: 21978 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf imágenes//9-Sistema_Físico_Completo.eps>
-(epstopdf)             \includegraphics on input line 362.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex.exe (file ./imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf, id=30, 562.1pt x 297.11pt>
-File: imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf Graphic file (type pdf)
-<use imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf  used on input line 362.
-(pdftex.def)             Requested size: 562.09863pt x 297.10927pt.
-Package epstopdf Info: Source file: <imágenes//3-Subsistema_Térmico.eps>
-(epstopdf)                    date: 2024-05-15 17:07:40
-(epstopdf)                    size: 444699 bytes
-(epstopdf)             Output file: <imágenes//3-Subsistema_Térmico-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-16 20:15:51
-(epstopdf)                    size: 13612 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//3-Subsistema_Térmico-eps-converted-to.pdf imágenes//3-Subsistema_Térmico.eps>
-(epstopdf)             \includegraphics on input line 370.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex.exe (file ./imágenes//3-Subsistema_Térmico-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//3-Subsistema_Térmico-eps-converted-to.pdf, id=31, 462.72874pt x 264.99pt>
-File: imágenes//3-Subsistema_Térmico-eps-converted-to.pdf Graphic file (type pdf)
-<use imágenes//3-Subsistema_Térmico-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//3-Subsistema_Térmico-eps-converted-to.pdf  used on input line 370.
-(pdftex.def)             Requested size: 462.72762pt x 264.98935pt.
-Package epstopdf Info: Source file: <imágenes//8-Subsistema_Electromagnético.eps>
-(epstopdf)                    date: 2024-05-15 17:14:11
-(epstopdf)                    size: 353497 bytes
-(epstopdf)             Output file: <imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-16 20:15:54
-(epstopdf)                    size: 12812 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf imágenes//8-Subsistema_Electromagnético.eps>
-(epstopdf)             \includegraphics on input line 378.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex.exe (file ./imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf, id=32, 325.215pt x 299.1175pt>
-File: imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf Graphic file (type pdf)
-<use imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf  used on input line 378.
-(pdftex.def)             Requested size: 325.2142pt x 299.11676pt.
-Package epstopdf Info: Source file: <imágenes//4-I_qs.eps>
-(epstopdf)                    date: 2024-05-15 17:09:43
-(epstopdf)                    size: 196821 bytes
-(epstopdf)             Output file: <imágenes//4-I_qs-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-16 20:15:57
-(epstopdf)                    size: 7747 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//4-I_qs-eps-converted-to.pdf imágenes//4-I_qs.eps>
-(epstopdf)             \includegraphics on input line 386.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex.exe (file ./imágenes//4-I_qs-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//4-I_qs-eps-converted-to.pdf, id=33, 373.395pt x 143.53625pt>
-File: imágenes//4-I_qs-eps-converted-to.pdf Graphic file (type pdf)
-<use imágenes//4-I_qs-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//4-I_qs-eps-converted-to.pdf  used on input line 386.
-(pdftex.def)             Requested size: 373.39409pt x 143.53589pt.
-Package epstopdf Info: Source file: <imágenes//5-I_ds.eps>
-(epstopdf)                    date: 2024-05-15 17:09:54
-(epstopdf)                    size: 88739 bytes
-(epstopdf)             Output file: <imágenes//5-I_ds-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-16 20:16:00
-(epstopdf)                    size: 6423 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//5-I_ds-eps-converted-to.pdf imágenes//5-I_ds.eps>
-(epstopdf)             \includegraphics on input line 394.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex.exe (file ./imágenes//5-I_ds-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//5-I_ds-eps-converted-to.pdf, id=34, 268.00125pt x 86.3225pt>
-File: imágenes//5-I_ds-eps-converted-to.pdf Graphic file (type pdf)
-<use imágenes//5-I_ds-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//5-I_ds-eps-converted-to.pdf  used on input line 394.
-(pdftex.def)             Requested size: 268.00058pt x 86.32227pt.
-Package epstopdf Info: Source file: <imágenes//6-I_0s.eps>
-(epstopdf)                    date: 2024-05-15 17:12:09
-(epstopdf)                    size: 70408 bytes
-(epstopdf)             Output file: <imágenes//6-I_0s-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-16 20:16:02
-(epstopdf)                    size: 5394 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//6-I_0s-eps-converted-to.pdf imágenes//6-I_0s.eps>
-(epstopdf)             \includegraphics on input line 402.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex.exe (file ./imágenes//6-I_0s-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//6-I_0s-eps-converted-to.pdf, id=35, 239.89626pt x 75.28125pt>
-File: imágenes//6-I_0s-eps-converted-to.pdf Graphic file (type pdf)
-<use imágenes//6-I_0s-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//6-I_0s-eps-converted-to.pdf  used on input line 402.
-(pdftex.def)             Requested size: 239.89566pt x 75.28105pt.
-Package epstopdf Info: Source file: <imágenes//7-T_m.eps>
-(epstopdf)                    date: 2024-05-15 17:12:21
-(epstopdf)                    size: 92571 bytes
-(epstopdf)             Output file: <imágenes//7-T_m-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-16 20:16:04
-(epstopdf)                    size: 6317 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//7-T_m-eps-converted-to.pdf imágenes//7-T_m.eps>
-(epstopdf)             \includegraphics on input line 410.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex.exe (file ./imágenes//7-T_m-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//7-T_m-eps-converted-to.pdf, id=36, 285.065pt x 85.31876pt>
-File: imágenes//7-T_m-eps-converted-to.pdf Graphic file (type pdf)
-<use imágenes//7-T_m-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//7-T_m-eps-converted-to.pdf  used on input line 410.
-(pdftex.def)             Requested size: 285.0643pt x 85.31853pt.
-Package epstopdf Info: Source file: <imágenes//10-Transformación_de_Park.eps>
-(epstopdf)                    date: 2024-05-15 20:50:26
-(epstopdf)                    size: 245561 bytes
-(epstopdf)             Output file: <imágenes//10-Transformación_de_Park-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-16 20:16:07
-(epstopdf)                    size: 27329 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//10-Transformación_de_Park-eps-converted-to.pdf imágenes//10-Transformación_de_Park.eps>
-(epstopdf)             \includegraphics on input line 418.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex.exe (file ./imágenes//10-Transformación_de_Park-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//10-Transformación_de_Park-eps-converted-to.pdf, id=37, 589.20125pt x 336.25626pt>
-File: imágenes//10-Transformación_de_Park-eps-converted-to.pdf Graphic file (type pdf)
-<use imágenes//10-Transformación_de_Park-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//10-Transformación_de_Park-eps-converted-to.pdf  used on input line 418.
-(pdftex.def)             Requested size: 589.1998pt x 336.25543pt.
-Package epstopdf Info: Source file: <imágenes//11-Transformación_de_Park_Inversa.eps>
-(epstopdf)                    date: 2024-05-15 20:50:26
-(epstopdf)                    size: 234171 bytes
-(epstopdf)             Output file: <imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-05-16 20:16:10
-(epstopdf)                    size: 24177 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf imágenes//11-Transformación_de_Park_Inversa.eps>
-(epstopdf)             \includegraphics on input line 426.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex.exe (file ./imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf, id=38, 561.09625pt x 336.25626pt>
-File: imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf Graphic file (type pdf)
-<use imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf>
-Package pdftex.def Info: imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf  used on input line 426.
-(pdftex.def)             Requested size: 561.09488pt x 336.25543pt.
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -591,6 +378,159 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [5 <./imágenes//2-Subsistema_Mecánico_Completo-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <imágenes//9-Sistema_Físico_Completo.eps>
+(epstopdf)                    date: 2024-05-15 17:14:21
+(epstopdf)                    size: 604058 bytes
+(epstopdf)             Output file: <imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-05-16 20:15:48
+(epstopdf)                    size: 21978 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf imágenes//9-Sistema_Físico_Completo.eps>
+(epstopdf)             \includegraphics on input line 467.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf, id=36, 562.1pt x 297.11pt>
+File: imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf Graphic file (type pdf)
+<use imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf>
+Package pdftex.def Info: imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf  used on input line 467.
+(pdftex.def)             Requested size: 562.09863pt x 297.10927pt.
+Package epstopdf Info: Source file: <imágenes//3-Subsistema_Térmico.eps>
+(epstopdf)                    date: 2024-05-15 17:07:40
+(epstopdf)                    size: 444699 bytes
+(epstopdf)             Output file: <imágenes//3-Subsistema_Térmico-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-05-16 20:15:51
+(epstopdf)                    size: 13612 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//3-Subsistema_Térmico-eps-converted-to.pdf imágenes//3-Subsistema_Térmico.eps>
+(epstopdf)             \includegraphics on input line 475.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./imágenes//3-Subsistema_Térmico-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<imágenes//3-Subsistema_Térmico-eps-converted-to.pdf, id=37, 462.72874pt x 264.99pt>
+File: imágenes//3-Subsistema_Térmico-eps-converted-to.pdf Graphic file (type pdf)
+<use imágenes//3-Subsistema_Térmico-eps-converted-to.pdf>
+Package pdftex.def Info: imágenes//3-Subsistema_Térmico-eps-converted-to.pdf  used on input line 475.
+(pdftex.def)             Requested size: 462.72762pt x 264.98935pt.
+Package epstopdf Info: Source file: <imágenes//8-Subsistema_Electromagnético.eps>
+(epstopdf)                    date: 2024-05-15 17:14:11
+(epstopdf)                    size: 353497 bytes
+(epstopdf)             Output file: <imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-05-16 20:15:54
+(epstopdf)                    size: 12812 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf imágenes//8-Subsistema_Electromagnético.eps>
+(epstopdf)             \includegraphics on input line 483.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf, id=38, 325.215pt x 299.1175pt>
+File: imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf Graphic file (type pdf)
+<use imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf>
+Package pdftex.def Info: imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf  used on input line 483.
+(pdftex.def)             Requested size: 325.2142pt x 299.11676pt.
+Package epstopdf Info: Source file: <imágenes//4-I_qs.eps>
+(epstopdf)                    date: 2024-05-15 17:09:43
+(epstopdf)                    size: 196821 bytes
+(epstopdf)             Output file: <imágenes//4-I_qs-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-05-16 20:15:57
+(epstopdf)                    size: 7747 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//4-I_qs-eps-converted-to.pdf imágenes//4-I_qs.eps>
+(epstopdf)             \includegraphics on input line 491.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./imágenes//4-I_qs-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<imágenes//4-I_qs-eps-converted-to.pdf, id=39, 373.395pt x 143.53625pt>
+File: imágenes//4-I_qs-eps-converted-to.pdf Graphic file (type pdf)
+<use imágenes//4-I_qs-eps-converted-to.pdf>
+Package pdftex.def Info: imágenes//4-I_qs-eps-converted-to.pdf  used on input line 491.
+(pdftex.def)             Requested size: 373.39409pt x 143.53589pt.
+Package epstopdf Info: Source file: <imágenes//5-I_ds.eps>
+(epstopdf)                    date: 2024-05-15 17:09:54
+(epstopdf)                    size: 88739 bytes
+(epstopdf)             Output file: <imágenes//5-I_ds-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-05-16 20:16:00
+(epstopdf)                    size: 6423 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//5-I_ds-eps-converted-to.pdf imágenes//5-I_ds.eps>
+(epstopdf)             \includegraphics on input line 499.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./imágenes//5-I_ds-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<imágenes//5-I_ds-eps-converted-to.pdf, id=40, 268.00125pt x 86.3225pt>
+File: imágenes//5-I_ds-eps-converted-to.pdf Graphic file (type pdf)
+<use imágenes//5-I_ds-eps-converted-to.pdf>
+Package pdftex.def Info: imágenes//5-I_ds-eps-converted-to.pdf  used on input line 499.
+(pdftex.def)             Requested size: 268.00058pt x 86.32227pt.
+Package epstopdf Info: Source file: <imágenes//6-I_0s.eps>
+(epstopdf)                    date: 2024-05-15 17:12:09
+(epstopdf)                    size: 70408 bytes
+(epstopdf)             Output file: <imágenes//6-I_0s-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-05-16 20:16:02
+(epstopdf)                    size: 5394 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//6-I_0s-eps-converted-to.pdf imágenes//6-I_0s.eps>
+(epstopdf)             \includegraphics on input line 507.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./imágenes//6-I_0s-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<imágenes//6-I_0s-eps-converted-to.pdf, id=41, 239.89626pt x 75.28125pt>
+File: imágenes//6-I_0s-eps-converted-to.pdf Graphic file (type pdf)
+<use imágenes//6-I_0s-eps-converted-to.pdf>
+Package pdftex.def Info: imágenes//6-I_0s-eps-converted-to.pdf  used on input line 507.
+(pdftex.def)             Requested size: 239.89566pt x 75.28105pt.
+Package epstopdf Info: Source file: <imágenes//7-T_m.eps>
+(epstopdf)                    date: 2024-05-15 17:12:21
+(epstopdf)                    size: 92571 bytes
+(epstopdf)             Output file: <imágenes//7-T_m-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-05-16 20:16:04
+(epstopdf)                    size: 6317 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//7-T_m-eps-converted-to.pdf imágenes//7-T_m.eps>
+(epstopdf)             \includegraphics on input line 515.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./imágenes//7-T_m-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<imágenes//7-T_m-eps-converted-to.pdf, id=42, 285.065pt x 85.31876pt>
+File: imágenes//7-T_m-eps-converted-to.pdf Graphic file (type pdf)
+<use imágenes//7-T_m-eps-converted-to.pdf>
+Package pdftex.def Info: imágenes//7-T_m-eps-converted-to.pdf  used on input line 515.
+(pdftex.def)             Requested size: 285.0643pt x 85.31853pt.
+Package epstopdf Info: Source file: <imágenes//10-Transformación_de_Park.eps>
+(epstopdf)                    date: 2024-05-15 20:50:26
+(epstopdf)                    size: 245561 bytes
+(epstopdf)             Output file: <imágenes//10-Transformación_de_Park-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-05-16 20:16:07
+(epstopdf)                    size: 27329 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//10-Transformación_de_Park-eps-converted-to.pdf imágenes//10-Transformación_de_Park.eps>
+(epstopdf)             \includegraphics on input line 523.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./imágenes//10-Transformación_de_Park-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<imágenes//10-Transformación_de_Park-eps-converted-to.pdf, id=43, 589.20125pt x 336.25626pt>
+File: imágenes//10-Transformación_de_Park-eps-converted-to.pdf Graphic file (type pdf)
+<use imágenes//10-Transformación_de_Park-eps-converted-to.pdf>
+Package pdftex.def Info: imágenes//10-Transformación_de_Park-eps-converted-to.pdf  used on input line 523.
+(pdftex.def)             Requested size: 589.1998pt x 336.25543pt.
+Package epstopdf Info: Source file: <imágenes//11-Transformación_de_Park_Inversa.eps>
+(epstopdf)                    date: 2024-05-15 20:50:26
+(epstopdf)                    size: 234171 bytes
+(epstopdf)             Output file: <imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-05-16 20:16:10
+(epstopdf)                    size: 24177 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf imágenes//11-Transformación_de_Park_Inversa.eps>
+(epstopdf)             \includegraphics on input line 531.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf, id=44, 561.09625pt x 336.25626pt>
+File: imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf Graphic file (type pdf)
+<use imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf>
+Package pdftex.def Info: imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf  used on input line 531.
+(pdftex.def)             Requested size: 561.09488pt x 336.25543pt.
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -598,7 +538,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[6 <./imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf>]
+[6]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -606,7 +546,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[7 <./imágenes//3-Subsistema_Térmico-eps-converted-to.pdf>]
+[7 <./imágenes//9-Sistema_Físico_Completo-eps-converted-to.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -614,7 +554,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[8 <./imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf>]
+[8 <./imágenes//3-Subsistema_Térmico-eps-converted-to.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -622,7 +562,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[9 <./imágenes//4-I_qs-eps-converted-to.pdf> <./imágenes//5-I_ds-eps-converted-to.pdf>]
+[9 <./imágenes//8-Subsistema_Electromagnético-eps-converted-to.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -630,7 +570,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[10 <./imágenes//6-I_0s-eps-converted-to.pdf> <./imágenes//7-T_m-eps-converted-to.pdf>]
+[10 <./imágenes//4-I_qs-eps-converted-to.pdf> <./imágenes//5-I_ds-eps-converted-to.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -638,7 +578,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[11 <./imágenes//10-Transformación_de_Park-eps-converted-to.pdf>]
+[11 <./imágenes//6-I_0s-eps-converted-to.pdf> <./imágenes//7-T_m-eps-converted-to.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -646,7 +586,15 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[12 <./imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf>] 
+[12 <./imágenes//10-Transformación_de_Park-eps-converted-to.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+[13 <./imágenes//11-Transformación_de_Park_Inversa-eps-converted-to.pdf>] 
 AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -655,19 +603,19 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[13] (main.aux) ) 
+[14] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 6914 strings out of 479321
- 122662 string characters out of 2857060
- 435864 words of memory out of 3000000
- 24249 multiletter control sequences out of 15000+600000
+ 6858 strings out of 479321
+ 121855 string characters out of 2857060
+ 441149 words of memory out of 3000000
+ 24194 multiletter control sequences out of 15000+600000
  514680 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,16n,74p,948b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,13n,74p,894b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Juan/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (13 pages, 361653 bytes).
+Output written on main.pdf (14 pages, 367340 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
+ 174 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

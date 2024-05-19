@@ -9,8 +9,10 @@
 \usepackage{amsmath}
 \usepackage{amssymb} % Para símbolos matemáticos adicionales
 \usepackage{adjustbox}
-\usepackage{multicol}
 \usepackage{cleveref}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{1.5} % Ajusta este valor para más o menos espacio entre filas
 \usepackage[prepend]{epstopdf}
 \graphicspath{{imágenes/}} 
 
@@ -97,14 +99,14 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
     \end{equation}
     \begin{equation}
         \frac{d\theta_m(t)}{dt} \equiv \omega_m(t) \Leftrightarrow \theta_m(t) = \int_{0}^{t} \omega_m(\tau) d\tau + \theta_m(0)
-        \label{posición y velocidad motor}
+        \label{posicion y velocidad motor}
     \end{equation}
 
     % sub-sistema electromagnético PMSM
     \item Coordenadas eléctricas de entrehierro $qd0^{r}$ (marco de referencia de rotor $\neq$ “sincrónico”):
     \begin{equation}
         \frac{d\theta_r(t)}{dt} \equiv \omega_r(t) \Leftrightarrow \theta_r(t) = \int_{0}^{t} \omega_r(\tau) d\tau + \theta_r(0)
-        \label{Relación coordenadas eléctricas y mecánicas}
+        \label{Relacion coordenadas electricas y mecanicas}
     \end{equation}
     \begin{equation}
         \theta_r(t) \equiv P_p \theta_m(t) \therefore  \omega_r(t) = P_p \omega_m(t)
@@ -113,7 +115,7 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
     \item Torque electromagnético:
     \begin{equation}
         T_m(t) = \frac{3}{2} P_p [\lambda'^r_{m} i^r_{qs}(t) + (L_d - L_q) i^r_{ds}(t) i^r_{qs}(t)]
-        \label{torque electromagnético}
+        \label{torque electromagnetico}
     \end{equation}
     \item Balance de tensiones eléctricas equivalentes de estator (referido a coordenadas $qd0^{r}$):
     \begin{equation}
@@ -144,22 +146,25 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
     \item Balance térmico de estator:
     \begin{equation}
         P_{s\ perd}(t) = C_{ts} \frac{dT_s^{\circ}(t)}{dt} + \frac{1}{R_{ts-amb}} \left(T_s^{\circ}(t) - T_{amb}^{\circ}(t)\right)
-        \label{balance térmico estator}
+        \label{balance termico estator}
     \end{equation}
 
     % Variables del modelo
     \item Vector de estado del sistema físico completo.
     \begin{equation}
         X = \begin{bmatrix} \theta_m \\ \omega_m \\ i^r_{qs} \\ i^r_{ds} \\ i_{0s} \\ T_s \end{bmatrix}
+        \label{vector de estado del sistema}
     \end{equation}
     \item Vector de entradas de manipulación al modelo dinámico del sistema físico completo en coordenadas virtuales y reales respectivamente
     \begin{equation}
         u_{c(qd0)} = \begin{bmatrix} v^r_{qs}(t) \\ v^r_{ds}(t) \\ v^r_{0s}(t)\end{bmatrix}
         u_{c(abc)} = \begin{bmatrix} v_{as}(t) \\ v_{bs}(t) \\ v_{cs}(t)\end{bmatrix}
+        \label{vector de entradas de control}
     \end{equation}
     \item Vector de entradas de perturbación al modelo dinámico del sistema físico completo.
     \begin{equation}
         u_{d} = \begin{bmatrix} T_l(t) \\ T_{amb}^{\circ}(t)\end{bmatrix}
+        \label{vector de entradas de perturbacion}
     \end{equation}
     % Inversor trifásico.
     \item Sistema de tensiones trifásico a la salida del inversor.
@@ -324,12 +329,8 @@ El modelo resultante tiene un solo grado de libertad, tal como sucede en el mode
 \vspace*{0.2cm}
 \subsubsection{\textbf{Modelo dinámico del sistema físico completo}} este incorpora los sub-sistemas electromagnético, mecánico y térmico.
 \vspace*{0.1cm}
+% a
 \paragraph{\textbf{Modelo Global No Lineal}}
-En la \cref{diagrama de bloques del sistema fisico} se muestra
-el diagrama de bloques del sistema físico completo. En las Figuras \cref{subsistema termico}, \cref{diagrama de bloques sub-sistema mecanico completo},
-y \cref{sub-sistema electromagnetico} se muestran los diagramas de bloques de los subsistemas térmico, mecánico y electromagnético respectivamente. A su vez, los componentes del sub-sistema electromagnético se detallan
-en las Figuras \cref{diagrama de bloques I_qs}, \cref{diagrama de bloques I_ds}, \cref{diagrama de bloques I_0s}, para las corrientes ($i_{qs}$, $i_{ds}$, $i_{0s}$ respectivamente) y en la Figura \cref{diagrama de bloques T_m} para el torque motor.
-Finalmente, en las Figuras \cref{transformacion de Park} y \cref{transformacion de Park inversa} se detallan las transformaciones de Park directa e inversa respecticamente.
 
 Al tratarse de un sistema no lineal de parámetros variables y con no-linealidades en las variables de estado, no se puede obtener una expresión
 de la ecuación de estado y de salida del sistema en la forma:
@@ -349,13 +350,117 @@ Sin embargo, se puede obtener una expresión del modelo matemático vectorial en
     y(t) = g(x(t), u(t), t)
 \end{equation*}
 
-En esta última forma, el sistema queda expresado como se muestra en las ecuaciones \cref{sistema vectorial de ecuaciones} y \cref{sistema vectorial de ecuaciones} para el estado y la salida respectivamente.
+Teniendo en cuenta la definición del estado del sistema (ver \cref{vector de estado del sistema}) la primera ecuación a considerar en la ecuación vectorial de estado del sistema es la
+\cref{posicion y velocidad motor}. El acoplamiento entre el sub-sistema electromagnético y el
+mecánico de la máquina eléctrica se da en el $T_m(t)$ dado por la ecuación \cref{torque electromagnetico}.
+Reemplazando esta ecuación en la \cref{subsistema mecanico con parametros equivalentes} y reordenando
+obtenemos la segunda ecuación de estado del sistema:
+
+\begin{equation}
+    \dot{\omega}_m(t) = \frac{3}{2} \frac{P_p i^r_{qs}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds}(t) \right]}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} 
+    \label{ecuacion de estado 2}
+\end{equation}
+
+Las siguientres tres ecuaciones de estado del sistema se obtienenen de las ecuaciones de balance de tensiones
+en coordenadas virtuales (\cref{balance de tensiones q} \cref{balance de tensiones d}, \cref{balance de tensiones 0}).
+Reemplazando en estas la relación entre $\omega_m(t)$ y $\omega_r(t)$ dada por la \cref{Relacion coordenadas electricas y mecanicas} obtenemos:
 
 \begin{align}
-    \frac{d}{dt} \begin{bmatrix} \dot{\theta_m}(t) \\ \dot{\omega_m}(t) \\ \dot{i^r_{qs}}(t) \\ \dot{i^r_{ds}}(t) \\ \dot{i_{0s}}(t) \\ \dot{T_s}(t) \end{bmatrix} &= \begin{bmatrix} \omega_m \\ \frac{3}{2} \frac{P_p i^r_{qs}(t)}{J_{eq}} \left[ \lambda'^r_{m} + (L_d - L_q) i^r_{ds}(t) \right] - \frac{b_{eq}}{J_{eq}} \omega_m(t) - \frac{T_l(t)}{J_{eq}r} \\ \frac{1}{L_q} \left( v^r_{qs}(t) - R_s(t) i^r_{qs} - [\lambda'^r_m + L_d i^r_{ds}] \omega_r(t) \right) \\ \frac{1}{L_d} \left( v^r_{ds}(t) - R_s(t) i^r_{ds} + L_q i^r_{qs} \omega_r(t) \right) \\ \frac{1}{L_{ls}} \left( v_{0s}(t) - R_s(t) i_{0s} \right) \\ \frac{3}{2} \frac{R_s(t)}{C_{ts}} \left( i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right) - \frac{1}{C_{ts}R_{ts-amb}} (T_s - T_{amb}) \end{bmatrix}
-    \label{sistema vectorial de ecuaciones}
+    \dot{i}^r_{qs}(t) &=  \frac{-R_s(t) i^r_{qs}(t)}{L_q} - \frac{\omega_m(t) \left[\lambda'^r_m - L_d P_p i^r_{ds}(t)\right]}{L_q}\\
+    \dot{i}^r_{ds}(t) &=  \frac{- R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p i^r_{qs}(t)\omega_m(t)}{L_d}  \\ 
+    \dot{i}_{0s}(t)   &= -\frac{1}{L_{ls}} R_s(t) i_{0s}(t)
+    \label{ecuaciones de estado 3 4 y 5}
 \end{align}
 
+La última ecuación de estado se obtiene relacionando las \cref{balance termico estator} y \cref{potencia de perdidas} obteniendose:
+\begin{equation}
+    \dot{T}^\circ_s(t) = \frac{3}{2} \frac{R_s(t) \left[ i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right]}{C_{ts}}
+    \label{ecuacion de estado 6}
+\end{equation}
+
+Cabe mencionar, para las útlimas ecuaciones de estado, que aunque se tiene un modelo lineal de evolución de la $R_S(t)$ con la $T^\circ_s(t)$ dado en la \cref{Rs}
+se decide no desarrollar la misma en las ecuaciones anteriores y se deja la dependencia explicita de $R_S$ con $t$ con el objeto de simplificar la notación
+y no oscurecer la explicación.
+
+% Ecuación vectorial de estado del sistema
+\textbf{Ecuación vectorial de estado del sistema}: se obtiene expresando en forma vectorial las ecuaciones obtenidas
+\begin{equation}
+    \begin{bmatrix} 
+    \dot{\theta}_m(t) \\ 
+    \dot{\omega}_m(t) \\ 
+    \dot{i}^r_{qs}(t) \\ 
+    \dot{i}^r_{ds}(t) \\ 
+    \dot{i}_{0s}(t) \\ 
+    \dot{T}^\circ_s(t) 
+    \end{bmatrix} 
+    = 
+    \begin{bmatrix} 
+    \omega_m(t) \\ 
+    \frac{3}{2} \frac{P_p i^r_{qs}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds}(t) \right]}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} \\ 
+    \frac{-R_s(t) i^r_{qs}(t)}{L_q} - \frac{\omega_m(t) \left[\lambda'^r_m - L_d P_p i^r_{ds}(t)\right]}{L_q}\\ 
+    \frac{- R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p i^r_{qs}(t)\omega_m(t)}{L_d}  \\ 
+    -\frac{1}{L_ls} R_s(t) i_{0s}(t)  \\ 
+    \frac{3}{2} \frac{R_s(t) \left[ i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right]}{C_{ts}}
+    \end{bmatrix}
+    + 
+    \begin{bmatrix} 
+    0 & 0 & 0 \\ 
+    0 & 0 & 0 \\ 
+    \frac{1}{L_q} & 0 & 0 \\ 
+    0 & \frac{1}{L_d} & 0  \\ 
+    0 & 0 & \frac{1}{L_{ls}}  \\ 
+    0 & 0 & 0
+    \end{bmatrix} 
+    \begin{bmatrix} 
+    v^r_{qs}(t) \\ 
+    v^r_{ds}(t) \\ 
+    v_{0s}(t)
+    \end{bmatrix}
+    - 
+    \begin{bmatrix} 
+    & 0 & 0 \\
+    & \frac{1}{J_{eq}} & 0 \\
+    & 0 & 0 \\
+    & 0 & 0 \\
+    & 0 & 0 \\
+    & 0 & \frac{1}{C_{ts} R_{ts-amb}}
+    \end{bmatrix}
+    \begin{bmatrix} 
+    T_l(t) \\ 
+    T_{amb}(t) 
+    \end{bmatrix}
+    \label{ecuacion vectorial de estado del sistema}
+\end{equation}
+
+
+En la \cref{ecuacion vectorial de estado del sistema} se han separado
+las relaciones que involucran a las variables de estado del sistema de las que involucran a las 
+entradas de manipulación y de las que involucran a las entradas perturbación (ver \cref{vector de estado del sistema}, \cref{vector de entradas de control} y \cref{vector de entradas de perturbacion}). Se puede notar
+que aunque el sistema es no lineal en las variables de estado (no se puede obtener una expresión de la forma $Ax(t)$ para las relaciones que involucran a las variables de estado), 
+si es lineal en las entradas tanto de perturbación como de control (las relaciones que involucran a las entradas se presentan como producto de matrices) salvo la dependencia de $T_l(t)$ con $\theta_l$ y por lo tanto con $\theta_m$ 
+dado en \cref{torque de carga}.
+
+% Ecuación vectorial de salida del sistema
+\textbf{Ecuación vectorial de salida del sistema:} se obtiene considerando que la salida de interés del sistema físico es $\theta_m(t)$:
+\begin{equation}
+    y = 
+    \begin{bmatrix}
+        1 & 0 & 0 & 0 & 0 & 0
+    \end{bmatrix}
+    \begin{bmatrix} \theta_m \\ \omega_m \\ i^r_{qs} \\ i^r_{ds} \\ i_{0s} \\ T^\circ_s \end{bmatrix}
+    \label{ecuacion vectorial de salida del sistema}
+\end{equation}
+
+
+%  Diagrama de bloques del sistema físico completo
+\textbf{Diagramas de bloques del sistema físico completo: } En la \cref{diagrama de bloques del sistema fisico} se muestra
+el diagrama de bloques del sistema físico completo constituido por los sub-sistemas mecánico, térmico y electromagnético cuyos diagramas
+respectivos se muestran en las \cref{diagrama de bloques sub-sistema mecanico completo}, \cref{subsistema termico},
+y \cref{sub-sistema electromagnetico}. A su vez, los componentes del sub-sistema electromagnético se detallan
+en las \cref{diagrama de bloques I_qs}, \cref{diagrama de bloques I_ds}, \cref{diagrama de bloques I_0s}, para las corrientes ($i_{qs}$, $i_{ds}$, $i_{0s}$ respectivamente) y en la \cref{diagrama de bloques T_m} para $T_m(t)$.
+Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park inversa} se detallan las transformaciones de Park directa e inversa respecticamente.
+
+% Diagramas
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
