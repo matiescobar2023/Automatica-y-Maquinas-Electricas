@@ -11,6 +11,7 @@
 \usepackage{adjustbox}
 \usepackage{cleveref}
 \usepackage{array}
+\newcommand{\defeq}{\mathrel{\mathop:}=}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 \renewcommand{\arraystretch}{1.5} % Ajusta este valor para más o menos espacio entre filas
 \usepackage[prepend]{epstopdf}
@@ -152,18 +153,18 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
     % Variables del modelo
     \item Vector de estado del sistema físico completo.
     \begin{equation}
-        X = \begin{bmatrix} \theta_m \\ \omega_m \\ i^r_{qs} \\ i^r_{ds} \\ i_{0s} \\ T_s \end{bmatrix}
+        \mathbf{X} = \begin{bmatrix} \theta_m \\ \omega_m \\ i^r_{qs} \\ i^r_{ds} \\ i_{0s} \\ T_s \end{bmatrix}
         \label{vector de estado del sistema}
     \end{equation}
     \item Vector de entradas de manipulación al modelo dinámico del sistema físico completo en coordenadas virtuales y reales respectivamente
     \begin{equation}
-        u_{c(qd0)} = \begin{bmatrix} v^r_{qs}(t) \\ v^r_{ds}(t) \\ v^r_{0s}(t)\end{bmatrix}
-        u_{c(abc)} = \begin{bmatrix} v_{as}(t) \\ v_{bs}(t) \\ v_{cs}(t)\end{bmatrix}
+        \mathbf{u_{c(qd0)}} = \begin{bmatrix} v^r_{qs}(t) \\ v^r_{ds}(t) \\ v^r_{0s}(t)\end{bmatrix}
+        \mathbf{u_{c(abc)}} = \begin{bmatrix} v_{as}(t) \\ v_{bs}(t) \\ v_{cs}(t)\end{bmatrix}
         \label{vector de entradas de control}
     \end{equation}
     \item Vector de entradas de perturbación al modelo dinámico del sistema físico completo.
     \begin{equation}
-        u_{d} = \begin{bmatrix} T_l(t) \\ T_{amb}^{\circ}(t)\end{bmatrix}
+        \mathbf{u_{d}} = \begin{bmatrix} T_l(t) \\ T_{amb}^{\circ}(t)\end{bmatrix}
         \label{vector de entradas de perturbacion}
     \end{equation}
     % Inversor trifásico.
@@ -447,11 +448,11 @@ dado en \cref{torque de carga}.
 % Ecuación vectorial de salida del sistema
 \textbf{Ecuación vectorial de salida del sistema:} se obtiene considerando que la salida de interés del sistema físico es $\theta_m(t)$:
 \begin{equation}
-    y = 
+    y(t) = 
     \begin{bmatrix}
         1 & 0 & 0 & 0 & 0 & 0
     \end{bmatrix}
-    \begin{bmatrix} \theta_m \\ \omega_m \\ i^r_{qs} \\ i^r_{ds} \\ i_{0s} \\ T^\circ_s \end{bmatrix}
+    \begin{bmatrix} \theta_m(t) \\ \omega_m(t) \\ i^r_{qs}(t) \\ i^r_{ds}(t) \\ i_{0s}(t) \\ T^\circ_s(t) \end{bmatrix}
     \label{ecuacion vectorial de salida del sistema}
 \end{equation}
 
@@ -539,7 +540,64 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
 \end{figure}
 
 
+% 5.1.1.B Linealización Jacobiana.
+\newpage
+\paragraph{\textbf{Linealización Jacobiana}}
+%Matrices Modelo linealizado
+%\begin{equation}
+%    \resizebox{\textwidth}{!}{
+%        $A = \left(\begin{array}{cccccc} 
+%        0 & 1 & 0 & 0 & 0 & 0\\ 
+%        -\frac{K_{l}\,\cos\left(\frac{\theta _{m}}{r}\right)}{J_{\mathrm{eq}}\,r^2} & -\frac{b_{\mathrm{eq}}}{J_{\mathrm{eq}}} & \frac{3\,\mathrm{Pp}\,\left(\lambda _{m}+i_{\mathrm{ds}}\,\left(L_{d}-L_{q}\right)\right)}{2\,J_{\mathrm{eq}}} & \frac{3\,\mathrm{Pp}\,i_{\mathrm{qs}}\,\left(L_{d}-L_{q}\right)}{2\,J_{\mathrm{eq}}} & 0 & 0\\ 
+%        0 & -\frac{3\,\mathrm{Pp}\,\left(i_{\mathrm{ds}}\,L_{d}+\lambda _{m}\right)}{2\,L_{q}} & -\frac{R_{\mathrm{sref}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{L_{q}} & -\frac{L_{d}\,\mathrm{Pp}\,\omega _{m}}{L_{q}} & 0 & -\frac{R_{\mathrm{sref}}\,\alpha _{\mathrm{cu}}\,i_{\mathrm{qs}}}{L_{q}}\\ 
+%        0 & \frac{L_{q}\,\mathrm{Pp}\,i_{\mathrm{qs}}}{L_{d}} & \frac{L_{q}\,\mathrm{Pp}\,\omega _{m}}{L_{d}} & -\frac{R_{\mathrm{sref}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{L_{d}} & 0 & -\frac{R_{\mathrm{sref}}\,\alpha _{\mathrm{cu}}\,i_{\mathrm{ds}}}{L_{d}}\\ 
+%        0 & 0 & 0 & 0 & -\frac{R_{\mathrm{sref}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{L_{\mathrm{ls}}} & -\frac{R_{\mathrm{sref}}\,\alpha _{\mathrm{cu}}\,i_{\mathrm{os}}}{L_{\mathrm{ls}}}\\ 
+%        0 & 0 & \frac{3\,R_{\mathrm{sref}}\,i_{\mathrm{qs}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{C_{\mathrm{ts}}} & \frac{3\,R_{\mathrm{sref}}\,i_{\mathrm{ds}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{C_{\mathrm{ts}}} & \frac{6\,R_{\mathrm{sref}}\,i_{\mathrm{os}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{C_{\mathrm{ts}}} & \frac{R_{\mathrm{sref}}\,\alpha _{\mathrm{cu}}\,\left(3\,{i_{\mathrm{ds}}}^2+6\,{i_{\mathrm{os}}}^2+3\,{i_{\mathrm{qs}}}^2\right)}{2\,C_{\mathrm{ts}}}-\frac{1}{C_{\mathrm{ts}}\,R_{\mathrm{ts},\mathrm{amb}}} 
+%        \end{array}\right)$
+%    }
+%    \label{eq:matriz_A}
+%\end{equation}
+El espacio de operación global NL cuasi-estacionario se obtiene considerando:
+\[
+\begin{cases}
+\frac{d\mathbf{X}_o(t)}{dt} = \mathbf{f}(\mathbf{X}_o(t), \mathbf{U}_o(t)) \approx 0/\text{const};  \mathbf{X}_o(0) \defeq \mathbf{x}_0 \\
+\mathbf{Y}_o(t) = \mathbf{C} \cdot \mathbf{X}_o(t)
+\end{cases}
+\]
+\begin{equation}
+    A = \begin{bmatrix}
+        \nabla_{\mathbf{X}} \dot{\theta}_m(t) \\ 
+        \nabla_{\mathbf{X}} \dot{\omega}_m(t) \\
+        \nabla_{\mathbf{X}} \dot{i}^r_{qs}(t) \\ 
+        \nabla_{\mathbf{X}} \dot{i}^r_{ds}(t) \\ 
+        \nabla_{\mathbf{X}} \dot{i}^r_{ds}(t) \\ 
+        \nabla_{\mathbf{X}} \dot{T}^\circ_s(t) 
+        \end{bmatrix}
+    \label{eq:matriz_A}
+\end{equation}
 
+En donde los gradientes indicados vienen dados por la \cref{gradientes}.
+\begin{equation}
+    \begin{aligned}
+        \nabla_{\mathbf{X}} \dot{\theta}_m(t) &= \begin{bmatrix} 0 & 1 & 0 & 0 & 0 & 0 \end{bmatrix}\\
+        \nabla_{\mathbf{X}} \dot{\omega}_m(t) &= \begin{bmatrix}
+        \frac{-K_{l} \cos\left(\frac{\theta_m(t)}{r}\right)}{J_{eq} r^2} & \frac{-b_{eq}}{J_{eq}} & \frac{3 P_p \left(\lambda_m+i^r_{ds}(t) \left(L_d-L_q\right)\right)}{2 J_{eq}} & \frac{3 P_p i^r_{qs}(t) \left(L_d-L_q\right)}{2 J_{eq}} & 0 & 0 
+        \end{bmatrix}\\
+        \nabla_{\mathbf{X}} \dot{i}^r_{qs}(t) &= \begin{bmatrix} 
+        0 & \frac{-3 P_p \left(i^r_{ds}(t) L_d+\lambda_m\right)}{2 L_q} & \frac{-R_s(t)}{L_q} & \frac{-L_d P_p \omega_m(t)}{L_q} & 0 & \frac{-R_{sREF} \alpha_{cu} i^r_{qs}(t)}{L_q} 
+        \end{bmatrix}\\
+        \nabla_{\mathbf{X}} \dot{i}^r_{ds}(t) &= \begin{bmatrix} 
+        0 & \frac{L_q P_p i^r_{qs}(t)}{L_d} & \frac{L_q P_p \omega_m(t)}{L_d} & \frac{-R_s(t)}{L_d} & 0 & \frac{-R_{sREF} \alpha_{cu} i^r_{ds}(t)}{L_d} 
+        \end{bmatrix}\\
+        \nabla_{\mathbf{X}} \dot{i}_{0s}(t) &= \begin{bmatrix} 
+        0 & 0 & 0 & 0 & \frac{-R_s(t)}{L_{ls}} & \frac{-R_{sREF} \alpha_{cu} i_{0s}(t)}{L_{ls}} 
+        \end{bmatrix}\\
+        \nabla_{\mathbf{X}} \dot{T^\circ}_s(t) &= \begin{bmatrix} 
+        0 & 0 & \frac{3 R_s(t) i^r_{qs}(t)}{C_{ts}} & \frac{3 R_s(t) i^r_{ds}(t)}{C_{ts}} & \frac{6 R_s(t) i^r_{0s}(t)}{C_{ts}} & \frac{3 R_{sREF} \alpha_{cu} \left({i^r_{ds}(t)}^2+2 {i^r_{0s}(t)}^2+{i^r_{qs}(t)}^2\right)}{2 C_{ts}} - \frac{1}{C_{ts} R_{ts}} 
+        \end{bmatrix}
+    \end{aligned}
+    \label{gradientes}
+\end{equation}
 
 
 
@@ -633,32 +691,5 @@ Appendixes should appear before the acknowledgment.
 \bibitem{c6} J. Wang, ``Fundamentals of erbium-doped fiber amplifiers arrays (Periodical styleÑSubmitted for publication),'' IEEE J. Quantum Electron., submitted for publication.
 
 \end{thebibliography}
-
-Matrices Modelo linealizado
-\begin{equation*}\label{eq:matriz_A}
-\resizebox{\textwidth}{!}{
-$A = \left(\begin{array}{cccccc} 
-0 & 1 & 0 & 0 & 0 & 0\\ 
--\frac{K_{l}\,\cos\left(\frac{\theta _{m}}{r}\right)}{J_{\mathrm{eq}}\,r^2} & -\frac{b_{\mathrm{eq}}}{J_{\mathrm{eq}}} & \frac{3\,\mathrm{Pp}\,\left(\lambda _{m}+i_{\mathrm{ds}}\,\left(L_{d}-L_{q}\right)\right)}{2\,J_{\mathrm{eq}}} & \frac{3\,\mathrm{Pp}\,i_{\mathrm{qs}}\,\left(L_{d}-L_{q}\right)}{2\,J_{\mathrm{eq}}} & 0 & 0\\ 
-0 & -\frac{3\,\mathrm{Pp}\,\left(i_{\mathrm{ds}}\,L_{d}+\lambda _{m}\right)}{2\,L_{q}} & -\frac{R_{\mathrm{sref}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{L_{q}} & -\frac{L_{d}\,\mathrm{Pp}\,\omega _{m}}{L_{q}} & 0 & -\frac{R_{\mathrm{sref}}\,\alpha _{\mathrm{cu}}\,i_{\mathrm{qs}}}{L_{q}}\\ 
-0 & \frac{L_{q}\,\mathrm{Pp}\,i_{\mathrm{qs}}}{L_{d}} & \frac{L_{q}\,\mathrm{Pp}\,\omega _{m}}{L_{d}} & -\frac{R_{\mathrm{sref}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{L_{d}} & 0 & -\frac{R_{\mathrm{sref}}\,\alpha _{\mathrm{cu}}\,i_{\mathrm{ds}}}{L_{d}}\\ 
-0 & 0 & 0 & 0 & -\frac{R_{\mathrm{sref}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{L_{\mathrm{ls}}} & -\frac{R_{\mathrm{sref}}\,\alpha _{\mathrm{cu}}\,i_{\mathrm{os}}}{L_{\mathrm{ls}}}\\ 
-0 & 0 & \frac{3\,R_{\mathrm{sref}}\,i_{\mathrm{qs}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{C_{\mathrm{ts}}} & \frac{3\,R_{\mathrm{sref}}\,i_{\mathrm{ds}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{C_{\mathrm{ts}}} & \frac{6\,R_{\mathrm{sref}}\,i_{\mathrm{os}}\,\left(\alpha _{\mathrm{cu}}\,\left(T_{s}-T_{\mathrm{sref}}\right)+1\right)}{C_{\mathrm{ts}}} & \frac{R_{\mathrm{sref}}\,\alpha _{\mathrm{cu}}\,\left(3\,{i_{\mathrm{ds}}}^2+6\,{i_{\mathrm{os}}}^2+3\,{i_{\mathrm{qs}}}^2\right)}{2\,C_{\mathrm{ts}}}-\frac{1}{C_{\mathrm{ts}}\,R_{\mathrm{ts},\mathrm{amb}}} 
-\end{array}\right)$
-}
-\end{equation*}
-
-\begin{equation*}\label{eq:matriz_A}
-    \resizebox{\textwidth}{!}{
-    $A = \left(\begin{array}{cccccc} 
-    0 & 1 & 0 & 0 & 0 & 0\\ 
-    \frac{-K_{l} \cos\left(\frac{\theta_m(t)}{r}\right)}{J_{eq} r^2} & \frac{-b_{eq}}{J_{eq}} & \frac{3 P_p \left(\lambda_m+i^r_{ds}(t) \left(L_d-L_q\right)\right)}{2 J_{eq}} & \frac{3 P_p i^r_{qs}(t) \left(L_d-L_q\right)}{2 J_{eq}} & 0 & 0\\ 
-    0 & \frac{-3 P_p \left(i^r_{ds}(t) L_d+\lambda_m\right)}{2 L_q} & \frac{-R_s(t)}{L_q} & \frac{-L_d P_p \omega_m(t)}{L_q} & 0 & \frac{-R_{sREF} \alpha_{cu} i^r_{qs}(t)}{L_q}\\ 
-    0 & \frac{L_q P_p i^r_{qs}(t)}{L_d} & \frac{L_q P_p \omega_m(t)}{L_d} & \frac{-R_s(t)}{L_d} & 0 & \frac{-R_{sREF} \alpha_{cu} i^r_{ds}(t)}{L_d}\\ 
-    0 & 0 & 0 & 0 & \frac{-R_s(t)}{L_{ls}} & \frac{-R_{sREF} \alpha_{cu} i_{0s}(t)}{L_{ls}}\\ 
-    0 & 0 & \frac{3 R_s(t) i^r_{qs}(t)}{C_{ts}} & \frac{3 R_s(t) i^r_{ds}(t)}{C_{ts}} & \frac{6 R_s(t) i^r_{0s}(t)}{C_{ts}} & \frac{3 R_{sREF} \alpha_{cu} \left({i^r_{ds}(t)}^2+2 {i^r_{0s}(t)}^2+{i^r_{qs}(t)}^2\right)}{2 C_{ts}}-\frac{1}{C_{ts} R_{ts}} 
-    \end{array}\right)$
-    }
-    \end{equation*}
 
 \end{document}
