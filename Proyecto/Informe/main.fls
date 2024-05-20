@@ -580,6 +580,9 @@ INPUT C:\Users\Juan\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmrc8t.v
 INPUT C:\Users\Juan\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\Juan\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\Juan\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
+INPUT C:\Users\Juan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\Juan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx7.tfm
+INPUT C:\Users\Juan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
 INPUT .\imágenes\\1-Brazo.PNG
 INPUT .\imágenes\\1-Brazo.PNG
 INPUT imágenes\\1-Brazo.PNG
@@ -606,9 +609,6 @@ INPUT .\imágenes\\2-Subsistema_Mecánico_Completo-eps-converted-to.pdf
 INPUT .\imágenes\\2-Subsistema_Mecánico_Completo-eps-converted-to.pdf
 INPUT .\imágenes\\2-Subsistema_Mecánico_Completo-eps-converted-to.pdf
 INPUT .\imágenes\\2-Subsistema_Mecánico_Completo-eps-converted-to.pdf
-INPUT C:\Users\Juan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-INPUT C:\Users\Juan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx7.tfm
-INPUT C:\Users\Juan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
 INPUT .\imágenes\\9-Sistema_Físico_Completo.eps
 INPUT .\imágenes\\9-Sistema_Físico_Completo.eps
 INPUT imágenes\\9-Sistema_Físico_Completo.eps
