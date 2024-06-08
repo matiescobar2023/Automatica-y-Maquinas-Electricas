@@ -1,0 +1,327 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ieeeconf
+\begin_preamble
+\overrideIEEEmargins
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb} % Para símbolos matemáticos adicionales
+\usepackage{adjustbox}
+\usepackage{cleveref}
+\usepackage{array}
+
+\newcommand{\defeq}{\mathrel{\mathop:}=}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{1.5} % Ajusta este valor para más o menos espacio entre filas
+\usepackage[prepend]{epstopdf}
+\graphicspath{{imagenes/}}
+
+% Configuración del encabezado y el pie de página
+\pagestyle{fancy}
+\fancyhf{}
+
+% Encabezado
+\fancyhead[L]{UNCuyo -- Ing. Mecatrónica \\ Mendoza - Argentina}
+\fancyhead[C]{\textbf{311 -- AUTOMÁTICA Y MÁQUINAS ELÉCTRICAS \\ PROYECTO GLOBAL INTEGRADOR}}
+\fancyhead[R]{Año: 2024 \\ Alumnos: Borquez y Escobar\\Fecha: 06/06/2024}
+
+% Pie de página
+\fancyfoot[C]{Página \thepage\ de \pageref{LastPage}} % Muestra "Página x de xx"
+
+
+\fancypagestyle{plain}{
+  \fancyhf{}  % Limpiar todos los encabezados y pies de página
+  \fancyhead[L]{UNCuyo -- Ing. Mecatrónica \\ Mendoza - Argentina}
+  \fancyhead[C]{\textbf{311 -- AUTOMÁTICA Y MÁQUINAS ELÉCTRICAS \\ PROYECTO GLOBAL INTEGRADOR}}
+  \fancyhead[R]{Año: 2024 \\ Alumnos: Borquez y Escobar\\Fecha: 06/06/2024}fancyhead[R]{Mi Encabezado Derecho}   % Encabezado derecho
+  \fancyfoot[C]{Página \thepage\ de \pageref{LastPage}} % Muestra "Página x de xx"
+}
+
+% Línea en la parte superior del encabezado
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Línea en la parte inferior del pie de página
+\renewcommand{\footrulewidth}{0.4pt}
+\end_preamble
+\options a4paper, 10pt, onecolumn, journal
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding utf8
+\fontencoding T1
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+Proyecto Global Integrador: Control de Accionamiento de CA con Motor Sincrónico
+ de Imanes Permanentes
+\end_layout
+
+\begin_layout Author
+Borquez Juan y Escobar Matías
+\end_layout
+
+\begin_layout Abstract
+En
+\end_layout
+
+\begin_layout Section
+INTRODUCCIÓN
+\end_layout
+
+\begin_layout Standard
+El estudio que se presenta en este documento trata sobre el modelado, simulación
+, diseño y análisis de desempeño de un Sistema de Control Automático de
+ Posición y Movimiento para un Accionamiento electromecánico de 4 cuadrantes,
+ compuesto por: una máquina eléctrica de corriente alterna (CA) trifásica
+ sincrónica con excitación por imanes permanentes (PMSM), alimentada por
+ inversor trifásico desde fuente de corriente continua (CC); un reductor
+ de velocidad de engranajes planetarios de salida hacia la carga mecánica;
+ realimentación con 1 sensor de posición en el eje del motor, más 3 sensores
+ de corriente instantánea de fases en la salida del inversor trifásico y
+ 1 sensor de temperatura del bobinado de estator.
+\end_layout
+
+\begin_layout Section
+PRESENTACIÓN DEL PROBLEMA
+\end_layout
+
+\begin_layout Standard
+El problema bajo estudio se encuentra bien detallado en la guía de referencia
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "c1"
+literal "false"
+
+\end_inset
+
+, por lo que en esta sección se indican solo los aspectos más relevantes
+ de cada una de las partes del problema junto con las ecuaciones que modelan
+ cada parte del sistema.
+\end_layout
+
+\begin_layout Subsection
+Carga Mecánica
+\end_layout
+
+\begin_layout Standard
+La aplicación se trata del control de movimiento de 1 eje (descentralizado)
+ para articulación de brazo manipulador robótico elemental de un grado de
+ libertad (1 g.d.l.) rotacional de eje horizontal sometido a la acción de la
+ aceleración de gravedad (péndulo rígido actuado), con eje de rotación fijo
+ a base en sistema de referencia inercial con parámetros equivalentes variables
+ según sea la carga útil transportada en el extremo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 0
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width ""
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Imagenes/1-Brazo.eps
+	scale 50
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Robot manipulador elemental de 1 g.d.l.
+ en plano vertical (péndulo rígido actuado).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "R. Kelly et al, Control of Robot Manipulators in Joint Space. Springer, 2005. (Example and Figure 2.2)."
+key "c1"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "G. O. Young, ``Synthetic structure of industrial plastics (Book style with paper title and editor),'' 	in Plastics, 2nd ed. vol. 3, J. Peters, Ed.  New York: McGraw-Hill, 1964, pp. 15--64."
+key "key-2"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label " P. Krause et al, Analysis of Electric Machinery and Drive Systems, 3rd Ed.. IEEE-Wiley, 2013."
+key "key-3"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "B. Smith, ``An approach to graphs of linear forms (Unpublished work style),'' unpublished."
+key "key-4"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "E. H. Miller, ``A note on reflector arrays (Periodical styleÑAccepted for publication),'' IEEE Trans. Antennas Propagat., to be publised."
+key "key-5"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "J. Wang, ``Fundamentals of erbium-doped fiber amplifiers arrays (Periodical styleÑSubmitted for publication),'' IEEE J. Quantum Electron., submitted for publication."
+key "key-6"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
