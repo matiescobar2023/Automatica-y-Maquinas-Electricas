@@ -1,4 +1,5 @@
 clear all
+clc
 b_l = 0.1;%+-0.03
 J_l = 0.0833;%+[0...0.375]
 K_l = 2.452;%+[0...7.355]
@@ -23,11 +24,25 @@ T_amb = 25;
 J_eq = J_m + J_l/(r^2);
 b_eq = b_m + b_l/(r^2);
 %Variables controlador
-Rqp = 2;
-Rdp = 3;
-Ksiq = 1;
-Ksa = 1;
-ba = 1;
+Rqp = 5000*L_q;
+Rdp = 5000*L_d;
+R0p = 5000*L_ls;
+w_pos = 800;
+n = 2.5;
+
+Ksiq = J_eq*w_pos^3;
+Ksa = J_eq*n*w_pos^2;
+ba = J_eq*n*w_pos;
+
+P_o = 3200;
+%Sin integrador
+Ke_omega = P_o^2;
+Ke_theta = 2*P_o;
+
+%Con integrador
+% Ke_theta = 3*P_o;
+% Ke_omega = 3*P_o^2;
+% Ke_omega_i = P_o^3;
 
 %syms dtheta_m(t) omega_m(t) J_eq domega_m(t) T_m(t) b_eq T_l(t) v_{qs}^r(t) R_s(t) i_{qs}^r(t) L_q di_{qs}^r(t) lambda_{m}^r L d_i_dsr(t) omega_r(t) v_{ds}^r(t) i_{ds}^r(t) id_s(t) Lls di0_s(t) T_perd(t) Cts dT0_s(t) Rts_amb Tamb(t) i_0s(t) i_2as(t) i_2bs(t) i_2cs(t) i_2qs(t) i_2ds(t) i_20s(t) Pp Rs_REF alpha_Cu Ts_REF;
 
