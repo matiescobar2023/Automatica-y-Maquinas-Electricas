@@ -599,8 +599,66 @@ En donde los gradientes indicados vienen dados por la \cref{gradientes}.
     \label{gradientes}
 \end{equation}
 
+\paragraph{\textbf{Linealización Por Realimentación No Lineal}}
+En este análisis no se tendra en cuenta el acoplamiento no lineal con el subsistema térmico, pero si su dinámica lineal. Para lograr esto, se impone directamente la especificación $i^{r}_{ds}(t)\equiv0$. Las ecuaciones resultantes son:
+
+	align
+
+\begin{equation}
+	\begin{cases}
+		\dot{\theta}_m(t) = {\omega}_m(t)\\
+		\dot{\omega}_m(t) = \frac{3}{2} \frac{P_p i^r_{qs}(t)\lambda^r_m}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} - \frac{T_l(t)}{r J_{eq}}\\
+		\dot{i}^r_{qs}(t) = -\frac{R_s i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \lambda^r_m}{L_q}+ \frac{v^r_{qs}(t)}{L_q}
+    \end{cases}
+	\label{ecuacion con ids=0}
+\end{equation}
+
+Expresandolo en forma de espacio de estados, el sistema quedaria de la siguiente manera:
+\begin{equation}
+	\begin{cases}
+		\begin{bmatrix}
+			\dot{\theta}_m(t) \\ 
+			\dot{\omega}_m(t)\\
+			\dot{i}^r_{qs}(t)  
+		\end{bmatrix}
+		 = 
+		 \begin{bmatrix}
+		 	0 & 1 & 0\\ 
+		 	0 & - \frac{b_{eq}}{J_{eq}} & \frac{3}{2} \frac{P_p \lambda^r_m}{J_{eq}}\\
+		 	0 &  - \frac{P_p  \lambda^r_m}{L_q} & -\frac{R_s}{L_q}  
+		 \end{bmatrix}
+		 \begin{bmatrix}
+		 	{\theta}_m(t) \\ 
+		 	{\omega}_m(t)\\
+		 	{i}^r_{qs}(t)  
+		 \end{bmatrix}
+		 +
+		 \begin{bmatrix}
+		 	0 \\ 
+		 	0\\
+		 	\frac{1}{L_q}  
+		 \end{bmatrix}
+		 v^r_{qs}(t)+
+		 \begin{bmatrix}
+		 	0 \\ 
+		 	- \frac{1}{r J_{eq}}\\
+		 	0 
+		 \end{bmatrix}
+		 T_l(t)\\
+		 y = \begin{bmatrix}
+		 		1 & 0 & 0
+		 	 \end{bmatrix}
+		 	 \begin{bmatrix}
+		 	 	{\theta}_m(t) \\ 
+		 	 	{\omega}_m(t)\\
+		 	 	{i}^r_{qs}(t)
+		 	 \end{bmatrix}
+	\end{cases}
+	\label{ecuacion con ids=0}
+\end{equation}
 
 
+Para lograr esta especificación es necesario realizar una ley de control minima que consiste en aplicar en la entrada $v^{r}_{ds}$
 
 
 
