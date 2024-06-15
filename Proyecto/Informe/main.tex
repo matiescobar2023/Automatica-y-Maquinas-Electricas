@@ -602,7 +602,7 @@ En donde los gradientes indicados vienen dados por la \cref{gradientes}.
 \paragraph{\textbf{Linealización Por Realimentación No Lineal}}
 En este análisis no se tendra en cuenta el acoplamiento no lineal con el subsistema térmico, pero si su dinámica lineal. Para lograr esto, se impone directamente la especificación $i^{r}_{ds}(t)\equiv0$. Las ecuaciones resultantes son:
 
-	align
+
 
 \begin{equation}
 	\begin{cases}
@@ -657,9 +657,27 @@ Expresandolo en forma de espacio de estados, el sistema quedaria de la siguiente
 	\label{ecuacion con ids=0}
 \end{equation}
 
+Para lograr esta especificación es necesario realizar una ley de control minima que se determina a partir de la ecuacion de estado para $i^{r}_{ds}$, partiendo de la hipotesis de que $i^{r}_{ds}(0)=0$:
+\begin{equation}
+	\begin{aligned}
+		\dot{i}^r_{ds}(t) = -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t)i^r_{qs}(t)}{L_d}  + \frac{v^r_{ds}(t)}{L_d}\\
+		0= \frac{L_q P_p \omega_m(t)i^r_{qs}(t)}{L_d}  + \frac{v^r_{ds}(t)}{L_d}\Rightarrow	v^{r}_{ds}= -L_{q}i^{r}_{qs}Pp\omega_{m}\\
+		\label{ecuacion determinacion ley de control minima}
+	\end{aligned}	
+\end{equation}
 
-Para lograr esta especificación es necesario realizar una ley de control minima que consiste en aplicar en la entrada $v^{r}_{ds}$
+De esta manera queda determinada la ley de control mínima, que debe aplicarse para lograr el desacoplamiento de los canales de flujo magnético y torque.
 
+Luego se implementó, en el modelo global NL completo, esta  ley de control mínima mediante un controlador parcial incorporando el inversor (modulador de tensión trifásico equivalente), las Transformaciones de Park y los sensores de realimentación ideal de variables de estado:
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{12-Ley_de_control_minima}}
+	\end{adjustbox}
+	\caption{Implementación de ley de control mínima}
+	\label{Implementación de ley de control mínima}
+\end{figure}
 
 
 
