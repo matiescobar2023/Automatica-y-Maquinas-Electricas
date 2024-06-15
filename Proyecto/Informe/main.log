@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.10)  15 JUN 2024 18:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.10)  15 JUN 2024 20:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -364,14 +364,6 @@ LaTeX Warning: Label `ecuacion con ids=0' multiply defined.
 
 
 LaTeX Warning: Label `ecuacion con ids=0@cref' multiply defined.
-
-
-LaTeX Warning: Label `ecuacion determinacion ley de control minima' multiply de
-fined.
-
-
-LaTeX Warning: Label `ecuacion determinacion ley de control minima@cref' multip
-ly defined.
 
 )
 \openout1 = `main.aux'.
@@ -739,7 +731,7 @@ on: found PDF version <1.7>, but at most version <1.5> allowed
 <12-Ley_de_control_minima.pdf, id=106, 794.97pt x 614.295pt>
 File: 12-Ley_de_control_minima.pdf Graphic file (type pdf)
 <use 12-Ley_de_control_minima.pdf>
-Package pdftex.def Info: 12-Ley_de_control_minima.pdf  used on input line 675.
+Package pdftex.def Info: 12-Ley_de_control_minima.pdf  used on input line 672.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
 
@@ -753,6 +745,16 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 
 [11 <./12-Ley_de_control_minima.pdf>]
 
+pdfTeX warning: pdflatex.exe (file ./13-Ley_de_control_complementaria.pdf): PDF
+ inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<13-Ley_de_control_complementaria.pdf, id=113, 794.97pt x 614.295pt>
+File: 13-Ley_de_control_complementaria.pdf Graphic file (type pdf)
+<use 13-Ley_de_control_complementaria.pdf>
+Package pdftex.def Info: 13-Ley_de_control_complementaria.pdf  used on input li
+ne 702.
+(pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
+
+
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -761,7 +763,17 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[12] 
+[12 <./13-Ley_de_control_complementaria.pdf>]
+
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+[13] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (main.aux)
  ***********
@@ -774,10 +786,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7337 strings out of 473937
- 131701 string characters out of 5739564
+ 7360 strings out of 473937
+ 132631 string characters out of 5739564
  1956893 words of memory out of 5000000
- 30054 multiletter control sequences out of 15000+600000
+ 30077 multiletter control sequences out of 15000+600000
  670867 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,16n,65p,733b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -797,9 +809,9 @@ s/LaTEX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Programas/LaTEX/fonts/type
 utmb8a.pfb><D:/Programas/LaTEX/fonts/type1/urw/times/utmbi8a.pfb><D:/Programas/
 LaTEX/fonts/type1/urw/times/utmr8a.pfb><D:/Programas/LaTEX/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on main.pdf (12 pages, 707282 bytes).
+Output written on main.pdf (13 pages, 1022513 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
+ 209 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
