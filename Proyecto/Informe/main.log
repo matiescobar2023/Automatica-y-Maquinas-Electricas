@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.10)  15 JUN 2024 18:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.10)  15 JUN 2024 18:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -365,6 +365,14 @@ LaTeX Warning: Label `ecuacion con ids=0' multiply defined.
 
 LaTeX Warning: Label `ecuacion con ids=0@cref' multiply defined.
 
+
+LaTeX Warning: Label `ecuacion determinacion ley de control minima' multiply de
+fined.
+
+
+LaTeX Warning: Label `ecuacion determinacion ley de control minima@cref' multip
+ly defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -490,7 +498,7 @@ o.pdf>
 (epstopdf)                    size: 21978 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=9-Sistema_Físico_Co
 mpleto-eps-converted-to.pdf 9-Sistema_Físico_Completo.eps>
-(epstopdf)             \includegraphics on input line 472.
+(epstopdf)             \includegraphics on input line 471.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -501,7 +509,7 @@ ed
 File: 9-Sistema_Físico_Completo-eps-converted-to.pdf Graphic file (type pdf)
 <use 9-Sistema_Físico_Completo-eps-converted-to.pdf>
 Package pdftex.def Info: 9-Sistema_Físico_Completo-eps-converted-to.pdf  used 
-on input line 472.
+on input line 471.
 (pdftex.def)             Requested size: 562.09863pt x 297.10927pt.
 Package epstopdf Info: Source file: <3-Subsistema_Térmico.eps>
 (epstopdf)                    date: 2024-06-08 23:22:47
@@ -512,7 +520,7 @@ Package epstopdf Info: Source file: <3-Subsistema_Térmico.eps>
 (epstopdf)                    size: 13612 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=3-Subsistema_Térmic
 o-eps-converted-to.pdf 3-Subsistema_Térmico.eps>
-(epstopdf)             \includegraphics on input line 480.
+(epstopdf)             \includegraphics on input line 479.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -522,7 +530,7 @@ pdfTeX warning: pdflatex.exe (file ./3-Subsistema_Térmico-eps-converted-to.pdf
 File: 3-Subsistema_Térmico-eps-converted-to.pdf Graphic file (type pdf)
 <use 3-Subsistema_Térmico-eps-converted-to.pdf>
 Package pdftex.def Info: 3-Subsistema_Térmico-eps-converted-to.pdf  used on in
-put line 480.
+put line 479.
 (pdftex.def)             Requested size: 462.72762pt x 264.98935pt.
 Package epstopdf Info: Source file: <8-Subsistema_Electromagnético.eps>
 (epstopdf)                    date: 2024-06-08 23:22:47
@@ -533,7 +541,7 @@ ed-to.pdf>
 (epstopdf)                    size: 12812 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=8-Subsistema_Electro
 magnético-eps-converted-to.pdf 8-Subsistema_Electromagnético.eps>
-(epstopdf)             \includegraphics on input line 488.
+(epstopdf)             \includegraphics on input line 487.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -546,7 +554,7 @@ File: 8-Subsistema_Electromagnético-eps-converted-to.pdf Graphic file (type pd
 f)
 <use 8-Subsistema_Electromagnético-eps-converted-to.pdf>
 Package pdftex.def Info: 8-Subsistema_Electromagnético-eps-converted-to.pdf  u
-sed on input line 488.
+sed on input line 487.
 (pdftex.def)             Requested size: 325.2142pt x 299.11676pt.
 Package epstopdf Info: Source file: <4-I_qs.eps>
 (epstopdf)                    date: 2024-06-08 23:22:47
@@ -556,7 +564,7 @@ Package epstopdf Info: Source file: <4-I_qs.eps>
 (epstopdf)                    size: 7747 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=4-I_qs-eps-converted
 -to.pdf 4-I_qs.eps>
-(epstopdf)             \includegraphics on input line 496.
+(epstopdf)             \includegraphics on input line 495.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -565,7 +573,7 @@ n: found PDF version <1.7>, but at most version <1.5> allowed
 <4-I_qs-eps-converted-to.pdf, id=41, 373.395pt x 143.53625pt>
 File: 4-I_qs-eps-converted-to.pdf Graphic file (type pdf)
 <use 4-I_qs-eps-converted-to.pdf>
-Package pdftex.def Info: 4-I_qs-eps-converted-to.pdf  used on input line 496.
+Package pdftex.def Info: 4-I_qs-eps-converted-to.pdf  used on input line 495.
 (pdftex.def)             Requested size: 373.39409pt x 143.53589pt.
 Package epstopdf Info: Source file: <5-I_ds.eps>
 (epstopdf)                    date: 2024-06-08 23:22:47
@@ -575,7 +583,7 @@ Package epstopdf Info: Source file: <5-I_ds.eps>
 (epstopdf)                    size: 6423 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=5-I_ds-eps-converted
 -to.pdf 5-I_ds.eps>
-(epstopdf)             \includegraphics on input line 504.
+(epstopdf)             \includegraphics on input line 503.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -584,7 +592,7 @@ n: found PDF version <1.7>, but at most version <1.5> allowed
 <5-I_ds-eps-converted-to.pdf, id=42, 268.00125pt x 86.3225pt>
 File: 5-I_ds-eps-converted-to.pdf Graphic file (type pdf)
 <use 5-I_ds-eps-converted-to.pdf>
-Package pdftex.def Info: 5-I_ds-eps-converted-to.pdf  used on input line 504.
+Package pdftex.def Info: 5-I_ds-eps-converted-to.pdf  used on input line 503.
 (pdftex.def)             Requested size: 268.00058pt x 86.32227pt.
 Package epstopdf Info: Source file: <6-I_0s.eps>
 (epstopdf)                    date: 2024-06-08 23:22:47
@@ -594,7 +602,7 @@ Package epstopdf Info: Source file: <6-I_0s.eps>
 (epstopdf)                    size: 5394 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=6-I_0s-eps-converted
 -to.pdf 6-I_0s.eps>
-(epstopdf)             \includegraphics on input line 512.
+(epstopdf)             \includegraphics on input line 511.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -603,7 +611,7 @@ n: found PDF version <1.7>, but at most version <1.5> allowed
 <6-I_0s-eps-converted-to.pdf, id=43, 239.89626pt x 75.28125pt>
 File: 6-I_0s-eps-converted-to.pdf Graphic file (type pdf)
 <use 6-I_0s-eps-converted-to.pdf>
-Package pdftex.def Info: 6-I_0s-eps-converted-to.pdf  used on input line 512.
+Package pdftex.def Info: 6-I_0s-eps-converted-to.pdf  used on input line 511.
 (pdftex.def)             Requested size: 239.89566pt x 75.28105pt.
 Package epstopdf Info: Source file: <7-T_m.eps>
 (epstopdf)                    date: 2024-06-08 23:22:47
@@ -613,7 +621,7 @@ Package epstopdf Info: Source file: <7-T_m.eps>
 (epstopdf)                    size: 6317 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=7-T_m-eps-converted-
 to.pdf 7-T_m.eps>
-(epstopdf)             \includegraphics on input line 520.
+(epstopdf)             \includegraphics on input line 519.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -622,7 +630,7 @@ pdfTeX warning: pdflatex.exe (file ./7-T_m-eps-converted-to.pdf): PDF inclusion
 <7-T_m-eps-converted-to.pdf, id=44, 285.065pt x 85.31876pt>
 File: 7-T_m-eps-converted-to.pdf Graphic file (type pdf)
 <use 7-T_m-eps-converted-to.pdf>
-Package pdftex.def Info: 7-T_m-eps-converted-to.pdf  used on input line 520.
+Package pdftex.def Info: 7-T_m-eps-converted-to.pdf  used on input line 519.
 (pdftex.def)             Requested size: 285.0643pt x 85.31853pt.
 Package epstopdf Info: Source file: <10-Transformación_de_Park.eps>
 (epstopdf)                    date: 2024-06-08 23:22:47
@@ -633,7 +641,7 @@ o.pdf>
 (epstopdf)                    size: 27329 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=10-Transformación_d
 e_Park-eps-converted-to.pdf 10-Transformación_de_Park.eps>
-(epstopdf)             \includegraphics on input line 528.
+(epstopdf)             \includegraphics on input line 527.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -645,7 +653,7 @@ ed
 File: 10-Transformación_de_Park-eps-converted-to.pdf Graphic file (type pdf)
 <use 10-Transformación_de_Park-eps-converted-to.pdf>
 Package pdftex.def Info: 10-Transformación_de_Park-eps-converted-to.pdf  used 
-on input line 528.
+on input line 527.
 (pdftex.def)             Requested size: 589.1998pt x 336.25543pt.
 Package epstopdf Info: Source file: <11-Transformación_de_Park_Inversa.eps>
 (epstopdf)                    date: 2024-06-08 23:22:47
@@ -656,7 +664,7 @@ verted-to.pdf>
 (epstopdf)                    size: 24177 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=11-Transformación_d
 e_Park_Inversa-eps-converted-to.pdf 11-Transformación_de_Park_Inversa.eps>
-(epstopdf)             \includegraphics on input line 536.
+(epstopdf)             \includegraphics on input line 535.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -669,7 +677,7 @@ File: 11-Transformación_de_Park_Inversa-eps-converted-to.pdf Graphic file (typ
 e pdf)
 <use 11-Transformación_de_Park_Inversa-eps-converted-to.pdf>
 Package pdftex.def Info: 11-Transformación_de_Park_Inversa-eps-converted-to.pd
-f  used on input line 536.
+f  used on input line 535.
 (pdftex.def)             Requested size: 561.09488pt x 336.25543pt.
 
 
@@ -731,7 +739,7 @@ on: found PDF version <1.7>, but at most version <1.5> allowed
 <12-Ley_de_control_minima.pdf, id=106, 794.97pt x 614.295pt>
 File: 12-Ley_de_control_minima.pdf Graphic file (type pdf)
 <use 12-Ley_de_control_minima.pdf>
-Package pdftex.def Info: 12-Ley_de_control_minima.pdf  used on input line 676.
+Package pdftex.def Info: 12-Ley_de_control_minima.pdf  used on input line 675.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
 
@@ -766,10 +774,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7333 strings out of 473937
- 131603 string characters out of 5739564
- 1955893 words of memory out of 5000000
- 30050 multiletter control sequences out of 15000+600000
+ 7337 strings out of 473937
+ 131701 string characters out of 5739564
+ 1956893 words of memory out of 5000000
+ 30054 multiletter control sequences out of 15000+600000
  670867 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,16n,65p,733b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -789,7 +797,7 @@ s/LaTEX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Programas/LaTEX/fonts/type
 utmb8a.pfb><D:/Programas/LaTEX/fonts/type1/urw/times/utmbi8a.pfb><D:/Programas/
 LaTEX/fonts/type1/urw/times/utmr8a.pfb><D:/Programas/LaTEX/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on main.pdf (12 pages, 706298 bytes).
+Output written on main.pdf (12 pages, 707282 bytes).
 PDF statistics:
  199 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

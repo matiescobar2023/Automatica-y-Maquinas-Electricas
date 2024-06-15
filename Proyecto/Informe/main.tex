@@ -359,7 +359,7 @@ obtenemos la segunda ecuación de estado del sistema:
 
 \begin{equation}
     \dot{\omega}_m(t) = \frac{3}{2} \frac{P_p i^r_{qs}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds}(t) \right]}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} - \frac{T_l(t)}{r J_{eq}}
-    \label{ecuacion de estado 2}
+    \label{ecuacion de estado wm}
 \end{equation}
 
 Las siguientres tres ecuaciones de estado del sistema se obtienenen de las ecuaciones de balance de tensiones
@@ -367,16 +367,15 @@ en coordenadas virtuales (\cref{balance de tensiones q} \cref{balance de tension
 Reemplazando en estas la relación entre $\omega_m(t)$ y $\omega_r(t)$ dada por la \cref{Relacion coordenadas electricas y mecanicas} obtenemos:
 
 \begin{align}
-    \dot{i}^r_{qs}(t) &= -\frac{R_s(t) i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \left[\lambda'^r_m + L_d i^r_{ds}(t)\right]}{L_q} + \frac{v^r_{qs}(t)}{L_q}\\
-    \dot{i}^r_{ds}(t) &= -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t)i^r_{qs}(t)}{L_d}  + \frac{v^r_{ds}(t)}{L_d}\\ 
-    \dot{i}_{0s}(t)   &= -\frac{R_s(t) i_{0s}(t)}{L_{ls}} + \frac{v_{0s}(t)}{L_ls}
-    \label{ecuaciones de estado 3 4 y 5}
+    \dot{i}^r_{qs}(t) &= -\frac{R_s(t) i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \left[\lambda'^r_m + L_d i^r_{ds}(t)\right]}{L_q} + \frac{v^r_{qs}(t)}{L_q} \label{ecuacion de estado iqs}\\
+    \dot{i}^r_{ds}(t) &= -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t)i^r_{qs}(t)}{L_d}  + \frac{v^r_{ds}(t)}{L_d} \label{ecuacion de estado ids}\\ 
+    \dot{i}_{0s}(t)   &= -\frac{R_s(t) i_{0s}(t)}{L_{ls}} + \frac{v_{0s}(t)}{L_ls}\label{ecuacion de estado i0s}
 \end{align}
 
 La última ecuación de estado se obtiene relacionando las \cref{potencia de perdidas} y \cref{balance termico estator} obteniendose:
 \begin{equation}
     \dot{T}^\circ_s(t) = \frac{3}{2} \frac{R_s(t) \left[ i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right]}{C_{ts}} - \frac{\left[T_s^{\circ}(t) - T_{amb}^{\circ}(t)\right]}{R_{ts}C_{ts}} 
-    \label{ecuacion de estado 6}
+    \label{ecuacion de estado Ts}
 \end{equation}
 
 Cabe mencionar, para las útlimas ecuaciones de estado, que aunque se tiene un modelo lineal de evolución de la $R_S(t)$ con la $T^\circ_s(t)$ dado en la \cref{Rs}
@@ -657,7 +656,7 @@ Expresandolo en forma de espacio de estados, el sistema quedaria de la siguiente
 	\label{ecuacion con ids=0}
 \end{equation}
 
-Para lograr esta especificación es necesario realizar una ley de control minima que se determina a partir de la ecuacion de estado para $i^{r}_{ds}$, partiendo de la hipotesis de que $i^{r}_{ds}(0)=0$:
+Para lograr esta especificación es necesario realizar una ley de control minima que se determina a partir de la ecuacion de estado para $i^{r}_{ds}$, partiendo de la hipótesis de que $i^{r}_{ds}(0)=0$:
 \begin{equation}
 	\begin{aligned}
 		\dot{i}^r_{ds}(t) = -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t)i^r_{qs}(t)}{L_d}  + \frac{v^r_{ds}(t)}{L_d}\\
@@ -679,7 +678,15 @@ Luego se implementó, en el modelo global NL completo, esta  ley de control mín
 	\label{Implementación de ley de control mínima}
 \end{figure}
 
+Para el caso general en donde no se cumple la hipótesis $i^{r}_{ds}(0)=0$ , existe una dinámica residual en la corriente $i^{r}_{ds}$. Ésta dinámica queda represantada con la ecuacion diferencial que obtenemos al reemplazar la ley de control mínima en \eqref{ecuacion de estado ids} :
 
+\begin{equation}
+	\begin{aligned}
+		\dot{i}^r_{ds}(t) = -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t)i^r_{qs}(t)}{L_d}  + \frac{v^r_{ds}(t)}{L_d}\\
+		0= \frac{L_q P_p \omega_m(t)i^r_{qs}(t)}{L_d}  + \frac{v^r_{ds}(t)}{L_d}\Rightarrow	v^{r}_{ds}= -L_{q}i^{r}_{qs}Pp\omega_{m}\\
+		\label{ecuacion determinacion ley de control minima}
+	\end{aligned}	
+\end{equation}
 
 
 
