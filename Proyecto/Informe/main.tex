@@ -717,6 +717,13 @@ El modelo LTI equivalente(incorporando la dinamica residual del eje $d$) queda d
 	\label{equaciones modelo LTI eq}
 \end{equation}
 
+La funciones de transferencia quedan de la siguiente manera:
+
+\begin{align}
+	G_{v^r_{qs}}(t) &= L_q{i}^r_{qs}(t) + R_s(t) i^r_{qs}(t) +P_p \omega_m(t) \lambda'^r_m +\underline{P_p \omega_m(t) L_d i^r_{ds}(t)} \label{ley de control complementaria 1 }\\
+	v^r_{qs}(t) &= v^r_{qs}(t)^{*} + P_p \omega_m(t) L_d i^r_{ds}(t)  \label{ley de control complementaria 2}\\
+	v^r_{qs}(t)^{*} &= L_q{i}^r_{qs}(t) + R_s(t) i^r_{qs}(t) +P_p \omega_m(t) \lambda'^r_m  \label{ley de control complementaria 3}
+\end{align}
 
 
 
