@@ -77,7 +77,7 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
         \label{torque de carga}
     \end{equation}
     \begin{equation}
-        \frac{d\theta_l(t)}{dt} \equiv \omega_l(t) \Leftrightarrow \theta_l(t) = \int_{0}^{t} \omega_l(\zeta) \, d\zeta + \theta_l(0))
+        \frac{d\theta_l(t)}{dt} \equiv \omega_l(t) \Leftrightarrow \theta_l(t) = \int_{0}^{t} \omega_l(\zeta) \, d\zeta + \theta_l(0)
         \label{velocidad y posición de la carga}
     \end{equation}
 
@@ -91,7 +91,7 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
         T_q(t) = r \cdot T_{dm}(t)
         \label{relacion de torque en caja}
     \end{equation}
-
+    
     % sub-sistema mecánico PMSM
     \item Modelo matemático equivalente del sub-sistema mecánico de la máquina eléctrica.
     \begin{equation}
@@ -153,23 +153,25 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
     % Variables del modelo
     \item Vector de estado del sistema físico completo.
     \begin{equation}
-        \mathbf{x} = \begin{bmatrix} \theta_m \\ \omega_m \\ i^r_{qs} \\ i^r_{ds} \\ i_{0s} \\ T_s \end{bmatrix}
+        \mathbf{x}(t) = \begin{bmatrix} \theta_m(t) \\ \omega_m(t) \\ i^r_{qs}(t) \\ i^r_{ds}(t) \\ i_{0s}(t) \\ T_s(t) \end{bmatrix}
         \label{vector de estado del sistema}
     \end{equation}
     \item Vector de entradas de manipulación al modelo dinámico del sistema físico completo en coordenadas virtuales y reales respectivamente
     \begin{equation}
-        \mathbf{u_{c(qd0)}} = \begin{bmatrix} v^r_{qs}(t) \\ v^r_{ds}(t) \\ v^r_{0s}(t)\end{bmatrix}
-        \mathbf{u_{c(abc)}} = \begin{bmatrix} v_{as}(t) \\ v_{bs}(t) \\ v_{cs}(t)\end{bmatrix}
+        \mathbf{u_{c(qd0)}}(t) = \begin{bmatrix} v^r_{qs}(t) \\ v^r_{ds}(t) \\ v^r_{0s}(t)\end{bmatrix}
+        \mathbf{u_{c(abc)}}(t) = \begin{bmatrix} v_{as}(t) \\ v_{bs}(t) \\ v_{cs}(t)\end{bmatrix}
         \label{vector de entradas de control}
     \end{equation}
     \item Vector de entradas de perturbación al modelo dinámico del sistema físico completo.
     \begin{equation}
-        \mathbf{u_{d}} = \begin{bmatrix} T_l(t) \\ T_{amb}^{\circ}(t)\end{bmatrix}
+        \mathbf{u_{d}}(t) = \begin{bmatrix} T_l(t) \\ T_{amb}^{\circ}(t)\end{bmatrix}
         \label{vector de entradas de perturbacion}
     \end{equation}
     \item Vector de entradas total al modelo dinámico del sistema físico completo.
     \begin{equation}
-        \mathbf{u} = \begin{bmatrix} \mathbf{u_c}(t) \\ \mathbf{u_d}(t)\end{bmatrix}
+        \mathbf{u}(t) = \begin{bmatrix} \mathbf{u_c}(t) \\ \mathbf{u_d}(t)\end{bmatrix} \, \, \, \,
+        \mathbf{u}(t) = \begin{bmatrix} v^r_{qs}(t) \\ v^r_{ds}(t) \\ v^r_{0s}(t) \\ T_l(t) \\ T_{amb}^{\circ}(t) \end{bmatrix}\, \, \, \,
+        \mathbf{u}(t) = \begin{bmatrix} v_{as}(t) \\ v_{bs}(t) \\ v_{cs}(t)\\ T_l(t) \\ T_{amb}^{\circ}(t) \end{bmatrix}
         \label{vector de entradas}
     \end{equation}
     % Inversor trifásico.
@@ -191,7 +193,6 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
         \label{ángulo de carga}
     \end{equation}
 \end{itemize}
-
 
 % DESARROLLO - PRESENTACIÓN DEL PROBLEMA
 \section{PRESENTACIÓN DEL PROBLEMA}
@@ -233,7 +234,7 @@ Inversor trifásico de 4 cuadrantes (regenerativo), consistente en puente trifá
 
 No es parte de este proyecto el análisis del detalle de operación del inversor ni su fuente de energía de CC. Se considera al inversor trifásico y la fuente de CC como un Modulador idealizado de tensión trifásico (vectorial) (modelo promediado que se indica a continuación) para alimentación al estator de la Máq. Eléctrica.
 
-\vspace*{0.2cm}
+
 \subsubsection{\textbf{Modelo Promediado}}
 Se considera un modelo promediado equivalente de tensiones sintetizadas de salida (componente fundamental, sin armónicos). Se trata de un sistema trifásico de tensiones de fase en bornes de estator, senoidales de secuencia positiva $abc$, equilibrado o balanceado, variable en Módulo $V_{sl}(t)$ y Frecuencia $\omega_e(t)$.
 
@@ -271,22 +272,6 @@ Se utilizan las siguientes variables para representar el estado, las entradas y 
     \item Variables medidas (para realimentación): Posición angular de eje del motor $\theta_m(t)$. Sistema trifásico de corrientes de fase reales en bornes de estator $i_{abc}(t)$. Temperatura de estator $T_s^{\circ}(t)$.
 \end{itemize}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 % DESARROLLO DE LAS TAREAS
 \section{DESARROLLO DE TAREAS}
 
@@ -298,28 +283,36 @@ Abierto” (Sin Controlador externo de Movimiento)}}
 \subsubsection{\textbf{Modelo sub-sistema mecánico completo referido al eje de la máquina eléctrica}}
 
 Multiplicando por $r$ ambos miembros de la \cref{subsistema mecanico maquina electrica}, sumando miembro a miembro con la \cref{carga mecanica} y tomando en cuenta $T_q(t)$ según \cref{relacion de torque en caja} obtenemos:
+
 \begin{flalign*}
     J_{l}\,\frac{d\omega _{l}\left(t\right)}{dt} +J_{m}\,r\,\frac{d\omega _{m}\left(t\right)}{dt} =r\,T_{m}\left(t\right)-T_{l}\left(t\right)-b_{l}\,\omega _{l}\left(t\right)-b_{m}\,r\,\omega _{m}\left(t\right)
 \end{flalign*}
+
 Reemplazando en la anterior $\omega_{l}(t)$ según \cref{relacion de velocidad en caja}, agrupando términos y diviendo entre $r$ a ambos miembros, obtenemos:
+
 \begin{flalign}
     \left(J_{m}+\frac{J_{l}}{r^2}\right)\,\frac{d \omega _{m}\left(t\right)}{dt}=T_{m}\left(t\right)-\left(b_{m}+\frac{b_{l}}{r^2}\right)\,\omega _{m}\left(t\right)-\frac{T_{l}\left(t\right)}{r}
     \label{subsistema mecanico con parametros desarrollados}
 \end{flalign}
+
 Definimos ahora la inercia equivalente y el amoriguamiento equivalente respectivamente como:
+
 \begin{equation}
    J_{eq}= \left(J_{m}+\frac{J_{l}}{r^2}\right)
    \label{inercia equivalente}
 \end{equation}
+
 \begin{equation}
     b_{eq}=\left(b_{m}+\frac{b_{l}}{r^2}\right)
     \label{amortiguamiento equivalente}
 \end{equation}
+
 Reemplazando \cref{inercia equivalente} y \cref{amortiguamiento equivalente} en \cref{subsistema mecanico con parametros desarrollados} obtenemos el modelo matemático equivalente del sub-sistema mecánico completo con parámetros equivalentes referido al eje del motor (veasé diagrama de bloques de la \cref{diagrama de bloques sub-sistema mecanico completo}):
 \begin{flalign}
     J_{eq}\,\frac{d \omega _{m}\left(t\right)}{dt}=T_{m}\left(t\right)-b_{eq}\, \omega _{m}\left(t\right)-\frac{T_{l}\left(t\right)}{r}
     \label{subsistema mecanico con parametros equivalentes}
 \end{flalign}
+
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
@@ -332,28 +325,28 @@ Reemplazando \cref{inercia equivalente} y \cref{amortiguamiento equivalente} en 
 El modelo resultante tiene un solo grado de libertad, tal como sucede en el modelo de la carga y del subsistema mecánico de la máquina eléctrica sin la transmisión. Esto se debe a la rigidez y la ausencia de "backlash" en la reducción, permitiendo un "acoplamiento directo" de la carga al eje de la máquina. Dicho de otra manera, la transmisión no incorpora dinámica al subsistema mecánico completo.
 
 %5.1.2
-\vspace*{0.2cm}
+
 \subsubsection{\textbf{Modelo dinámico del sistema físico completo}} este incorpora los sub-sistemas electromagnético, mecánico y térmico.
-\vspace*{0.1cm}
+
 % a
 \paragraph{\textbf{Modelo Global No Lineal}}
-
 Al tratarse de un sistema no lineal de parámetros variables y con no-linealidades en las variables de estado, no se puede obtener una expresión
 de la ecuación de estado y de salida del sistema en la forma:
 
 \begin{equation*}
-    \mathbf{\dot{x}}(t) = A \mathbf{x}(t) + B \mathbf{u}(t)
-\end{equation*}    
-\begin{equation*}
-    \mathbf{y}(t) = C \mathbf{x}(t) + D \mathbf{u}(t)
+    \begin{cases}
+        \mathbf{\dot{x}}(t) = A \mathbf{x}(t) + B \mathbf{u}(t)\\
+        \mathbf{y}(t) = C \mathbf{x}(t) + D \mathbf{u}(t)
+    \end{cases}
 \end{equation*}
 
 Sin embargo, se puede obtener una expresión del modelo matemático vectorial en la forma más general:
+
 \begin{equation*}
-    \mathbf{\dot{x}}(t) = f(\mathbf{x}(t), \mathbf{u}(t), t)
-\end{equation*}
-\begin{equation*}
-    \mathbf{y}(t) = g(\mathbf{x}(t), \mathbf{u}(t), t)
+    \begin{cases}
+        \mathbf{\dot{x}}(t) = f(\mathbf{x}(t), \mathbf{u}(t), t)\\
+        \mathbf{y}(t) = g(\mathbf{x}(t), \mathbf{u}(t), t)
+    \end{cases}
 \end{equation*}
 
 Teniendo en cuenta la definición del estado del sistema (ver \cref{vector de estado del sistema}) la primera ecuación a considerar en la ecuación vectorial de estado del sistema es la
@@ -367,14 +360,13 @@ obtenemos la segunda ecuación de estado del sistema:
     \label{ecuacion de estado wm}
 \end{equation}
 
-Las siguientres tres ecuaciones de estado del sistema se obtienenen de las ecuaciones de balance de tensiones
+Las siguientes tres ecuaciones de estado del sistema se obtienenen de las ecuaciones de balance de tensiones
 en coordenadas virtuales (\cref{balance de tensiones q} \cref{balance de tensiones d}, \cref{balance de tensiones 0}).
 Reemplazando en estas la relación entre $\omega_m(t)$ y $\omega_r(t)$ dada por la \cref{Relacion coordenadas electricas y mecanicas} obtenemos:
-
 \begin{align}
     \dot{i}^r_{qs}(t) &= -\frac{R_s(t) i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \left[\lambda'^r_m + L_d i^r_{ds}(t)\right]}{L_q} + \frac{v^r_{qs}(t)}{L_q} \label{ecuacion de estado iqs}\\
     \dot{i}^r_{ds}(t) &= -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t)i^r_{qs}(t)}{L_d}  + \frac{v^r_{ds}(t)}{L_d} \label{ecuacion de estado ids}\\ 
-    \dot{i}_{0s}(t)   &= -\frac{R_s(t) i_{0s}(t)}{L_{ls}} + \frac{v_{0s}(t)}{L_ls}\label{ecuacion de estado i0s}
+    \dot{i}_{0s}(t)   &= -\frac{R_s(t) i_{0s}(t)}{L_{ls}} + \frac{v_{0s}(t)}{L_{ls}}\label{ecuacion de estado i0s}
 \end{align}
 
 La última ecuación de estado se obtiene relacionando las \cref{potencia de perdidas} y \cref{balance termico estator} obteniendose:
@@ -385,62 +377,71 @@ La última ecuación de estado se obtiene relacionando las \cref{potencia de per
 
 Cabe mencionar, para las útlimas ecuaciones de estado, que aunque se tiene un modelo lineal de evolución de la $R_S(t)$ con la $T^\circ_s(t)$ dado en la \cref{Rs}
 se decide no desarrollar la misma en las ecuaciones anteriores y se deja la dependencia explicita de $R_S$ con $t$ con el objeto de simplificar la notación
-y no oscurecer la explicación. Con el mismo objeto, se simplifica la notación de $R_{ts-amb}$ a simplemente $R_{ts}$
+y no oscurecer la explicación. Con el mismo objeto, se simplifica la notación de $R_{ts-amb}$ a simplemente $R_{ts}$.
 
 % Ecuación vectorial de estado del sistema
-\textbf{Ecuación vectorial de estado del sistema}: se obtiene expresando en forma vectorial las ecuaciones obtenidas
+\textbf{Ecuación vectorial de estado del sistema}: se obtiene expresando en forma vectorial las ecuaciones obtenidas:
 \begin{equation}
-    \begin{aligned}
-        \begin{bmatrix} 
+    \begin{bmatrix} 
         \dot{\theta}_m(t) \\ 
         \dot{\omega}_m(t) \\ 
         \dot{i}^r_{qs}(t) \\ 
         \dot{i}^r_{ds}(t) \\ 
         \dot{i}_{0s}(t) \\ 
         \dot{T}^\circ_s(t) 
-        \end{bmatrix} 
-        &= 
-        \begin{bmatrix} 
+    \end{bmatrix} 
+        = 
+    \begin{bmatrix} 
         \omega_m(t) \\ 
         \frac{\frac{3}{2} P_p i^r_{qs}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds}(t) \right]}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} \\ 
         -\frac{R_s(t) i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \left[\lambda'^r_m + L_d i^r_{ds}(t)\right]}{L_q}\\ 
         -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t) i^r_{qs}(t)}{L_d}  \\ 
-        -\frac{R_s(t) i_{0s}(t) }{L_ls} \\ 
+        -\frac{R_s(t) i_{0s}(t) }{L_{ls}} \\ 
         \frac{\frac{3}{2} R_s(t) \left[ i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right]}{C_{ts}} - \frac{T_s^{\circ}(t)}{R_{ts}C_{ts}}
-        \end{bmatrix}
+    \end{bmatrix}
         + 
-        \begin{bmatrix} 
+    \begin{bmatrix} 
         0 & 0 & 0 \\ 
         0 & 0 & 0 \\ 
         \frac{1}{L_q} & 0 & 0 \\ 
         0 & \frac{1}{L_d} & 0  \\ 
         0 & 0 & \frac{1}{L_{ls}}  \\ 
         0 & 0 & 0
-        \end{bmatrix} 
-        \begin{bmatrix} 
+    \end{bmatrix} 
+    \begin{bmatrix} 
         v^r_{qs}(t) \\ 
         v^r_{ds}(t) \\ 
         v_{0s}(t)
-        \end{bmatrix}
+    \end{bmatrix}
         + 
-        \begin{bmatrix} 
+    \begin{bmatrix} 
         & 0 & 0 \\
         & \frac{-1}{r J_{eq}} & 0 \\
         & 0 & 0 \\
         & 0 & 0 \\
         & 0 & 0 \\
         & 0 & \frac{1}{C_{ts} R_{ts}}
-        \end{bmatrix}
-        \begin{bmatrix} 
+    \end{bmatrix}
+    \begin{bmatrix} 
         T_l(t) \\ 
         T_{amb}(t) 
-        \end{bmatrix}\\
-        \mathbf{x}(t_0) \quad&= \mathbf{x_0}
-    \end{aligned}
+    \end{bmatrix}
     \label{ecuacion vectorial de estado del sistema}
 \end{equation}
 
-
+Con condiciones inciales:
+\begin{equation}
+    \mathbf{x}(t_0) = \mathbf{x_0}
+    =
+    \begin{bmatrix} 
+        \theta_{m0} \\ 
+        \omega_{m0} \\ 
+        i^r_{qs0} \\ 
+        i^r_{ds0} \\ 
+        i_{0s0} \\ 
+        T^\circ_{s0} 
+    \end{bmatrix}
+\end{equation}
 
 En la \cref{ecuacion vectorial de estado del sistema} se han separado
 las relaciones que involucran a las variables de estado del sistema de las que involucran a las 
@@ -460,7 +461,6 @@ dado en \cref{torque de carga}.
     \label{ecuacion vectorial de salida del sistema}
 \end{equation}
 
-
 %  Diagrama de bloques del sistema físico completo
 \textbf{Diagramas de bloques del sistema físico completo: } En la \cref{diagrama de bloques del sistema fisico} se muestra
 el diagrama de bloques del sistema físico completo constituido por los sub-sistemas mecánico, térmico y electromagnético cuyos diagramas
@@ -478,6 +478,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
     \caption{Diagrama de bloques del sistema físico completo.}
     \label{diagrama de bloques del sistema fisico}
 \end{figure}
+
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
@@ -486,6 +487,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
     \caption{Diagrama de bloques del sub-sistema térmico}
     \label{subsistema termico}
 \end{figure}
+
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
@@ -494,6 +496,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
     \caption{Diagrama de bloques del sub-sistema electromagnético}
     \label{sub-sistema electromagnetico}
 \end{figure}
+
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
@@ -502,6 +505,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
     \caption{Diagrama de bloques $I_{qs}$}
     \label{diagrama de bloques I_qs}
 \end{figure}
+
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
@@ -510,6 +514,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
     \caption{Diagrama de bloques $I_{ds}$}
     \label{diagrama de bloques I_ds}
 \end{figure}
+
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
@@ -518,6 +523,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
     \caption{Diagrama de bloques $I_{0s}$}
     \label{diagrama de bloques I_0s}
 \end{figure}
+
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
@@ -526,6 +532,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
     \caption{Diagrama de bloques $T_m$}
     \label{diagrama de bloques T_m}
 \end{figure}
+
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
@@ -534,56 +541,164 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
     \caption{Transformación de Park Directa}
     \label{transformacion de Park}
 \end{figure}
+
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
         \framebox{\includegraphics{11-Transformación_de_Park_Inversa.eps}}
     \end{adjustbox}
-    \caption{transformacion de Park inversa}
+    \caption{Transformacion de Park inversa}
     \label{transformacion de Park inversa}
 \end{figure}
 
-
 % 5.1.1.B Linealización Jacobiana.
-\vspace*{0.5cm}
 \paragraph{\textbf{Linealización Jacobiana}}
-En en modelo de pequeñas desviaciones locales respecto de los puntos de equilibrio se considera
-\[
-\begin{cases}
-\mathbf{x}(t)  = \mathbf{X}_o(t) + \mathbf{\delta x}(t)\\
-\mathbf{\delta x}(0) \equiv \mathbf{0}
-\end{cases}
-\]
-
-
-Por un lado, el \textbf{espacio de operación global NL cuasi-estacionario} se obtiene considerando:
+Se aclara aquí que, solamente para este ejercicio, se considera un vector de entradas de perturbación modificado
+respecto al indicado en \cref{vector de entradas} al considerar $T_l(t)$ desarrollada como se indica en la \cref{torque de carga}.
+Lo que se hace es reemplazar $T_l(t)$ por $T_d(t)$ en el vector de la \cref{vector de entradas de perturbacion} lo
+cual cambia la definición de $\mathbf{u}(t)$ dada por la \cref{vector de entradas}. Luego, el vector
+de entradas de perturbación y el vector de entradas total del sistema, para este ejercicio, son los que se indican en la \cref{vector de entradas jacobi linealizado}.
+Cómo se puede observar, se toman las entradas de tensión de control en el espacio de coordenadas $qdo^r$.
 \begin{equation}
-\begin{cases}
-\frac{d\mathbf{X}_o(t)}{dt} = \mathbf{f}(\mathbf{X}_o(t), \mathbf{U}_o(t)) \approx 0/\text{const};  \mathbf{X}_o(0) \equiv \mathbf{x}_0 \\
-\mathbf{Y}_o(t) = C \mathbf{X}_o(t)
-\end{cases}
-\label{modelo de operacion NL cuasi-estacionario}
+    \mathbf{u_{d}}(t) = \begin{bmatrix} T_d(t) \\ T_{amb}^{\circ}(t)\end{bmatrix}\, \, \, 
+    \mathbf{u}(t) = \begin{bmatrix} v^r_{qs}(t) \\ v^r_{ds}(t) \\ v^r_{0s}(t) \\ T_d(t) \\ T_{amb}^{\circ}(t) \end{bmatrix}
+    \label{vector de entradas jacobi linealizado}
 \end{equation}
 
-Por otro lado, el \textbf{Modelo dinámico LPV} tiene la expresión:
+Con esta definición del vector de entradas, la ecuación vectorial de estado del sistema es redefinida.
+Por un lado se debe operar para obtener una expresión de $T_l(t)$ en función de $\theta_m(t)$ y no en función de 
+$\theta_l(t)$ como se indica en la \cref{torque de carga} para luego reemplazar la expresión obtenida en la \cref{ecuacion vectorial de estado del sistema}.
+El procedimiento se indica en \cref{reemplazo de T_l}. Finalmente, la ecuación vectorial de estado del sistema queda expresada
+como se indica en la \cref{ecuacion vectorial de estado jacobi}.
 
 \begin{equation}
-\begin{cases}
-\frac{d}{dt} \mathbf{\delta x}(t) \approx A(t) \mathbf{\delta x}(t) + B(t) \mathbf{\delta u}(t); \mathbf{\delta x}(0) \equiv \mathbf{0}\\
-\mathbf{\delta y}(t) = C\mathbf{\delta x}(t)
-\end{cases}
-\label{modelo de pequeñas desviaciones}
+    \begin{aligned}
+        \cref{relacion de velocidad en caja} \,\text{y}\, \cref{velocidad y posición de la carga}\,&\rightarrow\,\theta_l(t) = \frac{1}{r} \int_{0}^{t} \omega_m(\zeta) \, d\zeta + \theta_l(0)\\
+        \cref{posicion y velocidad motor}\,&\rightarrow\,  \int_{0}^{t} \omega_m(\zeta) \, d\zeta = \theta_m(t) - \theta_m(0)\\
+        \text{Reemplazando la segunda en la primera}\,&\rightarrow\,\theta_l(t) = \frac{\theta_m(t) - \theta_m(0)}{r} + \theta_l(0)\\
+        \text{Consideramos que se cumple}\,&\rightarrow\,\frac{\theta_m(0)}{r} = \theta_l(0)\\
+        \text{Luego}\,&\rightarrow\,\theta_l(t) = \theta_m(t)/r\\
+        \text{Finalmente}\,&\rightarrow\,T_l(t) = k_l\sin(\frac{\theta_m(t)}{r}) + T_d(t)
+    \end{aligned}
+    \label{reemplazo de T_l}
 \end{equation}
 
-Solamente para este ejercicio, se considera un vector de entradas de perturbación modificado
-al considerar $T_l(t)$ desarrollada según la \cref{torque de carga}.
-Lo que se hace es reemplazar $T_l(t)$ por $T_d(t)$ en el vector de la \cref{vector de entradas de perturbacion} con lo
-cual cambia la definición de $\mathbf{u}(t)$ según la \cref{vector de entradas}.
+\begin{equation}
+    \begin{bmatrix} 
+        \dot{\theta}_m(t) \\ 
+        \dot{\omega}_m(t) \\ 
+        \dot{i}^r_{qs}(t) \\ 
+        \dot{i}^r_{ds}(t) \\ 
+        \dot{i}_{0s}(t) \\ 
+        \dot{T}^\circ_s(t) 
+    \end{bmatrix} 
+        = 
+    \begin{bmatrix} 
+        \omega_m(t) \\ 
+        \frac{\frac{3}{2} P_p i^r_{qs}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds}(t) \right]}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} - \frac{k_l\sin(\frac{\theta_m(t)}{r})}{rJ_{eq}}\\ 
+        -\frac{R_s(t) i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \left[\lambda'^r_m + L_d i^r_{ds}(t)\right]}{L_q}\\ 
+        -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t) i^r_{qs}(t)}{L_d}  \\ 
+        -\frac{R_s(t) i_{0s}(t) }{L_{ls}} \\ 
+        \frac{\frac{3}{2} R_s(t) \left[ i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right]}{C_{ts}} - \frac{T_s^{\circ}(t)}{R_{ts}C_{ts}}
+    \end{bmatrix}
+        + 
+    \begin{bmatrix} 
+        0 & 0 & 0 & 0 & 0 \\ 
+        0 & 0 & 0 & \frac{-1}{r J_{eq}} & 0 \\ 
+        \frac{1}{L_q} & 0 & 0 & 0 & 0\\ 
+        0 & \frac{1}{L_d} & 0 & 0 & 0 \\ 
+        0 & 0 & \frac{1}{L_{ls}}  & 0 & 0 \\ 
+        0 & 0 & 0 & 0 & \frac{1}{C_{ts} R_{ts}}
+    \end{bmatrix} 
+    \begin{bmatrix} 
+        v^r_{qs}(t) \\ 
+        v^r_{ds}(t) \\ 
+        v_{0s}(t) \\
+        T_d(t) \\ 
+        T_{amb}(t)
+    \end{bmatrix}
+    \label{ecuacion vectorial de estado jacobi}
+\end{equation}
+
+En el modelo de pequeñas desviaciones locales $\delta \mathbf{x}(t)$ respecto de los puntos de equilibrio $\mathbf{X}_o(t)$
+se hacen las consideraciones señaladas en la \cref{pequeñas desviaciones}.
+
+\begin{equation}
+    \begin{cases}
+    \mathbf{x}(t)  = \mathbf{X}_o(t) + \mathbf{\delta x}(t)\\
+    \mathbf{\delta x}(0) \equiv \mathbf{0}
+    \end{cases}
+    \label{pequeñas desviaciones}
+\end{equation}
+
+Por un lado, el \textbf{espacio de operación global NL cuasi-estacionario} se muestra en la \cref{modelo de operacion NL cuasi-estacionario}.
+Para nuestro sistema queda expresado como se indica en la \cref{modelo de operacion NL cuasi_estacionario desarrollado} para el estado. Las condiciones
+iniciales se señalan en \cref{condiciones inciales cuasi-estacionario}. En dichas ecuaciones, 
+el sub-índice $-o$ indica los valores de las variables en el punto de operación.
+
+\begin{equation}
+    \begin{cases}
+    \frac{d\mathbf{X}_o(t)}{dt} =  \mathbf{f}(\mathbf{X}_o(t), \mathbf{U}_o(t)) \approx 0/\text{const};  \mathbf{X}_o(0) \equiv \mathbf{x}_0\\
+    \mathbf{Y}_o(t) = C \mathbf{X}_o(t)
+    \end{cases}
+    \label{modelo de operacion NL cuasi-estacionario}
+\end{equation}
+
+\begin{equation}
+    \begin{bmatrix}
+        \dot{\theta}_{m-o}(t)\\
+        \dot{\omega}_{m-o}(t)\\
+        \dot{i}^r_{qs-o}(t)\\
+        \dot{i}^r_{ds-o}(t)\\
+        \dot{i}_{0s-o}(t)\\
+        \dot{T}^\circ_{s-o}(t)
+    \end{bmatrix}
+    =
+    \begin{cases}
+        \omega_{m-o}(t) &\approx \omega_{m0}\\
+        \frac{1}{J_{eq}}\left[\frac{3}{2} P_p i^r_{qs-o}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds-o}(t) \right] - b_{eq}\omega_{m-o}(t) - \frac{k_l}{r}\sin(\frac{\theta_{m-o}(t)}{r}) - \frac{1}{r}T_{d-o}(t)\right] &\approx 0\\
+        \frac{1}{L_q}\left[-R_{s-o}(t) i^r_{qs-o}(t)- P_p \omega_{m-o}(t) \left[\lambda'^r_m + L_d i^r_{ds-o}(t)\right] + v^r_{qs-o}(t)\right] &\approx 0\\ 
+        \frac{1}{L_d}\left[-R_{s-o}(t) i^r_{ds-o}(t) + L_q P_p \omega_{m-o}(t) i^r_{qs-o}(t) + v^r_{ds-o}(t)\right] &\approx 0\\ 
+        \frac{1}{L_{ls}}\left[-R_{s-o}(t) i_{0s}(t) + v_{0s-o}(t)\right] &\approx 0\\ 
+        \frac{3}{2}\frac{R_{s-o}(t)}{C_{ts}} \left[ i_{qs-o}^2(t) + i_{ds-o}^2(t) + 2 i_{0s-o}^2(t) \right] + \frac{1}{R_{ts}C_{ts}}\left[T_{amb-o}(t) - T_{s-o}^{\circ}(t)\right] &\approx 0
+    \end{cases}
+    \label{modelo de operacion NL cuasi_estacionario desarrollado}
+\end{equation}
+
+\begin{equation}
+    \mathbf{X_o}(0)
+    =
+    \begin{bmatrix} 
+        \theta_{m-o}(0) \\ 
+        \omega_{m-o}(0) \\ 
+        i^r_{qs-o}(0) \\ 
+        i^r_{ds-o}(0)\\ 
+        i_{0s-o}(0)\\ 
+        T^\circ_{s-o}(0)
+    \end{bmatrix}
+    =
+    \begin{bmatrix} 
+        \theta_{m0} \\ 
+        \omega_{m0} \\ 
+        i^r_{qs0} \\ 
+        i^r_{ds0} \\ 
+        i_{0s0} \\ 
+        T^\circ_{s0} 
+    \end{bmatrix}
+    \label{condiciones inciales cuasi-estacionario}
+\end{equation}
+
+Por otro lado, el \textbf{Modelo dinámico LPV} se indica en la \cref{modelo de pequeñas desviaciones}:
+
+\begin{equation}
+    \begin{cases}
+        \frac{d}{dt} \mathbf{\delta x}(t) \approx A(t) \mathbf{\delta x}(t) + B(t) \mathbf{\delta u}(t); \mathbf{\delta x}(0) \equiv \mathbf{0}\\
+        \mathbf{\delta y}(t) = C\mathbf{\delta x}(t)
+    \end{cases}
+    \label{modelo de pequeñas desviaciones}
+\end{equation}
 
 Las matrices $A(t)$ y $B(t)$ de la \cref{modelo de pequeñas desviaciones} vienen dadas por la \cref{matriz_AB}.
-Al considerar el vector de entradas modificado como se indicó, la componente de $T_l(t)$
-dependiente de la coordenada articular del brazo es considerada en las matrices $A(t)$ y $B(t)$ en aquellos términos
-que contienen a la derivada respecto de $\theta_m(t)$ (recordar relación dada por la \cref{relacion de velocidad en caja}).
 
 \begin{equation}
     A(t) = \left[ \left. \frac{\mathbf{\partial f}}{\mathbf{\partial x}} \right|_{o}(t) \right] =
@@ -607,8 +722,8 @@ que contienen a la derivada respecto de $\theta_m(t)$ (recordar relación dada p
     \label{matriz_AB}
 \end{equation}
 
-
 Los gradientes indicados para $A(t)$ en la \cref{matriz_AB} vienen dados por la \cref{gradientesA}.
+
 \begin{equation}
     \begin{aligned}
         \nabla_{\mathbf{x}} \dot{\theta}_m(t) &= \begin{bmatrix} 0 & 1 & 0 & 0 & 0 & 0 \end{bmatrix}\\
@@ -632,11 +747,9 @@ Los gradientes indicados para $A(t)$ en la \cref{matriz_AB} vienen dados por la 
 \end{equation}
 
 Nota: Por motivos de legibilidad del modelo matemático LPV completo, decidimos conservar la expresión en esta forma desagregada.
-\vspace*{0.5cm}
+
 \paragraph{\textbf{Linealización Por Realimentación No Lineal}}
 En este análisis no se tendra en cuenta el acoplamiento no lineal con el subsistema térmico, pero si su dinámica lineal. Para lograr esto, se impone directamente la especificación $i^{r}_{ds}(t)\equiv0$. Las ecuaciones resultantes son:
-
-
 
 \begin{equation}
 	\begin{cases}
@@ -648,6 +761,7 @@ En este análisis no se tendra en cuenta el acoplamiento no lineal con el subsis
 \end{equation}
 
 Expresandolo en forma de espacio de estados, el sistema quedaria de la siguiente manera:
+
 \begin{equation}
 	\begin{cases}
 		\begin{bmatrix}
@@ -692,13 +806,13 @@ Expresandolo en forma de espacio de estados, el sistema quedaria de la siguiente
 \end{equation}
 
 Para lograr esta especificación es necesario realizar una ley de control minima que se determina a partir de la ecuacion de estado para $i^{r}_{ds}$ eq. \eqref{ecuacion de estado ids}, partiendo de la hipótesis de que $i^{r}_{ds}(0)=0$:
+
 \begin{equation}
 	0= \frac{L_q P_p \omega_m(t)i^r_{qs}(t)}{L_d}  + \frac{v^r_{ds}(t)}{L_d}\Rightarrow	v^{r}_{ds}= -L_{q}i^{r}_{qs}P_{p}\omega_{m}\\
 	\label{ecuacion determinacion ley de control minima}
 \end{equation}
 
 De esta manera queda determinada la ley de control mínima, que debe aplicarse para lograr el desacoplamiento de los canales de flujo magnético y torque.
-
 Luego se implementó, en el modelo global NL completo, esta  ley de control mínima mediante un controlador parcial incorporando el inversor (modulador de tensión trifásico equivalente), las Transformaciones de Park y los sensores de realimentación ideal de variables de estado:
 
 \begin{figure}[thpb]
@@ -710,20 +824,22 @@ Luego se implementó, en el modelo global NL completo, esta  ley de control mín
 	\label{Implementación de ley de control mínima}
 \end{figure}
 
-Para el caso general en donde no se cumple la hipótesis $i^{r}_{ds}(0)=0$ , existe una dinámica residual en la corriente $i^{r}_{ds}$. Esta dinámica queda represantada con la ecuacion diferencial que obtenemos al reemplazar la ley de control mínima eq. \eqref{ecuacion determinacion ley de control minima} en eq. \eqref{ecuacion de estado ids}:
+Para el caso general en donde no se cumple la hipótesis $i^{r}_{ds}(0)=0$ , existe una dinámica residual en la corriente $i^{r}_{ds}$. Esta dinámica queda represantada con la ecuacion diferencial que obtenemos al reemplazar la ley de control mínima eq. \cref{ecuacion determinacion ley de control minima} en eq. \cref{ecuacion de estado ids}:
+
 \begin{equation}
 	\dot{i}^r_{ds}(t) = -\frac{R_s i^r_{ds}(t)}{L_d} \Rightarrow L_d\dot{i}^r_{ds}(t) + R_s i^r_{ds}(t) = 0
 	\label{ecuacion dinamica residual ids}
 \end{equation}
 
 La cual tiene la siguiente solución:
+
 \begin{equation}
 	{i}^r_{ds}(t) = {i}^r_{ds}(0) e^{-\dfrac{R_s}{L_d}t} 
 \end{equation}
 
 Como se puede observar  si $i^{r}_{ds}(0)\neq0$, ésta decae exponencialmente hasta llegar a 0. Esto establece un acoplamiento con el eje $q$, produciendo un comportamiento no lineal, que se termina desvaneciendo con el tiempo a medida que $i^{r}_{ds}$ decae. Por lo tanto este fenomeno puede ser despreciado para régimen forzado.
 
-Para evitar esto, se puede implementar una ley de control complementaria mínima sobre el eje $q$ , y poder eliminar completamente el acoplamiento residual NL, obteniendo así un modelo equivalente lineal del sistema, aún cuando $i^{r}_{ds}(0)\neq0$. Esto se logró implementando una ley de control que permita deshacerse del termino que contien a $i^{r}_{ds}$ en la eq. \eqref{ecuacion de estado iqs}. 
+Para evitar esto, se puede implementar una ley de control complementaria mínima sobre el eje $q$ , y poder eliminar completamente el acoplamiento residual NL, obteniendo así un modelo equivalente lineal del sistema, aún cuando $i^{r}_{ds}(0)\neq0$. Esto se logró implementando una ley de control que permita deshacerse del termino que contien a $i^{r}_{ds}$ en la eq. \eqref{ecuacion de estado iqs}.
 
 \begin{align}
 	v^r_{qs}(t) &= L_q{i}^r_{qs}(t) + R_s(t) i^r_{qs}(t) +P_p \omega_m(t) \lambda'^r_m +\underline{P_p \omega_m(t) L_d i^r_{ds}(t)} \label{ley de control complementaria 1 }\\
@@ -760,20 +876,6 @@ La funciones de transferencia quedan de la siguiente manera:
 	v^r_{qs}(t)^{*} &= L_q{i}^r_{qs}(t) + R_s(t) i^r_{qs}(t) +P_p \omega_m(t) \lambda'^r_m  \label{ley de control complementaria 3}
 \end{align}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \section{ANÁLISIS DE RESULTADOS}
 
 
@@ -798,36 +900,9 @@ Three & Four\\
 \end{center}
 \end{table}
 
-
-   \begin{figure}[thpb]
-      \centering
-      \framebox{\parbox{3in}{We suggest that you use a text box to insert a graphic (which is ideally a 300 dpi TIFF or EPS file, with all fonts embedded) because, in an document, this method is somewhat more stable than directly inserting a picture.
-}}
-      %\includegraphics[scale=1.0]{figurefile}
-      \caption{Inductance of oscillation winding on amorphous
-       magnetic core versus DC bias magnetic field}
-      \label{figurelabel}
-   \end{figure}
-
 \section{CONCLUSIONES}
 
-
-\addtolength{\textheight}{-12cm}   % This command serves to balance the column lengths
-                                  % on the last page of the document manually. It shortens
-                                  % the textheight of the last page by a suitable amount.
-                                  % This command does not take effect until the next page
-                                  % so it should come on the page before the last. Make
-                                  % sure that you do not shorten the textheight too much.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\addtolength{\textheight}{-12cm}
 \section*{APENDICE}
 
 Appendixes should appear before the acknowledgment.
