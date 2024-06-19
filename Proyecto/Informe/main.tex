@@ -322,7 +322,11 @@ Reemplazando \cref{inercia equivalente} y \cref{amortiguamiento equivalente} en 
     \label{diagrama de bloques sub-sistema mecanico completo}
 \end{figure}
 
-El modelo resultante tiene un solo grado de libertad, tal como sucede en el modelo de la carga y del subsistema mecánico de la máquina eléctrica sin la transmisión. Esto se debe a la rigidez y la ausencia de "backlash" en la reducción, permitiendo un "acoplamiento directo" de la carga al eje de la máquina. Dicho de otra manera, la transmisión no incorpora dinámica al subsistema mecánico completo.
+El modelo resultante tiene un solo grado de libertad, tal como sucede en el modelo de la
+carga y en el del subsistema mecánico de la máquina eléctrica sin la transmisión.
+Esto se debe a la suposición de rigidez ideal y la ausencia de "backlash" en la reducción, 
+permitiendo un "acoplamiento directo" de la carga al eje de la máquina.
+Dicho de otra manera, la transmisión no incorpora dinámica al subsistema mecánico.
 
 %5.1.2
 
@@ -349,7 +353,7 @@ Sin embargo, se puede obtener una expresión del modelo matemático vectorial en
     \end{cases}
 \end{equation*}
 
-Teniendo en cuenta la definición del estado del sistema (ver \cref{vector de estado del sistema}) la primera ecuación a considerar en la ecuación vectorial de estado del sistema es la
+Teniendo en cuenta la definición del estado del sistema (ver \cref{vector de estado del sistema}) la primera ecuación escalar a considerar en la ecuación vectorial de estado del sistema es la
 \cref{posicion y velocidad motor}. El acoplamiento entre el sub-sistema electromagnético y el
 mecánico de la máquina eléctrica se da en el $T_m(t)$ dado por la ecuación \cref{torque electromagnetico}.
 Reemplazando esta ecuación en la \cref{subsistema mecanico con parametros equivalentes} y reordenando
@@ -482,7 +486,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
-        \framebox{\includegraphics{3-Subsistema_Térmico.eps}}
+        \framebox{\includegraphics{3-Subsistema_Térmico.png}}
     \end{adjustbox}
     \caption{Diagrama de bloques del sub-sistema térmico}
     \label{subsistema termico}

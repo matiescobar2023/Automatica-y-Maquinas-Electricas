@@ -1,19 +1,19 @@
 # Fdb version 4
-["pdflatex"] 1718832201.83365 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" "main.pdf" "main" 1718832208.07091 0
+["pdflatex"] 1718840247.77342 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" "main.pdf" "main" 1718840253.78776 0
   "1-Brazo.PNG" 1718289822.46398 14666 dbbf8840aa69c12071ab2a0a9be19378 ""
   "10-Transformación_de_Park.eps" 1718289822.60007 257157 f5601a0a7f2fa1ab38b71ca598b98e42 ""
   "11-Transformación_de_Park_Inversa.eps" 1718289822.66411 245311 0cc9edb6a8d7b4d5ee4308b3832dd742 ""
   "12-Ley_de_control_minima.pdf" 1718486173.56866 300344 7530265d106bdb682e2b35563f8f7146 ""
   "13-Ley_de_control_complementaria.pdf" 1718501363.06939 312874 896dd5fd74113968ad8a2eef8296b4dc ""
   "2-Subsistema_Mecánico_Completo.eps" 1718289822.73916 195922 320c2663a51481ad4486124cb83efda9 ""
-  "3-Subsistema_Térmico.eps" 1718289822.7982 450992 50020455295242a7b12b1a990f1ffab4 ""
+  "3-Subsistema_Térmico.png" 1718840206.99063 25811 33f6212bde13eb52f233db12c31ee41e ""
   "4-I_qs.eps" 1718289822.82022 199718 e4f0ae11b322b2621ca237d778c64a6b ""
   "5-I_ds.eps" 1718289822.88528 90156 1e7c84662324e3f2014237930b3281c4 ""
   "6-I_0s.eps" 1718289823.01877 71574 2253fd64b7e63e21e56942e943df1b63 ""
   "7-T_m.eps" 1718289823.12984 94040 d021e12cc7286f88c8c104a5e4d7442e ""
   "8-Subsistema_Electromagnético.eps" 1718289823.2199 358540 00dec4a5442564266852414adae74096 ""
   "9-Sistema_Físico_Completo.eps" 1718289823.30496 612534 b9b1d20406a5234877cbde93b307bba2 ""
-  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" 1718832196.83771 46405 131248df2d58205ae7c28ece41e3ef41 ""
+  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" 1718840242.90559 46436 3d664cc0a41334973b75210acba5925b ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1716317108.30627 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1716319181.74555 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1716345269.78178 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -126,7 +126,7 @@
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1716357246 8225112 5de980edea79c2c299f0a161b7db1c9e ""
   "c:/texlive/2024/texmf.cnf" 1716351796.41707 713 baa45e065482d44c4cd81b98ef72c63b ""
   "ieeeconf.cls" 1716331032.00079 202025 d003ccb4b5f2978a40d92fd20a03590a ""
-  "main.aux" 1718832206.81107 14489 30287f43771fdd40270e7d6de5cd1d19 "pdflatex"
+  "main.aux" 1718840252.62196 14489 30287f43771fdd40270e7d6de5cd1d19 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
