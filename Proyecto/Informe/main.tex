@@ -286,8 +286,7 @@ Se utilizan las siguientes variables para representar el estado, las entradas y 
 \section{DESARROLLO DE TAREAS}
 
 %5.1
-\subsection{\textbf{Modelado, Análisis y Simulación dinámica del SISTEMA FÍSICO a “Lazo
-Abierto” (Sin Controlador externo de Movimiento)}}
+\subsection{\textbf{Modelado, Análisis y Simulación dinámica del SISTEMA FÍSICO a “Lazo Abierto” (Sin Controlador externo de Movimiento)}}
 
 %5.1.1
 \subsubsection{\textbf{Modelo sub-sistema mecánico completo referido al eje de la máquina eléctrica}}
@@ -653,7 +652,7 @@ Expresandolo en forma de espacio de estados, el sistema quedaria de la siguiente
 		 	 	{i}^r_{qs}(t)
 		 	 \end{bmatrix}
 	\end{cases}
-	\label{ecuacion con ids=0}
+	\label{ecuacion matricial con ids=0}
 \end{equation}
 
 Para lograr esta especificación es necesario realizar una ley de control minima que se determina a partir de la ecuacion de estado para $i^{r}_{ds}$ eq. \eqref{ecuacion de estado ids}, partiendo de la hipótesis de que $i^{r}_{ds}(0)=0$:
@@ -716,29 +715,218 @@ El modelo LTI equivalente(incorporando la dinamica residual del eje $d$) queda d
 	\end{cases}
 	\label{equaciones modelo LTI eq}
 \end{equation}
+\paragraph{\textbf{Comparación del modelo dinámico LTI equivalente aumentado vs. el modelo dinámico global LPV}}
 
-La funciones de transferencia quedan de la siguiente manera:
+\paragraph{\textbf{Funciones de Transferencia}}
+para el modelo LTI equivalente aumentado, desde ambas entradas $V^r_{qs}(s)$ y $T_l(s)$ hacia la salida ${\Theta}_m(s)$.
 
+Primero se aplicó la Transformada de Laplace a la ecuaciones del sistema LTI equivalente aumentado, considerando condiciones iniciales nulas:
+
+\begin{equation}
+	\begin{cases}
+		s{\Theta}_m(s) = {\Omega}_m(s)\\
+		s{\Omega}_m(s) = \frac{3}{2} \frac{P_p I^r_{qs}(s)\lambda^r_m}{J_{eq}} - \frac{b_{eq}\Omega_m(s)}{J_{eq}} - \frac{T_l(s)}{r J_{eq}}\\
+		s{I}^r_{qs}(s) = -\frac{R_s I^r_{qs}(s)}{L_q} - \frac{P_p \Omega_m(s) \lambda^r_m}{L_q}+ \frac{V^r_{qs}(s)}{L_q}	
+	\end{cases}
+	\label{equaciones modelo LTI eq en s}
+\end{equation}
+
+Luego se despejó la salida en función de las entradas, para obtener finalmente las funciones de transferencia:
 \begin{align}
-	G_{v^r_{qs}}(t) &= L_q{i}^r_{qs}(t) + R_s(t) i^r_{qs}(t) +P_p \omega_m(t) \lambda'^r_m +\underline{P_p \omega_m(t) L_d i^r_{ds}(t)} \label{ley de control complementaria 1 }\\
-	v^r_{qs}(t) &= v^r_{qs}(t)^{*} + P_p \omega_m(t) L_d i^r_{ds}(t)  \label{ley de control complementaria 2}\\
-	v^r_{qs}(t)^{*} &= L_q{i}^r_{qs}(t) + R_s(t) i^r_{qs}(t) +P_p \omega_m(t) \lambda'^r_m  \label{ley de control complementaria 3}
+	{\Theta}_m(s) &= -\frac{R_{s} \frac{T_l(s)}{r} + L_{q} \frac{T_l(s)}{r} s - \dfrac{3}{2} P_{p} V^r_{qs}(s) \lambda^r_m}{J_{eq} L_{q} s^3 +\left( J_{eq} R_{s} + L_{q} b_{eq} \right)s^2 + \left( R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2\right) s}\label{posicion en funcion de demas variables en laplace}\\
+	G_{V^r_{qs}}(s) &= \frac{{\Theta}_m(s)}{V^r_{qs}(s)} = \frac{\dfrac{3}{2} P_{p} \lambda^r_m}{J_{eq} L_{q} s^3 +\left( J_{eq} R_{s} + L_{q} b_{eq} \right)s^2 + \left( R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2\right) s}\label{funcion de transferencia desde Vqs}\\
+	G_{T_l}(s) &= \frac{{\Theta}_m(s)}{T_l(s)} = -\frac{\frac{1}{r}\left( R_{s} + L_{q} s\right) }{J_{eq} L_{q} s^3 +\left( J_{eq} R_{s} + L_{q} b_{eq} \right)s^2 + \left( R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2\right) s}
+	\label{funcion de transferencia desde T_l}
 \end{align}
 
+\subsubsection{\textbf{Análisis de estabilidad a lazo abierto para el modelo LTI equivalente aumentado}}
+\paragraph{\textbf{Determinación de polos y ceros del sistema}}
+Para determinar los polos, se resolvió el polinomio característico del sistema.
+
+\begin{align}
+	J_{eq} L_{q} s^3 +\left( J_{eq} R_{s} + L_{q} b_{eq} \right)s^2 + \left( R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2\right) s = 0 \label{polinomio caracteristico del sistema LTI}\\
+\end{align}
+
+Cuyas soluciones fueron:
+\begin{equation}
+	\begin{cases}
+		s_1 = 0\\
+		s_2 = \frac{-\left( L_{q} b_{eq} + J_{eq} R_{s}\right)  + \sqrt{{J_{eq}}^2 {R_{s}}^2 - 6 J_{eq} L_{q} {P_{p}}^2 {\lambda^r_m}^2 - 2 J_{eq} L_{q} R_{s} b_{eq}+{L_{q}}^2 {b_{eq}}^2} }{2 J_{eq} L_{q}}\\
+		s_3 = \frac{-\left( L_{q} b_{eq} + J_{eq} R_{s}\right)  - \sqrt{{J_{eq}}^2 {R_{s}}^2 - 6 J_{eq} L_{q} {P_{p}}^2 {\lambda^r_m}^2 - 2 J_{eq} L_{q} R_{s} b_{eq}+{L_{q}}^2 {b_{eq}}^2} }{2 J_{eq} L_{q}}
+	\end{cases}\label{polos del sistema LTI}
+\end{equation}
+
+Además, se obtuvieron las frecuencias naturales y relaciones de amortiguamiento, al comparar la ecuacion caracteristicas asociada a los dos polos complejos conjugados, con  la ecuación estandar de un sistema de segundo orden.
+
+\begin{align}
+	 s^2 +\dfrac{ J_{eq} R_{s} + L_{q} b_{eq}}{J_{eq} L_{q}} &s +\dfrac{ R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2}{J_{eq} L_{q}}  = 0 \label{polinomio caracteristico del sistema LTI polos complejos conjugados}\\
+	 s^2 + 2 \zeta \omega_{n} &s + \omega_{n}^{2} = 0 \label{ecuación estandar de un sistema de segundo orden}
+\end{align}
+
+\begin{align}
+	\omega_{n} &= \sqrt{\dfrac{ R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2}{J_{eq} L_{q}}} \label{eciacion de las frecuencias naturales del LTI}\\
+	\zeta &= \dfrac{ J_{eq} R_{s} + L_{q} b_{eq}}{2 \sqrt{ J_{eq} L_{q}\left( R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2\right) }} \label{eciacion de las relaciones de amortiguamiento del LTI}
+\end{align}
+
+Se pudo ver que solo la perturbación introduce un cero:
+
+\begin{align}
+	 R_{s} + L_{q} s = 0 \Rightarrow s = -\frac{R_{s}}{L_{q}}
+	 \label{cero del sistema LTI}
+\end{align}
+
+Para ver como varian los polos, frecuencia natural y  cero, se graficaron en funcion de los parametros que se varian.
 
 
+\subsubsection{\textbf{Análisis de observabilidad completa de estado para el modelo LTI equivalente aumentado desde salida medida $\mathbf{\theta_m(t)}$}}
+
+Para evaluar la observabilidad desde la salida medida, se determinó la matriz de observabilidad, para luego calcular su rango y compararlo con el orden del sistema.
+
+\begin{equation}
+	O=
+	\begin{bmatrix}
+		C \\ 
+		CA\\
+		...\\
+		CA^{n-1}  
+	\end{bmatrix}
+	\label{Matriz de observabilida generica}
+\end{equation}
+
+Para nuestro caso, recordando las matrices A y C en eq.\eqref{ecuacion matricial con ids=0}, la matriz de observabilidad quedó de la siguiente manera:
+\begin{equation}
+	O=
+	\begin{bmatrix}
+		1 & 0 & 0 \\ 
+		0 & 1 & 0\\
+		 0 & -\frac{b_{eq}}{J_{eq}} & \frac{3 P_p \lambda^r_m}{2 J_{eq}}  
+	\end{bmatrix}
+	\label{Matriz de observabilida del LTI}
+\end{equation}
+Al calcular el determinate de esta matriz:
+
+\begin{equation}
+	det(O)= \frac{3 P_p \lambda^r_m}{2 J_{eq}}
+	\label{determinante de Matriz de observabilida del LTI}
+\end{equation}
+se pudo ver que es distintyo de cero, por lo que el rango de O es 3, que es igual al orden del sistema. Entonces, se concluye que el sistema LTI aumentado simplificado es completamente observable desde la posición.
+
+Sin embargo, se debe aclarar que el sistema LTI aumentado con sistemas autónomos desacoplados, es parcialmente observable, ya que los estados ${i}^r_{ds}(t) $ y ${T}^\circ_s(t)$ no pueden ser observados desde la posición.
+
+Se propuso tomar como salida a la velocidad ${\omega}_m(t)$ y analizar la observabilidad desde ella. En este caso la matriz de salida queda:
+\begin{equation}
+	O=
+	\begin{bmatrix}
+		0 & 1 & 0  
+	\end{bmatrix}
+	\label{Matriz C con velocidad como salida}
+\end{equation}
+Los resultados obtenidos fueron:
+
+\begin{equation}
+	O=
+	\begin{bmatrix}
+		0 & 1 & 0 \\ 
+		0 & -\frac{b_{eq}}{J_{eq}} &\frac{3 P_p \lambda^r_m}{2 J_{eq}}\\
+		0 & \frac{2 L_q {b_{eq}}^2 - 3 J_{eq} {P_p}^2 {\lambda^r_m}^2} {2 {J_{eq}}^2 L_q} & -\frac{3 P_p \lambda^r_m \left(L_q b_{eq} + J_{eq} R_s \right)}{2 {J_{eq}}^2 L_q}  
+	\end{bmatrix}
+	\label{Matriz de observabilidad desde velocidad del LTI }
+\end{equation}
 
 
+Al calcular el determinate de esta matriz, el resultado fue 0, por lo tanto el rango es menor a 3 y el sistema no es observable desde la velocidad.
+
+Esto ocurre ya que, al conocer la velocidad, no podemos determinar la posición si no conocemos la condicion inicial de la posición.
+
+\subsubsection{\textbf{Análisis de controlabilidad completa de estado para el modelo LTI equivalente aumentado desde entrada manipulada $\mathbf{v^r_{qs}(t)}$, sin considerar la perturbación de la carga mecánica}}
+Para evaluar la controlabilidad desde la entrada manipulada, se determinó la matriz de controlabilidad, para luego calcular su rango y compararlo con el orden del sistema.
+
+\begin{equation}
+	S=
+	\begin{bmatrix}
+		B & AB & ... & A^{n-1}B  
+	\end{bmatrix}
+	\label{Matriz de controlabilidad generica}
+\end{equation}
+
+Para nuestro caso, recordando las matrices A y B en eq.\eqref{ecuacion matricial con ids=0}, la matriz de controlabilidad quedó de la siguiente manera:
+\begin{equation}
+	S=
+	\begin{bmatrix}
+		0 & 0 & \frac{3 P_p \lambda^r_m}{2 J_{eq} L_q}\\ 
+		0 & \frac{3 P_p \lambda^r_m}{2 J_{eq} L_q} & -\frac{3 P_p \lambda^r_m \left(L_q b_{eq} + J_{eq} R_s \right)}{2 {J_{eq}}^2 L_q^2}\\
+		\frac{1}{L_q} & -\frac{R_s}{{L_q}^2} & \frac{2 J_{eq} {R_s}^2 - 3 L_{q} {P_p}^2 {\lambda^r_m}^2} {2 J_{eq} {L_q}^3}  
+	\end{bmatrix}
+	\label{Matriz de controlabilidad del LTI}
+\end{equation}
+
+Al calcular el determinate de esta matriz:
+
+\begin{equation}
+	det(S)= -\frac{9 {P_p}^2 {\lambda^r_m}^2}{4 {J_{eq}}^2 {{L_q}}^3}
+	\label{determinante de Matriz de controlabilidad del LTI}
+\end{equation}
+al igual que con la observabilidad, se pudo ver que es distinto de cero, por lo que el rango de S es 3, igual al orden del sistema. Entonces, se concluye que el sistema LTI aumentado simplificado es completamente controlable desde $v^r_{qs}(t)$.
+
+Similar a lo que ocurrió con la observabilidad, el sistema LTI aumentado con sistemas autónomos desacoplados, es parcialmente controlable, ya que el estado ${i}^r_{ds}(t) $  no puede ser controlado desde $v^r_{qs}(t)$. Para lograrlo, deben considerarse otras entradas de control adicionales como  $v^r_{ds}(t)$ 
 
 
+\subsubsection{\textbf{Simulación dinámica en dominio temporal}}
 
+\subsection{\textbf{Modelado, Análisis y Simulación con controlador de movimiento en cascada con modulador de torque equivalente(control vectorial)}}
 
+\subsubsection{\textbf{Modulador de torque equivalente(Controlador interno vectorial de corriente/torque)}}
+\paragraph{\textbf{Compensación de todas las realimentaciones físicas naturales de estado hacia la entrada}}
+Para lograrlo primero se analizaron las ecuaciones del modelo NL del subsitema electromagnético:
 
+\begin{align}
+	\begin{cases}
+		\dot{i}^r_{qs}(t) &= -\frac{R_s(t) i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \left[\lambda'^r_m + L_d i^r_{ds}(t)\right]}{L_q} + \frac{v^r_{qs}(t)}{L_q}\\
+		\dot{i}^r_{ds}(t) &= -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t)i^r_{qs}(t)}{L_d}  + \frac{v^r_{ds}(t)}{L_d} \\ 
+		\dot{i}_{0s}(t)   &= -\frac{R_s(t) i_{0s}(t)}{L_{ls}} + \frac{v_{0s}(t)}{L_ls}
+	\end{cases}	\label{Ecuaciones NL del subsistema electromagnetico}
+\end{align}
 
+ Se puede ver que, del lado derecho de las ecuaciones, tenemos todas las realimentaciones físicas además de las tensiones de entrada.Por lo tanto,para desacoplar estas realimentaciones, se propusieron las siguientes tensiones como consigna de entrada:
+ 
+ \begin{align}
+ 	v^r_{qs}(t) &= {v^r_{qs}}^*(t) + R_s(t) i^r_{qs}(t) + P_p \omega_m(t) \left[\lambda'^r_m + L_d i^r_{ds}(t)\right] \label{Ecuacion desacoplamientos en vqs}\\
+ 	v^r_{ds}(t) &= {v^r_{ds}(t)}^* + R_s(t) i^r_{ds}(t) - L_q P_p \omega_m(t)i^r_{qs}(t) \label{Ecuacion desacoplamientos en vds}\\ 
+ 	v_{0s}(t)   &= {v_{0s}(t)}^* + R_s(t) i_{0s}(t) \label{Ecuacion desacoplamientos en v0s}
+ \end{align}
+donde las tensiones  ${v_{qd0s}(t)}^*$ son las nuevas consignas con las realimentaciones ya desacopladas.
 
+Al reemplazar las ecuaciones \eqref{Ecuacion desacoplamientos en vqs}, \eqref{Ecuacion desacoplamientos en vds} y \eqref{Ecuacion desacoplamientos en v0s} en eq.\eqref{Ecuaciones NL del subsistema electromagnetico}, se cancelan los terminos de las realimentaciones y se obtiene el siguiente subsistema electromagnético:
 
+\begin{align}
+	\begin{cases}
+		\dot{i}^r_{qs}(t) &= \frac{{v^r_{qs}(t)}^*}{L_q}\\
+		\dot{i}^r_{ds}(t) &= \frac{{v^r_{ds}(t)}^*}{L_d} \\ 
+		\dot{i}_{0s}(t)   &= \frac{{v_{0s}(t)}^*}{L_ls}
+	\end{cases}	\label{Ecuaciones NL del subsistema electromagnetico sin realimentaciones fisicas}
+\end{align}
 
+De esta manera, quedó un sistema lineal en el cual existe un acceso directo a las corrientes, sin realimentaciones. Cabe destacar que con este método se desacoplaron los efectos que provocan las realimentaciones, ya que  estas se deben a principios físicos propios del sistema. Además se esta suponiendo que se tienen los sensores necesarios para medir los estados a realimentar.
 
+\paragraph{\textbf{Diseño de lazos de control de corrientes $\mathbf{{i}^r_{qd0s}(t)}$}}
+Luego de haber desacoplado todas las realimentaciones, se incorporaron lazos de control de corriente solamente proporcional (con polos ubicados en $p_{i}=-5000\dfrac{rad}{s}$), con consignas de corriente en lugar de tensiones y asi lograr un control mas preciso del torque.
+Para lograrlo, se definieron las consignas de tension  ${v_{qd0s}(t)}^*$ de la siguiente manera:
+ \begin{align}
+	{v^r_{qs}}^*(t) &= R_q \left[ {i^r_{qs}(t)}^* - i^r_{qs}(t))\right] \label{Ecuacion control corrinte iq}\\
+	{v^r_{ds}(t)}^* &= R_d \left[ {i^r_{ds}(t)}^* - i^r_{ds}(t) \right] \label{Ecuacion control corrinte id}\\ 
+	{v_{0s}(t)}^*   &= R_0 \left[ {i_{0s}(t)}^* - i_{0s}(t) \right] \label{Ecuacion control corrinte i0}
+\end{align}
+donde estas consignas de tensiones son proporcionales al error de corriente, y las constantes de proporcionalidad son resistencias con unidades en ohm.
+
+Para determinar el valor de las ganancias se reemplazaron las ecuaciones \eqref{Ecuacion control corrinte iq}, \eqref{Ecuacion control corrinte id} y \eqref{Ecuacion control corrinte i0} en la eq. \eqref{Ecuaciones NL del subsistema electromagnetico sin realimentaciones fisicas}, y luego se encontraron las funciones de transferencia del sistema resultante.
+
+\paragraph{\textbf{Incorporación de consigna de torque}}
+\paragraph{\textbf{Compensación del torque de carga por gravedad}}
+
+\subsubsection{\textbf{Controlador externo de movimiento: posición/velocidad}}
+\subsubsection{\textbf{Incorporación de observador de estado de orden reducido para parte mecánica}}
+\subsubsection{\textbf{Simulación en timepo continuo con modelo no lineal completo}}
+\subsubsection{\textbf{Verificación de desempeño}}
 \section{ANÁLISIS DE RESULTADOS}
 
 

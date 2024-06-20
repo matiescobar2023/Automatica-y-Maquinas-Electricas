@@ -19,3 +19,4 @@ Cont = [B, A*B, (A^2)*B];
 Cont = simplify(Cont);
 disp(Cont)
 disp(det(Cont))
+latex(det(Cont))
