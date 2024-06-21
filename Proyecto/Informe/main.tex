@@ -199,7 +199,7 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
 El problema bajo estudio se encuentra bien detallado en la guía de referencia (\cite{c1}), por lo que en esta sección se indican solo los aspectos más relevantes de cada una de las partes del problema, sin hacer énfasis en las ecuaciones que describen los modelos de cada una de las partes ni en los parámetros de cada uno de los subsistemas.
 
 % Carga mecánica
-\subsection{\textbf{carga mecanica}}
+\subsection{\textbf{carga mecánica}}
 Aplicación simplificada de referencia (adaptado de \cite{c2}): control de movimiento de 1 eje (descentralizado) para articulación de brazo manipulador robótico elemental de un grado de libertad (1 g.d.l.) rotacional de eje horizontal sometido a la acción de la aceleración de gravedad (péndulo rígido actuado), con eje de rotación fijo a base en sistema de referencia inercial (\cref{brazo}); con parámetros equivalentes variables según sea la carga útil transportada en el extremo.
 
 \begin{figure}[thpb]
@@ -223,7 +223,7 @@ Máquina eléctrica de CA trifásica sincrónica con excitación por imanes perm
 
 % Subsistema térmico de la máquina eléctrica
 \vspace*{0.2cm}
-\subsubsection{\textbf{subsistema termico}} Modelo simplificado equivalente de primer orden, considerando sólo pérdidas
+\subsubsection{\textbf{subsistema térmico}} Modelo simplificado equivalente de primer orden, considerando sólo pérdidas
 eléctricas resistivas por efecto Joule en bobinado de estator, despreciando pérdidas magnéticas
 en el núcleo; transferencia de calor por conducción y convección natural, sin ventilación forzada.
 
@@ -243,11 +243,11 @@ Se considera un modelo promediado equivalente de tensiones sintetizadas de salid
 
 El sistema cuenta con los siguientes dispositivos físicos y sus canales de medición y acondicionamiento:
 \begin{itemize}
-    \item 1 sensor de posición angular (codificador incremental o “encoder”) montado en el eje de motor, asumiendo proceso de “homing” y decodificación idealizados. Se logra la medición de la posición angular absoluta “rectificada” (al girar más de una revolución)
+    \item 1 sensor de posición angular (codificador incremental o “encoder”) montado en el eje de motor, asumiendo proceso de “homming” y decodificación idealizados. Se logra la medición de la posición angular absoluta “rectificada” (al girar más de una revolución)
     \[\rightarrow \text{variable medida}: \theta_m(t)\]
     \item 3 sensores de corriente instantánea de fase, montados en salida trifásica del inversor hacia bornes del estator.
     \[\rightarrow \text{variables medidas}: i_{as}(t), i_{bs}(t), i_{cs}(t)\]
-    \item 1 sensor de temperatura (ej. RTD) en bobinado de estator. Se mide la temperatur para monitoreo de calentamiento y estimación de resistencia de estator $R_s(t)$.
+    \item 1 sensor de temperatura (ej. RTD) en bobinado de estator. Se mide la temperatura para monitoreo de calentamiento y estimación de resistencia de estator $R_s(t)$.
     \[\rightarrow \text{variable medida}: T_s^{\circ}(t)\]
 \end{itemize}
 
@@ -294,7 +294,7 @@ Reemplazando en la anterior $\omega_{l}(t)$ según \cref{relacion de velocidad e
     \label{subsistema mecanico con parametros desarrollados}
 \end{flalign}
 
-Definimos ahora la inercia equivalente y el amoriguamiento equivalente respectivamente como:
+Definimos ahora la inercia equivalente y el amortiguamiento equivalente respectivamente como:
 
 \begin{equation}
    J_{eq}= \left(J_{m}+\frac{J_{l}}{r^2}\right)
@@ -306,7 +306,7 @@ Definimos ahora la inercia equivalente y el amoriguamiento equivalente respectiv
     \label{amortiguamiento equivalente}
 \end{equation}
 
-Reemplazando \cref{inercia equivalente} y \cref{amortiguamiento equivalente} en \cref{subsistema mecanico con parametros desarrollados} obtenemos el modelo matemático equivalente del sub-sistema mecánico completo con parámetros equivalentes referido al eje del motor (veasé diagrama de bloques de la \cref{diagrama de bloques sub-sistema mecanico completo}):
+Reemplazando \cref{inercia equivalente} y \cref{amortiguamiento equivalente} en \cref{subsistema mecanico con parametros desarrollados} obtenemos el modelo matemático equivalente del sub-sistema mecánico completo con parámetros equivalentes referido al eje del motor (véase diagrama de bloques de la \cref{diagrama de bloques sub-sistema mecanico completo}):
 \begin{flalign}
     J_{eq}\,\frac{d \omega _{m}\left(t\right)}{dt}=T_{m}\left(t\right)-b_{eq}\, \omega _{m}\left(t\right)-\frac{T_{l}\left(t\right)}{r}
     \label{subsistema mecanico con parametros equivalentes}
@@ -363,7 +363,7 @@ obtenemos la segunda ecuación de estado del sistema:
     \label{ecuacion de estado wm}
 \end{equation}
 
-Las siguientes tres ecuaciones de estado del sistema se obtienenen de las ecuaciones de balance de tensiones
+Las siguientes tres ecuaciones de estado del sistema se obtienen de las ecuaciones de balance de tensiones
 en coordenadas virtuales (\cref{balance de tensiones q} \cref{balance de tensiones d}, \cref{balance de tensiones 0}).
 Reemplazando en estas la relación entre $\omega_m(t)$ y $\omega_r(t)$ dada por la \cref{Relacion coordenadas electricas y mecanicas} obtenemos:
 \begin{align}
@@ -372,13 +372,13 @@ Reemplazando en estas la relación entre $\omega_m(t)$ y $\omega_r(t)$ dada por 
     \dot{i}_{0s}(t)   &= -\frac{R_s(t) i_{0s}(t)}{L_{ls}} + \frac{v_{0s}(t)}{L_{ls}}\label{ecuacion de estado i0s}
 \end{align}
 
-La última ecuación de estado se obtiene relacionando las \cref{potencia de perdidas} y \cref{balance termico estator} obteniendose:
+La última ecuación de estado se obtiene relacionando las \cref{potencia de perdidas} y \cref{balance termico estator} obteniéndose:
 \begin{equation}
     \dot{T}^\circ_s(t) = \frac{3}{2} \frac{R_s(t) \left[ i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right]}{C_{ts}} - \frac{\left[T_s^{\circ}(t) - T_{amb}^{\circ}(t)\right]}{R_{ts}C_{ts}} 
     \label{ecuacion de estado Ts}
 \end{equation}
 
-Cabe mencionar, para las útlimas ecuaciones de estado, que aunque se tiene un modelo lineal de evolución de la $R_S(t)$ con la $T^\circ_s(t)$ dado en la \cref{Rs}
+Cabe mencionar, para las últimas ecuaciones de estado, que aunque se tiene un modelo lineal de evolución de la $R_S(t)$ con la $T^\circ_s(t)$ dado en la \cref{Rs}
 se decide no desarrollar la misma en las ecuaciones anteriores y se deja la dependencia explicita de $R_S$ con $t$ con el objeto de simplificar la notación
 y no oscurecer la explicación. Con el mismo objeto, se simplifica la notación de $R_{ts-amb}$ a simplemente $R_{ts}$.
 
@@ -432,7 +432,7 @@ y no oscurecer la explicación. Con el mismo objeto, se simplifica la notación 
     \label{ecuacion vectorial de estado del sistema}
 \end{equation}
 
-Con condiciones inciales:
+Con condiciones iniciales:
 \begin{equation}
     \mathbf{x}(t_0) = \mathbf{x_0}
     =
@@ -470,7 +470,7 @@ el diagrama de bloques del sistema físico completo constituido por los sub-sist
 respectivos se muestran en las \cref{diagrama de bloques sub-sistema mecanico completo}, \cref{subsistema termico},
 y \cref{sub-sistema electromagnetico}. A su vez, los componentes del sub-sistema electromagnético se detallan
 en las \cref{diagrama de bloques I_qs}, \cref{diagrama de bloques I_ds}, \cref{diagrama de bloques I_0s}, para las corrientes ($i_{qs}$, $i_{ds}$, $i_{0s}$ respectivamente) y en la \cref{diagrama de bloques T_m} para $T_m(t)$.
-Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park inversa} se detallan las transformaciones de Park directa e inversa respecticamente.
+Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park inversa} se detallan las transformaciones de Park directa e inversa respectivamente.
 
 % Diagramas
 \begin{figure}[thpb]
@@ -550,7 +550,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
     \begin{adjustbox}{max width=\columnwidth}
         \framebox{\includegraphics{11-Transformación_de_Park_Inversa.eps}}
     \end{adjustbox}
-    \caption{Transformacion de Park inversa}
+    \caption{Transformación de Park inversa}
     \label{transformacion de Park inversa}
 \end{figure}
 
@@ -840,7 +840,7 @@ Los gradientes indicados para $A(t)$ en la \cref{matriz_AB} vienen dados por la 
 Nota: Por motivos de legibilidad del modelo matemático LPV completo, decidimos conservar la expresión en esta forma desagregada.
 
 \paragraph{\textbf{Linealización Por Realimentación No Lineal}}
-En este análisis no se tendra en cuenta el acoplamiento no lineal con el subsistema térmico, pero si su dinámica lineal. Para lograr esto, se impone directamente la especificación $i^{r}_{ds}(t)\equiv0$. Las ecuaciones resultantes son:
+En este análisis no se tendrá en cuenta el acoplamiento no lineal con el subsistema térmico, pero si su dinámica lineal. Para lograr esto, se impone directamente la especificación $i^{r}_{ds}(t)\equiv0$. Las ecuaciones resultantes son:
 
 \begin{equation}
 	\begin{cases}
@@ -851,7 +851,7 @@ En este análisis no se tendra en cuenta el acoplamiento no lineal con el subsis
 	\label{ecuacion con ids=0}
 \end{equation}
 
-Expresandolo en forma de espacio de estados, el sistema quedaria de la siguiente manera:
+Expresándolo en forma de espacio de estados, el sistema quedaría de la siguiente manera:
 
 \begin{equation}
 	\begin{cases}
@@ -896,7 +896,7 @@ Expresandolo en forma de espacio de estados, el sistema quedaria de la siguiente
 	\label{ecuacion matricial con ids=0}
 \end{equation}
 
-Para lograr esta especificación es necesario realizar una ley de control minima que se determina a partir de la ecuacion de estado para $i^{r}_{ds}$ eq. \eqref{ecuacion de estado ids}, partiendo de la hipótesis de que $i^{r}_{ds}(0)=0$:
+Para lograr esta especificación es necesario realizar una ley de control mínima que se determina a partir de la ecuación de estado para $i^{r}_{ds}$ eq. \eqref{ecuacion de estado ids}, partiendo de la hipótesis de que $i^{r}_{ds}(0)=0$:
 
 \begin{equation}
 	0= \frac{L_q P_p \omega_m(t)i^r_{qs}(t)}{L_d}  + \frac{v^r_{ds}(t)}{L_d}\Rightarrow	v^{r}_{ds}= -L_{q}i^{r}_{qs}P_{p}\omega_{m}\\
@@ -905,6 +905,10 @@ Para lograr esta especificación es necesario realizar una ley de control minima
 
 De esta manera queda determinada la ley de control mínima, que debe aplicarse para lograr el desacoplamiento de los canales de flujo magnético y torque.
 Luego se implementó, en el modelo global NL completo, esta  ley de control mínima mediante un controlador parcial incorporando el inversor (modulador de tensión trifásico equivalente), las Transformaciones de Park y los sensores de realimentación ideal de variables de estado:
+\begin{figure}
+	\includegraphics{13-Ley_de_control_complementaria}
+	\caption{}
+\end{figure}
 
 \begin{figure}[thpb]
 	\centering
@@ -915,7 +919,7 @@ Luego se implementó, en el modelo global NL completo, esta  ley de control mín
 	\label{Implementación de ley de control mínima}
 \end{figure}
 
-Para el caso general en donde no se cumple la hipótesis $i^{r}_{ds}(0)=0$ , existe una dinámica residual en la corriente $i^{r}_{ds}$. Esta dinámica queda represantada con la ecuacion diferencial que obtenemos al reemplazar la ley de control mínima eq. \cref{ecuacion determinacion ley de control minima} en eq. \cref{ecuacion de estado ids}:
+Para el caso general en donde no se cumple la hipótesis $i^{r}_{ds}(0)=0$ , existe una dinámica residual en la corriente $i^{r}_{ds}$. Esta dinámica queda representada con la ecuación diferencial que obtenemos al reemplazar la ley de control mínima eq. \cref{ecuacion determinacion ley de control minima} en eq. \cref{ecuacion de estado ids}:
 
 \begin{equation}
 	\dot{i}^r_{ds}(t) = -\frac{R_s i^r_{ds}(t)}{L_d} \Rightarrow L_d\dot{i}^r_{ds}(t) + R_s i^r_{ds}(t) = 0
@@ -928,9 +932,9 @@ La cual tiene la siguiente solución:
 	{i}^r_{ds}(t) = {i}^r_{ds}(0) e^{-\dfrac{R_s}{L_d}t} 
 \end{equation}
 
-Como se puede observar  si $i^{r}_{ds}(0)\neq0$, ésta decae exponencialmente hasta llegar a 0. Esto establece un acoplamiento con el eje $q$, produciendo un comportamiento no lineal, que se termina desvaneciendo con el tiempo a medida que $i^{r}_{ds}$ decae. Por lo tanto este fenomeno puede ser despreciado para régimen forzado.
+Como se puede observar  si $i^{r}_{ds}(0)\neq0$, ésta decae exponencialmente hasta llegar a 0. Esto establece un acoplamiento con el eje $q$, produciendo un comportamiento no lineal, que se termina desvaneciendo con el tiempo a medida que $i^{r}_{ds}$ decae. Por lo tanto este fenómeno puede ser despreciado para régimen forzado.
 
-Para evitar esto, se puede implementar una ley de control complementaria mínima sobre el eje $q$ , y poder eliminar completamente el acoplamiento residual NL, obteniendo así un modelo equivalente lineal del sistema, aún cuando $i^{r}_{ds}(0)\neq0$. Esto se logró implementando una ley de control que permita deshacerse del termino que contien a $i^{r}_{ds}$ en la eq. \eqref{ecuacion de estado iqs}.
+Para evitar esto, se puede implementar una ley de control complementaria mínima sobre el eje $q$ , y poder eliminar completamente el acoplamiento residual NL, obteniendo así un modelo equivalente lineal del sistema, aún cuando $i^{r}_{ds}(0)\neq0$. Esto se logró implementando una ley de control que permita deshacerse del término que contiene a $i^{r}_{ds}$ en la eq. \eqref{ecuacion de estado iqs}.
 
 \begin{align}
 	v^r_{qs}(t) &= L_q{i}^r_{qs}(t) + R_s(t) i^r_{qs}(t) +P_p \omega_m(t) \lambda'^r_m +\underline{P_p \omega_m(t) L_d i^r_{ds}(t)} \label{ley de control complementaria 1 }\\
@@ -947,7 +951,7 @@ Para evitar esto, se puede implementar una ley de control complementaria mínima
 	\label{Implementación de ley de control complementaria}
 \end{figure}
 
-El modelo LTI equivalente(incorporando la dinamica residual del eje $d$) queda de la siguiente manera:
+El modelo LTI equivalente(incorporando la dinámica residual del eje $d$) queda de la siguiente manera:
 
 \begin{equation}
 	\begin{cases}
@@ -999,7 +1003,7 @@ Cuyas soluciones fueron:
 	\end{cases}\label{polos del sistema LTI}
 \end{equation}
 
-Además, se obtuvieron las frecuencias naturales y relaciones de amortiguamiento, al comparar la ecuacion caracteristicas asociada a los dos polos complejos conjugados, con  la ecuación estandar de un sistema de segundo orden.
+Además, se obtuvieron las frecuencias naturales y relaciones de amortiguamiento, al comparar la ecuación características asociada a los dos polos complejos conjugados, con  la ecuación estándar de un sistema de segundo orden.
 
 \begin{align}
 	 s^2 +\dfrac{ J_{eq} R_{s} + L_{q} b_{eq}}{J_{eq} L_{q}} &s +\dfrac{ R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2}{J_{eq} L_{q}}  = 0 \label{polinomio caracteristico del sistema LTI polos complejos conjugados}\\
@@ -1018,7 +1022,7 @@ Se pudo ver que solo la perturbación introduce un cero:
 	 \label{cero del sistema LTI}
 \end{align}
 
-Para ver como varian los polos, frecuencia natural y  cero, se graficaron en funcion de los parametros que se varian.
+Para ver como varían los polos, frecuencia natural y  cero, se graficaron en función de los parámetros que se varían.
 
 
 \subsubsection{\textbf{Análisis de observabilidad completa de estado para el modelo LTI equivalente aumentado desde salida medida $\mathbf{\theta_m(t)}$}}
@@ -1046,13 +1050,13 @@ Para nuestro caso, recordando las matrices A y C en eq.\eqref{ecuacion matricial
 	\end{bmatrix}
 	\label{Matriz de observabilida del LTI}
 \end{equation}
-Al calcular el determinate de esta matriz:
+Al calcular el determinante de esta matriz:
 
 \begin{equation}
 	det(O)= \frac{3 P_p \lambda^r_m}{2 J_{eq}}
 	\label{determinante de Matriz de observabilida del LTI}
 \end{equation}
-se pudo ver que es distintyo de cero, por lo que el rango de O es 3, que es igual al orden del sistema. Entonces, se concluye que el sistema LTI aumentado simplificado es completamente observable desde la posición.
+se pudo ver que es distinto de cero, por lo que el rango de O es 3, que es igual al orden del sistema. Entonces, se concluye que el sistema LTI aumentado simplificado es completamente observable desde la posición.
 
 Sin embargo, se debe aclarar que el sistema LTI aumentado con sistemas autónomos desacoplados, es parcialmente observable, ya que los estados ${i}^r_{ds}(t) $ y ${T}^\circ_s(t)$ no pueden ser observados desde la posición.
 
@@ -1077,9 +1081,9 @@ Los resultados obtenidos fueron:
 \end{equation}
 
 
-Al calcular el determinate de esta matriz, el resultado fue 0, por lo tanto el rango es menor a 3 y el sistema no es observable desde la velocidad.
+Al calcular el determinante de esta matriz, el resultado fue 0, por lo tanto el rango es menor a 3 y el sistema no es observable desde la velocidad.
 
-Esto ocurre ya que, al conocer la velocidad, no podemos determinar la posición si no conocemos la condicion inicial de la posición.
+Esto ocurre ya que, al conocer la velocidad, no podemos determinar la posición si no conocemos la condición inicial de la posición.
 
 \subsubsection{\textbf{Análisis de controlabilidad completa de estado para el modelo LTI equivalente aumentado desde entrada manipulada $\mathbf{v^r_{qs}(t)}$, sin considerar la perturbación de la carga mecánica}}
 Para evaluar la controlabilidad desde la entrada manipulada, se determinó la matriz de controlabilidad, para luego calcular su rango y compararlo con el orden del sistema.
@@ -1103,7 +1107,7 @@ Para nuestro caso, recordando las matrices A y B en eq.\eqref{ecuacion matricial
 	\label{Matriz de controlabilidad del LTI}
 \end{equation}
 
-Al calcular el determinate de esta matriz:
+Al calcular el determinante de esta matriz:
 
 \begin{equation}
 	det(S)= -\frac{9 {P_p}^2 {\lambda^r_m}^2}{4 {J_{eq}}^2 {{L_q}}^3}
@@ -1139,7 +1143,7 @@ Para lograrlo primero se analizaron las ecuaciones del modelo NL del subsitema e
  \end{align}
 donde las tensiones  ${v_{qd0s}(t)}^*$ son las nuevas consignas con las realimentaciones ya desacopladas.
 
-Al reemplazar las ecuaciones \eqref{Ecuacion desacoplamientos en vqs}, \eqref{Ecuacion desacoplamientos en vds} y \eqref{Ecuacion desacoplamientos en v0s} en eq.\eqref{Ecuaciones NL del subsistema electromagnetico}, se cancelan los terminos de las realimentaciones y se obtiene el siguiente subsistema electromagnético:
+Al reemplazar las ecuaciones \eqref{Ecuacion desacoplamientos en vqs}, \eqref{Ecuacion desacoplamientos en vds} y \eqref{Ecuacion desacoplamientos en v0s} en eq.\eqref{Ecuaciones NL del subsistema electromagnetico}, se cancelan los términos de las realimentaciones y se obtiene el siguiente subsitema electromagnético:
 
 \begin{align}
 	\begin{cases}
@@ -1152,8 +1156,8 @@ Al reemplazar las ecuaciones \eqref{Ecuacion desacoplamientos en vqs}, \eqref{Ec
 De esta manera, quedó un sistema lineal en el cual existe un acceso directo a las corrientes, sin realimentaciones. Cabe destacar que con este método se desacoplaron los efectos que provocan las realimentaciones, ya que  estas se deben a principios físicos propios del sistema. Además se esta suponiendo que se tienen los sensores necesarios para medir los estados a realimentar.
 
 \paragraph{\textbf{Diseño de lazos de control de corrientes $\mathbf{{i}^r_{qd0s}(t)}$}}
-Luego de haber desacoplado todas las realimentaciones, se incorporaron lazos de control de corriente solamente proporcional (con polos ubicados en $p_{i}=-5000\dfrac{rad}{s}$), con consignas de corriente en lugar de tensiones y asi lograr un control mas preciso del torque.
-Para lograrlo, se definieron las consignas de tension  ${v_{qd0s}(t)}^*$ de la siguiente manera:
+Luego de haber desacoplado todas las realimentaciones, se incorporaron lazos de control de corriente solamente proporcional (con polos ubicados en $p_{i}=-5000\dfrac{rad}{s}$), con consignas de corriente en lugar de tensiones y así lograr un control mas preciso del torque.
+Para lograrlo, se definieron las consignas de tensión  ${v_{qd0s}(t)}^*$ de la siguiente manera:
  \begin{align}
 	{v^r_{qs}}^*(t) &= R_q \left[ {i^r_{qs}(t)}^* - i^r_{qs}(t))\right] \label{Ecuacion control corrinte iq}\\
 	{v^r_{ds}(t)}^* &= R_d \left[ {i^r_{ds}(t)}^* - i^r_{ds}(t) \right] \label{Ecuacion control corrinte id}\\ 
@@ -1161,14 +1165,14 @@ Para lograrlo, se definieron las consignas de tension  ${v_{qd0s}(t)}^*$ de la s
 \end{align}
 donde estas consignas de tensiones son proporcionales al error de corriente, y las constantes de proporcionalidad son resistencias con unidades en ohm.
 
-Para determinar el valor de las ganancias se reemplazaron las ecuaciones \eqref{Ecuacion control corrinte iq}, \eqref{Ecuacion control corrinte id} y \eqref{Ecuacion control corrinte i0} en la eq. \eqref{Ecuaciones NL del subsistema electromagnetico sin realimentaciones fisicas}, y luego se encontraron las funciones de transferencia del sistema resultante.
+Para determinar el valor de las ganancias se reemplazaron las ecuaciones \eqref{Ecuacion control corrinte iq}, \eqref{Ecuacion control corrinte id} y \eqref{Ecuacion control corrinte i0} en la \cref{Ecuaciones NL del subsistema electromagnetico sin realimentaciones fisicas}, y luego se encontraron las funciones de transferencia del sistema resultante.
 
 \paragraph{\textbf{Incorporación de consigna de torque}}
 \paragraph{\textbf{Compensación del torque de carga por gravedad}}
 
 \subsubsection{\textbf{Controlador externo de movimiento: posición/velocidad}}
 \subsubsection{\textbf{Incorporación de observador de estado de orden reducido para parte mecánica}}
-\subsubsection{\textbf{Simulación en timepo continuo con modelo no lineal completo}}
+\subsubsection{\textbf{Simulación en tiempo continuo con modelo no lineal completo}}
 \subsubsection{\textbf{Verificación de desempeño}}
 \section{ANÁLISIS DE RESULTADOS}
 
