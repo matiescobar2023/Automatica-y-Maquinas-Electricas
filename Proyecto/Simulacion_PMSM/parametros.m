@@ -30,7 +30,7 @@ R0p = 5000*L_ls;
 w_pos = 800;
 n = 2.5;
 
-Ksiq = J_eq*w_pos^3;
+Ksia = J_eq*w_pos^3;
 Ksa = J_eq*n*w_pos^2;
 ba = J_eq*n*w_pos;
 

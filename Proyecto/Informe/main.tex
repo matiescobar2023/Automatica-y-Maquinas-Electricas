@@ -1042,7 +1042,7 @@ Para lograrlo primero se analizaron las ecuaciones del modelo NL del subsitema e
 	\begin{cases}
 		\dot{i}^r_{qs}(t) &= -\frac{R_s(t) i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \left[\lambda'^r_m + L_d i^r_{ds}(t)\right]}{L_q} + \frac{v^r_{qs}(t)}{L_q}\\
 		\dot{i}^r_{ds}(t) &= -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t)i^r_{qs}(t)}{L_d}  + \frac{v^r_{ds}(t)}{L_d} \\ 
-		\dot{i}_{0s}(t)   &= -\frac{R_s(t) i_{0s}(t)}{L_{ls}} + \frac{v_{0s}(t)}{L_ls}
+		\dot{i}_{0s}(t)   &= -\frac{R_s(t) i_{0s}(t)}{L_{ls}} + \frac{v_{0s}(t)}{L_{ls}}
 	\end{cases}	\label{Ecuaciones NL del subsistema electromagnetico}
 \end{align}
 
@@ -1061,8 +1061,8 @@ Al reemplazar las ecuaciones \eqref{Ecuacion desacoplamientos en vqs}, \eqref{Ec
 	\begin{cases}
 		\dot{i}^r_{qs}(t) &= \frac{{v^r_{qs}(t)}^*}{L_q}\\
 		\dot{i}^r_{ds}(t) &= \frac{{v^r_{ds}(t)}^*}{L_d} \\ 
-		\dot{i}_{0s}(t)   &= \frac{{v_{0s}(t)}^*}{L_ls}
-	\end{cases}	\label{Ecuaciones NL del subsistema electromagnetico sin realimentaciones fisicas}
+		\dot{i}_{0s}(t)   &= \frac{{v_{0s}(t)}^*}{L_{ls}}
+	\end{cases}	\label{Ecuaciones del subsistema electromagnetico sin realimentaciones fisicas}
 \end{align}
 
 De esta manera, quedó un sistema lineal en el cual existe un acceso directo a las corrientes, sin realimentaciones. Cabe destacar que con este método se desacoplaron los efectos que provocan las realimentaciones, ya que  estas se deben a principios físicos propios del sistema. Además se esta suponiendo que se tienen los sensores necesarios para medir los estados a realimentar.
@@ -1077,18 +1077,103 @@ Para lograrlo, se definieron las consignas de tensión  ${v_{qd0s}(t)}^*$ de la 
 \end{align}
 donde estas consignas de tensiones son proporcionales al error de corriente, y las constantes de proporcionalidad son resistencias con unidades en ohm.
 
-Para determinar el valor de las ganancias se reemplazaron las ecuaciones \eqref{Ecuacion control corrinte iq}, \eqref{Ecuacion control corrinte id} y \eqref{Ecuacion control corrinte i0} en la \cref{Ecuaciones NL del subsistema electromagnetico sin realimentaciones fisicas}, y luego se encontraron las funciones de transferencia del sistema resultante.
+Para determinar el valor de las ganancias se reemplazaron las ecuaciones \eqref{Ecuacion control corrinte iq}, \eqref{Ecuacion control corrinte id} y \eqref{Ecuacion control corrinte i0} en la \cref{Ecuaciones del subsistema electromagnetico sin realimentaciones fisicas}, y luego se encontraron las funciones de transferencia del sistema resultante.
+
+\begin{align}
+	\begin{cases}
+		\dot{i}^r_{qs}(t) &= \frac{ R_q \left[ {i^r_{qs}(t)}^* - i^r_{qs}(t))\right]}{L_q}\\
+		\dot{i}^r_{ds}(t) &= \frac{R_d \left[ {i^r_{ds}(t)}^* - i^r_{ds}(t) \right]}{L_d} \\ 
+		\dot{i}_{0s}(t)   &= \frac{R_0 \left[ {i_{0s}(t)}^* - i_{0s}(t) \right]}{L_{ls}}
+	\end{cases}	\label{Ecuaciones lazos de control de corriente}
+\end{align}
+
+\begin{align}
+	\begin{cases}
+		s{I}^r_{qs}(s) &= \frac{ R_q \left[ {I^r_{qs}(s)}^* - I^r_{qs}(s))\right]}{L_q}\\
+		s{I}^r_{ds}(s) &= \frac{R_d \left[ {I^r_{ds}(s)}^* - I^r_{ds}(s) \right]}{L_d} \\ 
+		s{I}_{0s}(s)   &= \frac{R_0 \left[ {I_{0s}(s)}^* - I_{0s}(s) \right]}{L_{ls}}
+	\end{cases}	\label{Ecuaciones Laplace lazos de control de corriente}
+\end{align}
+
+\begin{align}
+	\begin{cases}
+		G_{{I}^r_{qs}}(s) &=\frac{{I}^r_{qs}(s)}{{I^r_{qs}(s)}^*} =\frac{1}{\frac{L_q}{R_q} s + 1}\\
+		G_{{I}^r_{ds}}(s) &=\frac{{I}^r_{ds}(s)}{{I^r_{ds}(s)}^*} = \frac{1}{\frac{L_d}{R_d} s + 1}\\ 
+		G_{{I}_{0s}}(s)   &=\frac{{I}_{0s}(s)}{{I_{0s}(s)}^*} = \frac{1}{\frac{L_{ls}}{R_0} s + 1}
+	\end{cases}	\label{Funciones de Transferencia de lazos de control de corriente}
+\end{align}
+Al observar estas funciones de transferencia, se puede ver que contienen un solo polo:
+
+\begin{align}
+	\frac{L_q}{R_q} s + 1 &= 0 \Rightarrow s = -\frac{R_q}{L_q}\\
+	\frac{L_{d}}{R_d} s + 1 &=0 \Rightarrow s = -\frac{R_d}{L_d}\\ 
+	\frac{L_{ls}}{R_0} s + 1  &=0 \Rightarrow s = -\frac{R_0}{L_{ls}}
+\end{align}
+que al posicionarlos en $p_{i}=-5000\dfrac{rad}{s}$, se obtuvieron las siguientes ecuaciones para las ganancias:
+
+\begin{align}
+	R_q &= 5000 L_q = 29 \Omega\\
+	R_d &= 5000 L_d = 33 \Omega\\ 
+	R_0 &= 5000 L_{ls} = 4 \Omega
+\end{align}
 
 \paragraph{\textbf{Incorporación de consigna de torque}}
+Luego de haber incorporado los lazos de control de corriente, se hizo la realimentación necesaria para pasar de consignas de corrientes a una consigna de torque. Para esto, primero se analizó la ecuación del torque electromagnético, de donde podemos despejar la consigna de corriente${i^r_{qs}(t)}^*$:
+
+\begin{align}
+	T_m(t) &= \frac{3}{2} P_p [\lambda'^r_{m} {i^r_{qs}(t)}^* + (L_d - L_q) i^r_{ds}(t) {i^r_{qs}(t)}^*] \label{torque electromagnetico 2}\\
+	{i^r_{qs}(t)}^* &= \frac{T_m(t)}{\frac{3}{2} P_p [\lambda'^r_{m} + (L_d - L_q) i^r_{ds}(t)]}
+\end{align}
+ Además, se incorporó el termino de fricción para desacoplar este efecto:
+ \begin{align}
+ 	{i^r_{qs}(t)}^* &= \frac{{T_m(t)}^* + b_{eq} \omega_m(t) }{\frac{3}{2} P_p [\lambda'^r_{m} + (L_d - L_q) i^r_{ds}(t)]}
+ \end{align}
+	
 \paragraph{\textbf{Compensación del torque de carga por gravedad}}
+Al analizar la ecuación de estado de la velocidad, luego de haber reemplazado la consigna de corriente:
+
+\begin{equation}
+	\dot{\omega}_m(t) = \frac{{T_m(t)}^*}{ J_{eq}} - \frac{k_l \sin \left( \frac{\theta_m}{r}\right) }{r J_{eq}} - \frac{T_d(t)}{r J_{eq}}
+	\label{ecuacion de estado wm con consigna de torque}
+\end{equation}
+se pudo ver que es posible compensar el termino del torque de carga por gravedad, proponiendo la siguiente consigna de torque:
+\begin{equation}
+	{T_m(t)}^* = {T_m(t)}^{*'} + \frac{k_l \sin \left( \frac{\theta_m}{r}\right) }{r}
+	\label{consigna de torque para desacoplar carga por gravedad}
+\end{equation}
+para que la \cref{ecuacion de estado wm con consigna de torque} quede de la siguiente manera:
+\begin{equation}
+	\dot{\omega}_m(t) = \frac{{T_m(t)}^{*'}}{ J_{eq}}- \frac{T_d(t)}{r J_{eq}}
+	\label{ecuacion de estado wm sin gravedad}
+\end{equation}
 
 \subsubsection{\textbf{Controlador externo de movimiento: posición/velocidad}}
+Para mejorar la dinámica del sistema,eliminar el error de estado estacionario, y poder seguir consignas de posición/velocidad se añadió un PID , determine el torque necesario para cumplirlas.
+
+\begin{equation}
+	{T_m(s)}^{*'} = \left[ {\omega}_m^{*}(s)-{\omega}_m(s)\right] b_a + \frac{\left[ {\omega}_m^{*}(s)-{\omega}_m(s)\right]}{s} K_{sa} + \frac{\left[ {\omega}_m^{*}(s)-{\omega}_m(s)\right]}{s^2} K_{sia}
+\end{equation}
+\begin{align}
+	J_{eq} s^2 \Theta_m &= {T_m(s)}^{*'}- \frac{T_d(s)}{r }  \\
+	J_{eq} s^2 \Theta_m &= \left[ {\Theta}_m^{*}(s)-{\Theta}_m(s)\right] \left( b_a s + K_{sa} + \frac{1}{s} K_{sia}\right)  - \frac{T_d(s)}{r } \\
+	\left( J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}\right) \Theta_m &=   \left( b_a s^2 + K_{sa} s + K_{sia}\right) {\Theta}_m^{*}(s)  - \frac{T_d(s)}{r} s \\ 
+	\Theta_m &= \frac{ b_a s^2 + K_{sa} s + K_{sia}}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}} {\Theta}_m^{*}(s)  - \frac{s}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}} \frac{T_d(s)}{r} \\
+	G_{{\Theta}_m^{*}}(s) &= \frac{ b_a s^2 + K_{sa} s + K_{sia}}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}} \\
+	G_{T_l}(s) &= \frac{s}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}}
+\end{align}
+
+\begin{equation}
+	P(s) = 
+\end{equation}
 \subsubsection{\textbf{Incorporación de observador de estado de orden reducido para parte mecánica}}
+
 \subsubsection{\textbf{Simulación en tiempo continuo con modelo no lineal completo}}
 \subsubsection{\textbf{Verificación de desempeño}}
 \section{ANÁLISIS DE RESULTADOS}
 
-
+\begin{equation}
+	\frac{3\,\lambda _{m}\,\left(v_{\mathrm{qs}}-P_{p}\,\lambda _{m}\,\omega _{m}+\frac{L_{d}\,P_{p}\,\omega _{m}\,v_{\mathrm{ds}}}{R_{s}}\right)}{2\,\left(R_{s}-\frac{L_{d}\,L_{q}\,{P_{p}}^2\,{\omega _{m}}^2}{R_{s}}\right)}+\frac{3\,\left(L_{d}-L_{q}\right)\,\left(v_{\mathrm{ds}}+\frac{L_{q}\,P_{p}\,\omega _{m}\,\left(v_{\mathrm{qs}}-P_{p}\,\lambda _{m}\,\omega _{m}+\frac{L_{d}\,P_{p}\,\omega _{m}\,v_{\mathrm{ds}}}{R_{s}}\right)}{R_{s}-\frac{L_{d}\,L_{q}\,{P_{p}}^2\,{\omega _{m}}^2}{R_{s}}}\right)\,\left(v_{\mathrm{qs}}-P_{p}\,\lambda _{m}\,\omega _{m}+\frac{L_{d}\,P_{p}\,\omega _{m}\,v_{\mathrm{ds}}}{R_{s}}\right)}{2\,R_{s}\,\left(R_{s}-\frac{L_{d}\,L_{q}\,{P_{p}}^2\,{\omega _{m}}^2}{R_{s}}\right)}
+\end{equation}
 \subsection{Heading 1, etc}
 
 

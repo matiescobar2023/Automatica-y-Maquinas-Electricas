@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.10)  19 JUN 2024 23:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.10)  21 JUN 2024 20:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -811,7 +811,35 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[18] 
+[18]
+Overfull \hbox (55.65773pt too wide) detected at line 1176
+[][] \OT1/cmr/m/n/10 + []
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+[19]
+
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+[20] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (main.aux)
  ***********
@@ -820,32 +848,33 @@ L3 programming layer <2024-05-08>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 7432 strings out of 473937
- 135581 string characters out of 5739564
+ 7446 strings out of 473937
+ 136244 string characters out of 5739564
  1967893 words of memory out of 5000000
- 30149 multiletter control sequences out of 15000+600000
+ 30163 multiletter control sequences out of 15000+600000
  670867 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,16n,65p,733b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 70i,17n,65p,733b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Programas/L
 aTEX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><D:/Programas/LaTEX/fonts/type1/p
 ublic/amsfonts/cm/cmex10.pfb><D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb><D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Pr
-ogramas/LaTEX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Programas/LaTEX/font
-s/type1/public/amsfonts/cm/cmmi7.pfb><D:/Programas/LaTEX/fonts/type1/public/ams
-fonts/cm/cmmi8.pfb><D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm/cmr10.pfb
-><D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/Programas/LaTE
-X/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Programas/LaTEX/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb><D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb><D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Programa
-s/LaTEX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Programas/LaTEX/fonts/type
-1/public/amsfonts/symbols/msam10.pfb><D:/Programas/LaTEX/fonts/type1/urw/times/
-utmb8a.pfb><D:/Programas/LaTEX/fonts/type1/urw/times/utmbi8a.pfb><D:/Programas/
-LaTEX/fonts/type1/urw/times/utmr8a.pfb><D:/Programas/LaTEX/fonts/type1/urw/time
-s/utmri8a.pfb>
-Output written on main.pdf (18 pages, 1060470 bytes).
+extra/cmex7.pfb><D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Programas/LaTEX
+/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Programas/LaTEX/fonts/type1/publi
+c/amsfonts/cm/cmmi7.pfb><D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb><D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Programa
+s/LaTEX/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/Programas/LaTEX/fonts/type1
+/public/amsfonts/cm/cmr6.pfb><D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm
+/cmr7.pfb><D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Pro
+gramas/LaTEX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Programas/LaTEX/fonts
+/type1/public/amsfonts/cm/cmsy7.pfb><D:/Programas/LaTEX/fonts/type1/public/amsf
+onts/symbols/msam10.pfb><D:/Programas/LaTEX/fonts/type1/urw/times/utmb8a.pfb><D
+:/Programas/LaTEX/fonts/type1/urw/times/utmbi8a.pfb><D:/Programas/LaTEX/fonts/t
+ype1/urw/times/utmr8a.pfb><D:/Programas/LaTEX/fonts/type1/urw/times/utmri8a.pfb
+>
+Output written on main.pdf (20 pages, 1080314 bytes).
 PDF statistics:
- 222 PDF objects out of 1000 (max. 8388607)
+ 234 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
