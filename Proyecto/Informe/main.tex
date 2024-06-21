@@ -398,7 +398,7 @@ y no oscurecer la explicación. Con el mismo objeto, se simplifica la notación 
         \omega_m(t) \\ 
         \frac{\frac{3}{2} P_p i^r_{qs}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds}(t) \right]}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} \\ 
         -\frac{R_s(t) i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \left[\lambda'^r_m + L_d i^r_{ds}(t)\right]}{L_q}\\ 
-        -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t) i^r_{qs}(t)}{L_d}  \\ 
+        -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{P_p \omega_m(t) L_q i^r_{qs}(t)}{L_d}  \\ 
         -\frac{R_s(t) i_{0s}(t) }{L_{ls}} \\ 
         \frac{\frac{3}{2} R_s(t) \left[ i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right]}{C_{ts}} - \frac{T_s^{\circ}(t)}{R_{ts}C_{ts}}
     \end{bmatrix}
@@ -581,7 +581,7 @@ como se indica en la \cref{ecuacion vectorial de estado jacobi}.
         \text{Reemplazando la segunda en la primera}\,&\rightarrow\,\theta_l(t) = \frac{\theta_m(t) - \theta_m(0)}{r} + \theta_l(0)\\
         \text{Consideramos que se cumple}\,&\rightarrow\,\frac{\theta_m(0)}{r} = \theta_l(0)\\
         \text{Luego}\,&\rightarrow\,\theta_l(t) = \theta_m(t)/r\\
-        \text{Finalmente}\,&\rightarrow\,T_l(t) = k_l\sin(\frac{\theta_m(t)}{r}) + T_d(t)
+        \text{Finalmente}\,&\rightarrow\,T_l(t) = k_l\sin\left(\frac{\theta_m(t)}{r}\right) + T_d(t)
     \end{aligned}
     \label{reemplazo de T_l}
 \end{equation}
@@ -598,9 +598,9 @@ como se indica en la \cref{ecuacion vectorial de estado jacobi}.
         = 
     \begin{bmatrix} 
         \omega_m(t) \\ 
-        \frac{\frac{3}{2} P_p i^r_{qs}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds}(t) \right]}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} - \frac{k_l\sin(\frac{\theta_m(t)}{r})}{rJ_{eq}}\\ 
+        \frac{\frac{3}{2} P_p i^r_{qs}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds}(t) \right]}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} - \frac{k_l\sin\left(\frac{\theta_m(t)}{r}\right)}{rJ_{eq}}\\ 
         -\frac{R_s(t) i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \left[\lambda'^r_m + L_d i^r_{ds}(t)\right]}{L_q}\\ 
-        -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t) i^r_{qs}(t)}{L_d}  \\ 
+        -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{P_p \omega_m(t) L_q  i^r_{qs}(t)}{L_d}  \\ 
         -\frac{R_s(t) i_{0s}(t) }{L_{ls}} \\ 
         \frac{\frac{3}{2} R_s(t) \left[ i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right]}{C_{ts}} - \frac{T_s^{\circ}(t)}{R_{ts}C_{ts}}
     \end{bmatrix}
@@ -634,10 +634,7 @@ se hacen las consideraciones señaladas en la \cref{pequeñas desviaciones}.
     \label{pequeñas desviaciones}
 \end{equation}
 
-Por un lado, el \textbf{espacio de operación global NL cuasi-estacionario} se muestra en la \cref{modelo de operacion NL cuasi-estacionario}.
-Para nuestro sistema queda expresado como se indica en la \cref{modelo de operacion NL cuasi_estacionario desarrollado} para el estado. Las condiciones
-iniciales se señalan en \cref{condiciones inciales cuasi-estacionario}. En dichas ecuaciones, 
-el sub-índice $-o$ indica los valores de las variables en el punto de operación.
+Por un lado, la ecuación del \textbf{espacio de operación global NL cuasi-estacionario} se muestra en la \cref{modelo de operacion NL cuasi-estacionario}.
 
 \begin{equation}
     \begin{cases}
@@ -647,6 +644,7 @@ el sub-índice $-o$ indica los valores de las variables en el punto de operació
     \label{modelo de operacion NL cuasi-estacionario}
 \end{equation}
 
+Para nuestro sistema queda expresado como se indica en la \cref{modelo de operacion NL cuasi_estacionario desarrollado} para la ecuación de estado.
 \begin{equation}
     \begin{bmatrix}
         \dot{\theta}_{m-o}(t)\\
@@ -659,14 +657,17 @@ el sub-índice $-o$ indica los valores de las variables en el punto de operació
     =
     \begin{cases}
         \omega_{m-o}(t) &\approx \omega_{m0}\\
-        \frac{1}{J_{eq}}\left[\frac{3}{2} P_p i^r_{qs-o}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds-o}(t) \right] - b_{eq}\omega_{m-o}(t) - \frac{k_l}{r}\sin(\frac{\theta_{m-o}(t)}{r}) - \frac{1}{r}T_{d-o}(t)\right] &\approx 0\\
+        \frac{1}{J_{eq}}\left[\frac{3}{2} P_p i^r_{qs-o}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds-o}(t) \right] - b_{eq}\omega_{m-o}(t) - \frac{k_l}{r}\sin\left(\frac{\theta_{m-o}(t)}{r}\right) - \frac{1}{r}T_{d-o}(t)\right] &\approx 0\\
         \frac{1}{L_q}\left[-R_{s-o}(t) i^r_{qs-o}(t)- P_p \omega_{m-o}(t) \left[\lambda'^r_m + L_d i^r_{ds-o}(t)\right] + v^r_{qs-o}(t)\right] &\approx 0\\ 
-        \frac{1}{L_d}\left[-R_{s-o}(t) i^r_{ds-o}(t) + L_q P_p \omega_{m-o}(t) i^r_{qs-o}(t) + v^r_{ds-o}(t)\right] &\approx 0\\ 
+        \frac{1}{L_d}\left[-R_{s-o}(t) i^r_{ds-o}(t) + P_p \omega_{m-o}(t) L_q  i^r_{qs-o}(t) + v^r_{ds-o}(t)\right] &\approx 0\\ 
         \frac{1}{L_{ls}}\left[-R_{s-o}(t) i_{0s}(t) + v_{0s-o}(t)\right] &\approx 0\\ 
         \frac{3}{2}\frac{R_{s-o}(t)}{C_{ts}} \left[ i_{qs-o}^2(t) + i_{ds-o}^2(t) + 2 i_{0s-o}^2(t) \right] + \frac{1}{R_{ts}C_{ts}}\left[T_{amb-o}(t) - T_{s-o}^{\circ}(t)\right] &\approx 0
     \end{cases}
     \label{modelo de operacion NL cuasi_estacionario desarrollado}
 \end{equation}
+
+Las condiciones
+iniciales se señalan en \cref{condiciones inciales cuasi-estacionario}.
 
 \begin{equation}
     \mathbf{X_o}(0)
@@ -690,6 +691,93 @@ el sub-índice $-o$ indica los valores de las variables en el punto de operació
     \end{bmatrix}
     \label{condiciones inciales cuasi-estacionario}
 \end{equation}
+
+En las \cref{modelo de operacion NL cuasi_estacionario desarrollado} y \cref{condiciones inciales cuasi-estacionario}
+el sub-índice $-o$ indica los valores de las variables en el punto de operación.
+
+Consideramos relevante hacer aquí un análisis al respecto
+del espacio de operación global NL para estem modelo del sistema físico
+en particular.
+
+Si en lugar de la restricción débil señalada en la primera ecuación de la \cref{modelo de operacion NL cuasi-estacionario}
+se toma la restricción fuerte dada por la \cref{restriccion fuerte}. Tendremos un
+punto de operación definido como en la \cref{punto de operacion} tomando en cuenta
+las condiciones iniciales del modelo señaladas en \cref{modelo de operacion NL cuasi_estacionario desarrollado} y 
+la evolución de $\theta_m(t)$ dada por la \cref{posicion y velocidad motor}.
+
+
+\begin{equation}
+    \frac{d\mathbf{X}_o(t)}{dt} =  \mathbf{f}(\mathbf{X}_o(t), \mathbf{U}_o(t)) \equiv 0/\text{const}
+    \label{restriccion fuerte}
+\end{equation}
+
+\begin{equation}
+    \mathbf{X_o}(t)
+    =
+    \begin{bmatrix} 
+        \theta_{m-o}(t) \\ 
+        \omega_{m-o}(t) \\ 
+        i^r_{qs-o}(t) \\ 
+        i^r_{ds-o}(t)\\ 
+        i_{0s-o}(t)\\ 
+        T^\circ_{s-o}(t)
+    \end{bmatrix}
+    =
+    \begin{bmatrix} 
+        \int_{0}^{t} \omega_{m-o}(0) d\tau + \theta_{m-o}(0)\\
+        \omega_{m-o}(0)\\
+        i^r_{qs-o}(0) \\
+        i^r_{ds-o}(0)\\
+        i_{0s-o}(0)\\
+        T^\circ_{s-o}(0)
+    \end{bmatrix}
+    =
+    \begin{bmatrix} 
+        \omega_{m0}t + \theta_{m0}\\
+        \omega_{m0} \\ 
+        i^r_{qs0} \\ 
+        i^r_{ds0} \\ 
+        i_{0s0} \\ 
+        T^\circ_{s0} 
+    \end{bmatrix}
+    \label{punto de operacion}
+\end{equation}
+
+Reemplazamos lo obtenido en \cref{punto de operacion} en la \cref{modelo de operacion NL cuasi_estacionario desarrollado}
+y destacamos la ecuación de estado asociada a $\omega_(t)$.
+
+\begin{equation}    
+    \frac{1}{J_{eq}}\left[\frac{3}{2} P_p i^r_{qs0}\left[\lambda'^r_m + (L_d - L_q) i^r_{ds0} \right] - b_{eq}\omega_{m0} - \frac{k_l}{r}\sin\left(\frac{\omega_{m0}t + \theta_{m0}}{r}\right) - \frac{1}{r}T_{d0}\right] = 0
+    \label{ecuacion de estado omega_m espacio NL de operacion}
+\end{equation}
+
+Se puede ver en la \cref{ecuacion de estado omega_m espacio NL de operacion} que 
+existe una dependencia explícita de $t$, no solamente de las variables de 
+estado y de las entradas en el punto de operación. Al considerar
+un punto de operación cuasiestacionario, la \cref{ecuacion de estado omega_m espacio NL de operacion}
+se puede expresar de forma simplificada, para mostrar nuestro punto, como en la \cref{ecuacion de estado omega_m espacio NL de operacion simplificada}.
+
+\begin{equation}    
+    cte - \frac{k_l}{r}\sin\left(\frac{\omega_{m0}t + \theta_{m0}}{r}\right) - \frac{1}{r}T_{d-o}(t) = 0
+    \label{ecuacion de estado omega_m espacio NL de operacion simplificada}
+\end{equation}
+
+Condición que se puede satisfacer solo bajo dos supuestos distintos indicados en la \cref{condiciones de satisfaccion}.
+La primera de ellas implica tener control sobre la entrada de perturbación $T_{d-o}$, lo cual
+no es posible por definición, o bién si se tuviera un contrapeso que equilibre el torque
+gravitacional producido por el brazo y la masa que transporta en su extremo. La segunda condición
+elimina la dependencia explícita de $t$ y no requiere control sobre la entrada de perturbación para
+lograrse.
+
+\begin{equation}
+    \begin{cases}
+        T_{d-o}(t) = cte - \frac{k_l}{r}\sin\left(\frac{\omega_{m0}t + \theta_{m0}}{r}\right)\\
+        \omega_{m0} = 0
+    \end{cases}
+    \label{condiciones de satisfaccion}
+\end{equation}
+
+Cuando se 
 
 Por otro lado, el \textbf{Modelo dinámico LPV} se indica en la \cref{modelo de pequeñas desviaciones}:
 

@@ -2,7 +2,7 @@ clear all
 clc
 
 %% VARIABLES SIMBÓLICAS DE ESTADO
-%{
+
 syms i_qs i_ds i_0s T_s
 x       = [i_qs; i_ds; i_0s; T_s];
 theta_m = pi/3; % Imponemos esta condición directamente
@@ -22,19 +22,16 @@ u = [u_c; u_d];
 %}
 
 %% PARAMETROS SIMBÓLICOS DEL SISTEMA FÍSICO
-%{
+
 syms K_l r b_eq J_eq Pp
 syms lambda_m L_q L_ls L_d
 syms alpha_cu R_sref T_sref
 syms R_ts_amb C_ts
-syms R_s
-
-% Definción de la evolución de R_S
-R_s = R_sref*(1 + alpha_cu*(T_s - T_sref));
 %}
+syms R_s(T_s)
 
 %% PARAMETROS DEL MODELO FÍSICO
-
+%{
 b_l = 0.1;%+-0.03
 J_l = 0.0833;%+[0...0.375]
 K_l = 2.452;%+[0...7.355]
@@ -63,30 +60,36 @@ b_eq = b_m + b_l/(r^2);
 %}
 
 %% CURVAS DE OPERACIÓN CUASI-ESTACIONARIA
-%{
+
 % Definir la función no lineal f(x, u)
 f = [omega_m;
     (1/J_eq)*(1.5*Pp*i_qs*(lambda_m + (L_d - L_q)*i_ds) - (K_l/r)*sin(theta_m/r) - T_d/r);
-    (1/L_q)*(-R_s*i_qs + v_qs);
-    (1/L_d)*(-R_s*i_ds + v_ds);
-    (1/L_ls)*(-R_s*i_0s);
-    ((1.5*R_s)/C_ts)*(i_qs^2 + i_ds^2 + 2*i_0s^2) + (T_amb - T_s)/(R_ts_amb*C_ts)];
+    (1/L_q)*(-R_s(T_s)*i_qs + v_qs);
+    (1/L_d)*(-R_s(T_s)*i_ds + v_ds);
+    (1/L_ls)*(-R_s(T_s)*i_0s);
+    (1.5*R_s(T_s)/C_ts)*(i_qs^2 + i_ds^2 + 2*i_0s^2) + (T_amb - T_s)/(R_ts_amb*C_ts)];
+
+% Definción de la evolución de R_S
+R_s = @(T_s) R_sref*(1 + alpha_cu*(T_s - T_sref));
 
 % Igualar la ecuación de estado al vector nulo y resolver
 eqns = f == [0; 0; 0; 0; 0; 0];
-vars = x.'
-solutions = solve(eqns, vars);
+f
+vars = x.';
+solutions = solve(eqns, (i_0s]);
+solutions
 disp('Soluciones para i_qs:');
 disp(solutions.i_qs);
 disp('Soluciones para i_ds:');
 disp(solutions.i_ds);
 disp('Soluciones para i_0s:');
 disp(solutions.i_0s);
-
+disp('Soluciones para T_s:');
+disp(solutions.T_s);
 %}
 
 %% PUNTO DE OPERACIÓN TRIVIAL
-
+%{
 theta_m_o   = 0;
 omega_m_o   = 0;
 R_s_o       = R_s;
