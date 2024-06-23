@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.22)  23 JUN 2024 12:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.22)  23 JUN 2024 14:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -654,26 +654,22 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [15 <./18-Diagrama_de_bloques_LTI_equivalente_aumentado.png>]
-
-pdfTeX warning: pdflatex.exe (file ./12-Ley_de_control_minima.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<12-Ley_de_control_minima.pdf, id=198, 794.97pt x 614.295pt>
-File: 12-Ley_de_control_minima.pdf Graphic file (type pdf)
-<use 12-Ley_de_control_minima.pdf>
-Package pdftex.def Info: 12-Ley_de_control_minima.pdf  used on input line 1072.
-(pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./13-Ley_de_control_complementaria.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<13-Ley_de_control_complementaria.pdf, id=199, 794.97pt x 614.295pt>
-File: 13-Ley_de_control_complementaria.pdf Graphic file (type pdf)
-<use 13-Ley_de_control_complementaria.pdf>
-Package pdftex.def Info: 13-Ley_de_control_complementaria.pdf  used on input line 1104.
-(pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
+<12-Ley_de_control_minima.png, id=198, 644.4075pt x 411.03563pt>
+File: 12-Ley_de_control_minima.png Graphic file (type png)
+<use 12-Ley_de_control_minima.png>
+Package pdftex.def Info: 12-Ley_de_control_minima.png  used on input line 1072.
+(pdftex.def)             Requested size: 644.40593pt x 411.03462pt.
+<13-Ley_de_control_complementaria.png, id=199, 693.34032pt x 407.27156pt>
+File: 13-Ley_de_control_complementaria.png Graphic file (type png)
+<use 13-Ley_de_control_complementaria.png>
+Package pdftex.def Info: 13-Ley_de_control_complementaria.png  used on input line 1118.
+(pdftex.def)             Requested size: 693.33862pt x 407.27055pt.
 <20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png, id=200, 720.44156pt x 329.73187pt>
 File: 20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png Graphic file (type png)
 <use 20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png>
-Package pdftex.def Info: 20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png  used on input line 1125.
+Package pdftex.def Info: 20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png  used on input line 1127.
 (pdftex.def)             Requested size: 720.43979pt x 329.73105pt.
+
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -689,7 +685,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[17 <./12-Ley_de_control_minima.pdf>]
+[17 <./12-Ley_de_control_minima.png> <./13-Ley_de_control_complementaria.png>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -697,7 +693,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[18 <./13-Ley_de_control_complementaria.pdf> <./20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png>]
+[18 <./20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -731,6 +727,13 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 
 [22]
 
+pdfTeX warning: pdflatex.exe (file ./Observador.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Observador.pdf, id=228, 794.97pt x 614.295pt>
+File: Observador.pdf Graphic file (type pdf)
+<use Observador.pdf>
+Package pdftex.def Info: Observador.pdf  used on input line 1548.
+(pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
+
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
@@ -738,15 +741,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [23]
-
-pdfTeX warning: pdflatex.exe (file ./Observador.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Observador.pdf, id=237, 794.97pt x 614.295pt>
-File: Observador.pdf Graphic file (type pdf)
-<use Observador.pdf>
-Package pdftex.def Info: Observador.pdf  used on input line 1546.
-(pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
-
-Overfull \hbox (55.65773pt too wide) detected at line 1560
+Overfull \hbox (55.65773pt too wide) detected at line 1562
 [][] \OT1/cmr/m/n/10 + []
  []
 
@@ -778,18 +773,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7556 strings out of 474049
- 142263 string characters out of 5746277
+ 7548 strings out of 474049
+ 141927 string characters out of 5746277
  1965754 words of memory out of 5000000
- 29864 multiletter control sequences out of 15000+600000
+ 29856 multiletter control sequences out of 15000+600000
  670867 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,22n,65p,1171b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (25 pages, 1215393 bytes).
+Output written on main.pdf (25 pages, 686114 bytes).
 PDF statistics:
- 344 PDF objects out of 1000 (max. 8388607)
- 223 compressed objects within 3 object streams
+ 338 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

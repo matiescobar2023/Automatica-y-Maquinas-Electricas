@@ -1069,7 +1069,7 @@ se puede observar en la \cref{Implementación de ley de control mínima}
 \begin{figure}[thpb]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
-		\framebox{\includegraphics{12-Ley_de_control_minima}}
+		\framebox{\includegraphics{12-Ley_de_control_minima.png}}
 	\end{adjustbox}
 	\caption{Implementación de ley de control mínima}
 	\label{Implementación de ley de control mínima}
@@ -1098,15 +1098,6 @@ Para evitar esto, se puede implementar una \textbf{ley de control complementaria
  	v^r_{qs}(t)^{*} &= L_q\frac{d i^r_{qs}(t)}{dt} + R_s i^r_{qs}(t) +P_p \omega_m(t) \lambda'^r_m  \label{ley de control complementaria 3}
 \end{align}
 
-\begin{figure}[thpb]
-	\centering
-	\begin{adjustbox}{max width=\columnwidth}
-		\framebox{\includegraphics{13-Ley_de_control_complementaria}}
-	\end{adjustbox}
-	\caption{Implementación de ley de control complementaria}
-	\label{Implementación de ley de control complementaria}
-\end{figure}
-
 El modelo \textbf{LTI equivalente(incorporando la dinámica residual del eje $\mathbf{d}$)} queda como se indica en la \cref{equaciones modelo LTI eq} y en la \cref{diagrama de bloques modelo LTI eq}:
 
 \begin{equation}
@@ -1119,12 +1110,23 @@ El modelo \textbf{LTI equivalente(incorporando la dinámica residual del eje $\m
 	\label{equaciones modelo LTI eq}
 \end{equation}
 
+El diagrama de bloques del \textbf{modelo NL desacoplado con ley de control NL} se observa en la \cref{Implementación de ley de control complementaria}
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{13-Ley_de_control_complementaria.png}}
+	\end{adjustbox}
+	\caption{Implementación de ley de control complementaria}
+	\label{Implementación de ley de control complementaria}
+\end{figure}
+
 \begin{figure}[thpb]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png}}
 	\end{adjustbox}
-	\caption{Diagrama de bloques LTI con dinámica residual eje d}
+	\caption{Diagrama de bloques LTI equivalente aumentado con dinámica residual eje d}
 	\label{diagrama de bloques modelo LTI eq}
 \end{figure}
 
