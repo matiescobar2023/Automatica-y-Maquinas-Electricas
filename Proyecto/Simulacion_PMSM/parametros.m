@@ -9,7 +9,7 @@ J_m = 1.4e-5;
 b_m = 1.5e-5;
 P_p = 3;
 Pp = 3;
-lambda_m = 0.01546;
+lambda_m = 0.016%0.01546;
 L_q = 5.8/1000;
 L_d = 6.6/1000;
 L_ls = 0.8/1000;
@@ -36,14 +36,15 @@ ba = J_eq*n*w_pos;
 
 P_o = 3200;
 %Sin integrador
-Ke_omega = P_o^2;
-Ke_theta = 2*P_o;
+% Ke_omega = P_o^2;
+% Ke_theta = 2*P_o;
+% Ke_omega_i = 0;
 
 %Con integrador
-% Ke_theta = 3*P_o;
-% Ke_omega = 3*P_o^2;
-% Ke_omega_i = P_o^3;
-
+Ke_theta = 3*P_o;
+Ke_omega = 3*P_o^2;
+Ke_omega_i = P_o^3;
+Consigna_de_pos
 %syms dtheta_m(t) omega_m(t) J_eq domega_m(t) T_m(t) b_eq T_l(t) v_{qs}^r(t) R_s(t) i_{qs}^r(t) L_q di_{qs}^r(t) lambda_{m}^r L d_i_dsr(t) omega_r(t) v_{ds}^r(t) i_{ds}^r(t) id_s(t) Lls di0_s(t) T_perd(t) Cts dT0_s(t) Rts_amb Tamb(t) i_0s(t) i_2as(t) i_2bs(t) i_2cs(t) i_2qs(t) i_2ds(t) i_20s(t) Pp Rs_REF alpha_Cu Ts_REF;
 
 % Ecuaciones
