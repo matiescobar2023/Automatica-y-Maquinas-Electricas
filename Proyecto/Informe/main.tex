@@ -427,7 +427,7 @@ y no oscurecer la explicación. Con el mismo objeto, se simplifica la notación 
     \end{bmatrix}
     \begin{bmatrix} 
         T_l(t) \\ 
-        T_{amb}(t) 
+        T^{\circ}_{amb}(t) 
     \end{bmatrix}
     \label{ecuacion vectorial de estado del sistema}
 \end{equation}
@@ -618,7 +618,7 @@ como se indica en la \cref{ecuacion vectorial de estado jacobi}.
         v^r_{ds}(t) \\ 
         v_{0s}(t) \\
         T_d(t) \\ 
-        T_{amb}(t)
+        T^{\circ}_{amb}(t)
     \end{bmatrix}
     \label{ecuacion vectorial de estado jacobi}
 \end{equation}
@@ -661,13 +661,13 @@ Para nuestro sistema queda expresado como se indica en la \cref{modelo de operac
         \frac{1}{L_q}\left[-R_{s-o}(t) i^r_{qs-o}(t)- P_p \omega_{m-o}(t) \left[\lambda'^r_m + L_d i^r_{ds-o}(t)\right] + v^r_{qs-o}(t)\right] &\approx 0\\ 
         \frac{1}{L_d}\left[-R_{s-o}(t) i^r_{ds-o}(t) + P_p \omega_{m-o}(t) L_q  i^r_{qs-o}(t) + v^r_{ds-o}(t)\right] &\approx 0\\ 
         \frac{1}{L_{ls}}\left[-R_{s-o}(t) i_{0s}(t) + v_{0s-o}(t)\right] &\approx 0\\ 
-        \frac{3}{2}\frac{R_{s-o}(t)}{C_{ts}} \left[ i_{qs-o}^2(t) + i_{ds-o}^2(t) + 2 i_{0s-o}^2(t) \right] + \frac{1}{R_{ts}C_{ts}}\left[T_{amb-o}(t) - T_{s-o}^{\circ}(t)\right] &\approx 0
+        \frac{3}{2}\frac{R_{s-o}(t)}{C_{ts}} \left[ i_{qs-o}^2(t) + i_{ds-o}^2(t) + 2 i_{0s-o}^2(t) \right] + \frac{1}{R_{ts}C_{ts}}\left[T^{\circ}_{amb-o}(t) - T_{s-o}^{\circ}(t)\right] &\approx 0
     \end{cases}
     \label{modelo de operacion NL cuasi_estacionario desarrollado}
 \end{equation}
 
 Las condiciones
-iniciales se señalan en \cref{condiciones inciales cuasi-estacionario}.
+iniciales se señalan en la \cref{condiciones inciales cuasi-estacionario}.
 
 \begin{equation}
     \mathbf{X_o}(0)
@@ -777,7 +777,99 @@ lograrse.
     \label{condiciones de satisfaccion}
 \end{equation}
 
-Cuando se 
+Cuando se asume la segunda condición de la \cref{condiciones de satisfaccion},
+la \cref{modelo de operacion NL cuasi_estacionario desarrollado} queda como se indica en la 
+\cref{modelo de operacion NL cuasi_estacionario desarrollado reducido}. En la que
+además se toma $v_{0s-o}(t) \equiv 0$ al tratarse de un sistema de
+tensiones trifásico simétrico balanceado. Eso da por resultado $i_{ds0} = 0$,
+al ser $R_{s-o} \neq 0$ para las temperaturas normales de operación, y se reemplaza directamente en la 
+ecuación de estado de la $T^{\circ}_{s}$.
+
+\begin{equation}
+    \begin{cases}
+        \omega_{m0} &= 0\\
+        \frac{1}{J_{eq}}\left[\frac{3}{2} P_p i^r_{qs0}\left[\lambda'^r_m + (L_d - L_q) i^r_{ds0} \right] - \frac{k_l}{r}\sin\left(\frac{\theta_{m0}}{r}\right) - \frac{1}{r}T_{d-o}\right] &= 0\\
+        \frac{1}{L_q}\left[-R_{s-o} i^r_{qs0} + v^r_{qs-o}\right] &= 0 \Rightarrow i^r_{qs0} = v^r_{qs-o}/R_{s-o}\\ 
+        \frac{1}{L_d}\left[-R_{s-o} i^r_{ds0} + v^r_{ds-o}\right] &= 0 \Rightarrow i^r_{ds0} = v^r_{ds-o}/R_{s-o}\\ 
+        \frac{1}{L_{ls}}\left[-R_{s-o} i_{0s}\right] &= 0 \Rightarrow i_{0s} = 0\\ 
+        \frac{3}{2}\frac{R_{s-o}}{C_{ts}} \left[ i_{qs0}^2+ i_{ds0}^2 \right] + \frac{1}{R_{ts}C_{ts}}\left[T^{\circ}_{amb-o} - T_{s0}^{\circ}\right] &= 0
+    \end{cases}
+    \label{modelo de operacion NL cuasi_estacionario desarrollado reducido}
+\end{equation}
+
+Presentamos aquí las curvas que permitan obtener las entradas
+de control que es necesario aplicar para obtener una posición
+del brazo, dado un vector de entradas de perturbación constantes.
+
+En \cref{T_m en función de la posición y T_do} representamos
+el $T_{m-o}$ que se requiere para una preturbación $T_{d-o}$ dada,
+en función de la posición del brazo. En donde se
+consideran los valores extremos de $T_{d-o}$ y un
+un valor de $k_l = 9.807 \left[N.m\right]$, ambos en los rangos
+dados en \cite{c1}.
+
+\begin{figure}[thpb]
+    \centering
+    \begin{adjustbox}{scale = 0.6}
+        \framebox{\includegraphics{14-T_m_vs_thetha_vd_Td.pdf}}
+    \end{adjustbox}
+    \caption{$T_m$ respecto a $T_{d-o}$ y $\theta_l$}
+    \label{T_m en función de la posición y T_do}
+\end{figure}
+
+Luego, dado un valor de corriente total junto con un
+ángulo $\beta$ como se indica en la \cref{corriente total}, y que se pueden relacionar
+gráficamente como en la \cref{restriccion de corriente maxima}, podemos expresar
+las curvas de $T_{m-o}$ en función de $i^{r}_{qd0s-o}$ con $\beta$ como parametro, las que
+se muestran en la \cref{T_m respecto a i_qd0s-o} y que responden a la \cref{ecuación T_m respecto a i_qd0s-o}.
+
+
+\begin{equation}
+    \left(i^{r}_{qd0s-o}\right)^2 = \left(i^{r}_{qs0}\right)^2 + \left(i^{r}_{ds0}\right)^2
+    \label{corriente total}
+\end{equation}
+
+\begin{equation}
+    \frac{3}{2} P_p i^r_{qd0s-o}\sin(\beta)\left[\lambda'^r_m + (L_d - L_q) i^r_{qd0s-o}\cos(\beta)\right]
+    \label{ecuación T_m respecto a i_qd0s-o}
+\end{equation}
+
+\begin{figure}[thpb]
+    \centering
+    \begin{adjustbox}{scale = 0.6}
+        \framebox{\includegraphics{15-Circulos_de_corriente.pdf}}
+    \end{adjustbox}
+    \caption{circulos de corriente total en coordenadas virtuales.}
+    \label{restriccion de corriente maxima}
+\end{figure}
+
+\begin{figure}[thpb]
+    \centering
+    \begin{adjustbox}{scale = 0.6}
+        \framebox{\includegraphics{17-T_m_vs_corriente_vs_beta.pdf}}
+    \end{adjustbox}
+    \caption{$T_m$ respecto de $i^r_{qd0s-o}$ con parámetro $\beta$.}
+    \label{T_m respecto a i_qd0s-o}
+\end{figure}
+
+De la última ecuación en la \cref{modelo de operacion NL cuasi_estacionario desarrollado reducido}
+se puede obtener $T^{\circ}_{s0}$ a partir del conocimiento de la corriente total. Esto se expresa en la
+\cref{T_s respecto a la corriente total} y da como resultado la gráfica mostrada en \cref{grafica T_s respecto a la corriente} en donde
+se grafica la $T^{\circ}_{s0}$ respecto a $i^{r}_{qd0s-o}$ con $T^{\circ}_{amb-o}$ como parámetro.
+
+\begin{equation}
+    T^{\circ}_{s0} = \frac{\frac{3}{2}R_{sREF}\left(\alpha_{cu}T^{\circ}_{sREF} - 1\right)\left(i^{r}_{qd0s-o}\right)^2 - \frac{T^{\circ}_{amb-o}}{R_{ts-amb}}}{\frac{3}{2}R_{sREF}\alpha_{cu}\left(i^{r}_{qd0s-o}\right)^2 - \frac{1}{R_{ts-amb}}}
+    \label{T_s respecto a la corriente total}
+\end{equation}
+
+\begin{figure}[thpb]
+    \centering
+    \begin{adjustbox}{scale = 0.6}
+        \framebox{\includegraphics{16-Temperatura_vs_corriente.pdf}}
+    \end{adjustbox}
+    \caption{$T^{\circ}_s$ respecto de $i^r_{qd0s-o}$ con parámetro $T^{\circ}_{amb}$.}
+    \label{grafica T_s respecto a la corriente}
+\end{figure}
 
 Por otro lado, el \textbf{Modelo dinámico LPV} se indica en la \cref{modelo de pequeñas desviaciones}:
 
