@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.10)  21 JUN 2024 20:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.10)  22 JUN 2024 21:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -358,7 +358,16 @@ Package grfext Info: Graphics extension search list:
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count288
 \l__pdf_internal_box=\box59
-) (main.aux)
+) (main.aux
+
+LaTeX Warning: Label `ecuacion matricial de subsistema mecanico compensado' mul
+tiply defined.
+
+
+LaTeX Warning: Label `ecuacion matricial de subsistema mecanico compensado@cref
+' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
@@ -375,8 +384,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
-
-(D:\Programas\LaTEX\tex/context/base/mkii\supp-pdf.mkii
+ (D:\Programas\LaTEX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count289
 \scratchdimen=\dimen179
@@ -720,27 +728,13 @@ pdfTeX warning: pdflatex.exe (file ./13-Ley_de_control_complementaria.pdf): PDF
 File: 13-Ley_de_control_complementaria.pdf Graphic file (type pdf)
 <use 13-Ley_de_control_complementaria.pdf>
 Package pdftex.def Info: 13-Ley_de_control_complementaria.pdf  used on input li
-ne 821.
+ne 909.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
-Overfull \hbox (289.07806pt too wide) in paragraph at lines 821--822
+Overfull \hbox (289.07806pt too wide) in paragraph at lines 909--910
 [][] 
  []
 
-
-
-pdfTeX warning: pdflatex.exe (file ./12-Ley_de_control_minima.pdf): PDF inclusi
-on: found PDF version <1.7>, but at most version <1.5> allowed
-<12-Ley_de_control_minima.pdf, id=108, 794.97pt x 614.295pt>
-File: 12-Ley_de_control_minima.pdf Graphic file (type pdf)
-<use 12-Ley_de_control_minima.pdf>
-Package pdftex.def Info: 12-Ley_de_control_minima.pdf  used on input line 828.
-(pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
-File: 13-Ley_de_control_complementaria.pdf Graphic file (type pdf)
-<use 13-Ley_de_control_complementaria.pdf>
-Package pdftex.def Info: 13-Ley_de_control_complementaria.pdf  used on input li
-ne 860.
-(pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
 
 
@@ -753,6 +747,20 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 
 [12]
 
+pdfTeX warning: pdflatex.exe (file ./12-Ley_de_control_minima.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<12-Ley_de_control_minima.pdf, id=111, 794.97pt x 614.295pt>
+File: 12-Ley_de_control_minima.pdf Graphic file (type pdf)
+<use 12-Ley_de_control_minima.pdf>
+Package pdftex.def Info: 12-Ley_de_control_minima.pdf  used on input line 916.
+(pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
+File: 13-Ley_de_control_complementaria.pdf Graphic file (type pdf)
+<use 13-Ley_de_control_complementaria.pdf>
+Package pdftex.def Info: 13-Ley_de_control_complementaria.pdf  used on input li
+ne 948.
+(pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
+
+
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -761,7 +769,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[13 <./13-Ley_de_control_complementaria.pdf>]
+[13]
 
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -771,7 +779,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[14 <./12-Ley_de_control_minima.pdf>]
+[14 <./13-Ley_de_control_complementaria.pdf>]
 
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -781,7 +789,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[15]
+[15 <./12-Ley_de_control_minima.pdf>]
 
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -812,14 +820,6 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [18]
-Overfull \hbox (55.65773pt too wide) detected at line 1176
-[][] \OT1/cmr/m/n/10 + []
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -839,22 +839,60 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[20] 
+[20]
+
+pdfTeX warning: pdflatex.exe (file ./Observador.pdf): PDF inclusion: found PDF 
+version <1.7>, but at most version <1.5> allowed
+<Observador.pdf, id=146, 794.97pt x 614.295pt>
+File: Observador.pdf Graphic file (type pdf)
+<use Observador.pdf>
+Package pdftex.def Info: Observador.pdf  used on input line 1380.
+(pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+[21 <./Observador.pdf>]
+Overfull \hbox (55.65773pt too wide) detected at line 1394
+[][] \OT1/cmr/m/n/10 + []
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+[22] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (main.aux)
  ***********
 LaTeX2e <2024-06-01>
 L3 programming layer <2024-05-08>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 7446 strings out of 473937
- 136244 string characters out of 5739564
- 1967893 words of memory out of 5000000
- 30163 multiletter control sequences out of 15000+600000
+ 7485 strings out of 473937
+ 137687 string characters out of 5739564
+ 1968893 words of memory out of 5000000
+ 30202 multiletter control sequences out of 15000+600000
  670867 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,17n,65p,733b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 70i,24n,65p,999b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Programas/L
 aTEX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><D:/Programas/LaTEX/fonts/type1/p
 ublic/amsfonts/cm/cmex10.pfb><D:/Programas/LaTEX/fonts/type1/public/amsfonts/cm
@@ -872,9 +910,9 @@ onts/symbols/msam10.pfb><D:/Programas/LaTEX/fonts/type1/urw/times/utmb8a.pfb><D
 :/Programas/LaTEX/fonts/type1/urw/times/utmbi8a.pfb><D:/Programas/LaTEX/fonts/t
 ype1/urw/times/utmr8a.pfb><D:/Programas/LaTEX/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on main.pdf (20 pages, 1080314 bytes).
+Output written on main.pdf (22 pages, 1114015 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
+ 242 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

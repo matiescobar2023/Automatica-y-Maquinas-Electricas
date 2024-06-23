@@ -1242,20 +1242,150 @@ Para mejorar la dinámica del sistema,eliminar el error de estado estacionario, 
 	{T_m(s)}^{*'} = \left[ {\omega}_m^{*}(s)-{\omega}_m(s)\right] b_a + \frac{\left[ {\omega}_m^{*}(s)-{\omega}_m(s)\right]}{s} K_{sa} + \frac{\left[ {\omega}_m^{*}(s)-{\omega}_m(s)\right]}{s^2} K_{sia}
 \end{equation}
 \begin{align}
-	J_{eq} s^2 \Theta_m &= {T_m(s)}^{*'}- \frac{T_d(s)}{r }  \\
-	J_{eq} s^2 \Theta_m &= \left[ {\Theta}_m^{*}(s)-{\Theta}_m(s)\right] \left( b_a s + K_{sa} + \frac{1}{s} K_{sia}\right)  - \frac{T_d(s)}{r } \\
+	J_{eq} s^2 \Theta_m(s) &= {T_m(s)}^{*'}- \frac{T_d(s)}{r }  \\
+	J_{eq} s^2 \Theta_m(s) &= \left[ {\Theta}_m^{*}(s)-{\Theta}_m(s)\right] \left( b_a s + K_{sa} + \frac{1}{s} K_{sia}\right)  - \frac{T_d(s)}{r } \\
 	\left( J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}\right) \Theta_m &=   \left( b_a s^2 + K_{sa} s + K_{sia}\right) {\Theta}_m^{*}(s)  - \frac{T_d(s)}{r} s \\ 
-	\Theta_m &= \frac{ b_a s^2 + K_{sa} s + K_{sia}}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}} {\Theta}_m^{*}(s)  - \frac{s}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}} \frac{T_d(s)}{r} \\
+	\Theta_m(s) &= \frac{ b_a s^2 + K_{sa} s + K_{sia}}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}} {\Theta}_m^{*}(s)  - \frac{s}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}} \frac{T_d(s)}{r} \\
 	G_{{\Theta}_m^{*}}(s) &= \frac{ b_a s^2 + K_{sa} s + K_{sia}}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}} \\
-	G_{T_l}(s) &= \frac{s}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}}
+	G_{T_l}(s) &= -\frac{s}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}}
+\end{align}
+Se puede observar, a partir del teorema del valor final, que al colocar una acción integral, desaparece el error de estado estacionario para una perturbación escalón unitario:
+
+\begin{itemize}
+	\item Si $K_{sia}=0 \: \land \: \frac{T_d(s)}{r} = \frac{1}{s} \: \land \: {\Theta}_m^{*}(s) = 0 \Rightarrow \lim_{t \to \infty} \theta_m(t) = \lim_{s \to 0} s\Theta_m(s) = -\frac{1}{K_{sa}} $ 
+	\item Si $K_{sia}=0 \: \land \: \frac{T_d(s)}{r} = 0 \: \land \: {\Theta}_m^{*}(s) = \frac{1}{s} \Rightarrow \lim_{t \to \infty} \theta_m(t) = \lim_{s \to 0} s\Theta_m(s) = 1 $
+	\item Si $K_{sia}\neq0 \: \land \: \frac{T_d(s)}{r} = \frac{1}{s} \: \land \: {\Theta}_m^{*}(s) = 0 \Rightarrow \lim_{t \to \infty} \theta_m(t) = \lim_{s \to 0} s\Theta_m(s) = 0$
+	\item Si $K_{sia}\neq0 \: \land \: \frac{T_d(s)}{r} = 0 \: \land \: {\Theta}_m^{*}(s) = \frac{1}{s} \Rightarrow \lim_{t \to \infty} \theta_m(t) = \lim_{s \to 0} s\Theta_m(s) = 1 $
+\end{itemize}
+
+Para encontrar los valores de las ganancias del PID, se utilizo el método de sintonía serie, con $n=2.5$ y $\omega_{pos}=800\frac{rad}{s}$ y $J_{eq}$ nominal. Donde se comparó el polinomio característico:
+\begin{equation}
+	P(s) =  s^3 + \frac{b_a}{J_{eq}} s^2 + \frac{K_{sa}}{J_{eq}} s + \frac{K_{sia}}{J_{eq}} 
+\end{equation}
+con el siguiente polinomio:
+\begin{equation}
+	P(s) =  s^3 + n \omega_{pos} s^2 + n {\omega_{pos}}^2 s + {\omega_{pos}}^3 
+\end{equation}
+obteniendo las siguientes ganancias:
+\begin{align}
+	b_a &=  n \, \omega_{pos} \, J_{eq}= 0.0396 \frac{Nm}{rad/s} \\
+	K_{sa} &=  n \, {\omega_{pos}}^2 \, J_{eq}= 31.6556 \frac{Nm}{rad}\\
+	K_{sia} &= {\omega_{pos}}^3 \, J_{eq}= 10130 \frac{Nm}{rad \, s}
 \end{align}
 
-\begin{equation}
-	P(s) = 
-\end{equation}
-\subsubsection{\textbf{Incorporación de observador de estado de orden reducido para parte mecánica}}
+Los polos para estos valores de ganancias serian los siguientes:
 
+\subsubsection{\textbf{Incorporación de observador de estado de orden reducido para parte mecánica}}
+Como en este controlador se ha optado por realimentar la velocidad, para evitar la utilización de derivadores, y dado que se cuenta con un encoder para medir posición del eje, fue necesario implementar un observador de estado reducido para poder realimentar la velocidad angular del motor. Se aclara que las corrientes no son observadas, ya que se cuenta con sensores de corriente.
+
+Para diseñar el observador, se analizo el subsistema mecánico resultante luego de todas las compensaciones:
+\begin{align}
+	\begin{cases}
+		\dot{\theta}_m(t) ={\omega}_m(t)\\
+		\dot{\omega}_m(t) = \frac{{T_m(t)}^{*'}}{ J_{eq}}- \frac{T_d(t)}{r J_{eq}}
+	\end{cases}\label{ecuacion de subsistema mecanico compensado}
+\end{align}
+ equivalente en forma de espacio de estados:
+ 
+\begin{align}
+	\begin{cases}
+		\begin{bmatrix}
+			\dot{\theta}_m(t) \\ 
+			\dot{\omega}_m(t)
+		\end{bmatrix} = 
+		\begin{bmatrix}
+			0 & 1 \\ 
+			0 & 0
+		\end{bmatrix}
+		\begin{bmatrix}
+			{\theta}_m(t) \\ 
+			{\omega}_m(t)
+		\end{bmatrix} + 
+		\begin{bmatrix}
+			0 \\ 
+			\frac{1}{J_{eq}}
+		\end{bmatrix} {T_m(t)}^{*'} +
+		\begin{bmatrix}
+			0 \\ 
+			-\frac{1}{r J_{eq}}
+		\end{bmatrix} T_d(t)\\
+		y(t) = \begin{bmatrix}
+			1 & 0
+		\end{bmatrix} \begin{bmatrix}
+		{\theta}_m(t) \\ 
+		{\omega}_m(t)
+		\end{bmatrix}
+	\end{cases}\label{ecuacion matricial de subsistema mecanico compensado}
+\end{align}
+Al asumir un funcionamiento ideal, las ecuaciones del observador quedan similares a las del sistema, con el agregado de un termino proporcional al error entre la salida del sistema real y la observada:
+\begin{align}
+	\begin{cases}
+		\begin{bmatrix}
+			\dot{\tilde{\theta}}_m(t) \\ 
+			\dot{\tilde{\omega}}_m(t)
+		\end{bmatrix} = 
+		\begin{bmatrix}
+			0 & 1 \\ 
+			0 & 0
+		\end{bmatrix}
+		\begin{bmatrix}
+			{\tilde{\theta}}_m(t) \\ 
+			{\tilde{\omega}}_m(t)
+		\end{bmatrix} + 
+		\begin{bmatrix}
+			0 \\ 
+			\frac{1}{J_{eq}}
+		\end{bmatrix} {T_m(t)}^{*'} + 
+		\begin{bmatrix}
+			K_{\theta} \\
+			K_{\omega}
+		\end{bmatrix} \left(y(t) - \tilde{y}(t) \right) \\
+		\tilde{y}(t) = \begin{bmatrix}
+			1 & 0
+		\end{bmatrix} 
+		\begin{bmatrix}
+			{\tilde{\theta}}_m(t) \\ 
+			{\tilde{\omega}}_m(t)
+		\end{bmatrix}
+	\end{cases}\label{ecuacion matricial de subsistema mecanico compensado}
+\end{align}
+Al evaluar la dinámica del error de estimación obtenemos las siguientes ecuaciones: 
+\begin{align}
+	{\mathbf{\dot e(t)}} &= \mathbf{\dot x(t)} - \mathbf{\dot{\tilde{x}} (t)}\\
+	{\mathbf{\dot e(t)}} &= A {\mathbf{x(t)}} + B_c {T_m(t)}^{*'} + B_d T_d(t) - \left( A \mathbf{\tilde{x} (t)} + B_c {T_m(t)}^{*'} + K C \left(\mathbf{x(t)} - \mathbf{\tilde{x} (t)} \right) \right) \\
+	{\mathbf{\dot e(t)}} &= \left(A - KC \right) {\mathbf{e(t)}} + B_d T_d(t)\label{dinamica del error de estimacion}
+\end{align}
+donde la matriz que gobierna la dinámica es $\left(A - KC \right)$, por lo se busca su polinomio característico:
+\begin{align}
+	p(s) = det\left(s I - \left( A - KC\right)  \right) = det\left(\begin{bmatrix}
+		s + K_{\theta} & -1 \\ 
+		K_{\omega} & s
+	\end{bmatrix}  
+	 \right) = s^2 + K_{\theta} s + K_{\omega} \label{polinomeo caracteristico de observador}
+\end{align}
+
+Luego, se plateó el polinomio de segundo orden con polos deseados reales e iguales en $p_{obs1,2} = -3200 \frac{rad}{s}$, para no interferir con el controlador, y asegurar un decaimiento rápido del error de observación:
+\begin{align}
+	p(s) = \left( s + 3200\right) ^2 = s^2 + 6400 s + 10240000\label{polinomeo caracteristico de observador deseado}
+\end{align}
+Al comparar ambos polinomios obtenemos los valores de las ganancias del observador:
+\begin{align}
+	K_{\theta} &= 6400 seg^{-1}\label{ganacia de posicion de observador}\\
+	K_{\omega} &= 10240000 seg^{-2}\label{ganacia de velocidad de observador}
+\end{align}
+El diagrama de bloques resultante queda de la siguiente manera:
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Observador}}
+	\end{adjustbox}
+	\caption{Diagrama de bloques del observador de estado de orden reducido}
+	\label{Diagrama de bloques del observador de estado de orden reducido}
+\end{figure}
 \subsubsection{\textbf{Simulación en tiempo continuo con modelo no lineal completo}}
+\begin{equation}
+	\left(\begin{array}{c} \frac{2\,\theta _{\mathrm{m2}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{2\,\theta _{\mathrm{m1}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}\\ \frac{3\,\theta _{\mathrm{m1}}\,\left(t_{1}+t_{2}\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{3\,\theta _{\mathrm{m2}}\,\left(t_{1}+t_{2}\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}\\ \frac{6\,t_{1}\,t_{2}\,\theta _{\mathrm{m2}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{6\,t_{1}\,t_{2}\,\theta _{\mathrm{m1}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}\\ \frac{\theta _{\mathrm{m1}}\,\left(3\,t_{1}\,{t_{2}}^2-{t_{2}}^3\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{\theta _{\mathrm{m2}}\,\left(3\,{t_{1}}^2\,t_{2}-{t_{1}}^3\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3} \end{array}\right)
+\end{equation}
 \subsubsection{\textbf{Verificación de desempeño}}
 \section{ANÁLISIS DE RESULTADOS}
 
