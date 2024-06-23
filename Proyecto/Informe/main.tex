@@ -470,7 +470,7 @@ dado en \cref{torque de carga}.
 % Ecuación vectorial de salida del sistema
 \textbf{Ecuación vectorial de salida del sistema:} se obtiene considerando que la salida de interés del sistema físico es $\theta_m(t)$:
 \begin{equation}
-    \mathbf{y}(t) = 
+    y(t) = 
     \begin{bmatrix}
         1 & 0 & 0 & 0 & 0 & 0
     \end{bmatrix}
@@ -985,10 +985,9 @@ como se indica en \cref{ecuacion matricial con ids=0}.
 		\end{bmatrix}
 		 = 
 		 \begin{bmatrix}
-		 	0 & 1 & 0 & 0& 0\\ 
-		 	0 & - \frac{b_{eq}}{J_{eq}} & \frac{3}{2} \frac{P_p \lambda^r_m}{J_{eq}}& 0 & 0\\
-		 	0 &  - \frac{P_p  \lambda^r_m}{L_q} & -\frac{R_s}{L_q} & 0 & 0\\
-            0 & \frac{P_p \omega_m(t) L_q i^r_{qs}(t)}{L_d}
+		 	0 & 1 & 0 \\ 
+		 	0 & - \frac{b_{eq}}{J_{eq}} & \frac{3}{2} \frac{P_p \lambda^r_m}{J_{eq}}& 0 \\
+		 	0 &  - \frac{P_p  \lambda^r_m}{L_q} & -\frac{R_s}{L_q} & 0
 		 \end{bmatrix}
 		 \begin{bmatrix}
 		 	{\theta}_m(t) \\ 
@@ -1448,7 +1447,7 @@ Como en este controlador se ha optado por realimentar la velocidad, para evitar 
 Para diseñar el observador, se analizo el subsistema mecánico resultante luego de todas las compensaciones:
 \begin{align}
 	\begin{cases}
-		\dot{\theta}_m(t) ={\omega}_m(t)\\
+		\frac{\theta_m(t)}{dt} ={\omega}_m(t)\\
 		\dot{\omega}_m(t) = \frac{{T_m(t)}^{*'}}{ J_{eq}}- \frac{T_d(t)}{r J_{eq}}
 	\end{cases}\label{ecuacion de subsistema mecanico compensado}
 \end{align}
@@ -1457,8 +1456,8 @@ Para diseñar el observador, se analizo el subsistema mecánico resultante luego
 \begin{align}
 	\begin{cases}
 		\begin{bmatrix}
-			\dot{\theta}_m(t) \\ 
-			\dot{\omega}_m(t)
+			\frac{\theta_m(t)}{dt} \\ 
+			\frac{\omega_m(t)}{dt}
 		\end{bmatrix} = 
 		\begin{bmatrix}
 			0 & 1 \\ 
@@ -1488,8 +1487,8 @@ Al asumir un funcionamiento ideal, las ecuaciones del observador quedan similare
 \begin{align}
 	\begin{cases}
 		\begin{bmatrix}
-			\dot{\tilde{\theta}}_m(t) \\ 
-			\dot{\tilde{\omega}}_m(t)
+			\frac{d \tilde{\theta}_m(t)}{dt} \\ 
+			\frac{d \tilde{\omega}_m(t)}{dt}
 		\end{bmatrix} = 
 		\begin{bmatrix}
 			0 & 1 \\ 
@@ -1518,9 +1517,9 @@ Al asumir un funcionamiento ideal, las ecuaciones del observador quedan similare
 \end{align}
 Al evaluar la dinámica del error de estimación obtenemos las siguientes ecuaciones: 
 \begin{align}
-	{\mathbf{\dot e(t)}} &= \mathbf{\dot x(t)} - \mathbf{\dot{\tilde{x}} (t)}\\
-	{\mathbf{\dot e(t)}} &= A {\mathbf{x(t)}} + B_c {T_m(t)}^{*'} + B_d T_d(t) - \left( A \mathbf{\tilde{x} (t)} + B_c {T_m(t)}^{*'} + K C \left(\mathbf{x(t)} - \mathbf{\tilde{x} (t)} \right) \right) \\
-	{\mathbf{\dot e(t)}} &= \left(A - KC \right) {\mathbf{e(t)}} + B_d T_d(t)\label{dinamica del error de estimacion}
+	\frac{d \mathbf{e}(t)}{dt} &= \frac{d \mathbf{x}(t)}{dt} - \frac{d \mathbf{\tilde{x}} (t)}{dt}\\
+	\frac{d \mathbf{e}(t)}{dt} &= A {\mathbf{x}(t)} + B_c {T_m(t)}^{*'} + B_d T_d(t) - \left( A \mathbf{\tilde{x} (t)} + B_c {T_m(t)}^{*'} + K C \left(\mathbf{x(t)} - \mathbf{\tilde{x} (t)} \right) \right) \\
+	\frac{d \mathbf{e}(t)}{dt} &= \left(A - KC \right) {\mathbf{e(t)}} + B_d T_d(t)\label{dinamica del error de estimacion}
 \end{align}
 donde la matriz que gobierna la dinámica es $\left(A - KC \right)$, por lo se busca su polinomio característico:
 \begin{align}
