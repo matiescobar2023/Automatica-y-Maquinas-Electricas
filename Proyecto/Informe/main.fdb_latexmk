@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1719088314.54876 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" "main.pdf" "main" 1719088320.70408 0
+["pdflatex"] 1719155374.94017 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" "main.pdf" "main" 1719155381.15261 0
   "1-Brazo.PNG" 1718289822.46398 14666 dbbf8840aa69c12071ab2a0a9be19378 ""
   "10-Transformación_de_Park.eps" 1718289822.60007 257157 f5601a0a7f2fa1ab38b71ca598b98e42 ""
   "11-Transformación_de_Park_Inversa.eps" 1718289822.66411 245311 0cc9edb6a8d7b4d5ee4308b3832dd742 ""
@@ -9,7 +9,10 @@
   "15-Circulos_de_corriente.pdf" 1719087013.52057 10048 d5a6c4222a3e10ff1679613fd68cff1a ""
   "16-Temperatura_vs_corriente.pdf" 1719088301.91863 10355 172452df164662b7038224a92c583ede ""
   "17-T_m_vs_corriente_vs_beta.pdf" 1719087781.52351 12928 ccc7adf93bb13d5123f7614d5b75118d ""
+  "18-Diagrama_de_bloques_LTI_equivalente_aumentado.png" 1719153021.00927 37224 9f1391a157e465de3e2df9957f8501f7 ""
+  "19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.png" 1719149930.91964 10236 5a932bbae4ae42f9414e383d49e65cba ""
   "2-Subsistema_Mecánico_Completo.eps" 1718289822.73916 195922 320c2663a51481ad4486124cb83efda9 ""
+  "20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png" 1719152974.91145 42987 50f88e759a04d3fb6bbcdd55ab5c9f63 ""
   "3-Subsistema_Térmico.png" 1718840206.99063 25811 33f6212bde13eb52f233db12c31ee41e ""
   "4-I_qs.eps" 1718289822.82022 199718 e4f0ae11b322b2621ca237d778c64a6b ""
   "5-I_ds.eps" 1718289822.88528 90156 1e7c84662324e3f2014237930b3281c4 ""
@@ -17,7 +20,7 @@
   "7-T_m.eps" 1718289823.12984 94040 d021e12cc7286f88c8c104a5e4d7442e ""
   "8-Subsistema_Electromagnético.eps" 1718289823.2199 358540 00dec4a5442564266852414adae74096 ""
   "9-Sistema_Físico_Completo.eps" 1718289823.30496 612534 b9b1d20406a5234877cbde93b307bba2 ""
-  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" 1719088302.04171 67622 a2e09c0370c35773a590ee0bcf71ae92 ""
+  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" 1719155363.57663 78411 c322f1983696852a09403c866ddc2b81 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1716317108.30627 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1716319181.74555 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1716345269.78178 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -64,10 +67,12 @@
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1716310575.23134 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1716310575.24697 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1716310575.24697 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1716310575.24697 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1716310575.29384 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1716310575.30947 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1716310575.30947 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1716310575.30947 32716 08e384dc442464e7285e891af9f45947 ""
+  "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1716310575.37197 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1716310575.49698 31764 459c573c03a4949a528c2cc7f557e217 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1716345269.96667 44729 811d6c62865936705a31c797a1d5dada ""
   "c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb" 1716345269.96967 44656 0cbca70e0534538582128f6b54593cca ""
@@ -131,7 +136,7 @@
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1716357246 8225112 5de980edea79c2c299f0a161b7db1c9e ""
   "c:/texlive/2024/texmf.cnf" 1716351796.41707 713 baa45e065482d44c4cd81b98ef72c63b ""
   "ieeeconf.cls" 1716331032.00079 202025 d003ccb4b5f2978a40d92fd20a03590a ""
-  "main.aux" 1719088319.51388 24181 92754781fb8f76d0159b762f3483fa60 "pdflatex"
+  "main.aux" 1719155380.0136 26613 1ecf39c22e4cbbf1e3f109f2868f57fc "pdflatex"
   (generated)
   "main.aux"
   "main.log"
