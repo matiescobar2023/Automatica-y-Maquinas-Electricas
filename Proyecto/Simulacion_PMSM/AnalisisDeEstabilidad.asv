@@ -22,7 +22,9 @@ Cts         = 0.818;
 
 
 bl_values = linspace(bl_nom - 0.03, bl_nom + 0.03, 5);
+%bl_values = 0.1;
 Jl_values = linspace(Jl_nom, Jl_nom + 0.375, 50);
+%Jl_values = Jl_nom;
 
 syms J_eq b_eq
 
@@ -44,10 +46,16 @@ poles_real = [];
 figure;
 hold on;
 grid on;
-title('Mapa de Polos con migración de propiedades ')
+
+%title('Mapa de polos y ceros: migracion de propiedades ante variacion de $J_l$ y $b_l = b_{lnom}$', 'Interpreter', 'latex', 'Fontsize', 16);
+
+xlabel('Eje Real [$\frac{rad}{s}$]',  'interpreter', 'latex', 'Fontsize', 14);
+ylabel('Eje Imaginario [$\frac{rad}{s}$]', 'interpreter', 'latex', 'Fontsize', 14);
 
 i      = 0;
-colors = {'red'; 'blue'; 'green'; 'cyan'; 'black';'magenta'};
+colors = {'black'; 'blue'; 'green'; 'cyan'; 'black';'magenta'};
+zitas  = [];
+frecuencias = [];
 
 for bl = bl_values
     i = i + 1;
@@ -69,22 +77,29 @@ for bl = bl_values
         %G1       = zpk(sys_tf);
         poles     = pole(sys_ss);
         
+        
         preal     = real(poles(2));
         im        = imag(poles(2));
 
         poles_real = [poles_real; preal];
         poles_imag = [poles_imag; im];
         
+        frecuencias = [frecuencias;abs(poles(2))];
+        zitas       = [zitas; -cos(angle(poles(2)))];
+        
+        %{
         if i == 1
             if j == 1
                 plot(preal, im,'x', 'color', c, 'markersize', 10 , 'HandleVisibility', 'off')
-                text(preal + 0.035, im-8, '\leftarrow min J_l', 'HorizontalAlignment', 'right', 'VerticalAlignment', 'bottom');
+                text(preal + 12, im-8, '\leftarrow min J_l', 'HorizontalAlignment', 'right', 'VerticalAlignment', 'bottom', 'Fontsize', 12);
             elseif j == length(Jl_values)
                 plot(preal, im,'x', 'color', c, 'markersize', 10 , 'HandleVisibility', 'off');
-                text(preal + 0.035, im-8, '\leftarrow max J_l', 'HorizontalAlignment', 'right', 'VerticalAlignment', 'bottom');
+                text(preal + 12, im-8, '\leftarrow max J_l', 'HorizontalAlignment', 'right', 'VerticalAlignment', 'bottom', 'Fontsize', 12);
             end
         end
+        %}
     end
+    %{
     if bl == 0.1
         plot(poles_real, poles_imag, '-', 'color', c ,'Displayname', '$b_{lnom}$');
     else
@@ -93,11 +108,14 @@ for bl = bl_values
     plot(poles_real, -poles_imag, '-', 'color', c ,'HandleVisibility', 'off');
     poles_real = [];
     poles_imag = [];
+    %}
+    zitas       = [];
+    frecuencias = [];
 end
 
-
-legend ('show', 'Interpreter', 'latex');
-
+plot(0,0,'x', 'color', 'black', 'markersize', 10 , 'HandleVisibility', 'off');
+plot(-Rs/Lq, 0,'o', 'color', 'black', 'markersize', 10 , 'HandleVisibility', 'off');
+legend ('show', 'Interpreter', 'latex', 'Fontsize', 12);
 
 
 % Funcion de transferencia desde V_qs a Theta_m

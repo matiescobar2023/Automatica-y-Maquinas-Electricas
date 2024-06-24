@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1719237327.10289 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" "main.pdf" "main" 1719237337.43633 0
+["pdflatex"] 1719250427.08219 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" "main.pdf" "main" 1719250435.38173 0
   "1-Brazo.PNG" 1718289822.46398 14666 dbbf8840aa69c12071ab2a0a9be19378 ""
   "10-Transformación_de_Park.eps" 1718289822.60007 257157 f5601a0a7f2fa1ab38b71ca598b98e42 ""
   "11-Transformación_de_Park_Inversa.eps" 1718289822.66411 245311 0cc9edb6a8d7b4d5ee4308b3832dd742 ""
@@ -13,7 +13,10 @@
   "19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.png" 1719149930.91964 10236 5a932bbae4ae42f9414e383d49e65cba ""
   "2-Subsistema_Mecánico_Completo.eps" 1718289822.73916 195922 320c2663a51481ad4486124cb83efda9 ""
   "20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png" 1719152974.91145 42987 50f88e759a04d3fb6bbcdd55ab5c9f63 ""
-  "21-Mapa_de_polos_complejos_migracion.pdf" 1719237316.87845 114779 e5e7072bd6a9b0f89b3d1f14bcf09035 ""
+  "21-Mapa_de_polos_complejos_migracion.pdf" 1719249538.93336 116894 4e6c26afe2913782b34fb2dad178a514 ""
+  "22-Mapa_de_polos.pdf" 1719244912.0976 74757 4eabd91051d5f35120a46e0032e5ae94 ""
+  "23-Frecuencia_natural_migracion.pdf" 1719249969.80351 93706 311bb4c30822f0a7751cd633916c9e41 ""
+  "24-Zita_migracion.pdf" 1719250133.93229 87328 a914f86a0e6667617ad562a034949457 ""
   "3-Subsistema_Térmico.png" 1718840206.99063 25811 33f6212bde13eb52f233db12c31ee41e ""
   "4-I_qs.eps" 1718289822.82022 199718 e4f0ae11b322b2621ca237d778c64a6b ""
   "5-I_ds.eps" 1718289822.88528 90156 1e7c84662324e3f2014237930b3281c4 ""
@@ -22,7 +25,7 @@
   "8-Subsistema_Electromagnético.eps" 1718289823.2199 358540 00dec4a5442564266852414adae74096 ""
   "9-Sistema_Físico_Completo.eps" 1718289823.30496 612534 b9b1d20406a5234877cbde93b307bba2 ""
   "Observador.pdf" 1719155671.98859 19088 0ec65a01e33475a438b54169c846befd ""
-  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" 1719237320.92069 87495 6539be0b6a6aa09c07d58579cf463e9d ""
+  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" 1719250421.43898 90244 03fc6d8a44ba37e93bafa977a7a59afa ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1716317108.30627 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1716319181.74555 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1716345269.78178 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -138,7 +141,7 @@
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1716357246 8225112 5de980edea79c2c299f0a161b7db1c9e ""
   "c:/texlive/2024/texmf.cnf" 1716351796.41707 713 baa45e065482d44c4cd81b98ef72c63b ""
   "ieeeconf.cls" 1716331032.00079 202025 d003ccb4b5f2978a40d92fd20a03590a ""
-  "main.aux" 1719237335.26588 28644 e00d7a63aa4c58fd74bb27cdeb4c7bc5 "pdflatex"
+  "main.aux" 1719250433.68278 29646 c630bc57ae847794bd22fb306d9e8af9 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
