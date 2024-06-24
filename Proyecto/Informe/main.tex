@@ -844,7 +844,7 @@ se muestran en la \cref{T_m respecto a i_qd0s-o} y que responden a la \cref{ecua
 \end{equation}
 
 \begin{equation}
-    \frac{3}{2} P_p i^r_{qd0s-o}\sin(\beta)\left[\lambda'^r_m + (L_d - L_q) i^r_{qd0s-o}\cos(\beta)\right]
+    T_m(t) = \frac{3}{2} P_p i^r_{qd0s-o}\sin(\beta)\left[\lambda'^r_m + (L_d - L_q) i^r_{qd0s-o}\cos(\beta)\right]
     \label{ecuación T_m respecto a i_qd0s-o}
 \end{equation}
 
@@ -889,8 +889,8 @@ Por otro lado, el \textbf{Modelo dinámico LPV} se indica en la \cref{modelo de 
 
 \begin{equation}
     \begin{cases}
-        \frac{d}{dt} \mathbf{\delta x}(t) \approx A(t) \mathbf{\delta x}(t) + B(t) \mathbf{\delta u}(t); \mathbf{\delta x}(0) \equiv \mathbf{0}\\
-        \mathbf{\delta y}(t) = C\mathbf{\delta x}(t)
+        \frac{d}{dt} \mathbf{\delta x}(t) &\approx A(t) \mathbf{\delta x}(t) + B(t) \mathbf{\delta u}(t); \mathbf{\delta x}(0) \equiv \mathbf{0}\\
+        \mathbf{\delta y}(t) &= C\mathbf{\delta x}(t)
     \end{cases}
     \label{modelo de pequeñas desviaciones}
 \end{equation}
@@ -983,11 +983,11 @@ como se indica en \cref{ecuacion matricial con ids=0}.
 			\frac{d \omega_m(t)}{dt}\\
 			\frac{d i^r_{qs}(t)}{dt}  
 		\end{bmatrix}
-		 = 
+		 &= 
 		 \begin{bmatrix}
 		 	0 & 1 & 0 \\ 
-		 	0 & - \frac{b_{eq}}{J_{eq}} & \frac{3}{2} \frac{P_p \lambda^r_m}{J_{eq}}& 0 \\
-		 	0 &  - \frac{P_p  \lambda^r_m}{L_q} & -\frac{R_s}{L_q} & 0
+		 	0 & - \frac{b_{eq}}{J_{eq}} & \frac{3}{2} \frac{P_p \lambda^r_m}{J_{eq}} \\
+		 	0 &  - \frac{P_p  \lambda^r_m}{L_q} & -\frac{R_s}{L_q}
 		 \end{bmatrix}
 		 \begin{bmatrix}
 		 	{\theta}_m(t) \\ 
@@ -1006,7 +1006,7 @@ como se indica en \cref{ecuacion matricial con ids=0}.
 		 	- \frac{1}{r J_{eq}}\\
 		 	0 
 		 \end{bmatrix} T_l(t)\,\,; \mathbf{x}(0) = \mathbf{x_0}\\
-		 y(t) = \begin{bmatrix}
+		 y(t) &= \begin{bmatrix}
 		 		1 & 0 & 0
 		 	 \end{bmatrix}
 		 	 \begin{bmatrix}
@@ -1135,7 +1135,7 @@ El diagrama de bloques del \textbf{modelo NL desacoplado con ley de control NL} 
 \paragraph{\textbf{Funciones de Transferencia}}
 para el modelo LTI equivalente aumentado, desde ambas entradas $V^r_{qs}(s)$ y $T_l(s)$ hacia la salida ${\Theta}_m(s)$.
 
-Primero se aplicó la Transformada de Laplace a la ecuaciones del sistema LTI equivalente aumentado, considerando condiciones iniciales nulas:
+Primero se aplicó la Transformada de Laplace a la ecuaciones del sistema LTI equivalente aumentado, considerando condiciones iniciales nulas (\cref{equaciones modelo LTI eq en s}):
 
 \begin{equation}
 	\begin{cases}
@@ -1146,7 +1146,8 @@ Primero se aplicó la Transformada de Laplace a la ecuaciones del sistema LTI eq
 	\label{equaciones modelo LTI eq en s}
 \end{equation}
 
-Luego se despejó la salida en función de las entradas, para obtener finalmente las funciones de transferencia:
+Luego se despejó la salida en función de las entradas, para obtener finalmente las funciones de transferencia (\cref{posicion en funcion de demas variables en laplace}, \cref{funcion de transferencia desde Vqs} y \cref{funcion de transferencia desde T_l}):
+
 \begin{align}
 	{\Theta}_m(s) &= -\frac{R_{s} \frac{T_l(s)}{r} + L_{q} \frac{T_l(s)}{r} s - \dfrac{3}{2} P_{p} V^r_{qs}(s) \lambda^r_m}{J_{eq} L_{q} s^3 +\left( J_{eq} R_{s} + L_{q} b_{eq} \right)s^2 + \left( R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2\right) s}\label{posicion en funcion de demas variables en laplace}\\
 	G_{V^r_{qs}}(s) &= \frac{{\Theta}_m(s)}{V^r_{qs}(s)} = \frac{\dfrac{3}{2} P_{p} \lambda^r_m}{J_{eq} L_{q} s^3 +\left( J_{eq} R_{s} + L_{q} b_{eq} \right)s^2 + \left( R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2\right) s}\label{funcion de transferencia desde Vqs}\\
@@ -1156,13 +1157,20 @@ Luego se despejó la salida en función de las entradas, para obtener finalmente
 
 \subsubsection{\textbf{Análisis de estabilidad a lazo abierto para el modelo LTI equivalente aumentado}}
 \paragraph{\textbf{Determinación de polos y ceros del sistema}}
-Para determinar los polos, se resolvió el polinomio característico del sistema.
+Para determinar los polos, se resolvió el polinomio característico del sistema (\cref{polinomio caracteristico del sistema LTI}).
 
-\begin{align}
-	J_{eq} L_{q} s^3 +\left( J_{eq} R_{s} + L_{q} b_{eq} \right)s^2 + \left( R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2\right) s = 0 \label{polinomio caracteristico del sistema LTI}\\
-\end{align}
+\begin{equation}
+	J_{eq} L_{q} s^3 +\left( J_{eq} R_{s} + L_{q} b_{eq} \right)s^2 + \left( R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2\right) s = 0
+    \label{polinomio caracteristico del sistema LTI}
+\end{equation}
 
-Cuyas soluciones fueron:
+Cuyas soluciones fueron las indicadas en la \cref{polos del sistema LTI}.
+En donde el polo en el origen está asociado al integrador puro a la salida
+del diagrama de bloques del LTI equivalente aumentado, correspondiente con
+el pseudo-estado $\theta_m(t)$. Sin considerar este polo se tiene un sistema de
+segundo orden como lo ponen de manifiesto los dos integradores asociados a $i^r_{qs}(t)$ en el
+sub-sistema electromagnético y el asociado a $\omega_m{t}$ en el sub-sistema mecánico.
+
 \begin{equation}
 	\begin{cases}
 		s_1 = 0\\
@@ -1171,19 +1179,19 @@ Cuyas soluciones fueron:
 	\end{cases}\label{polos del sistema LTI}
 \end{equation}
 
-Además, se obtuvieron las frecuencias naturales y relaciones de amortiguamiento, al comparar la ecuación características asociada a los dos polos complejos conjugados, con  la ecuación estándar de un sistema de segundo orden.
+Además, se obtuvieron las frecuencias naturales (\cref{ecuacion de las frecuencias naturales del LTI}) y relaciones de amortiguamiento crítico (\cref{ecuacion de las relaciones de amortiguamiento del LTI}), al comparar la ecuación característica asociada a los dos polos complejos conjugados (\cref{polinomio caracteristico del sistema LTI polos complejos conjugados}), con  la ecuación estándar de un sistema de segundo orden sub-amortiguado (\cref{ecuación estandar de un sistema de segundo orden}).
 
 \begin{align}
 	 s^2 +\dfrac{ J_{eq} R_{s} + L_{q} b_{eq}}{J_{eq} L_{q}} &s +\dfrac{ R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2}{J_{eq} L_{q}}  = 0 \label{polinomio caracteristico del sistema LTI polos complejos conjugados}\\
-	 s^2 + 2 \zeta \omega_{n} &s + \omega_{n}^{2} = 0 \label{ecuación estandar de un sistema de segundo orden}
+	s^2 + 2 \zeta \omega_{n} &s + \omega_{n}^{2} = 0 \label{ecuación estandar de un sistema de segundo orden}
 \end{align}
 
 \begin{align}
-	\omega_{n} &= \sqrt{\dfrac{ R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2}{J_{eq} L_{q}}} \label{eciacion de las frecuencias naturales del LTI}\\
-	\zeta &= \dfrac{ J_{eq} R_{s} + L_{q} b_{eq}}{2 \sqrt{ J_{eq} L_{q}\left( R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2\right) }} \label{eciacion de las relaciones de amortiguamiento del LTI}
+	\omega_{n} &= \sqrt{\dfrac{ R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2}{J_{eq} L_{q}}} \label{ecuacion de las frecuencias naturales del LTI}\\
+	\zeta &= \dfrac{ J_{eq} R_{s} + L_{q} b_{eq}}{2 \sqrt{ J_{eq} L_{q}\left( R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2\right) }} \label{ecuacion de las relaciones de amortiguamiento del LTI}
 \end{align}
 
-Se pudo ver que solo la perturbación introduce un cero:
+Se pudo ver que solo la perturbación introduce un cero (\cref{cero del sistema LTI}).
 
 \begin{align}
 	 R_{s} + L_{q} s = 0 \Rightarrow s = -\frac{R_{s}}{L_{q}}
