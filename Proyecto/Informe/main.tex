@@ -11,6 +11,7 @@
 \usepackage{adjustbox}
 \usepackage{cleveref}
 \usepackage{array}
+\usepackage{float}     % Para el modificador [H]
 \newcommand{\defeq}{\mathrel{\mathop:}=}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 \renewcommand{\arraystretch}{1.5} % Ajusta este valor para más o menos espacio entre filas
@@ -1570,15 +1571,32 @@ Al comparar ambos polinomios obtenemos los valores de las ganancias del observad
 	K_{\omega} &= 10240000 seg^{-2}\label{ganacia de velocidad de observador}
 \end{align}
 El diagrama de bloques resultante queda de la siguiente manera:
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{max width=\columnwidth,scale=0.8}
 		\framebox{\includegraphics{Observador}}
 	\end{adjustbox}
 	\caption{Diagrama de bloques del observador de estado de orden reducido}
 	\label{Diagrama de bloques del observador de estado de orden reducido}
 \end{figure}
 \subsubsection{\textbf{Simulación en tiempo continuo con modelo no lineal completo}}
+Para poder realizar la simulación en tiempo continuo, se integraron todos los bloques del controlador, en un solo diagrama de bloques, separando el controlador de la planta. Ademas se pueden visualizar el modulador de tensión y los sensores con ganancias unitarias 
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Controlador_completo}}
+	\end{adjustbox}
+	\caption{Diagrama de bloques del controlador completo}
+	\label{Diagrama de bloques del controlador completo}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Planta_completa}}
+	\end{adjustbox}
+	\caption{Diagrama de bloques de la planta}
+	\label{Diagrama de bloques de la planta}
+\end{figure}
 \begin{equation}
 	\left(\begin{array}{c} \frac{2\,\theta _{\mathrm{m2}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{2\,\theta _{\mathrm{m1}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}\\ \frac{3\,\theta _{\mathrm{m1}}\,\left(t_{1}+t_{2}\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{3\,\theta _{\mathrm{m2}}\,\left(t_{1}+t_{2}\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}\\ \frac{6\,t_{1}\,t_{2}\,\theta _{\mathrm{m2}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{6\,t_{1}\,t_{2}\,\theta _{\mathrm{m1}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}\\ \frac{\theta _{\mathrm{m1}}\,\left(3\,t_{1}\,{t_{2}}^2-{t_{2}}^3\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{\theta _{\mathrm{m2}}\,\left(3\,{t_{1}}^2\,t_{2}-{t_{1}}^3\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3} \end{array}\right)
 \end{equation}
