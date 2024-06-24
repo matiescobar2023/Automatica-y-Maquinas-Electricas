@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.22)  23 JUN 2024 21:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.22)  24 JUN 2024 10:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -694,6 +694,12 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [18 <./20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png>]
+<21-Mapa_de_polos_complejos_migracion.pdf, id=215, 882.29625pt x 511.9125pt>
+File: 21-Mapa_de_polos_complejos_migracion.pdf Graphic file (type pdf)
+<use 21-Mapa_de_polos_complejos_migracion.pdf>
+Package pdftex.def Info: 21-Mapa_de_polos_complejos_migracion.pdf  used on input line 1214.
+(pdftex.def)             Requested size: 882.2941pt x 511.91125pt.
+
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -709,7 +715,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[20]
+[20 <./21-Mapa_de_polos_complejos_migracion.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -727,13 +733,6 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 
 [22]
 
-pdfTeX warning: pdflatex.exe (file ./Observador.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Observador.pdf, id=228, 794.97pt x 614.295pt>
-File: Observador.pdf Graphic file (type pdf)
-<use Observador.pdf>
-Package pdftex.def Info: Observador.pdf  used on input line 1556.
-(pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
-
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
@@ -741,18 +740,21 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [23]
-Overfull \hbox (55.65773pt too wide) detected at line 1570
+
+pdfTeX warning: pdflatex.exe (file ./Observador.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Observador.pdf, id=251, 794.97pt x 614.295pt>
+File: Observador.pdf Graphic file (type pdf)
+<use Observador.pdf>
+Package pdftex.def Info: Observador.pdf  used on input line 1576.
+(pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
+
+Overfull \hbox (55.65773pt too wide) detected at line 1590
 [][] \OT1/cmr/m/n/10 + []
  []
 
 
-Package fancyhdr Warning: \headheight is too small (18.0pt): 
-(fancyhdr)                Make it at least 34.37994pt, for example:
-(fancyhdr)                \setlength{\headheight}{34.37994pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24 <./Observador.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
@@ -760,7 +762,15 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[25] 
+[24]
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+[25 <./Observador.pdf>] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -773,18 +783,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7548 strings out of 474049
- 141927 string characters out of 5746277
+ 7557 strings out of 474049
+ 142334 string characters out of 5746277
  1965754 words of memory out of 5000000
- 29856 multiletter control sequences out of 15000+600000
+ 29865 multiletter control sequences out of 15000+600000
  670867 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,22n,65p,1171b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (25 pages, 686789 bytes).
+Output written on main.pdf (25 pages, 800417 bytes).
 PDF statistics:
- 338 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
+ 358 PDF objects out of 1000 (max. 8388607)
+ 240 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

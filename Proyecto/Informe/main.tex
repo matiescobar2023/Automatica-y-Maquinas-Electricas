@@ -1198,7 +1198,27 @@ Se pudo ver que solo la perturbación introduce un cero (\cref{cero del sistema 
 	 \label{cero del sistema LTI}
 \end{align}
 
-Para ver como varían los polos, frecuencia natural y  cero, se graficaron en función de los parámetros que se varían.
+Luego se quiere evaluar la variación de  polos, frecuencia natural y  cero ante la 
+migración de propiedades del sistema debida a la variación de los parámetros de la carga
+$J_l$ y $b_l$ (\cite{c1}) %aca vendría a la cita en la guía donde dice lo de la variación de parametros.
+
+Lo que se puede determinar es, por un lado, que el polo en el origen introducido por el integrador
+puro a la salida del sistema no cambia ante la variación de los parámetros de la carga. Por otro lado,
+los polos complejos conjugados del sistema se encuentran suficientemente alejados del origen como para
+poder observar cómo varían. Por esto, se representa el mapa de los polos complejos conjugados en
+una gráfica separada en la ,\cref{mapa de polos complejos}.
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{21-Mapa_de_polos_complejos_migracion.pdf}}
+	\end{adjustbox}
+	\caption{Mapa de polos complejos del sistema ante variación de parametros de la carga.}
+	\label{mapa de polos complejos}
+\end{figure}
+
+
+
 
 
 \subsubsection{\textbf{Análisis de observabilidad completa de estado para el modelo LTI equivalente aumentado desde salida medida $\mathbf{\theta_m(t)}$}}

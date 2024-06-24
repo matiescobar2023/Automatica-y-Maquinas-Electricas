@@ -44,9 +44,7 @@ poles_real = [];
 figure;
 hold on;
 grid on;
-title('Mapa de polos complejos: migracion de propiedades ante variacion de $J_l$ y $b_l$', 'Interpreter', 'latex', 'Fontsize', 16);
-xlabel('Eje Real [$\frac{rad}{s}$]',  'interpreter', 'latex', 'Fontsize', 14);
-ylabel('Eje Imaginario [$\frac{rad}{s}$]', 'interpreter', 'latex', 'Fontsize', 14);
+title('Mapa de Polos con migración de propiedades ')
 
 i      = 0;
 colors = {'red'; 'blue'; 'green'; 'cyan'; 'black';'magenta'};
@@ -80,10 +78,10 @@ for bl = bl_values
         if i == 1
             if j == 1
                 plot(preal, im,'x', 'color', c, 'markersize', 10 , 'HandleVisibility', 'off')
-                text(preal + 0.035, im-8, '\leftarrow min J_l', 'HorizontalAlignment', 'right', 'VerticalAlignment', 'bottom', 'Fontsize', 12);
+                text(preal + 0.035, im-8, '\leftarrow min J_l', 'HorizontalAlignment', 'right', 'VerticalAlignment', 'bottom');
             elseif j == length(Jl_values)
                 plot(preal, im,'x', 'color', c, 'markersize', 10 , 'HandleVisibility', 'off');
-                text(preal + 0.035, im-8, '\leftarrow max J_l', 'HorizontalAlignment', 'right', 'VerticalAlignment', 'bottom', 'Fontsize', 12);
+                text(preal + 0.035, im-8, '\leftarrow max J_l', 'HorizontalAlignment', 'right', 'VerticalAlignment', 'bottom');
             end
         end
     end
@@ -98,7 +96,7 @@ for bl = bl_values
 end
 
 
-legend ('show', 'Interpreter', 'latex', 'Fontsize', 12);
+legend ('show', 'Interpreter', 'latex');
 
 
 
