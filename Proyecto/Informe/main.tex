@@ -1205,14 +1205,16 @@ Se pudo ver que solo la perturbación introduce un cero como se indica en la \cr
 
 Luego se quiere evaluar la variación de  polos, frecuencia natural y  cero ante la 
 \textbf{migración de propiedades} del sistema debida a la variación de los parámetros de la carga
-$J_l$ y $b_l$ \cite{c1}. %aca vendría a la cita en la guía donde dice lo de la variación de parametros.
+$J_l$ y $b_l$ \cite{c1}. Resulta de interés, también conocer la migración
+de propiedades ante el cambio de $R_s$ al considerar temperaturas de equilibrio en los extremos del rango de operación.
+%aca vendría a la cita en la guía donde dice lo de la variación de parametros.
 
 Al trazar el mapa de polos y ceros del sistema se puede observar que
-los polos complejos conjugados presentan poca variación relativa ante el cambio de $b_l$ en comparación con la variación ante el cambio de $J_l$.
+los polos complejos conjugados presentan poca variación relativa ante el cambio de $b_l$ en comparación con la variación ante el cambio de $J_l$ y de $R_s$.
 Por este motivo, en la \cref{mapa de polos b_l nominal} se presenta, por un lado, el mapa de polos y ceros completo cuando
-$b_l = b_{lnom} = 0.1 \left[\frac{N \cdot m}{rad \cdot s}\right]$ y $J_l$ varía en todo su rango. Mientras que en la
+$b_l = b_{lnom} = 0.1 \left[\frac{N \cdot m}{rad \cdot s}\right]$ y $J_l$ varía en todo su rango con $R_s$ a $-15^\circ C$, a $40^\circ C$ y a $115^\circ C$. Mientras que en la
 \cref{mapa de polos complejos} se muestra solo el mapa de los polos complejos cuando
-$b_l$ toma cinco valores equi-espaciados en su rango, y para cada uno, $J_l$ varía en todo su rango.
+$b_l$ toma cinco valores equi-espaciados en su rango, y para cada uno, $J_l$ varía en todo su rango ($R_s$ solo a $40^\circ C$).
 En estas figuras se indica con $max J_{l}$ y $min J_{l} = J_{lnom}$ a los polos correspondientes al máximo y mínimo valor
 de $J_{l}$ respectivamente. Luego, en cada curva, $J_l$ varía desde un mínimo a un máximo
 desde la parte superior izquierda de la gráfica hacia la parte inferior derecha de la misma. Es decir, como se espera, 
@@ -1225,7 +1227,7 @@ cambio en el amortiguamiento del sistema.
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{22-Mapa_de_polos.pdf}}
 	\end{adjustbox}
-	\caption{Mapa de polos completo del sistema ante variación de $J_l$ con $b_l = b_{lnom}$}
+	\caption{Mapa de polos completo del sistema ante variación de $J_l$ y $R_s$ con $b_l = b_{lnom}$}
 	\label{mapa de polos b_l nominal}
 \end{figure}
 
@@ -1234,21 +1236,24 @@ cambio en el amortiguamiento del sistema.
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{21-Mapa_de_polos_complejos_migracion.pdf}}
 	\end{adjustbox}
-	\caption{Mapa de polos complejos del sistema ante variación de parametros de la carga.}
+	\caption{Mapa de polos complejos del sistema ante variación de parametros de la carga ($R_s$ a $40^\circ C$).}
 	\label{mapa de polos complejos}
 \end{figure}
 
 A continuación se trazaron las curvas que presentan la variación
 de $\omega_n$ (\cref{variacion de omega_n}) y de $\zeta$ (\cref{variacion de zita}). Cómo se anticipó,
 la variación de $b_l$ no tiene efecto apreciable en el cambio de $\omega_n$ y se presentan prácticamente superpuestas
-las curvas de $\omega_n$ respecto a $J_l$ para cada $b_l$. De manera similar ocurre para la variación de $\zeta$.
+las curvas de $\omega_n$ respecto a $J_l$ para cada $b_l$ y de manera similar ocurre para la variación de $\zeta$.
+Es por eso que, en lugar de presentar las curvas para todo el rango de variación de $b_l$, lo que no aportaría claridad
+a la explicación al presentarse las gráficas superpuestas, lo que se hace es tomar $b_l = b_{lnom}$ y graficar la variación
+solo respecto a $R_s$ y $J_l$. Se puede observar que aunque $R_s$ tampoco produce demasiado efecto en $\omega_n$ si lo hace en $\zeta$.
 
 \begin{figure}[thpb]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{23-Frecuencia_natural_migracion.pdf}}
 	\end{adjustbox}
-	\caption{Variación de la frecuencia natural (ancho de banda del sistema) $\omega_n$ ante variación de los parámetros de la carga.}
+	\caption{Variación de la frecuencia natural (ancho de banda del sistema) $\omega_n$ ante variación de los parámetros de la carga y de $R_s$.}
 	\label{variacion de omega_n}
 \end{figure}
 
@@ -1257,10 +1262,12 @@ las curvas de $\omega_n$ respecto a $J_l$ para cada $b_l$. De manera similar ocu
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{24-Zita_migracion.pdf}}
 	\end{adjustbox}
-	\caption{Variación de la relación de amortiguamiento crítico $\zeta$ ante variación de los parámetros de la carga.}
+	\caption{Variación de la relación de amortiguamiento crítico $\zeta$ ante variación de los parámetros de la carga y de $R_s$.}
 	\label{variacion de zita}
 \end{figure}
 
+\paragraph{\textbf{Estabilidad parcial y completa, y dinámica de los ceros}}:
+ 
 
 \subsubsection{\textbf{Análisis de observabilidad completa de estado para el modelo LTI equivalente aumentado desde salida medida $\mathbf{\theta_m(t)}$}}
 
