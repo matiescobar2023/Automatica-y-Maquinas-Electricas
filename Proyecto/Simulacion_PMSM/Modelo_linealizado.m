@@ -61,6 +61,10 @@ R_ts_amb    = 146.7;
 J_eq = J_m + J_l/(r^2);
 b_eq = b_m + b_l/(r^2);
 
+z       = -60;
+%z       = -R_s/L_q;
+%L_q    = -R_s/z;
+R_s    = -L_q*z;
 i_max   = linspace(0, sqrt(2)*0.4, 100);
 T_amb_o = -15:10:40;
 beta    = 0:pi/4:2*pi;

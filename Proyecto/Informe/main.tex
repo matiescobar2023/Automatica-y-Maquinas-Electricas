@@ -1293,20 +1293,43 @@ En \cref{funcion de transferencia desde T_l simplificada} $G_1(s)$ da la respues
 y la respuesta total a través de $G_{T_l}(s)$ se obtiene sumando a la obtenida de $G_1(s)$ su derivada
 ponderada por un factor $\rho = -1/z$. En tanto mayor sea el valor de $\rho$ (tanto más cercano al eje imaginario se encuentra $z$)\cite{c1}
 mayor será la ponderación de la derivada. Ante una entrada tipo escalón,
-este cero amplifica el sobrepico en el transitorio en el punto de inflexión de la respuesta a la salida de 
-$G_1(s)$. Para representar este fenómeno, se simuló el sistema bajo las condiciones indicadas en \cref{condiciones simulacion dinamica de ceros}, exagerando
-el efecto del cero llevandolo hacia el eje imaginario del plano complejo.
+este cero amplifica el sobrepico en el transitorio, en el punto de inflexión de la respuesta a la salida de 
+$G_1(s)$. Para representar este fenómeno, se simuló el sistema bajo las condiciones indicadas en la \cref{condiciones simulacion dinamica de ceros},
+primero con los parámetros nominales del sistema y luego exagerando
+el efecto del cero llevándolo hacia el eje imaginario. Los resultados se muestran en la \cref{dinámica de cero nominal} y en la (\cref{dinámica de cero exagerada}) respectivamente.
+Cómo se puede observar en esta figuras, presentamos la evolución en el tiempo de $\omega_m(t)$ en lugar de $\theta_m(t)$.
+Hacemos esto, dado que, al ser el último un pseudo-estado, en estado permanente crece sin cota a diferencia de $\omega_m(t)$ que sí adopta un valor permanente constante ante la perturbación de tipo escalón, y de la misma
+manera permite reflejar el efecto del cero en la dinámica a lazo abierto.
+
 
 \begin{equation}
     \begin{cases}
         \mathbf{x}(0) &= \mathbf{0}\\
         v_{qs}(t) &\equiv 0\\
-        T_l(t) &= 0 \rightarrow  \left(T_{lmax} = 6.28 \, N \cdot m\,; t = 0.3\,s\right)\\
-	    z &= -50\,\frac{rad}{s}
+        T_l(t) &= 0 \rightarrow  \left(T_{lmax} = 6.28 \, N \cdot m\,; t = 1\,s\right)\\
+        \left(1\right)\rightarrow z &= z_{nom} = -154.54\left[\frac{rad}{s}\right]\left(\cref{cero del sistema LTI}\right)\\
+	    \left(2\right)\rightarrow z &= -60\,\frac{rad}{s}
     \end{cases}
 	\label{condiciones simulacion dinamica de ceros}
 \end{equation}
  
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{25-Dinamica_de_los_ceros_1.pdf}}
+	\end{adjustbox}
+	\caption{Dinámica del cero de $G_{T_l}(s)$ para $z_{nom}$.}
+	\label{dinámica de cero nominal}
+\end{figure}
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{26-Dinamica_de_los_ceros_2.pdf}}
+	\end{adjustbox}
+	\caption{Dinámica del cero de $G_{T_l}(s)$ para $z$ trasladado hacia el eje imaginario.}
+	\label{dinámica de cero exagerada}
+\end{figure}
 
 \subsubsection{\textbf{Análisis de observabilidad completa de estado para el modelo LTI equivalente aumentado desde salida medida $\mathbf{\theta_m(t)}$}}
 
