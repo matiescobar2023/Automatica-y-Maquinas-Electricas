@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1719265867.23896 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" "main.pdf" "main" 1719265875.24997 0
+["pdflatex"] 1719277326.2442 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" "main.pdf" "main" 1719277333.57296 0
   "1-Brazo.PNG" 1718289822.46398 14666 dbbf8840aa69c12071ab2a0a9be19378 ""
   "10-Transformación_de_Park.eps" 1718289822.60007 257157 f5601a0a7f2fa1ab38b71ca598b98e42 ""
   "11-Transformación_de_Park_Inversa.eps" 1718289822.66411 245311 0cc9edb6a8d7b4d5ee4308b3832dd742 ""
@@ -24,8 +24,10 @@
   "7-T_m.eps" 1718289823.12984 94040 d021e12cc7286f88c8c104a5e4d7442e ""
   "8-Subsistema_Electromagnético.eps" 1718289823.2199 358540 00dec4a5442564266852414adae74096 ""
   "9-Sistema_Físico_Completo.eps" 1718289823.30496 612534 b9b1d20406a5234877cbde93b307bba2 ""
+  "Controlador_completo.pdf" 1719266010.53671 223123 6ed0720f25a7590328755c32ea0ed9ac ""
   "Observador.pdf" 1719155671.98859 19088 0ec65a01e33475a438b54169c846befd ""
-  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" 1719265862.85867 91043 b96ac2fa369b5d30465661edb57cb594 ""
+  "Planta_completa.pdf" 1719266010.55672 299128 25c2fe974f1f9478637458e68a0d9a45 ""
+  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" 1719277322.1073 94324 2062848e5296f5380877efcd3466db17 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1716317108.30627 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1716319181.74555 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1716345269.78178 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -116,6 +118,7 @@
   "c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1716317817.30936 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty" 1716317817.32499 4393 47f27fd4d95928d20b1885ba77de11d2 ""
   "c:/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty" 1716318420.70227 18674 2cc1c2f64272f458981b096e7600b014 ""
+  "c:/texlive/2024/texmf-dist/tex/latex/float/float.sty" 1716318997.99042 6749 16d2656a1984957e674b149555f1ea1d ""
   "c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1716320278.75151 1224 978390e9c2234eab29404bc21b268d1e ""
   "c:/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def" 1716320281.51719 19440 9da9dcbb27470349a580fca7372d454b ""
   "c:/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty" 1716320265.23789 18387 8f900a490197ebaf93c02ae9476d4b09 ""
@@ -141,7 +144,7 @@
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1716357246 8225112 5de980edea79c2c299f0a161b7db1c9e ""
   "c:/texlive/2024/texmf.cnf" 1716351796.41707 713 baa45e065482d44c4cd81b98ef72c63b ""
   "ieeeconf.cls" 1716331032.00079 202025 d003ccb4b5f2978a40d92fd20a03590a ""
-  "main.aux" 1719265873.9561 29864 9abacc53e3c6ac9fb750fb1cff9cd6e0 "pdflatex"
+  "main.aux" 1719277332.23757 30812 490475864001793d6255d3f2b10b52aa "pdflatex"
   (generated)
   "main.aux"
   "main.log"

@@ -1267,7 +1267,45 @@ solo respecto a $R_s$ y $J_l$. Se puede observar que aunque $R_s$ tampoco produc
 	\label{variacion de zita}
 \end{figure}
 
-\paragraph{\textbf{Estabilidad parcial y completa, y dinámica de los ceros}}:
+\paragraph{\textbf{Estabilidad parcial y completa, y dinámica de los ceros}}
+Cómo se pudo observar en el mapa de polos y ceros (\cref{mapa de polos b_l nominal}),  ante la variación de los parámetros de la carga
+y de la temperatura de equilibrio térmico, los polos siempre se encuentran
+en el semiplano izquiero del plano complejo (a excepción del polo en el origen) y esta es condición suficiente para
+garantizar que el \textbf{sistema es estable}. Por otro lado, el polo en el origen no introduce una inestabilidad real, 
+en cambio, esta asociado a un crecimiento sin cota del pseudo-estado $\theta_m(t)$ al no considerarse ahora, explícitamente,
+la rectificación de la variable angular de la articulación al rango  $[0;2\pi]$, o a una posición angular final constante no nula
+luego de los transitorios en régimen no forzado.
+
+Para el análisis de la dinámica de los ceros, primero %aca deberíamos hacer un \cite{canal del tipo de control}
+expresamos la \cref{funcion de transferencia desde T_l}
+como:
+
+\begin{equation}
+    \begin{cases}
+        z &= -R_s/L_q\\
+        G_1(s) &= -\frac{-\frac{L_q}{r}z}{J_{eq} L_{q} s^3 +\left( J_{eq} R_{s} + L_{q} b_{eq} \right)s^2 + \left( R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^r_m}^2\right) s}\\
+	    G_{T_l}(s) &= G_1(s)\left( 1 - \frac{s}{z}\right)
+    \end{cases}
+	\label{funcion de transferencia desde T_l simplificada}
+\end{equation}
+
+En \cref{funcion de transferencia desde T_l simplificada} $G_1(s)$ da la respuesta a una entrada $T_l(s)$
+y la respuesta total a través de $G_{T_l}(s)$ se obtiene sumando a la obtenida de $G_1(s)$ su derivada
+ponderada por un factor $\rho = -1/z$. En tanto mayor sea el valor de $\rho$ (tanto más cercano al eje imaginario se encuentra $z$)\cite{c1}
+mayor será la ponderación de la derivada. Ante una entrada tipo escalón,
+este cero amplifica el sobrepico en el transitorio en el punto de inflexión de la respuesta a la salida de 
+$G_1(s)$. Para representar este fenómeno, se simuló el sistema bajo las condiciones indicadas en \cref{condiciones simulacion dinamica de ceros}, exagerando
+el efecto del cero llevandolo hacia el eje imaginario del plano complejo.
+
+\begin{equation}
+    \begin{cases}
+        \mathbf{x}(0) &= \mathbf{0}\\
+        v_{qs}(t) &\equiv 0\\
+        T_l(t) &= 0 \rightarrow  \left(T_{lmax} = 6.28 \, N \cdot m\,; t = 0.3\,s\right)\\
+	    z &= -50\,\frac{rad}{s}
+    \end{cases}
+	\label{condiciones simulacion dinamica de ceros}
+\end{equation}
  
 
 \subsubsection{\textbf{Análisis de observabilidad completa de estado para el modelo LTI equivalente aumentado desde salida medida $\mathbf{\theta_m(t)}$}}
