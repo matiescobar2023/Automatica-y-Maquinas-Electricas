@@ -51,7 +51,7 @@ L_d         = 6.6/1000;
 L_ls        = 0.8/1000;
 
 alpha_cu    = 3.9e-3;
-%R_s         = 1.02;
+R_s         = 1.02;
 T_sref      = 40;
 R_sref      = 1.02;
 
@@ -153,7 +153,7 @@ for i = 1:length(i_max)
     end
 end
 %}
-
+%{
 figure;
 hold on; % Mantener la gráfica para añadir el segmento de recta
 grid on; % Mostrar cuadrícula
