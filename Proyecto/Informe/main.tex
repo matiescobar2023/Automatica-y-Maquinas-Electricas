@@ -1346,7 +1346,7 @@ Para evaluar la observabilidad desde la salida medida, se determinó la matriz d
 	\label{Matriz de observabilida generica}
 \end{equation}
 
-Para nuestro caso, recordando las matrices A y C en eq.\eqref{ecuacion matricial con ids=0}, la matriz de observabilidad quedó de la siguiente manera:
+Para nuestro caso, recordando las matrices A y C en la \cref{ecuacion matricial con ids=0}, la matriz de observabilidad quedó de la siguiente manera:
 \begin{equation}
 	O=
 	\begin{bmatrix}
@@ -1356,25 +1356,29 @@ Para nuestro caso, recordando las matrices A y C en eq.\eqref{ecuacion matricial
 	\end{bmatrix}
 	\label{Matriz de observabilida del LTI}
 \end{equation}
-Al calcular el determinante de esta matriz:
+
+Al calcular el determinante de esta matriz(\cref{determinante de Matriz de observabilida del LTI}), se pudo ver que es distinto de cero, por lo que el rango de O es 3, que es igual al orden del sistema. Entonces, se concluye que el sistema LTI aumentado simplificado es completamente observable desde la posición.
 
 \begin{equation}
 	det(O)= \frac{3 P_p \lambda^r_m}{2 J_{eq}}
 	\label{determinante de Matriz de observabilida del LTI}
 \end{equation}
-se pudo ver que es distinto de cero, por lo que el rango de O es 3, que es igual al orden del sistema. Entonces, se concluye que el sistema LTI aumentado simplificado es completamente observable desde la posición.
 
 Sin embargo, se debe aclarar que el sistema LTI aumentado con sistemas autónomos desacoplados, es parcialmente observable, ya que los estados ${i}^r_{ds}(t) $ y ${T}^\circ_s(t)$ no pueden ser observados desde la posición.
 
-Se propuso tomar como salida a la velocidad ${\omega}_m(t)$ y analizar la observabilidad desde ella. En este caso la matriz de salida queda:
+Se propuso tomar como salida a la velocidad ${\omega}_m(t)$ y analizar la observabilidad desde ella. En este caso la matriz de salida es:
 \begin{equation}
-	O=
+	C=
 	\begin{bmatrix}
 		0 & 1 & 0  
 	\end{bmatrix}
 	\label{Matriz C con velocidad como salida}
 \end{equation}
-Los resultados obtenidos fueron:
+
+La matriz de observabilidad se muestra en la \cref{Matriz de observabilidad desde velocidad del LTI}.
+Al calcular el determinante de esta matriz, el resultado fue 0, por lo tanto el rango es menor a 3 y el sistema no es completamente observable desde la velocidad.
+
+Esto ocurre ya que, al conocer la velocidad, no podemos determinar la posición instantánea sin conocer su valor inicial.
 
 \begin{equation}
 	O=
@@ -1383,13 +1387,8 @@ Los resultados obtenidos fueron:
 		0 & -\frac{b_{eq}}{J_{eq}} &\frac{3 P_p \lambda^r_m}{2 J_{eq}}\\
 		0 & \frac{2 L_q {b_{eq}}^2 - 3 J_{eq} {P_p}^2 {\lambda^r_m}^2} {2 {J_{eq}}^2 L_q} & -\frac{3 P_p \lambda^r_m \left(L_q b_{eq} + J_{eq} R_s \right)}{2 {J_{eq}}^2 L_q}  
 	\end{bmatrix}
-	\label{Matriz de observabilidad desde velocidad del LTI }
+	\label{Matriz de observabilidad desde velocidad del LTI}
 \end{equation}
-
-
-Al calcular el determinante de esta matriz, el resultado fue 0, por lo tanto el rango es menor a 3 y el sistema no es observable desde la velocidad.
-
-Esto ocurre ya que, al conocer la velocidad, no podemos determinar la posición si no conocemos la condición inicial de la posición.
 
 \subsubsection{\textbf{Análisis de controlabilidad completa de estado para el modelo LTI equivalente aumentado desde entrada manipulada $\mathbf{v^r_{qs}(t)}$, sin considerar la perturbación de la carga mecánica}}
 Para evaluar la controlabilidad desde la entrada manipulada, se determinó la matriz de controlabilidad, para luego calcular su rango y compararlo con el orden del sistema.
@@ -1402,7 +1401,7 @@ Para evaluar la controlabilidad desde la entrada manipulada, se determinó la ma
 	\label{Matriz de controlabilidad generica}
 \end{equation}
 
-Para nuestro caso, recordando las matrices A y B en eq.\eqref{ecuacion matricial con ids=0}, la matriz de controlabilidad quedó de la siguiente manera:
+Para nuestro caso, recordando las matrices A y B en la \cref{ecuacion matricial con ids=0}, la matriz de controlabilidad quedó de la siguiente manera:
 \begin{equation}
 	S=
 	\begin{bmatrix}
@@ -1413,13 +1412,13 @@ Para nuestro caso, recordando las matrices A y B en eq.\eqref{ecuacion matricial
 	\label{Matriz de controlabilidad del LTI}
 \end{equation}
 
-Al calcular el determinante de esta matriz:
+El determinante de esta matriz (\cref{determinante de Matriz de controlabilidad del LTI}), 
+como ocurrió con la observabilidad, se pudo ver que es distinto de cero, por lo que el rango de S es 3, igual al orden del sistema. Así, el sistema LTI aumentado simplificado es completamente controlable desde $v^r_{qs}(t)$.
 
 \begin{equation}
 	det(S)= -\frac{9 {P_p}^2 {\lambda^r_m}^2}{4 {J_{eq}}^2 {{L_q}}^3}
 	\label{determinante de Matriz de controlabilidad del LTI}
 \end{equation}
-al igual que con la observabilidad, se pudo ver que es distinto de cero, por lo que el rango de S es 3, igual al orden del sistema. Entonces, se concluye que el sistema LTI aumentado simplificado es completamente controlable desde $v^r_{qs}(t)$.
 
 Similar a lo que ocurrió con la observabilidad, el sistema LTI aumentado con sistemas autónomos desacoplados, es parcialmente controlable, ya que el estado ${i}^r_{ds}(t) $  no puede ser controlado desde $v^r_{qs}(t)$. Para lograrlo, deben considerarse otras entradas de control adicionales como  $v^r_{ds}(t)$ 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.22)  25 JUN 2024 20:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.22)  25 JUN 2024 21:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -803,7 +803,7 @@ pdfTeX warning: pdflatex.exe (file ./Observador.pdf): PDF inclusion: found PDF v
 <Observador.pdf, id=366, 794.97pt x 614.295pt>
 File: Observador.pdf Graphic file (type pdf)
 <use Observador.pdf>
-Package pdftex.def Info: Observador.pdf  used on input line 1686.
+Package pdftex.def Info: Observador.pdf  used on input line 1685.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -818,7 +818,7 @@ pdfTeX warning: pdflatex.exe (file ./Controlador_completo.pdf): PDF inclusion: f
 <Controlador_completo.pdf, id=370, 794.97pt x 614.295pt>
 File: Controlador_completo.pdf Graphic file (type pdf)
 <use Controlador_completo.pdf>
-Package pdftex.def Info: Controlador_completo.pdf  used on input line 1696.
+Package pdftex.def Info: Controlador_completo.pdf  used on input line 1695.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
 
@@ -826,7 +826,7 @@ pdfTeX warning: pdflatex.exe (file ./Planta_completa.pdf): PDF inclusion: found 
 <Planta_completa.pdf, id=371, 794.97pt x 614.295pt>
 File: Planta_completa.pdf Graphic file (type pdf)
 <use Planta_completa.pdf>
-Package pdftex.def Info: Planta_completa.pdf  used on input line 1704.
+Package pdftex.def Info: Planta_completa.pdf  used on input line 1703.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -844,7 +844,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [29 <./Controlador_completo.pdf>]
-Overfull \hbox (55.65773pt too wide) detected at line 1717
+Overfull \hbox (55.65773pt too wide) detected at line 1716
 [][] \OT1/cmr/m/n/10 + []
  []
 
@@ -880,14 +880,14 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  7703 strings out of 474049
- 146003 string characters out of 5746277
+ 146001 string characters out of 5746277
  1965754 words of memory out of 5000000
  30007 multiletter control sequences out of 15000+600000
  670867 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,22n,65p,1171b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (31 pages, 1696254 bytes).
+Output written on main.pdf (31 pages, 1696236 bytes).
 PDF statistics:
  489 PDF objects out of 1000 (max. 8388607)
  337 compressed objects within 4 object streams

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1719359535.2083 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" "main.pdf" "main" 1719359542.55251 0
+["pdflatex"] 1719360962.42765 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" "main.pdf" "main" 1719360969.94202 0
   "1-Brazo.PNG" 1718289822.46398 14666 dbbf8840aa69c12071ab2a0a9be19378 ""
   "10-Transformación_de_Park.eps" 1718289822.60007 257157 f5601a0a7f2fa1ab38b71ca598b98e42 ""
   "11-Transformación_de_Park_Inversa.eps" 1718289822.66411 245311 0cc9edb6a8d7b4d5ee4308b3832dd742 ""
@@ -29,7 +29,7 @@
   "Controlador_completo.pdf" 1719266010.53671 223123 6ed0720f25a7590328755c32ea0ed9ac ""
   "Observador.pdf" 1719155671.98859 19088 0ec65a01e33475a438b54169c846befd ""
   "Planta_completa.pdf" 1719266010.55672 299128 25c2fe974f1f9478637458e68a0d9a45 ""
-  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" 1719359524.35072 95655 3804116f05c7e91b983f712371f1fa51 ""
+  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" 1719360957.93025 95804 975802388fca2b25924cdb6eb007cc08 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1716317108.30627 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1716319181.74555 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1716345269.78178 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -146,7 +146,7 @@
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1716357246 8225112 5de980edea79c2c299f0a161b7db1c9e ""
   "c:/texlive/2024/texmf.cnf" 1716351796.41707 713 baa45e065482d44c4cd81b98ef72c63b ""
   "ieeeconf.cls" 1716331032.00079 202025 d003ccb4b5f2978a40d92fd20a03590a ""
-  "main.aux" 1719359541.24759 31411 10fcb1316fa4cce2287a460271325122 "pdflatex"
+  "main.aux" 1719360968.62262 31409 fe2fcd438a44d5c1c002cba37871a00b "pdflatex"
   (generated)
   "main.aux"
   "main.log"
