@@ -12,6 +12,7 @@
 \usepackage{cleveref}
 \usepackage{array}
 \usepackage{float}     % Para el modificador [H]
+\usepackage{multirow}
 \newcommand{\defeq}{\mathrel{\mathop:}=}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 \renewcommand{\arraystretch}{1.5} % Ajusta este valor para más o menos espacio entre filas
@@ -1652,7 +1653,7 @@ Al asumir un funcionamiento ideal, las ecuaciones del observador quedan similare
 			{\tilde{\theta}}_m(t) \\ 
 			{\tilde{\omega}}_m(t)
 		\end{bmatrix}
-	\end{cases}\label{ecuacion matricial de subsistema mecanico compensado}
+	\end{cases}\label{ecuacion matricial de observador}
 \end{align}
 Al evaluar la dinámica del error de estimación obtenemos las siguientes ecuaciones: 
 \begin{align}
@@ -1705,15 +1706,291 @@ Para poder realizar la simulación en tiempo continuo, se integraron todos los b
 	\caption{Diagrama de bloques de la planta}
 	\label{Diagrama de bloques de la planta}
 \end{figure}
+\paragraph{\textbf{Seguimiento de consignas de movimiento}}
+La consigna del sistema sera la posición del brazo ${q^*}(t) \equiv \frac{1}{r} {\theta^*_m}(t)$, la cual sera un perfil trapezoidal con las siguientes características:
+\begin{equation}
+	{q^*}(1)=0 \: [rad] \longrightarrow {q^*}(6)=2 \pi \: [rad] \longrightarrow {q^*}(11)=2 \pi \: [rad]\longrightarrow {q^*}(16)=0 \: [rad]
+\end{equation}
+Los resultados de la simulación fueron los siguientes:
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{grafica_posicion_vs_posicionconsigna}}
+	\end{adjustbox}
+	\caption{Gráfica de posición angular consigna y medida}
+	\label{Grafica de posicion angular consigna y medida }
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{grafica_error _posicion_vs_posicionconsigna}}
+	\end{adjustbox}
+	\caption{Gráfica del error entre posición angular consigna y medida}
+	\label{Grafica del error entre posicion angular consigna y medida }
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{grafica__detalle_error _posicion_vs_posicionconsigna}}
+	\end{adjustbox}
+	\caption{Detalle del error entre posición angular consigna y medida}
+	\label{Detalle del error entre posición angular consigna y medida }
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{grafica_velocidad_m_vs_consigna_velocidad_m_vs_velocidad_e}}
+	\end{adjustbox}
+	\caption{Gráficas de velocidad del motor consigna, medida y estimada}
+	\label{Gráficas de velocidad del motor consigna, medida y estimada}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{grafica_torque_y_corriente_iqs}}
+	\end{adjustbox}
+	\caption{Gráfica de torque electromagnético y corriente $i_{qs}$}
+	\label{Gráfica de torque electromagnético y corriente $i_{qs}$}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{grafica_corrientes_abc}}
+	\end{adjustbox}
+	\caption{Gráficas de corrientes abc}
+	\label{Gráficas de corrientes $i_{abc}$}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{grafica_tensiones_abc}}
+	\end{adjustbox}
+	\caption{Gráficas de tensiones abc}
+	\label{Gráficas de tensiones abc}
+\end{figure}
+
+\paragraph{\textbf{Rechazo de perturbaciones}} 
+Se evaluó el comportamiento del sistema ante torques de perturbación del tipo escalón,considerando valores nominales y variación máxima de los parámetros de carga mecánica física.
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Torque_de_perturbacion}}
+	\end{adjustbox}
+	\caption{Torque de perturbación}
+	\label{Torque de perturbación}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{grafica_error _posicion_vs_posicionconsigna_con_perturbacion}}
+	\end{adjustbox}
+	\caption{Error entre  posición consigna y medida}
+	\label{Error entre  posición consigna y medida}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Error_entre_posicion_medida_y_posicion_observada_ante_perturbacion}}
+	\end{adjustbox}
+	\caption{Error entre  posición medida y estimada}
+	\label{Error entre  posición medida y estimada}
+\end{figure}
+
 \begin{equation}
 	\left(\begin{array}{c} \frac{2\,\theta _{\mathrm{m2}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{2\,\theta _{\mathrm{m1}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}\\ \frac{3\,\theta _{\mathrm{m1}}\,\left(t_{1}+t_{2}\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{3\,\theta _{\mathrm{m2}}\,\left(t_{1}+t_{2}\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}\\ \frac{6\,t_{1}\,t_{2}\,\theta _{\mathrm{m2}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{6\,t_{1}\,t_{2}\,\theta _{\mathrm{m1}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}\\ \frac{\theta _{\mathrm{m1}}\,\left(3\,t_{1}\,{t_{2}}^2-{t_{2}}^3\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{\theta _{\mathrm{m2}}\,\left(3\,{t_{1}}^2\,t_{2}-{t_{1}}^3\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3} \end{array}\right)
 \end{equation}
-\subsubsection{\textbf{Verificación de desempeño}}
+\subsubsection{\textbf{Verificación de desempeño y mejoras}}
+\paragraph{\textbf{Verificación de las especificaciones de operación}}Al comparar los obtenidos en las simulaciones, con los limites de operación, se obtuvieron los siguientes resultados:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|cc|cc|}
+		\hline
+		\multirow{2}{*}{} & \multicolumn{2}{c|}{Valores obtenidos de simulación} & \multicolumn{2}{c|}{Especificaciones de operación}   \\ \cline{2-5} 
+		& \multicolumn{1}{c|}{Régimen Continuo} & Valores Pico & \multicolumn{1}{c|}{Régimen Continuo} & Valores Pico \\ \hline
+		Tension de linea         & \multicolumn{1}{c|}{7.5 V}                & 2374.9 V            & \multicolumn{1}{c|}{24 V}                & -            \\ \hline
+		Corriente         & \multicolumn{1}{c|}{0.3 A}                & 67.5 A            & \multicolumn{1}{c|}{0.4 A}                & 2 A            \\ \hline
+		Torque motor            & \multicolumn{1}{c|}{0.04 Nm}                & 4.9 Nm            & \multicolumn{1}{c|}{0.142 Nm}               & 0.375 Nm           \\ \hline
+		Velocidad angular del motor         & \multicolumn{1}{c|}{150.8 rad/s}               & 209.4 rad/s           & \multicolumn{1}{c|}{691.15 rad/s }               & -           \\ \hline
+	\end{tabular}
+\end{table}
+
+Se observa que los valores de tensión, corriente y torque obtenidos en la simulación superan los límites especificados en las condiciones de operación. Este comportamiento se debe a la consigna de posición que se le ha entregado al sistema. Dado que el perfil de posición es trapezoidal, se generan escalones en la velocidad, lo que implicaría aceleraciones infinitas para poder seguir dichos perfiles correctamente. Como resultado, el sistema intenta cumplir estos perfiles con torques, corrientes y tensiones elevadas.
+
+Para solucionar este problema, se propuso un perfil de posición alternativo que sigue cumpliendo con los requisitos de posicionamiento y tiempo, pero en lugar de rampas, se utilizan polinomios de quinto grado. Con esta modificación, las consignas de aceleración se transforman en funciones cúbicas en lugar de impulsos infinitos, lo que resulta en un cambio suave en la tasa de aceleración (jerk). Esto logra una reducción de vibraciones en una aplicación real y una mayor durabilidad del sistema. Para determinar los coeficientes de estos polinomios, es necesario conocer la posición, velocidad y aceleración en los puntos extremos del perfil.
+\begin{align}
+	q*(t) &= at^5 + bt^4 + ct^3 + dt^2 + et + f  \\
+	\frac{d q*(t)}{dt} &=  5at^4 + 4bt^3 + 3ct^2 + 2dt + e \\
+	\frac{d^2 q*(t)}{dt^2} &=  20at^3 + 12bt^2 + 6ct + 2d\\
+\end{align}
+Las aceleraciones y velocidades en los extremos serán cero, las posiciones serán las mismas que en la consigna anterior. Por lo que para la primer giro queda el siguiente sistema de ecuaciones
+\begin{align}
+	\begin{cases}
+		0[rad]  &= a_1(1 [s])^5 + b_1(1 [s])^4 + c_1(1 [s])^3 + d_1(1 [s])^2 + e_1(1 [s]) + f_1 \\
+		2\pi [rad] &= a_1(6 [s])^5 + b_1(6 [s])^4 + c_1(6 [s])^3 + d_1(6 [s])^2 + e_1(6 [s]) + f_1  \\
+		0[rad/s] &= 5a_1(1 [s])^4 + 4b_1(1 [s])^3 + 3c_1(1 [s])^2 + 2d_1(1 [s]) + e_1 \\
+		0[rad/s] &= 5a_1(6 [s])^4 + 4b_1(6 [s])^3 + 3c_1(6 [s])^2 + 2d_1(6 [s]) + e_1 \\
+		0[rad/s^2] &= 20a_1(1 [s])^3 + 12b_1(1 [s])^2 + 6c_1(1 [s]) + 2d_1 \\
+		0[rad/s^2] &= 20a_1(6 [s])^3 + 12b_1(6 [s])^2 + 6c_1(6 [s]) + 2d_1
+	\end{cases}
+\end{align}
+
+Y para el giro de regreso:
+\begin{align}
+	\begin{cases}
+		0[rad]  &= a_2(11 [s])^5 + b_2(11 [s])^4 + c_2(11 [s])^3 + d_2(11 [s])^2 + e_2(11 [s]) + f_2 \\
+		2\pi [rad] &= a_2(16 [s])^5 + b_2(16 [s])^4 + c_2(16 [s])^3 + d_2(16 [s])^2 + e_2(16 [s]) + f_2  \\
+		0[rad/s] &= 5a_2(11 [s])^4 + 4b_2(11 [s])^3 + 3c_2(11 [s])^2 + 2d_2(11 [s]) + e_2 \\
+		0[rad/s] &= 5a_2(16 [s])^4 + 4b_2(16 [s])^3 + 3c_2(16 [s])^2 + 2d_2(16 [s]) + e_2 \\
+		0[rad/s^2] &= 20a_2(11 [s])^3 + 12b_2(11 [s])^2 + 6c_2(11 [s]) + 2d_2 \\
+		0[rad/s^2] &= 20a_2(16 [s])^3 + 12b_2(16 [s])^2 + 6c_2(16 [s]) + 2d_2
+	\end{cases}
+\end{align}
+
+Los polinomios resultantes al resolver los sistemas fueron:
+\begin{align}
+	q*_1(t) &= 0.0121t^5 - 0.2111t^4 + 1.2265t^3 - 2.5334t^2 + 2.1715t - 0.6655\\
+	q*_2(t) &= -0.0121t^5 + 0.8143t^4 - 21.7348t^3 + 286.6339t^2 - 1868.4283t + 4826.0010
+\end{align}
+ 
+Por lo tanto la consigna resultante fue:
+\begin{align}
+	q*(t) =
+	\begin{cases}
+		0  &  t<1 \\
+		 0.0121t^5 - 0.2111t^4 + 1.2265t^3 - 2.5334t^2 + 2.1715t - 0.6655  &  1 \leq t \leq 6 \\
+		2\pi  &  6 < t < 11 \\
+		-0.0121t^5 + 0.8143t^4 - 21.7348t^3 + 286.6339t^2 - 1868.4283t + 4826.0010  &  11 \leq t \leq 16 \\
+		0  &  t>16
+	\end{cases}
+\end{align}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{pos_vel_acel_suaves}}
+	\end{adjustbox}
+	\caption{Nueva consigna de posición, velocidad, aceleración}
+	\label{Nueva consigna de posición, velocidad, aceleración}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{grafica_tensiones_abc_nuevas}}
+	\end{adjustbox}
+	\caption{Tensiones abc con consigna suave}
+	\label{Tensiones abc con consigna suave}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{grafica_corrientes_abc_nueva}}
+	\end{adjustbox}
+	\caption{Corrientes abc con consigna suave}
+	\label{Corrientes abc con consigna suave}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{grafica_torque_nueva}}
+	\end{adjustbox}
+	\caption{Torque electromagnético con consigna suave}
+	\label{Torque electromagnético con consigna suave}
+\end{figure}
+
+\paragraph{\textbf{Mejoras en el observador de estado}} 
+En las simulaciones se observó la presencia de un error de estado estacionario entre la posición medida del motor y la estimada por el observador cuando se aplica un torque de perturbación a la planta. Este error se debe a que el observador no considera dichas perturbaciones. Si estas fueran medibles, se podrían realimentar al observador; sin embargo, la implementación de un medidor de torque sería muy costosa. Por lo tanto, se optó por agregar una acción integral al observador para eliminar este error.
+
+\begin{align}
+	\begin{cases}
+		\begin{bmatrix}
+			\frac{d \tilde{\theta}_m(t)}{dt} \\ 
+			\frac{d \tilde{\omega}_m(t)}{dt} \\
+			\frac{d \tilde{z}(t)}{dt}
+		\end{bmatrix} = 
+		\begin{bmatrix}
+			0 & 1 & 0\\ 
+			0 & 0 & 1 \\
+			0 & 0 & 0
+		\end{bmatrix}
+		\begin{bmatrix}
+			{\tilde{\theta}}_m(t) \\ 
+			{\tilde{\omega}}_m(t) \\
+			\tilde{z}(t)
+		\end{bmatrix} + 
+		\begin{bmatrix}
+			0 \\ 
+			\frac{1}{J_{eq}}\\
+			0
+		\end{bmatrix} {T_m(t)}^{*'} + 
+		\begin{bmatrix}
+			K_{\theta} \\
+			K_{\omega}\\
+			K_{i}
+		\end{bmatrix} \left(y(t) - \tilde{y}(t) \right) \\
+		\tilde{y}(t) = \begin{bmatrix}
+			1 & 0 & 0
+		\end{bmatrix} 
+		\begin{bmatrix}
+			{\tilde{\theta}}_m(t) \\ 
+			{\tilde{\omega}}_m(t) \\
+			\tilde{z}(t)
+		\end{bmatrix}
+	\end{cases}\label{ecuacion matricial de observador nuevo}
+\end{align}
+
+\begin{align}
+	p(s) = det\left(s I - \left( A - KC\right)  \right) = det\left(\begin{bmatrix}
+		s + K_{\theta} & -1 & 0\\ 
+		K_{\omega} & s & -1 \\
+		K_{i} & 0 & s
+	\end{bmatrix}  
+	\right) = s^3 + K_{\theta} s^2 + K_{\omega} s + K_{i} \label{polinomeo caracteristico de observador nuevo}
+\end{align}
+
+\begin{align}
+	p(s) = \left( s + 3200\right) ^3 = s^3 + 9600 s^2 + 3(3200)^2 s + (3200)^3\label{polinomeo caracteristico de observador nuevo deseado}
+\end{align}
+
+\begin{align}
+	K_{\theta} &= 9600 seg^{-1} \label{ganacia de posicion de observador nuevo}\\
+	K_{\omega} &= 3(3200)^2 seg^{-2} \label{ganacia de velocidad de observador nuevo}\\
+	K_{i} &= (3200)^3 seg^{-3} \label{ganacia integral de observador nuevo}
+\end{align}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Observador_con_integrador}}
+	\end{adjustbox}
+	\caption{Diagrama del bloques del observador con acción integral}
+	\label{Diagrama del bloques del observador con acción integrale}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Error_entre_posicion_medida_y_posicion_observada_ante_perturbacion_2}}
+	\end{adjustbox}
+	\caption{Error entre posición medida y observada}
+	\label{Error entre posición medida y observada}
+\end{figure}
+
+\paragraph{\textbf{Comportamiento térmico del motor}} 
+
 \section{ANÁLISIS DE RESULTADOS}
 
-\begin{equation}
-	\frac{3\,\lambda _{m}\,\left(v_{\mathrm{qs}}-P_{p}\,\lambda _{m}\,\omega _{m}+\frac{L_{d}\,P_{p}\,\omega _{m}\,v_{\mathrm{ds}}}{R_{s}}\right)}{2\,\left(R_{s}-\frac{L_{d}\,L_{q}\,{P_{p}}^2\,{\omega _{m}}^2}{R_{s}}\right)}+\frac{3\,\left(L_{d}-L_{q}\right)\,\left(v_{\mathrm{ds}}+\frac{L_{q}\,P_{p}\,\omega _{m}\,\left(v_{\mathrm{qs}}-P_{p}\,\lambda _{m}\,\omega _{m}+\frac{L_{d}\,P_{p}\,\omega _{m}\,v_{\mathrm{ds}}}{R_{s}}\right)}{R_{s}-\frac{L_{d}\,L_{q}\,{P_{p}}^2\,{\omega _{m}}^2}{R_{s}}}\right)\,\left(v_{\mathrm{qs}}-P_{p}\,\lambda _{m}\,\omega _{m}+\frac{L_{d}\,P_{p}\,\omega _{m}\,v_{\mathrm{ds}}}{R_{s}}\right)}{2\,R_{s}\,\left(R_{s}-\frac{L_{d}\,L_{q}\,{P_{p}}^2\,{\omega _{m}}^2}{R_{s}}\right)}
-\end{equation}
 \subsection{Heading 1, etc}
 
 
