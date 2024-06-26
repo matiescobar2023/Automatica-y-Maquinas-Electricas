@@ -17,7 +17,7 @@
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 \renewcommand{\arraystretch}{1.5} % Ajusta este valor para más o menos espacio entre filas
 \usepackage[prepend]{epstopdf}
-\graphicspath{{imágenes/}} 
+%\graphicspath{{imágenes/}}
 
 
 % Configuración del encabezado y el pie de página
@@ -317,7 +317,7 @@ Reemplazando la \cref{inercia equivalente} y la \cref{amortiguamiento equivalent
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
-        \framebox{\includegraphics{2-Subsistema_Mecánico_Completo.eps}}
+        \framebox{\includegraphics{2-Subsistema_Mecánico_Completo}}
     \end{adjustbox}
     \caption{Diagrama de bloques del sub-sistema mecánico completo.}
     \label{diagrama de bloques sub-sistema mecanico completo}
@@ -492,16 +492,16 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
-        \framebox{\includegraphics{9-Sistema_Físico_Completo.eps}}
+        \framebox{\includegraphics{9-Planta_completa}}
     \end{adjustbox}
-    \caption{Diagrama de bloques del sistema físico completo.}
+    \caption{Diagrama de bloques completo de la planta.}
     \label{diagrama de bloques del sistema fisico}
 \end{figure}
 
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
-        \framebox{\includegraphics{3-Subsistema_Térmico.png}}
+        \framebox{\includegraphics{3-Subsistema_Térmico}}
     \end{adjustbox}
     \caption{Diagrama de bloques del sub-sistema térmico}
     \label{subsistema termico}
@@ -510,7 +510,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
-        \framebox{\includegraphics{8-Subsistema_Electromagnético.eps}}
+        \framebox{\includegraphics{8-Subsistema_Electromagnético}}
     \end{adjustbox}
     \caption{Diagrama de bloques del sub-sistema electromagnético}
     \label{sub-sistema electromagnetico}
@@ -519,7 +519,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
-        \framebox{\includegraphics{4-I_qs.eps}}
+        \framebox{\includegraphics{4-I_qs.pdf}}
     \end{adjustbox}
     \caption{Diagrama de bloques $I_{qs}$}
     \label{diagrama de bloques I_qs}
@@ -528,7 +528,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
-        \framebox{\includegraphics{5-I_ds.eps}}
+        \framebox{\includegraphics{5-I_ds.pdf}}
     \end{adjustbox}
     \caption{Diagrama de bloques $I_{ds}$}
     \label{diagrama de bloques I_ds}
@@ -537,7 +537,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
-        \framebox{\includegraphics{6-I_0s.eps}}
+        \framebox{\includegraphics{6-I_0s.pdf}}
     \end{adjustbox}
     \caption{Diagrama de bloques $I_{0s}$}
     \label{diagrama de bloques I_0s}
@@ -546,7 +546,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
-        \framebox{\includegraphics{7-T_m.eps}}
+        \framebox{\includegraphics{7-T_m.pdf}}
     \end{adjustbox}
     \caption{Diagrama de bloques $T_m$}
     \label{diagrama de bloques T_m}
@@ -555,7 +555,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
-        \framebox{\includegraphics{10-Transformación_de_Park.eps}}
+        \framebox{\includegraphics{10-Transformación_de_Park.pdf}}
     \end{adjustbox}
     \caption{Transformación de Park Directa}
     \label{transformacion de Park}
@@ -564,7 +564,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
-        \framebox{\includegraphics{11-Transformación_de_Park_Inversa.eps}}
+        \framebox{\includegraphics{11-Transformación_de_Park_Inversa.pdf}}
     \end{adjustbox}
     \caption{Transformación de Park inversa}
     \label{transformacion de Park inversa}
@@ -1043,7 +1043,7 @@ $i^r_{ds}(t)$ y la $i_{0s}(t)$ bajo las especificaciones indicadas.
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
-        \framebox{\includegraphics{18-Diagrama_de_bloques_LTI_equivalente_aumentado.png}}
+        \framebox{\includegraphics{18-Diagrama_de_bloques_LTI_equivalente_aumentado.pdf}}
     \end{adjustbox}
     \caption{Diagrama de bloques LTI equivalente.}
     \label{diagrama de bloques LTI equivalente}
@@ -1052,7 +1052,7 @@ $i^r_{ds}(t)$ y la $i_{0s}(t)$ bajo las especificaciones indicadas.
 \begin{figure}[thpb]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
-        \framebox{\includegraphics{19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.png}}
+        \framebox{\includegraphics{19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.pdf}}
     \end{adjustbox}
     \caption{Dinámica de $i^r_{ds}(t)$ e $i_{0s}(t)$.}
     \label{diagrama de bloques LTI equivalente i0s e ids}
@@ -1073,7 +1073,7 @@ se puede observar en la \cref{Implementación de ley de control mínima}
 \begin{figure}[thpb]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
-		\framebox{\includegraphics{12-Ley_de_control_minima.png}}
+		\framebox{\includegraphics{12-Ley_de_control_minima.pdf}}
 	\end{adjustbox}
 	\caption{Implementación de ley de control mínima}
 	\label{Implementación de ley de control mínima}
@@ -1119,7 +1119,7 @@ El diagrama de bloques del \textbf{modelo NL desacoplado con ley de control NL} 
 \begin{figure}[thpb]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
-		\framebox{\includegraphics{13-Ley_de_control_complementaria.png}}
+		\framebox{\includegraphics{13-Ley_de_control_complementaria.pdf}}
 	\end{adjustbox}
 	\caption{Implementación de ley de control complementaria}
 	\label{Implementación de ley de control complementaria}
@@ -1128,7 +1128,7 @@ El diagrama de bloques del \textbf{modelo NL desacoplado con ley de control NL} 
 \begin{figure}[thpb]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
-		\framebox{\includegraphics{20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png}}
+		\framebox{\includegraphics{20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.pdf}}
 	\end{adjustbox}
 	\caption{Diagrama de bloques LTI equivalente aumentado con dinámica residual eje d}
 	\label{diagrama de bloques modelo LTI eq}
@@ -1683,7 +1683,7 @@ El diagrama de bloques resultante queda de la siguiente manera:
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth,scale=0.8}
-		\framebox{\includegraphics{Observador}}
+		\framebox{\includegraphics{Observador.pdf}}
 	\end{adjustbox}
 	\caption{Diagrama de bloques del observador de estado de orden reducido}
 	\label{Diagrama de bloques del observador de estado de orden reducido}
@@ -1701,7 +1701,7 @@ Para poder realizar la simulación en tiempo continuo, se integraron todos los b
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
-		\framebox{\includegraphics{Planta_completa}}
+		\framebox{\includegraphics{9-Planta_completa.pdf}}
 	\end{adjustbox}
 	\caption{Diagrama de bloques de la planta}
 	\label{Diagrama de bloques de la planta}
@@ -1972,7 +1972,7 @@ En las simulaciones se observó la presencia de un error de estado estacionario 
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
-		\framebox{\includegraphics{Observador_con_integrador}}
+		\framebox{\includegraphics{Observador_con_integrador.pdf}}
 	\end{adjustbox}
 	\caption{Diagrama del bloques del observador con acción integral}
 	\label{Diagrama del bloques del observador con acción integrale}
