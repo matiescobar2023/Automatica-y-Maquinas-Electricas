@@ -1,316 +1,277 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.10)  25 JUN 2024 21:12
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.22)  25 JUN 2024 20:52
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**./main.tex
-(main.tex
-LaTeX2e <2024-06-01>
-L3 programming layer <2024-05-08>
-(ieeeconf.cls
+**"c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex"
+(c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-04-11>
+(./ieeeconf.cls
 Document Class: ieeeconf 2004/1/15 revision V1.6b by Pradeep Misra
-\@IEEEtrantmpdimenA=\dimen141
-\@IEEEtrantmpdimenB=\dimen142
-\@IEEEtrantmpcountA=\count194
-\@IEEEtrantmpcountB=\count195
+\@IEEEtrantmpdimenA=\dimen140
+\@IEEEtrantmpdimenB=\dimen141
+\@IEEEtrantmpcountA=\count189
+\@IEEEtrantmpcountB=\count190
 \@IEEEtrantmptoksA=\toks17
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 7
-92.
-(D:\Programas\LaTEX\tex/latex/psnfss\ot1ptm.fd
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 792.
+(c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 ** ATTENTION: Single column mode is not normally used with IEEE publications.
-\@IEEEnormalsizefontbaselineskip=\skip49
+\@IEEEnormalsizefontbaselineskip=\skip48
 -- This is a 10 point document.
-\normalsizebaselineskip=\skip50
-\normaljot=\skip51
+\normalsizebaselineskip=\skip49
+\normaljot=\skip50
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1111.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1111.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1111.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1111.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1111.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1111.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1111.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1111.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1111.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1111.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1111.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1111.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1111.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1111.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1111.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <16> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1111.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1111.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1111.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1111.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1111.
-
-\IEEEilabelindentA=\dimen143
-\IEEEilabelindentB=\dimen144
-\IEEEilabelindent=\dimen145
-\IEEEelabelindent=\dimen146
-\IEEEdlabelindent=\dimen147
-\labelindent=\dimen148
-\IEEEiednormlabelsep=\dimen149
-\IEEEiedmathlabelsep=\dimen150
-\IEEEiedtopsep=\skip52
-\c@section=\count196
-\c@subsection=\count197
-\c@subsubsection=\count198
-\c@paragraph=\count199
-\c@IEEEsubequation=\count266
-\abovecaptionskip=\skip53
-\belowcaptionskip=\skip54
-\c@figure=\count267
-\c@table=\count268
-\@IEEEeqnnumcols=\count269
-\@IEEEeqncolcnt=\count270
-\@IEEEtmpitemindent=\dimen151
-\c@biography=\count271
-\@IEEEtranrubishbin=\box52
+\IEEEilabelindentA=\dimen142
+\IEEEilabelindentB=\dimen143
+\IEEEilabelindent=\dimen144
+\IEEEelabelindent=\dimen145
+\IEEEdlabelindent=\dimen146
+\labelindent=\dimen147
+\IEEEiednormlabelsep=\dimen148
+\IEEEiedmathlabelsep=\dimen149
+\IEEEiedtopsep=\skip51
+\c@section=\count191
+\c@subsection=\count192
+\c@subsubsection=\count193
+\c@paragraph=\count194
+\c@IEEEsubequation=\count195
+\abovecaptionskip=\skip52
+\belowcaptionskip=\skip53
+\c@figure=\count196
+\c@table=\count197
+\@IEEEeqnnumcols=\count198
+\@IEEEeqncolcnt=\count199
+\@IEEEtmpitemindent=\dimen150
+\c@biography=\count266
+\@IEEEtranrubishbin=\box51
 )
 ** ATTENTION: Overriding IEEE standard margins (line 3).
-(D:\Programas\LaTEX\tex/latex/base\inputenc.sty
-Package: inputenc 2024/02/08 v1.3d Input encoding file
+(c:/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks18
 \inpenc@posthook=\toks19
-)
-(D:\Programas\LaTEX\tex/latex/base\fontenc.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 11
-6.
-
-(D:\Programas\LaTEX\tex/latex/psnfss\t1ptm.fd
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 112.
+ (c:/texlive/2024/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-))
-(D:\Programas\LaTEX\tex/latex/fancyhdr\fancyhdr.sty
+)) (c:/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2024/04/23 v4.2 Extensive control of page headers and footers
-
-\f@nch@headwidth=\skip55
-\f@nch@O@elh=\skip56
-\f@nch@O@erh=\skip57
-\f@nch@O@olh=\skip58
-\f@nch@O@orh=\skip59
-\f@nch@O@elf=\skip60
-\f@nch@O@erf=\skip61
-\f@nch@O@olf=\skip62
-\f@nch@O@orf=\skip63
-)
-(D:\Programas\LaTEX\tex/latex/lastpage\lastpage.sty
+\f@nch@headwidth=\skip54
+\f@nch@O@elh=\skip55
+\f@nch@O@erh=\skip56
+\f@nch@O@olh=\skip57
+\f@nch@O@orh=\skip58
+\f@nch@O@elf=\skip59
+\f@nch@O@erf=\skip60
+\f@nch@O@olf=\skip61
+\f@nch@O@orf=\skip62
+) (c:/texlive/2024/texmf-dist/tex/latex/lastpage/lastpage.sty
 Package: lastpage 2024/04/27 v2.1a lastpage: 2.09 or 2e? (HMM)
-
-(D:\Programas\LaTEX\tex/latex/lastpage\lastpage2e.sty
-Package: lastpage2e 2024/04/27 v2.1a Decide which 2e lastpage version to use (H
-MM)
-
-(D:\Programas\LaTEX\tex/latex/lastpage\lastpagemodern.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/lastpage/lastpage2e.sty
+Package: lastpage2e 2024/04/27 v2.1a Decide which 2e lastpage version to use (HMM)
+ (c:/texlive/2024/texmf-dist/tex/latex/lastpage/lastpagemodern.sty
 Package: lastpagemodern 2024-04-27 v2.1a Refers to last page's name (HMM; JPG)
-\c@lastpagecount=\count272
+\c@lastpagecount=\count267
 ) 
-)) (D:\Programas\LaTEX\tex/latex/graphics\graphicx.sty
+)) (c:/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
-(D:\Programas\LaTEX\tex/latex/graphics\keyval.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks20
-)
-(D:\Programas\LaTEX\tex/latex/graphics\graphics.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
-
-(D:\Programas\LaTEX\tex/latex/graphics\trig.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
-(D:\Programas\LaTEX\tex/latex/graphics-cfg\graphics.cfg
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
-
-(D:\Programas\LaTEX\tex/latex/graphics-def\pdftex.def
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen152
-\Gin@req@width=\dimen153
-)
-(D:\Programas\LaTEX\tex/latex/amsmath\amsmath.sty
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
-\@mathmargin=\skip64
+\@mathmargin=\skip63
 
 For additional information on amsmath, use the `?' option.
-(D:\Programas\LaTEX\tex/latex/amsmath\amstext.sty
+(c:/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
-
-(D:\Programas\LaTEX\tex/latex/amsmath\amsgen.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks21
-\ex@=\dimen154
-))
-(D:\Programas\LaTEX\tex/latex/amsmath\amsbsy.sty
+\ex@=\dimen153
+)) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen155
-)
-(D:\Programas\LaTEX\tex/latex/amsmath\amsopn.sty
+\pmbraise@=\dimen154
+) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count273
+\inf@bad=\count268
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count274
-\leftroot@=\count275
+\uproot@=\count269
+\leftroot@=\count270
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count276
-\DOTSCASE@=\count277
+\classnum@=\count271
+\DOTSCASE@=\count272
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box53
-\strutbox@=\box54
+\Mathstrutbox@=\box52
+\strutbox@=\box53
 LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen156
+\big@size=\dimen155
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count278
+\macc@depth=\count273
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count279
-\dotsspace@=\muskip17
-\c@parentequation=\count280
-\dspbrk@lvl=\count281
+\c@MaxMatrixCols=\count274
+\dotsspace@=\muskip16
+\c@parentequation=\count275
+\dspbrk@lvl=\count276
 \tag@help=\toks22
-\row@=\count282
-\column@=\count283
-\maxfields@=\count284
+\row@=\count277
+\column@=\count278
+\maxfields@=\count279
 \andhelp@=\toks23
-\eqnshift@=\dimen157
-\alignsep@=\dimen158
-\tagshift@=\dimen159
-\tagwidth@=\dimen160
-\totwidth@=\dimen161
-\lineht@=\dimen162
+\eqnshift@=\dimen156
+\alignsep@=\dimen157
+\tagshift@=\dimen158
+\tagwidth@=\dimen159
+\totwidth@=\dimen160
+\lineht@=\dimen161
 \@envbody=\toks24
-\multlinegap=\skip65
-\multlinetaggap=\skip66
+\multlinegap=\skip64
+\multlinetaggap=\skip65
 \mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-)
-(D:\Programas\LaTEX\tex/latex/amsfonts\amssymb.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(D:\Programas\LaTEX\tex/latex/amsfonts\amsfonts.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(D:\Programas\LaTEX\tex/latex/adjustbox\adjustbox.sty
+)) (c:/texlive/2024/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
-
-(D:\Programas\LaTEX\tex/latex/xkeyval\xkeyval.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
-
-(D:\Programas\LaTEX\tex/generic/xkeyval\xkeyval.tex
-(D:\Programas\LaTEX\tex/generic/xkeyval\xkvutils.tex
+ (c:/texlive/2024/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/texlive/2024/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks26
 \XKV@tempa@toks=\toks27
 )
-\XKV@depth=\count285
+\XKV@depth=\count280
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-(D:\Programas\LaTEX\tex/latex/adjustbox\adjcalc.sty
-Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
--ends (calc, etex, pgfmath)
-)
-(D:\Programas\LaTEX\tex/latex/adjustbox\trimclip.sty
+)) (c:/texlive/2024/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (c:/texlive/2024/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
-
-(D:\Programas\LaTEX\tex/latex/collectbox\collectbox.sty
+ (c:/texlive/2024/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box55
+\collectedbox=\box54
 )
-\tc@llx=\dimen163
-\tc@lly=\dimen164
-\tc@urx=\dimen165
-\tc@ury=\dimen166
+\tc@llx=\dimen162
+\tc@lly=\dimen163
+\tc@urx=\dimen164
+\tc@ury=\dimen165
 Package trimclip Info: Using driver 'tc-pdftex.def'.
-
-(D:\Programas\LaTEX\tex/latex/adjustbox\tc-pdftex.def
+ (c:/texlive/2024/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen167
-\adjbox@Height=\dimen168
-\adjbox@Depth=\dimen169
-\adjbox@Totalheight=\dimen170
-\adjbox@pwidth=\dimen171
-\adjbox@pheight=\dimen172
-\adjbox@pdepth=\dimen173
-\adjbox@ptotalheight=\dimen174
-
-(D:\Programas\LaTEX\tex/latex/ifoddpage\ifoddpage.sty
+\adjbox@Width=\dimen166
+\adjbox@Height=\dimen167
+\adjbox@Depth=\dimen168
+\adjbox@Totalheight=\dimen169
+\adjbox@pwidth=\dimen170
+\adjbox@pheight=\dimen171
+\adjbox@pdepth=\dimen172
+\adjbox@ptotalheight=\dimen173
+ (c:/texlive/2024/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count286
-)
-(D:\Programas\LaTEX\tex/latex/varwidth\varwidth.sty
+\c@checkoddpage=\count281
+) (c:/texlive/2024/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box56
-\sift@deathcycles=\count287
-\@vwid@loff=\dimen175
-\@vwid@roff=\dimen176
-))
-(D:\Programas\LaTEX\tex/latex/cleveref\cleveref.sty
+\@vwid@box=\box55
+\sift@deathcycles=\count282
+\@vwid@loff=\dimen174
+\@vwid@roff=\dimen175
+)) (c:/texlive/2024/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
-)
-(D:\Programas\LaTEX\tex/latex/tools\array.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/tools/array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen177
-\ar@mcellbox=\box57
-\extrarowheight=\dimen178
+\col@sep=\dimen176
+\ar@mcellbox=\box56
+\extrarowheight=\dimen177
 \NC@list=\toks28
-\extratabsurround=\skip67
-\backup@length=\skip68
-\ar@cellbox=\box58
-)
-(D:\Programas\LaTEX\tex/latex/float\float.sty
+\extratabsurround=\skip66
+\backup@length=\skip67
+\ar@cellbox=\box57
+) (c:/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count288
+\c@float@type=\count283
 \float@exts=\toks29
-\float@box=\box59
+\float@box=\box58
 \@float@everytoks=\toks30
+<<<<<<< HEAD
 \@floatcapt=\box60
 )
 (D:\Programas\LaTEX\tex/latex/multirow\multirow.sty
@@ -321,53 +282,44 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \bigstrutjot=\dimen179
 )
 (D:\Programas\LaTEX\tex/latex/epstopdf-pkg\epstopdf.sty
+=======
+\@floatcapt=\box59
+) (c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
-
-(D:\Programas\LaTEX\tex/generic/infwarerr\infwarerr.sty
+ (c:/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-(D:\Programas\LaTEX\tex/latex/grfext\grfext.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/grfext/grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-
-(D:\Programas\LaTEX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+ (c:/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-))
-(D:\Programas\LaTEX\tex/latex/kvoptions\kvoptions.sty
+)) (c:/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-
-(D:\Programas\LaTEX\tex/generic/ltxcmds\ltxcmds.sty
+ (c:/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
-(D:\Programas\LaTEX\tex/latex/kvsetkeys\kvsetkeys.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-))
-(D:\Programas\LaTEX\tex/generic/pdftexcmds\pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(D:\Programas\LaTEX\tex/generic/iftex\iftex.sty
+)) (c:/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-(D:\Programas\LaTEX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+) (c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
-
-(D:\Programas\LaTEX\tex/latex/00miktex\epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+ (c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package grfext Info: Graphics extension search list:
-(grfext)             [.eps,.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG
-,.JPEG,.JBIG2,.JB2]
+(grfext)             [.eps,.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2]
 (grfext)             \PrependGraphicsExtensions on input line 158.
+<<<<<<< HEAD
 )
 (D:\Programas\LaTEX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
@@ -414,379 +366,441 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
 
 
 (D:\Programas\LaTEX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+=======
+) (c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count284
+\l__pdf_internal_box=\box60
+) (./main.aux
+
+LaTeX Warning: Label `ecuacion matricial de subsistema mecanico compensado' multiply defined.
+
+
+LaTeX Warning: Label `ecuacion matricial de subsistema mecanico compensado@cref' multiply defined.
+
 )
+\openout1 = `main.aux'.
 
-[1{C:/Users/matie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{D:/Programa
-s/LaTEX/fonts/enc/dvips/base/8r.enc}]
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+ (c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count285
+\scratchdimen=\dimen178
+\scratchbox=\box61
+\nofMPsegments=\count286
+\nofMParguments=\count287
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count288
+\MPscratchDim=\dimen179
+\MPnumerator=\count289
+\makeMPintoPDFobject=\count290
+\everyMPtoPDFconversion=\toks32
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
+ (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
+ (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [2]
-<1-Brazo.PNG, id=20, 320.69812pt x 257.46187pt>
+<1-Brazo.PNG, id=21, 320.69812pt x 257.46187pt>
 File: 1-Brazo.PNG Graphic file (type png)
 <use 1-Brazo.PNG>
 Package pdftex.def Info: 1-Brazo.PNG  used on input line 212.
 (pdftex.def)             Requested size: 505.89pt x 406.14885pt.
 
 
-
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [3 <./1-Brazo.PNG>]
 Package epstopdf Info: Source file: <2-Subsistema_Mecánico_Completo.eps>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)                    date: 2024-06-13 11:43:42
 (epstopdf)                    size: 195922 bytes
-(epstopdf)             Output file: <2-Subsistema_Mecánico_Completo-eps-conver
-ted-to.pdf>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)             Output file: <2-Subsistema_Mecánico_Completo-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-06-13 11:43:42
 (epstopdf)                    size: 8685 bytes
+<<<<<<< HEAD
 (epstopdf)             Command: <miktex-epstopdf --outfile=2-Subsistema_Mecáni
 co_Completo-eps-converted-to.pdf 2-Subsistema_Mecánico_Completo.eps>
 (epstopdf)             \includegraphics on input line 320.
+=======
+(epstopdf)             Command: <repstopdf --outfile=2-Subsistema_Mecánico_Completo-eps-converted-to.pdf 2-Subsistema_Mecánico_Completo.eps>
+(epstopdf)             \includegraphics on input line 319.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex.exe (file ./2-Subsistema_Mecánico_Completo-eps-conver
-ted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> 
-allowed
-<2-Subsistema_Mecánico_Completo-eps-converted-to.pdf, id=28, 306.14375pt x 170
-.6375pt>
-File: 2-Subsistema_Mecánico_Completo-eps-converted-to.pdf Graphic file (type p
-df)
+pdfTeX warning: pdflatex.exe (file ./2-Subsistema_Mecánico_Completo-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<2-Subsistema_Mecánico_Completo-eps-converted-to.pdf, id=29, 306.14375pt x 170.6375pt>
+File: 2-Subsistema_Mecánico_Completo-eps-converted-to.pdf Graphic file (type pdf)
 <use 2-Subsistema_Mecánico_Completo-eps-converted-to.pdf>
+<<<<<<< HEAD
 Package pdftex.def Info: 2-Subsistema_Mecánico_Completo-eps-converted-to.pdf  
 used on input line 320.
+=======
+Package pdftex.def Info: 2-Subsistema_Mecánico_Completo-eps-converted-to.pdf  used on input line 319.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 (pdftex.def)             Requested size: 306.14299pt x 170.63707pt.
-
-
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [4]
 
-
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [5 <./2-Subsistema_Mecánico_Completo-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <9-Sistema_Físico_Completo.eps>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)                    date: 2024-06-13 11:43:43
 (epstopdf)                    size: 612534 bytes
-(epstopdf)             Output file: <9-Sistema_Físico_Completo-eps-converted-t
-o.pdf>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)             Output file: <9-Sistema_Físico_Completo-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-06-13 11:43:43
 (epstopdf)                    size: 21978 bytes
+<<<<<<< HEAD
 (epstopdf)             Command: <miktex-epstopdf --outfile=9-Sistema_Físico_Co
 mpleto-eps-converted-to.pdf 9-Sistema_Físico_Completo.eps>
 (epstopdf)             \includegraphics on input line 495.
+=======
+(epstopdf)             Command: <repstopdf --outfile=9-Sistema_Físico_Completo-eps-converted-to.pdf 9-Sistema_Físico_Completo.eps>
+(epstopdf)             \includegraphics on input line 494.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex.exe (file ./9-Sistema_Físico_Completo-eps-converted-t
-o.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allow
-ed
-<9-Sistema_Físico_Completo-eps-converted-to.pdf, id=38, 562.1pt x 297.11pt>
+pdfTeX warning: pdflatex.exe (file ./9-Sistema_Físico_Completo-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<9-Sistema_Físico_Completo-eps-converted-to.pdf, id=39, 562.1pt x 297.11pt>
 File: 9-Sistema_Físico_Completo-eps-converted-to.pdf Graphic file (type pdf)
 <use 9-Sistema_Físico_Completo-eps-converted-to.pdf>
+<<<<<<< HEAD
 Package pdftex.def Info: 9-Sistema_Físico_Completo-eps-converted-to.pdf  used 
 on input line 495.
+=======
+Package pdftex.def Info: 9-Sistema_Físico_Completo-eps-converted-to.pdf  used on input line 494.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 (pdftex.def)             Requested size: 562.09863pt x 297.10927pt.
-<3-Subsistema_Térmico.png, id=39, 452.4403pt x 264.99pt>
+<3-Subsistema_Térmico.png, id=40, 452.4403pt x 264.99pt>
 File: 3-Subsistema_Térmico.png Graphic file (type png)
 <use 3-Subsistema_Térmico.png>
 Package pdftex.def Info: 3-Subsistema_Térmico.png  used on input line 504.
 (pdftex.def)             Requested size: 452.43921pt x 264.98935pt.
 Package epstopdf Info: Source file: <8-Subsistema_Electromagnético.eps>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)                    date: 2024-06-13 11:43:43
 (epstopdf)                    size: 358540 bytes
-(epstopdf)             Output file: <8-Subsistema_Electromagnético-eps-convert
-ed-to.pdf>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)             Output file: <8-Subsistema_Electromagnético-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-06-13 11:43:43
 (epstopdf)                    size: 12812 bytes
+<<<<<<< HEAD
 (epstopdf)             Command: <miktex-epstopdf --outfile=8-Subsistema_Electro
 magnético-eps-converted-to.pdf 8-Subsistema_Electromagnético.eps>
 (epstopdf)             \includegraphics on input line 513.
+=======
+(epstopdf)             Command: <repstopdf --outfile=8-Subsistema_Electromagnético-eps-converted-to.pdf 8-Subsistema_Electromagnético.eps>
+(epstopdf)             \includegraphics on input line 512.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex.exe (file ./8-Subsistema_Electromagnético-eps-convert
-ed-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> a
-llowed
-<8-Subsistema_Electromagnético-eps-converted-to.pdf, id=40, 325.215pt x 299.11
-75pt>
-File: 8-Subsistema_Electromagnético-eps-converted-to.pdf Graphic file (type pd
-f)
+pdfTeX warning: pdflatex.exe (file ./8-Subsistema_Electromagnético-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<8-Subsistema_Electromagnético-eps-converted-to.pdf, id=41, 325.215pt x 299.1175pt>
+File: 8-Subsistema_Electromagnético-eps-converted-to.pdf Graphic file (type pdf)
 <use 8-Subsistema_Electromagnético-eps-converted-to.pdf>
+<<<<<<< HEAD
 Package pdftex.def Info: 8-Subsistema_Electromagnético-eps-converted-to.pdf  u
 sed on input line 513.
+=======
+Package pdftex.def Info: 8-Subsistema_Electromagnético-eps-converted-to.pdf  used on input line 512.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 (pdftex.def)             Requested size: 325.2142pt x 299.11676pt.
 Package epstopdf Info: Source file: <4-I_qs.eps>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)                    date: 2024-06-13 11:43:42
 (epstopdf)                    size: 199718 bytes
 (epstopdf)             Output file: <4-I_qs-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)                    date: 2024-06-13 11:43:42
 (epstopdf)                    size: 7747 bytes
+<<<<<<< HEAD
 (epstopdf)             Command: <miktex-epstopdf --outfile=4-I_qs-eps-converted
 -to.pdf 4-I_qs.eps>
 (epstopdf)             \includegraphics on input line 522.
+=======
+(epstopdf)             Command: <repstopdf --outfile=4-I_qs-eps-converted-to.pdf 4-I_qs.eps>
+(epstopdf)             \includegraphics on input line 521.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex.exe (file ./4-I_qs-eps-converted-to.pdf): PDF inclusio
-n: found PDF version <1.7>, but at most version <1.5> allowed
-<4-I_qs-eps-converted-to.pdf, id=41, 373.395pt x 143.53625pt>
+pdfTeX warning: pdflatex.exe (file ./4-I_qs-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<4-I_qs-eps-converted-to.pdf, id=42, 373.395pt x 143.53625pt>
 File: 4-I_qs-eps-converted-to.pdf Graphic file (type pdf)
 <use 4-I_qs-eps-converted-to.pdf>
 Package pdftex.def Info: 4-I_qs-eps-converted-to.pdf  used on input line 522.
 (pdftex.def)             Requested size: 373.39409pt x 143.53589pt.
 Package epstopdf Info: Source file: <5-I_ds.eps>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)                    date: 2024-06-13 11:43:42
 (epstopdf)                    size: 90156 bytes
 (epstopdf)             Output file: <5-I_ds-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)                    date: 2024-06-13 11:43:42
 (epstopdf)                    size: 6423 bytes
+<<<<<<< HEAD
 (epstopdf)             Command: <miktex-epstopdf --outfile=5-I_ds-eps-converted
 -to.pdf 5-I_ds.eps>
 (epstopdf)             \includegraphics on input line 531.
+=======
+(epstopdf)             Command: <repstopdf --outfile=5-I_ds-eps-converted-to.pdf 5-I_ds.eps>
+(epstopdf)             \includegraphics on input line 530.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex.exe (file ./5-I_ds-eps-converted-to.pdf): PDF inclusio
-n: found PDF version <1.7>, but at most version <1.5> allowed
-<5-I_ds-eps-converted-to.pdf, id=42, 268.00125pt x 86.3225pt>
+pdfTeX warning: pdflatex.exe (file ./5-I_ds-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<5-I_ds-eps-converted-to.pdf, id=43, 268.00125pt x 86.3225pt>
 File: 5-I_ds-eps-converted-to.pdf Graphic file (type pdf)
 <use 5-I_ds-eps-converted-to.pdf>
 Package pdftex.def Info: 5-I_ds-eps-converted-to.pdf  used on input line 531.
 (pdftex.def)             Requested size: 268.00058pt x 86.32227pt.
 Package epstopdf Info: Source file: <6-I_0s.eps>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)                    date: 2024-06-13 11:43:43
 (epstopdf)                    size: 71574 bytes
 (epstopdf)             Output file: <6-I_0s-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)                    date: 2024-06-15 18:19:16
 (epstopdf)                    size: 5394 bytes
+<<<<<<< HEAD
 (epstopdf)             Command: <miktex-epstopdf --outfile=6-I_0s-eps-converted
 -to.pdf 6-I_0s.eps>
 (epstopdf)             \includegraphics on input line 540.
+=======
+(epstopdf)             Command: <repstopdf --outfile=6-I_0s-eps-converted-to.pdf 6-I_0s.eps>
+(epstopdf)             \includegraphics on input line 539.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex.exe (file ./6-I_0s-eps-converted-to.pdf): PDF inclusio
-n: found PDF version <1.7>, but at most version <1.5> allowed
-<6-I_0s-eps-converted-to.pdf, id=43, 239.89626pt x 75.28125pt>
+pdfTeX warning: pdflatex.exe (file ./6-I_0s-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<6-I_0s-eps-converted-to.pdf, id=44, 239.89626pt x 75.28125pt>
 File: 6-I_0s-eps-converted-to.pdf Graphic file (type pdf)
 <use 6-I_0s-eps-converted-to.pdf>
 Package pdftex.def Info: 6-I_0s-eps-converted-to.pdf  used on input line 540.
 (pdftex.def)             Requested size: 239.89566pt x 75.28105pt.
 Package epstopdf Info: Source file: <7-T_m.eps>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)                    date: 2024-06-13 11:43:43
 (epstopdf)                    size: 94040 bytes
 (epstopdf)             Output file: <7-T_m-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)                    date: 2024-06-13 11:43:43
 (epstopdf)                    size: 6317 bytes
+<<<<<<< HEAD
 (epstopdf)             Command: <miktex-epstopdf --outfile=7-T_m-eps-converted-
 to.pdf 7-T_m.eps>
 (epstopdf)             \includegraphics on input line 549.
+=======
+(epstopdf)             Command: <repstopdf --outfile=7-T_m-eps-converted-to.pdf 7-T_m.eps>
+(epstopdf)             \includegraphics on input line 548.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex.exe (file ./7-T_m-eps-converted-to.pdf): PDF inclusion
-: found PDF version <1.7>, but at most version <1.5> allowed
-<7-T_m-eps-converted-to.pdf, id=44, 285.065pt x 85.31876pt>
+pdfTeX warning: pdflatex.exe (file ./7-T_m-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<7-T_m-eps-converted-to.pdf, id=45, 285.065pt x 85.31876pt>
 File: 7-T_m-eps-converted-to.pdf Graphic file (type pdf)
 <use 7-T_m-eps-converted-to.pdf>
 Package pdftex.def Info: 7-T_m-eps-converted-to.pdf  used on input line 549.
 (pdftex.def)             Requested size: 285.0643pt x 85.31853pt.
 Package epstopdf Info: Source file: <10-Transformación_de_Park.eps>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)                    date: 2024-06-13 11:43:42
 (epstopdf)                    size: 257157 bytes
-(epstopdf)             Output file: <10-Transformación_de_Park-eps-converted-t
-o.pdf>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)             Output file: <10-Transformación_de_Park-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-06-13 11:43:42
 (epstopdf)                    size: 27329 bytes
+<<<<<<< HEAD
 (epstopdf)             Command: <miktex-epstopdf --outfile=10-Transformación_d
 e_Park-eps-converted-to.pdf 10-Transformación_de_Park.eps>
 (epstopdf)             \includegraphics on input line 558.
+=======
+(epstopdf)             Command: <repstopdf --outfile=10-Transformación_de_Park-eps-converted-to.pdf 10-Transformación_de_Park.eps>
+(epstopdf)             \includegraphics on input line 557.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex.exe (file ./10-Transformación_de_Park-eps-converted-t
-o.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allow
-ed
-<10-Transformación_de_Park-eps-converted-to.pdf, id=45, 589.20125pt x 336.2562
-6pt>
+pdfTeX warning: pdflatex.exe (file ./10-Transformación_de_Park-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<10-Transformación_de_Park-eps-converted-to.pdf, id=46, 589.20125pt x 336.25626pt>
 File: 10-Transformación_de_Park-eps-converted-to.pdf Graphic file (type pdf)
 <use 10-Transformación_de_Park-eps-converted-to.pdf>
+<<<<<<< HEAD
 Package pdftex.def Info: 10-Transformación_de_Park-eps-converted-to.pdf  used 
 on input line 558.
+=======
+Package pdftex.def Info: 10-Transformación_de_Park-eps-converted-to.pdf  used on input line 557.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 (pdftex.def)             Requested size: 589.1998pt x 336.25543pt.
 Package epstopdf Info: Source file: <11-Transformación_de_Park_Inversa.eps>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)                    date: 2024-06-13 11:43:42
 (epstopdf)                    size: 245311 bytes
-(epstopdf)             Output file: <11-Transformación_de_Park_Inversa-eps-con
-verted-to.pdf>
-(epstopdf)                    date: 2024-06-08 23:22:47
+(epstopdf)             Output file: <11-Transformación_de_Park_Inversa-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-06-13 11:43:42
 (epstopdf)                    size: 24177 bytes
+<<<<<<< HEAD
 (epstopdf)             Command: <miktex-epstopdf --outfile=11-Transformación_d
 e_Park_Inversa-eps-converted-to.pdf 11-Transformación_de_Park_Inversa.eps>
 (epstopdf)             \includegraphics on input line 567.
+=======
+(epstopdf)             Command: <repstopdf --outfile=11-Transformación_de_Park_Inversa-eps-converted-to.pdf 11-Transformación_de_Park_Inversa.eps>
+(epstopdf)             \includegraphics on input line 566.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex.exe (file ./11-Transformación_de_Park_Inversa-eps-con
-verted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
-5> allowed
-<11-Transformación_de_Park_Inversa-eps-converted-to.pdf, id=46, 561.09625pt x 
-336.25626pt>
-File: 11-Transformación_de_Park_Inversa-eps-converted-to.pdf Graphic file (typ
-e pdf)
+pdfTeX warning: pdflatex.exe (file ./11-Transformación_de_Park_Inversa-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<11-Transformación_de_Park_Inversa-eps-converted-to.pdf, id=47, 561.09625pt x 336.25626pt>
+File: 11-Transformación_de_Park_Inversa-eps-converted-to.pdf Graphic file (type pdf)
 <use 11-Transformación_de_Park_Inversa-eps-converted-to.pdf>
+<<<<<<< HEAD
 Package pdftex.def Info: 11-Transformación_de_Park_Inversa-eps-converted-to.pd
 f  used on input line 567.
+=======
+Package pdftex.def Info: 11-Transformación_de_Park_Inversa-eps-converted-to.pdf  used on input line 566.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 (pdftex.def)             Requested size: 561.09488pt x 336.25543pt.
-
-
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [6]
 
-
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[7 <./9-Sistema_Físico_Completo-eps-converted-to.pdf> <./3-Subsistema_Térmico
-.png>]
-
+[7 <./9-Sistema_Físico_Completo-eps-converted-to.pdf> <./3-Subsistema_Térmico.png>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[8 <./8-Subsistema_Electromagnético-eps-converted-to.pdf> <./4-I_qs-eps-conver
-ted-to.pdf> <./5-I_ds-eps-converted-to.pdf>]
-
+[8 <./8-Subsistema_Electromagnético-eps-converted-to.pdf> <./4-I_qs-eps-converted-to.pdf> <./5-I_ds-eps-converted-to.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [9 <./6-I_0s-eps-converted-to.pdf> <./7-T_m-eps-converted-to.pdf>]
 
-
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[10 <./10-Transformación_de_Park-eps-converted-to.pdf> <./11-Transformación_d
-e_Park_Inversa-eps-converted-to.pdf>]
-
+[10 <./10-Transformación_de_Park-eps-converted-to.pdf> <./11-Transformación_de_Park_Inversa-eps-converted-to.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [11]
-<14-T_m_vs_thetha_vd_Td.pdf, id=107, 426.59375pt x 370.38374pt>
+<14-T_m_vs_thetha_vd_Td.pdf, id=108, 426.59375pt x 370.38374pt>
 File: 14-T_m_vs_thetha_vd_Td.pdf Graphic file (type pdf)
 <use 14-T_m_vs_thetha_vd_Td.pdf>
 Package pdftex.def Info: 14-T_m_vs_thetha_vd_Td.pdf  used on input line 830.
 (pdftex.def)             Requested size: 426.5927pt x 370.38283pt.
-<15-Circulos_de_corriente.pdf, id=108, 426.59375pt x 370.38374pt>
+<15-Circulos_de_corriente.pdf, id=109, 426.59375pt x 370.38374pt>
 File: 15-Circulos_de_corriente.pdf Graphic file (type pdf)
 <use 15-Circulos_de_corriente.pdf>
 Package pdftex.def Info: 15-Circulos_de_corriente.pdf  used on input line 856.
 (pdftex.def)             Requested size: 426.5927pt x 370.38283pt.
-<17-T_m_vs_corriente_vs_beta.pdf, id=109, 426.59375pt x 370.38374pt>
+<17-T_m_vs_corriente_vs_beta.pdf, id=110, 426.59375pt x 370.38374pt>
 File: 17-T_m_vs_corriente_vs_beta.pdf Graphic file (type pdf)
 <use 17-T_m_vs_corriente_vs_beta.pdf>
+<<<<<<< HEAD
 Package pdftex.def Info: 17-T_m_vs_corriente_vs_beta.pdf  used on input line 86
 5.
+=======
+Package pdftex.def Info: 17-T_m_vs_corriente_vs_beta.pdf  used on input line 864.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 (pdftex.def)             Requested size: 426.5927pt x 370.38283pt.
-
 
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [12 <./14-T_m_vs_thetha_vd_Td.pdf>]
-<16-Temperatura_vs_corriente.pdf, id=117, 426.59375pt x 370.38374pt>
+<16-Temperatura_vs_corriente.pdf, id=118, 426.59375pt x 370.38374pt>
 File: 16-Temperatura_vs_corriente.pdf Graphic file (type pdf)
 <use 16-Temperatura_vs_corriente.pdf>
+<<<<<<< HEAD
 Package pdftex.def Info: 16-Temperatura_vs_corriente.pdf  used on input line 88
 4.
+=======
+Package pdftex.def Info: 16-Temperatura_vs_corriente.pdf  used on input line 883.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 (pdftex.def)             Requested size: 426.5927pt x 370.38283pt.
-
 
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [13 <./15-Circulos_de_corriente.pdf> <./17-T_m_vs_corriente_vs_beta.pdf>]
 
-
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [14 <./16-Temperatura_vs_corriente.pdf>]
-<18-Diagrama_de_bloques_LTI_equivalente_aumentado.png, id=190, 720.44156pt x 32
-9.73187pt>
-File: 18-Diagrama_de_bloques_LTI_equivalente_aumentado.png Graphic file (type p
-ng)
+<18-Diagrama_de_bloques_LTI_equivalente_aumentado.png, id=192, 735.49782pt x 329.73187pt>
+File: 18-Diagrama_de_bloques_LTI_equivalente_aumentado.png Graphic file (type png)
 <use 18-Diagrama_de_bloques_LTI_equivalente_aumentado.png>
+<<<<<<< HEAD
 Package pdftex.def Info: 18-Diagrama_de_bloques_LTI_equivalente_aumentado.png  
 used on input line 1046.
 (pdftex.def)             Requested size: 720.43979pt x 329.73105pt.
@@ -797,41 +811,56 @@ File: 19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.png Graphic file
 <use 19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.png>
 Package pdftex.def Info: 19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_i
 ds.png  used on input line 1055.
+=======
+Package pdftex.def Info: 18-Diagrama_de_bloques_LTI_equivalente_aumentado.png  used on input line 1045.
+(pdftex.def)             Requested size: 735.49603pt x 329.73105pt.
+<19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.png, id=193, 266.49562pt x 161.10187pt>
+File: 19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.png Graphic file (type png)
+<use 19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.png>
+Package pdftex.def Info: 19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.png  used on input line 1054.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 (pdftex.def)             Requested size: 266.49496pt x 161.10147pt.
-
 
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [15 <./18-Diagrama_de_bloques_LTI_equivalente_aumentado.png>]
-<12-Ley_de_control_minima.png, id=196, 644.4075pt x 411.03563pt>
+<12-Ley_de_control_minima.png, id=198, 644.4075pt x 411.03563pt>
 File: 12-Ley_de_control_minima.png Graphic file (type png)
 <use 12-Ley_de_control_minima.png>
+<<<<<<< HEAD
 Package pdftex.def Info: 12-Ley_de_control_minima.png  used on input line 1076.
 
+=======
+Package pdftex.def Info: 12-Ley_de_control_minima.png  used on input line 1075.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 (pdftex.def)             Requested size: 644.40593pt x 411.03462pt.
-<13-Ley_de_control_complementaria.png, id=197, 693.34032pt x 407.27156pt>
+<13-Ley_de_control_complementaria.png, id=199, 693.34032pt x 407.27156pt>
 File: 13-Ley_de_control_complementaria.png Graphic file (type png)
 <use 13-Ley_de_control_complementaria.png>
+<<<<<<< HEAD
 Package pdftex.def Info: 13-Ley_de_control_complementaria.png  used on input li
 ne 1122.
 (pdftex.def)             Requested size: 693.33862pt x 407.27055pt.
 
+=======
+Package pdftex.def Info: 13-Ley_de_control_complementaria.png  used on input line 1121.
+(pdftex.def)             Requested size: 693.33862pt x 407.27055pt.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [16 <./19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.png>]
+<<<<<<< HEAD
 <20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png, id=203, 720.4415
 6pt x 329.73187pt>
 File: 20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png Graphic file
@@ -841,25 +870,30 @@ Package pdftex.def Info: 20-Diagrama_de_bloques_LTI_equivalente_dinamica_residu
 al.png  used on input line 1131.
 (pdftex.def)             Requested size: 720.43979pt x 329.73105pt.
 
+=======
+<20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png, id=205, 735.49782pt x 329.73187pt>
+File: 20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png Graphic file (type png)
+<use 20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png>
+Package pdftex.def Info: 20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png  used on input line 1130.
+(pdftex.def)             Requested size: 735.49603pt x 329.73105pt.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [17 <./12-Ley_de_control_minima.png>]
 
-
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
+<<<<<<< HEAD
 [18 <./13-Ley_de_control_complementaria.png> <./20-Diagrama_de_bloques_LTI_equi
 valente_dinamica_residual.png>]
 <22-Mapa_de_polos.pdf, id=213, 882.29625pt x 511.9125pt>
@@ -872,10 +906,23 @@ File: 21-Mapa_de_polos_complejos_migracion.pdf Graphic file (type pdf)
 <use 21-Mapa_de_polos_complejos_migracion.pdf>
 Package pdftex.def Info: 21-Mapa_de_polos_complejos_migracion.pdf  used on inpu
 t line 1237.
+=======
+[18 <./13-Ley_de_control_complementaria.png> <./20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.png>]
+<22-Mapa_de_polos.pdf, id=215, 626.34pt x 483.8075pt>
+File: 22-Mapa_de_polos.pdf Graphic file (type pdf)
+<use 22-Mapa_de_polos.pdf>
+Package pdftex.def Info: 22-Mapa_de_polos.pdf  used on input line 1229.
+(pdftex.def)             Requested size: 626.33846pt x 483.80632pt.
+<21-Mapa_de_polos_complejos_migracion.pdf, id=216, 882.29625pt x 483.8075pt>
+File: 21-Mapa_de_polos_complejos_migracion.pdf Graphic file (type pdf)
+<use 21-Mapa_de_polos_complejos_migracion.pdf>
+Package pdftex.def Info: 21-Mapa_de_polos_complejos_migracion.pdf  used on input line 1238.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 (pdftex.def)             Requested size: 882.2941pt x 483.80632pt.
 <23-Frecuencia_natural_migracion.pdf, id=215, 868.24374pt x 483.8075pt>
 File: 23-Frecuencia_natural_migracion.pdf Graphic file (type pdf)
 <use 23-Frecuencia_natural_migracion.pdf>
+<<<<<<< HEAD
 Package pdftex.def Info: 23-Frecuencia_natural_migracion.pdf  used on input lin
 e 1251.
 (pdftex.def)             Requested size: 868.24162pt x 483.80632pt.
@@ -885,62 +932,85 @@ File: 24-Zita_migracion.pdf Graphic file (type pdf)
 Package pdftex.def Info: 24-Zita_migracion.pdf  used on input line 1260.
 (pdftex.def)             Requested size: 868.24162pt x 483.80632pt.
 
+=======
+Package pdftex.def Info: 23-Frecuencia_natural_migracion.pdf  used on input line 1255.
+(pdftex.def)             Requested size: 868.24162pt x 483.80632pt.
+<24-Zita_migracion.pdf, id=218, 868.24374pt x 469.755pt>
+File: 24-Zita_migracion.pdf Graphic file (type pdf)
+<use 24-Zita_migracion.pdf>
+Package pdftex.def Info: 24-Zita_migracion.pdf  used on input line 1264.
+(pdftex.def)             Requested size: 868.24162pt x 469.75386pt.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [19]
 
-
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[20 <./22-Mapa_de_polos.pdf> <./21-Mapa_de_polos_complejos_migracion.pdf>]
-
+[20 <./22-Mapa_de_polos.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[21 <./23-Frecuencia_natural_migracion.pdf> <./24-Zita_migracion.pdf>]
+[21 <./21-Mapa_de_polos_complejos_migracion.pdf> <./23-Frecuencia_natural_migracion.pdf>]
+<25-Dinamica_de_los_ceros_1.pdf, id=285, 1081.03876pt x 511.9125pt>
+File: 25-Dinamica_de_los_ceros_1.pdf Graphic file (type pdf)
+<use 25-Dinamica_de_los_ceros_1.pdf>
+Package pdftex.def Info: 25-Dinamica_de_los_ceros_1.pdf  used on input line 1319.
+(pdftex.def)             Requested size: 1081.03612pt x 511.91125pt.
+<26-Dinamica_de_los_ceros_2.pdf, id=286, 1052.93375pt x 511.9125pt>
+File: 26-Dinamica_de_los_ceros_2.pdf Graphic file (type pdf)
+<use 26-Dinamica_de_los_ceros_2.pdf>
+Package pdftex.def Info: 26-Dinamica_de_los_ceros_2.pdf  used on input line 1328.
+(pdftex.def)             Requested size: 1052.93118pt x 511.91125pt.
 
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[22]
-
+[22 <./24-Zita_migracion.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
-[23]
-
+[23 <./25-Dinamica_de_los_ceros_1.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+[24 <./26-Dinamica_de_los_ceros_2.pdf>]
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+<<<<<<< HEAD
 
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
@@ -952,19 +1022,43 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
+=======
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [25]
 
+<<<<<<< HEAD
 pdfTeX warning: pdflatex.exe (file ./Observador.pdf): PDF inclusion: found PDF 
 version <1.7>, but at most version <1.5> allowed
 <Observador.pdf, id=316, 794.97pt x 614.295pt>
 File: Observador.pdf Graphic file (type pdf)
 <use Observador.pdf>
 Package pdftex.def Info: Observador.pdf  used on input line 1619.
+=======
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+[26]
+
+pdfTeX warning: pdflatex.exe (file ./Observador.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Observador.pdf, id=366, 794.97pt x 614.295pt>
+File: Observador.pdf Graphic file (type pdf)
+<use Observador.pdf>
+Package pdftex.def Info: Observador.pdf  used on input line 1686.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
+<<<<<<< HEAD
 pdfTeX warning: pdflatex.exe (file ./Controlador_completo.pdf): PDF inclusion: 
 found PDF version <1.7>, but at most version <1.5> allowed
 <Controlador_completo.pdf, id=317, 794.97pt x 614.295pt>
@@ -980,24 +1074,57 @@ pdfTeX warning: pdflatex.exe (file ./Planta_completa.pdf): PDF inclusion: found
 File: Planta_completa.pdf Graphic file (type pdf)
 <use Planta_completa.pdf>
 Package pdftex.def Info: Planta_completa.pdf  used on input line 1637.
+=======
+[27]
+
+pdfTeX warning: pdflatex.exe (file ./Controlador_completo.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Controlador_completo.pdf, id=370, 794.97pt x 614.295pt>
+File: Controlador_completo.pdf Graphic file (type pdf)
+<use Controlador_completo.pdf>
+Package pdftex.def Info: Controlador_completo.pdf  used on input line 1696.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
 
+pdfTeX warning: pdflatex.exe (file ./Planta_completa.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Planta_completa.pdf, id=371, 794.97pt x 614.295pt>
+File: Planta_completa.pdf Graphic file (type pdf)
+<use Planta_completa.pdf>
+Package pdftex.def Info: Planta_completa.pdf  used on input line 1704.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
+(pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
-
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
+<<<<<<< HEAD
 [26 <./Observador.pdf>]
+=======
+[28 <./Observador.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 34.37994pt, for example:
+(fancyhdr)                \setlength{\headheight}{34.37994pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+[29 <./Controlador_completo.pdf>]
+Overfull \hbox (55.65773pt too wide) detected at line 1717
+[][] \OT1/cmr/m/n/10 + []
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+<<<<<<< HEAD
 
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
@@ -1017,11 +1144,17 @@ on input line 1660.
 (pdftex.def)             Requested size: 654.19246pt x 559.33832pt.
 
 
+=======
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+[30 <./Planta_completa.pdf>]
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
 (fancyhdr)                Make it at least 34.37994pt, for example:
 (fancyhdr)                \setlength{\headheight}{34.37994pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
+<<<<<<< HEAD
 
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
@@ -1312,14 +1445,20 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [46] 
+=======
+(fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
+
+[31] 
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 enddocument/afterlastpage: lastpage setting LastPage.
-(main.aux)
+(./main.aux)
  ***********
-LaTeX2e <2024-06-01>
-L3 programming layer <2024-05-08>
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-04-11>
  ***********
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  8008 strings out of 473937
  157190 string characters out of 5739564
  1965893 words of memory out of 5000000
@@ -1349,4 +1488,20 @@ PDF statistics:
  516 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  216 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+ 7703 strings out of 474049
+ 146003 string characters out of 5746277
+ 1965754 words of memory out of 5000000
+ 30007 multiletter control sequences out of 15000+600000
+ 670867 words of font info for 152 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 70i,22n,65p,1171b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (31 pages, 1696254 bytes).
+PDF statistics:
+ 489 PDF objects out of 1000 (max. 8388607)
+ 337 compressed objects within 4 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> b1abd51185fd3537724ebb92160fae79ddcd549d
 

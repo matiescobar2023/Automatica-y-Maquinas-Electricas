@@ -51,7 +51,7 @@ L_d         = 6.6/1000;
 L_ls        = 0.8/1000;
 
 alpha_cu    = 3.9e-3;
-%R_s         = 1.02;
+R_s         = 1.02;
 T_sref      = 40;
 R_sref      = 1.02;
 
@@ -61,6 +61,10 @@ R_ts_amb    = 146.7;
 J_eq = J_m + J_l/(r^2);
 b_eq = b_m + b_l/(r^2);
 
+z       = -60;
+%z       = -R_s/L_q;
+%L_q    = -R_s/z;
+R_s    = -L_q*z;
 i_max   = linspace(0, sqrt(2)*0.4, 100);
 T_amb_o = -15:10:40;
 beta    = 0:pi/4:2*pi;
@@ -153,7 +157,7 @@ for i = 1:length(i_max)
     end
 end
 %}
-
+%{
 figure;
 hold on; % Mantener la gráfica para añadir el segmento de recta
 grid on; % Mostrar cuadrícula
