@@ -51,7 +51,7 @@ L_d         = 6.6/1000;
 L_ls        = 0.8/1000;
 
 alpha_cu    = 3.9e-3;
-R_s         = 1.02;
+%R_s         = 1.02;
 T_sref      = 40;
 R_sref      = 1.02;
 
@@ -61,39 +61,241 @@ R_ts_amb    = 146.7;
 J_eq = J_m + J_l/(r^2);
 b_eq = b_m + b_l/(r^2);
 
+%% DINAMICA DE CEROS
+%{
 z       = -60;
-%z       = -R_s/L_q;
-%L_q    = -R_s/z;
+z       = -R_s/L_q;
+L_q    = -R_s/z;
 R_s    = -L_q*z;
+%}
+
+%% CURVAS DE OPERACIÓN LPV
+%{
 i_max   = linspace(0, sqrt(2)*0.4, 100);
 T_amb_o = -15:10:40;
 beta    = 0:pi/4:2*pi;
-
 %}
 
-%% CURVAS DE OPERACIÓN CUASI-ESTACIONARIA
+
+%% PUNTOS DE OPERACIÓN
+
+% Entradas en el punto de operación y omega_mo
+syms i_qso i_dso i_0so T_so omega_mo v_qso
+vars         = [i_qso i_dso i_0so T_so omega_mo v_qso];
+
+%%
+% SIMULACIÓN 1. Enrealidad despues de la 3 con menos variación
 %{
-% ESTO NO ANDUVO
+theta_m_o    = r*pi/12;
+T_amb_o      = 25;
+T_d_o        = 1;
+
+
+v_ds_o       = 0; 
+v_0s_o       = 0;
+
+v_ds         = v_ds_o;
+v_0s         = v_0s_o;
+T_d          = T_d_o*(1 + 0.01);%    50% encima del punto de operación.
+T_amb        = T_amb_o + 5;   % +10 °C encima del punto de operación.
+%}
+%%
+% SIMULACIÓN 2 T_d \notequal 0
+%{
+theta_m_o    = r*pi/12;
+T_amb_o      = 25;
+T_d_o        = 1;
+v_ds_o       = 0;
+v_0s_o       = 0;
+
+v_ds         = v_ds_o;
+v_0s         = v_0s_o;
+T_d          = T_d_o;
+T_amb        = T_amb_o;
+%}
+
+%%
+% SIMULACIÓN 3 deltaX_o \notqeual 0
+
+theta_m_o    = r*pi/12;
+T_amb_o      = 25;
+T_d_o        = 1;
+
+
+v_ds_o       = 0; 
+v_0s_o       = 0;
+
+v_ds         = v_ds_o;
+v_0s         = v_0s_o;
+T_d          = T_d_o*(1 + 0.1);%    50% encima del punto de operación.
+T_amb        = T_amb_o + 5;   % +10 °C encima del punto de operación.
+%}
+
+%%
+% SIMULACIÓN 4.1 reforzamiento de campo
+%{
+syms i_tot v_dso
+beta = deg2rad(80);
+i_dso        = i_tot*cos(beta);
+i_qso        = i_tot*sin(beta);
+
+theta_m_o    = r*pi/12;
+T_amb_o      = 25;
+T_d_o        = 1;
+v_0s_o       = 0;
+
+
+v_0s         = v_0s_o;
+T_d          = T_d_o;%    50% encima del punto de operación.
+T_amb        = T_amb_o;   % +10 °C encima del punto de operación.
+
+vars         = [i_tot i_0so T_so omega_mo v_qso v_dso];
+%}
+
+%%
+% SIMULACIÓN 4.2 debilitamiento de campo
+%{
+syms i_tot v_dso
+beta = deg2rad(100);
+i_dso        = i_tot*cos(beta);
+i_qso        = i_tot*sin(beta);
+
+theta_m_o    = r*pi/12;
+T_amb_o      = 25;
+T_d_o        = 1;
+v_0s_o       = 0;
+
+
+v_0s         = v_0s_o;
+T_d          = T_d_o;%    50% encima del punto de operación.
+T_amb        = T_amb_o;   % +10 °C encima del punto de operación.
+
+vars         = [i_tot i_0so T_so omega_mo v_qso v_dso];
+%}
+
+%%
+R_sf         = @(T) R_sref*(1 + alpha_cu*(T - T_sref));
+
 % Definir la función no lineal f(x, u)
-f = [omega_m;
-    (1/J_eq)*(1.5*Pp*i_qs*(lambda_m + (L_d - L_q)*i_ds) - (K_l/r)*sin(theta_m/r) - T_d/r);
-    (1/L_q)*(-R_s*i_qs + v_qs);
-    (1/L_d)*(-R_s*i_ds + v_ds);
-    (1/L_ls)*(-R_s*i_0s);
-    ((1.5*R_s)/C_ts)*(i_qs^2 + i_ds^2 + 2*i_0s^2) + (T_amb - T_s)/(R_ts_amb*C_ts)];
+f = [omega_mo;
+    (1/J_eq)*(1.5*Pp*i_qso*(lambda_m + (L_d - L_q)*i_dso) - b_eq*omega_mo - (K_l/r)*sin(theta_m_o/r) - T_d_o/r);
+    (1/L_q)*(-R_sref*(1 + alpha_cu*(T_so - T_sref))*i_qso - Pp*omega_mo*(lambda_m + i_dso*L_d) + v_qso);
+    (1/L_d)*(-R_sref*(1 + alpha_cu*(T_so - T_sref))*i_dso + Pp*omega_mo*i_qso*L_q + v_ds_o);
+    (1/L_ls)*(-R_sref*(1 + alpha_cu*(T_so - T_sref))*i_0so + v_0s_o);
+    ((1.5*R_sref*(1 + alpha_cu*(T_so - T_sref)))/C_ts)*(i_qso^2 + i_dso^2 + 2*i_0so^2) + (T_amb_o - T_so)/(R_ts_amb*C_ts)];
 
 % Igualar la ecuación de estado al vector nulo y resolver
-eqns = f == [0; 0; 0; 0; 0; 0];
-vars = x.'
-solutions = solve(eqns, vars);
-disp('Soluciones para i_qs:');
-disp(solutions.i_qs);
-disp('Soluciones para i_ds:');
-disp(solutions.i_ds);
-disp('Soluciones para i_0s:');
-disp(solutions.i_0s);
+eqns      = f == [0; 0; 0; 0; 0; 0];
+
+solutions = vpasolve(eqns.', vars);
+
+
+%% SIMULACIÓN 1
+%{
+i_qs_o    = double(solutions.i_qso);
+i_ds_o    = double(solutions.i_dso);
+i_0s_o    = double(solutions.i_0so);
+v_qs_o    = double(solutions.v_qso);
+omega_m_o = double(solutions.omega_mo);
+T_s_o     = double(solutions.T_so);
+R_s_o     = R_sf(T_s_o);
+R_s       = R_s_o;
+v_qs      = v_qs_o*(1 + 0.01); %20% por encima del punto de equilibrio
+%}
+%% SIMULACIÓN 2
+%{
+i_qs_o    = double(solutions.i_qso);
+i_ds_o    = double(solutions.i_dso);
+i_0s_o    = double(solutions.i_0so);
+v_qs_o    = double(solutions.v_qso);
+omega_m_o = double(solutions.omega_mo);
+T_s_o     = double(solutions.T_so);
+R_s_o     = R_sf(T_s_o);
+R_s       = R_s_o;
+v_qs      = v_qs_o;
+%}
+%% SIMULACIÓN 3
+
+i_qs_o    = double(solutions.i_qso);
+i_ds_o    = double(solutions.i_dso);
+i_0s_o    = double(solutions.i_0so);
+v_qs_o    = double(solutions.v_qso);
+omega_m_o = double(solutions.omega_mo);
+T_s_o     = double(solutions.T_so);
+R_s_o     = R_sf(T_s_o);
+R_s       = R_s_o;
+v_qs      = v_qs_o*(1 + 0.1); %20% por encima del punto de equilibrio
+%}
+%}
+
+%% SIMLUACIÓN 4.1 reforzamiento de campo
+%{
+i_qs_o    = double(solutions.i_tot(1)*sin(beta));
+i_ds_o    = double(solutions.i_tot(1)*cos(beta));
+i_0s_o    = double(solutions.i_0so(1));
+v_qs_o    = double(solutions.v_qso(1));
+v_ds_o    = double(solutions.v_dso(1));
+omega_m_o = double(solutions.omega_mo(1));
+T_s_o     = double(solutions.T_so(1));
+R_s_o     = R_sf(T_s_o);
+
+R_s       = R_s_o;
+v_qs      = v_qs_o;
+v_ds      = v_ds_o;
+
 
 %}
+
+%% SIMLUACIÓN 4.2 debilitamiento de campo
+%{
+i_qs_o    = double(solutions.i_tot(1)*sin(beta));
+i_ds_o    = double(solutions.i_tot(1)*cos(beta));
+i_0s_o    = double(solutions.i_0so(1));
+v_qs_o    = double(solutions.v_qso(1));
+v_ds_o    = double(solutions.v_dso(1));
+omega_m_o = double(solutions.omega_mo(1));
+T_s_o     = double(solutions.T_so(1));
+R_s_o     = R_sf(T_s_o);
+
+R_s       = R_s_o;
+v_qs      = v_qs_o;
+v_ds      = v_ds_o;
+
+
+%}
+%% Matrices del modelo LVP
+
+A = [0                                                       1                                   0                                           0                             0                                             0
+    -(K_l/(J_eq*r^2))*cos(theta_m_o/r)                 -b_eq/J_eq                      3*Pp*(lambda_m + (L_d-L_q)*i_ds_o)/(2*J_eq)    3*Pp*(L_d-L_q)*i_qs_o/(2*J_eq)       0                                             0
+     0                                     -Pp*(lambda_m + L_d*i_ds_o)/L_q                  -R_s_o/L_q                                 -Pp*L_d*omega_m_o/L_q               0                             -R_sref*alpha_cu*i_qs_o/L_q
+     0                                             L_q*i_qs_o*Pp/L_d                      L_q*Pp*omega_m_o/L_d                           -R_s_o/L_d                        0                             -R_sref*alpha_cu*i_ds_o/L_d
+     0                                                       0                                   0                                           0                       -R_s_o/L_ls                         -R_sref*alpha_cu*i_0s_o/L_ls
+     0                                                       0                            3*i_qs_o*R_s_o/C_ts                          3*i_ds_o*R_s_o/C_ts        6*i_0s_o*R_s_o/C_ts     3*(i_qs_o^2 + i_ds_o^2 + 2*i_0s_o^2)*R_sref*alpha_cu/(2*C_ts)-1/(C_ts*R_ts_amb)];
+B = [0      0       0           0           0
+     0      0       0       -1/(r*J_eq)     0
+     1/L_q  0       0           0           0
+     0    1/L_d     0           0           0
+     0      0      1/L_ls       0           0
+     0      0       0           0   1/(C_ts*R_ts_amb)];
+C = eye(6);
+D = zeros(6,5);
+%}
+%% PUNTO DE OPERACIÓN TRIVIAL
+%{
+theta_m_o   = 0;
+omega_m_o   = 0;
+R_s_o       = R_s;
+V_qs_o      = 0;
+V_ds_o      = 0;
+V_os_o      = 0;
+i_qs_o      = V_qs_o/R_s_o;
+i_ds_o      = V_ds_o/R_s_o;
+i_os_o      = V_os_o/R_s_o;
+T_s_o       = 40;
+%}
+
+%% Curvas de puntos de operación del 5.1.2.b creo, del LPV
+%{
 %{
 T_m         = @(theta_l, T_d) K_l*sin(theta_l)/r + T_d/r;
 theta_lr    = linspace(0, 2*pi, 100);
@@ -196,37 +398,8 @@ for i = 1:length(beta)
     end
 end
 legend show;
+
+%}
 %}
 
 
-%% PUNTO DE OPERACIÓN TRIVIAL
-%{
-theta_m_o   = 0;
-omega_m_o   = 0;
-R_s_o       = R_s;
-V_qs_o      = 0;
-V_ds_o      = 0;
-V_os_o      = 0;
-i_qs_o      = V_qs_o/R_s_o;
-i_ds_o      = V_ds_o/R_s_o;
-i_os_o      = V_os_o/R_s_o;
-T_s_o       = 40;
-%}
-
-%% Matrices del modelo LVP
-%{
-A = [0,1,0,0,0,0;
-    -(K_l/(J_eq*r^2))*cos(theta_m/r),-b_eq/J_eq,3*Pp*(lambda_m+(L_d-L_q)*i_ds)/(2*J_eq),3*Pp*(L_d-L_q)*i_qs/(2*J_eq),0,0;
-    0,-3*Pp*(lambda_m+L_d)*i_ds/(2*L_q),-R_sref*(1+alpha_cu*(T_s-T_sref))/L_q,-Pp*L_d*omega_m/L_q,0,-R_sref*alpha_cu*i_qs/L_q;
-    0,L_q*i_qs*Pp/L_d,L_q*Pp*omega_m/L_d,-R_sref*(1+alpha_cu*(T_s-T_sref))/L_d,0,-R_sref*alpha_cu*i_ds/L_d;
-    0,0,0,0,-R_sref*(1+alpha_cu*(T_s-T_sref))/L_ls,-R_sref*alpha_cu*i_os/L_ls;
-    0,0,3*i_qs*R_sref*(1+alpha_cu*(T_s-T_sref))/C_ts,3*i_ds*R_sref*(1+alpha_cu*(T_s-T_sref))/C_ts,6*i_os*R_sref*(1+alpha_cu*(T_s-T_sref))/C_ts,3*(i_qs^2+i_ds^2+2*i_os^2)*R_sref*alpha_cu/(2*C_ts)-1/(C_ts*R_ts_amb)];
-B = [0,0,0,0,0;
-     0,0,0,-1/(r*J_eq),0;
-     1/L_q,0,0,0,0;
-     0,1/L_d,0,0,0;
-     0,0,1/L_ls,0,0;
-     0,0,0,0,1/(C_ts*R_ts_amb)];
-C = eye(6);
-D = zeros(6,5);
-%}

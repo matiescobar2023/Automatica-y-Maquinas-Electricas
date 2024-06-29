@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.22)  26 JUN 2024 13:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.22)  26 JUN 2024 14:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -548,11 +548,11 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.37994pt}.
 
 [15]
-<18-Diagrama_de_bloques_LTI_equivalente_aumentado.pdf, id=251, 776.08946pt x 354.75536pt>
+<18-Diagrama_de_bloques_LTI_equivalente_aumentado.pdf, id=251, 783.04544pt x 316.99428pt>
 File: 18-Diagrama_de_bloques_LTI_equivalente_aumentado.pdf Graphic file (type pdf)
 <use 18-Diagrama_de_bloques_LTI_equivalente_aumentado.pdf>
 Package pdftex.def Info: 18-Diagrama_de_bloques_LTI_equivalente_aumentado.pdf  used on input line 1046.
-(pdftex.def)             Requested size: 776.08757pt x 354.75447pt.
+(pdftex.def)             Requested size: 783.04352pt x 316.9935pt.
 <19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.pdf, id=252, 370.65475pt x 212.65448pt>
 File: 19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.pdf Graphic file (type pdf)
 <use 19-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.pdf>
@@ -585,11 +585,11 @@ File: 13-Ley_de_control_complementaria.pdf Graphic file (type pdf)
 <use 13-Ley_de_control_complementaria.pdf>
 Package pdftex.def Info: 13-Ley_de_control_complementaria.pdf  used on input line 1122.
 (pdftex.def)             Requested size: 777.08127pt x 462.0752pt.
-<20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.pdf, id=298, 780.06433pt x 350.78052pt>
+<20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.pdf, id=298, 785.03285pt x 345.81194pt>
 File: 20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.pdf Graphic file (type pdf)
 <use 20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.pdf>
 Package pdftex.def Info: 20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.pdf  used on input line 1131.
-(pdftex.def)             Requested size: 780.06242pt x 350.77965pt.
+(pdftex.def)             Requested size: 785.03093pt x 345.8111pt.
 
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -997,7 +997,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  70i,22n,65p,1171b,440s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (48 pages, 2531275 bytes).
+Output written on main.pdf (48 pages, 2531689 bytes).
 PDF statistics:
  705 PDF objects out of 1000 (max. 8388607)
  479 compressed objects within 5 object streams
