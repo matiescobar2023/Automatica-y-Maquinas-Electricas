@@ -1323,7 +1323,7 @@ manera permite reflejar el efecto del cero en la dinámica a lazo abierto.
 	\label{dinámica de cero nominal}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{26-Dinamica_de_los_ceros_2.pdf}}
@@ -1424,9 +1424,181 @@ como ocurrió con la observabilidad, se pudo ver que es distinto de cero, por lo
 Similar a lo que ocurrió con la observabilidad, el sistema LTI aumentado con sistemas autónomos desacoplados, es parcialmente controlable, ya que el estado ${i}^r_{ds}(t) $  no puede ser controlado desde $v^r_{qs}(t)$. Para lograrlo, deben considerarse otras entradas de control adicionales como  $v^r_{ds}(t)$ 
 
 
-\subsubsection{\textbf{Simulación dinámica en dominio temporal}}
+\subsubsection{\textbf{Simulación dinámica en dominio temporal}} 
+Se realizó una comparación entre el modelo no lineal completo desacoplado utilizando una ley de control no lineal y el modelo linealizado equivalente aumentado. En esta comparación, se analizaron dos escenarios: uno con $i^r_{ds}(0) = \pm 0.5 A $  y otro con $i^r_{ds}(0) = 0 A $ 
+\paragraph{\textbf{Respuesta del estado interno a pulso de consigna de tensión de estator en eje q}}
+Primero se analizo la respuesta del estado interno $\left\lbrace \theta_m(t), \omega_{m}(t), i^r_{qd0s}(t), T^\circ_s(t)\right\rbrace $ y $v^r_(ds)$ forzada a un pulso de consigna de tensión en eje q:
+\begin{equation}
+	{v^r_{qs}(t)}^* = 0 \rightarrow \left({v^r_{qs}}^* = +19.596 \: V_{cc} \  en \ t_{step1}=0.1s \right) \rightarrow \left(0 \: V \  en \ t_{step4}=0.7s \right) 
+\end{equation}
+, superpuesto con doble pulso de torque de carga:
 
+\begin{equation}
+	T_{l}(t) = 0 \rightarrow \left(T_{lmax} = +6.98 \: Nm \  en \ t_{step2}=0.3s \right) \rightarrow \left(-T_{lmax} = -6.98 \: Nm \  en \ t_{step3}=0.5s \right)
+	 \rightarrow \left(0 \: Nm \  en \ t_{step5}=0.9s \right) 
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Consignas_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Consigna de tensión y torque de perturbación}
+	\label{Consigna de tensión y torque de perturbación}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Tensiones_abc_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Tensiones abc}
+	\label{Tensiones abc}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Tensiones_qd0_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Tensiones qd0}
+	\label{Tensiones qd0}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Corrientes_abc_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Corrientes abc}
+	\label{Corrientes abc}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Corrientes_qd0_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Corrientes qd0}
+	\label{Corrientes qd0}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Temperatura_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Temperatura }
+	\label{Temperatura}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{tm_vs_vel}}
+	\end{adjustbox}
+	\caption{Torque electromagnético vs Velocidad del motor}
+	\label{Torque electromagnético vs Velocidad del motor}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Tm_vs_vel_m_simulacion_5_1_6}}
+	\end{adjustbox}
+	\caption{Torque electromagnético y Velocidad del motor}
+	\label{Torque electromagnético y Velocidad del motor}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Posiciones_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Posición motor del sistema NL realimentado y del LTI aumentado}
+	\label{Posición motor del sistema NL realimentado y del LTI aumentado}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Velocidades_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Velocidad motor del sistema NL realimentado y del LTI aumentado}
+	\label{Velocidad motor del sistema NL realimentado y del LTI aumentado}
+\end{figure}
+\paragraph{\textbf{Determinación de las características de la respuesta}}
+Para evaluar el comportamiento del sistema, se determinaron las características de respuesta de la velocidad del motor y la corriente ante escalones de consigna y torque, específicamente: tiempo de crecimiento, tiempo de establecimiento, sobrepico y valor final de establecimiento. Estos datos se obtuvieron utilizando la función "stepinfo" de Matlab, aplicada a los resultados de las simulaciones.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|ccccc|}
+		\hline
+		& \multicolumn{5}{c|}{Corriente}                                                                                              \\ \hline
+		Tiempo de inicio del transitorio {[}s{]} & \multicolumn{1}{c|}{0.1}   & \multicolumn{1}{c|}{0.3}   & \multicolumn{1}{c|}{0.5}    & \multicolumn{1}{c|}{0.7}    & 0.9   \\ \hline
+		Valor final de establecimiento {[}mA{]}  & \multicolumn{1}{c|}{125.1} & \multicolumn{1}{c|}{845.7} & \multicolumn{1}{c|}{-598.5} & \multicolumn{1}{c|}{-722.1} & 0     \\ \hline
+		Tiempo de crecimiento {[}ms{]}           & \multicolumn{1}{c|}{0.029} & \multicolumn{1}{c|}{9.542} & \multicolumn{1}{c|}{9.548}  & \multicolumn{1}{c|}{0.029}  & 9.607 \\ \hline
+		Tiempo de establecimiento {[}ms{]}       & \multicolumn{1}{c|}{152.5} & \multicolumn{1}{c|}{345.6} & \multicolumn{1}{c|}{545.5}  & \multicolumn{1}{c|}{752.0}  & 945.0 \\ \hline
+		Sobrepico {[}\%{]}                       & \multicolumn{1}{c|}{8447}  & \multicolumn{1}{c|}{15.36} & \multicolumn{1}{c|}{15.32}  & \multicolumn{1}{c|}{8411}   & 14.93 \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|ccccc|}
+		\hline
+		& \multicolumn{5}{c|}{Velocidad}                                                                                            \\ \hline
+		Tiempo de inicio del transitorio {[}s{]}   & \multicolumn{1}{c|}{0.1}   & \multicolumn{1}{c|}{0.3}   & \multicolumn{1}{c|}{0.5}   & \multicolumn{1}{c|}{0.7}   & 0.9   \\ \hline
+		Valor final de establecimiento {[}rad/s{]} & \multicolumn{1}{c|}{405.6} & \multicolumn{1}{c|}{390.1} & \multicolumn{1}{c|}{421.1} & \multicolumn{1}{c|}{15.64} & 0     \\ \hline
+		Tiempo de crecimiento {[}ms{]}             & \multicolumn{1}{c|}{9.513} & \multicolumn{1}{c|}{5.560} & \multicolumn{1}{c|}{5.560} & \multicolumn{1}{c|}{9.567} & 5.635 \\ \hline
+		Tiempo de establecimiento {[}ms{]}         & \multicolumn{1}{c|}{145.6} & \multicolumn{1}{c|}{343.1} & \multicolumn{1}{c|}{542.9} & \multicolumn{1}{c|}{745.1} & 942.8 \\ \hline
+		Sobrepico {[}\%{]}                         & \multicolumn{1}{c|}{15.46} & \multicolumn{1}{c|}{27.79} & \multicolumn{1}{c|}{27.82} & \multicolumn{1}{c|}{15.08} & 27.01 \\ \hline
+	\end{tabular}
+\end{table}
+
+
+Sabiendo que en los instantes 0.1 s y 0.7 s se aplican variaciones en la consigna de tensión ${v^r_{qs}}^*$, y que en los instantes 0.3 s, 0.5 s y 0.9 s se modifica el torque de perturbación $T_l$, se puede observar que los cambios en ${v^r_{qs}}^*$ influyen más en la velocidad (con tiempos de crecimiento mayores) que en la corriente. En contraste, los cambios en $T_l$ tienen una mayor influencia en la corriente que en la velocidad. Además, se puede observar que al variar ${v^r_{qs}}^*$ se producen sobrepicos mayores en la corriente, mientras que los cambios en $T_l$ generan mayores sobrepicos en la velocidad.
+
+\paragraph{\textbf{Comportamiento de $\mathbf{i^r_{ds}(t)}$ para $\mathbf{i^r_{ds}(0) = \pm 5A}$ vs $\mathbf{i^r_{ds}(0) = 0A}$}} 
+Se obtuvieron las siguientes gráficas para comparar la evolución de la corriente $i^r_{ds}(t)$ en ambos modelos.
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Corriente_ids_5_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Diferencia entre la corriente del sistema NL y la del LTI aumentado para $i^r_{ds}(0) = 5A $}
+	\label{Diferencia entre la corriente del sistema NL y la del LTI aumentado para $i^r_{ds}(0) = 5A $}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Corriente_ids_-5_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Diferencia entre la corriente del sistema NL y la del LTI aumentado para $i^r_{ds}(0) = -5A $}
+	\label{Diferencia entre la corriente del sistema NL y la del LTI aumentado para $i^r_{ds}(0) = -5A $}
+\end{figure}
+Se puede observar que cuando la corriente inicial del eje d, no hay diferencias notables entre el modelo NL realimentado y el LTI aumentado. Este se debe al desacoplamiento que se hizo entre los eje q y d.
+
+\paragraph{\textbf{Agregado de consigna de tensión en eje d}}
+Se agrego la consigna de tensión ${V^r_{ds}}^* = \pm 1.9596 V $ en $t = 0.5 s$ para realizar debilitamiento o reforzamiento de campo. Los resultados obtenidos fueron los siguientes:
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Velocidad_deb_ref_campo_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Velocidad del motor con ${V^r_{ds}}^* > 0$, ${V^r_{ds}}^* = 0$ y ${V^r_{ds}}^* < 0$}
+	\label{Velocidad del motor con ${V^r_{ds}}^* > 0$, ${V^r_{ds}}^* = 0$ y ${V^r_{ds}}^* < 0$}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Torque_deb_ref_campo_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Torque electromagnético con ${V^r_{ds}}^* > 0$, ${V^r_{ds}}^* = 0$ y ${V^r_{ds}}^* < 0$}
+	\label{Torque electromagnético con ${V^r_{ds}}^* > 0$, ${V^r_{ds}}^* = 0$ y ${V^r_{ds}}^* < 0$}
+\end{figure}
+En estas gráficas se puede observar el efecto del debilitamiento y reforzamiento del campo. En el primer caso, el debilitamiento del campo provoca un aumento en la velocidad del motor y una disminución del torque. En el segundo caso, el reforzamiento del campo produce el efecto contrario, disminuyendo la velocidad del motor y aumentando el torque. Por otro lado, este tipo de consigna no tiene efecto sobre el sistema LTI equivalente aumentado, ya que en este se desacoplaron los ejes q y d entre sí.
 \subsection{\textbf{Modelado, Análisis y Simulación con controlador de movimiento en cascada con modulador de torque equivalente(control vectorial)}}
+
 
 \subsubsection{\textbf{Modulador de torque equivalente(Controlador interno vectorial de corriente/torque)}}
 \paragraph{\textbf{Compensación de todas las realimentaciones físicas naturales de estado hacia la entrada}}
@@ -1580,6 +1752,11 @@ obteniendo las siguientes ganancias:
 \end{align}
 
 Los polos para estos valores de ganancias serian los siguientes:
+\begin{align}
+	s_1 &= -800 \\
+	s_2 &=  -600 + j 529.15\\
+	s_3 &=  -600 - j 529.15
+\end{align}
 
 \subsubsection{\textbf{Incorporación de observador de estado de orden reducido para parte mecánica}}
 Como en este controlador se ha optado por realimentar la velocidad, para evitar la utilización de derivadores, y dado que se cuenta con un encoder para medir posición del eje, fue necesario implementar un observador de estado reducido para poder realimentar la velocidad angular del motor. Se aclara que las corrientes no son observadas, ya que se cuenta con sensores de corriente.
@@ -1804,9 +1981,6 @@ Se evaluó el comportamiento del sistema ante torques de perturbación del tipo 
 	\label{Error entre  posición medida y estimada}
 \end{figure}
 
-\begin{equation}
-	\left(\begin{array}{c} \frac{2\,\theta _{\mathrm{m2}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{2\,\theta _{\mathrm{m1}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}\\ \frac{3\,\theta _{\mathrm{m1}}\,\left(t_{1}+t_{2}\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{3\,\theta _{\mathrm{m2}}\,\left(t_{1}+t_{2}\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}\\ \frac{6\,t_{1}\,t_{2}\,\theta _{\mathrm{m2}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{6\,t_{1}\,t_{2}\,\theta _{\mathrm{m1}}}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}\\ \frac{\theta _{\mathrm{m1}}\,\left(3\,t_{1}\,{t_{2}}^2-{t_{2}}^3\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3}-\frac{\theta _{\mathrm{m2}}\,\left(3\,{t_{1}}^2\,t_{2}-{t_{1}}^3\right)}{{t_{1}}^3-3\,{t_{1}}^2\,t_{2}+3\,t_{1}\,{t_{2}}^2-{t_{2}}^3} \end{array}\right)
-\end{equation}
 \subsubsection{\textbf{Verificación de desempeño y mejoras}}
 \paragraph{\textbf{Verificación de las especificaciones de operación}}Al comparar los obtenidos en las simulaciones, con los limites de operación, se obtuvieron los siguientes resultados:
 
@@ -1988,8 +2162,352 @@ En las simulaciones se observó la presencia de un error de estado estacionario 
 \end{figure}
 
 \paragraph{\textbf{Comportamiento térmico del motor}} 
+\paragraph{\textbf{Sensores y acondicionamiento de señal}} 
+Para realizar una simulación mas cercana a la realidad, se incorporaron sensores no ideales y se evaluó la degradación del desempeño del sistema.
+Primero se reemplazaron los sensores de corriente por modelos equivalentes a filtros pasa bajos de segundo orden con $\omega_n=6000\frac{rad}{s}$ y $\zeta = 1$, representados en espacio de estados.
+A partir de la función de transferencia para un filtro pasa bajos de segundo orden, se encontró el modelo equivalente en espacios de estados:
+\begin{align}
+	G(s) = \frac{{\omega_n}^2}{s^2 + 2 \zeta \omega_n s + {\omega_n}^2}\\
+	\left(s^2 + 2 \zeta \omega_n s + {\omega_n}^2 \right) Y(s)={\omega_n}^2 U(s)\\
+	\frac{d^2 y(t)}{dt^2} + 2 \zeta \omega_n \frac{d y(t)}{dt} + {\omega_n}^2 y(t) = {\omega_n}^2 u(t) 
+\end{align}
+\begin{align}
+	\begin{cases}
+		\begin{bmatrix}
+			\frac{d x_1(t)}{dt} \\ 
+			\frac{d x_2(t)}{dt}
+		\end{bmatrix} = 
+		\begin{bmatrix}
+			0 & 1 \\ 
+			-{\omega_n}^2 & - 2 \zeta \omega_n
+		\end{bmatrix}
+		\begin{bmatrix}
+			x_1(t) \\ 
+			x_2(t)
+		\end{bmatrix} + 
+		\begin{bmatrix}
+			0 \\
+			{\omega_n}^2
+		\end{bmatrix} u(t) \\
+		y(t) = \begin{bmatrix}
+			1 & 0
+		\end{bmatrix} 
+		\begin{bmatrix}
+			x_1(t) \\ 
+			x_2(t)
+		\end{bmatrix}
+	\end{cases}\label{ecuacion matricial de sensor corriente}
+\end{align}
+El diagrama de bloques de cada sensor quedó de la siguiente forma:
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Diagrama_Sensor_FPB_orden_2.pdf}}
+	\end{adjustbox}
+	\caption{Diagrama del bloques del sensor de corriente no ideal}
+	\label{Diagrama del bloques del sensor de corriente no ideal}
+\end{figure}
+Luego se realizo lo mismo con el sensor de posición angular, tomando $\omega_n=2000\frac{rad}{s}$ y $\zeta = 1$
 
-\section{ANÁLISIS DE RESULTADOS}
+Para el sensor de temperatura se planteo un modelo de filtro pasa bajos de primer orden con $\tau=20 s$:
+\begin{align}
+	G(s) = \frac{1}{\tau s + 1}\\
+	\left(\tau s + 1 \right) Y(s)=U(s)\\
+	\tau \frac{d y(t)}{dt} +  y(t) = u(t) 
+\end{align}
+
+\begin{align}
+	\begin{cases}
+		\begin{bmatrix}
+			\frac{d x(t)}{dt} 
+		\end{bmatrix} = 
+		\begin{bmatrix}
+			\tau
+		\end{bmatrix}
+		\begin{bmatrix}
+			x(t) 
+		\end{bmatrix} + 
+		\begin{bmatrix}
+			\frac{1}{\tau}
+		\end{bmatrix} u(t) \\
+		y(t) = \begin{bmatrix}
+			1 
+		\end{bmatrix} 
+		\begin{bmatrix}
+			x(t)
+		\end{bmatrix}
+	\end{cases}\label{ecuacion matricial de sensor de temperatura}
+\end{align}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{diagrama_sensor_ts_real.pdf}}
+	\end{adjustbox}
+	\caption{Diagrama del bloques del sensor de temperatura no ideal}
+	\label{Diagrama del bloques del sensor de temperatura no ideal}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Posiciones_para_Sensores_reales}}
+	\end{adjustbox}
+	\caption{Diferencia entre posición consigna,medida y observada, para sensores no ideales}
+	\label{Diferencia entre posición consigna,medida y observada, para sensores no ideales}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Corrientes_abc_con_sensores_reales}}
+	\end{adjustbox}
+	\caption{Corrientes abc, para sensores no ideales}
+	\label{Corrientes abc, para sensores no ideales}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Temperatura_con_sensores_reales}}
+	\end{adjustbox}
+	\caption{Temperatura, para sensores no ideales}
+	\label{Temperatura, para sensores no ideales}
+\end{figure}
+
+Como se puede observar en las gráficas, la posición real y la estimada difieren significativamente de la consigna. Además, las corrientes presentan picos superiores a los $200 A$ y la temperatura del motor aumenta exponencialmente hasta que la simulación se detiene por divergencia. Este comportamiento se debe a los retrasos introducidos por los sensores, cuyos polos se encuentran cerca de los del controlador. Para mejorar la respuesta del sistema, se duplicaron las frecuencias de los sensores.
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Posiciones_para_Sensores_reales_2}}
+	\end{adjustbox}
+	\caption{Diferencia entre posición consigna y medida, para sensores no ideales con el doble de frecuencia natural}
+	\label{Diferencia entre posición consigna y medida, para sensores no ideales con el doble de frecuencia natural}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Corrientes_abc_con_sensores_reales_2}}
+	\end{adjustbox}
+	\caption{Corrientes abc, para sensores no ideales con el doble de frecuencia natural}
+	\label{Corrientes abc, para sensores no ideales con el doble de frecuencia natural}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Temperatura_con_sensores_reales_2}}
+	\end{adjustbox}
+	\caption{Temperatura, para sensores no ideales con el doble de frecuencia natural}
+	\label{Temperatura, para sensores no ideales con el doble de frecuencia natural}
+\end{figure}
+
+Se puede observar que al haber duplicados las frecuencias, la respuesta de los sensores es mas rápida y por lo tanto el comportamiento del controlador mejora notablemente. 
+Luego se propuso triplicar las frecuencias de los sensores y observar las respuestas.
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Posiciones_para_Sensores_reales_3}}
+	\end{adjustbox}
+	\caption{Diferencia entre posición consigna y medida, para sensores no ideales con el triple de frecuencia natural}
+	\label{Diferencia entre posición consignay medida, para sensores no ideales con el triple de frecuencia natural}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Corrientes_abc_con_sensores_reales_3}}
+	\end{adjustbox}
+	\caption{Corrientes abc, para sensores no ideales con el triple de frecuencia natural}
+	\label{Corrientes abc, para sensores no ideales con el triple de frecuencia natural}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Temperatura_con_sensores_reales_3}}
+	\end{adjustbox}
+	\caption{Temperatura, para sensores no ideales con el triple de frecuencia natural}
+	\label{Temperatura, para sensores no ideales con el triple de frecuencia natural}
+\end{figure}
+Como se observa, las respuestas obtenidas son prácticamente igual que con el doble de frecuencia natural.
+
+\paragraph{\textbf{Incorporación de modulador de tensión trifásico no ideal}} Para acercar aun más la simulación a la realidad, se reemplazo el modelo ideal del modulador de tensión, por uno aproximado equivalente con saturación y características de filtro pasa bajos de segundo orden.Los parámetros del modulador son los siguientes:
+\begin{itemize}
+	\item Saturación: $\left| v_{as}(t)\right|,\left| v_{bs}(t)\right|,\left| v_{ac}(t)\right| \leq \sqrt{2} \frac{24 V_{ca \space rms}}{\sqrt{3}} $
+	\item Modelo de filtro LP con: $\omega_n = 6000 \frac{rad}{s} $ y $\zeta = 1$ 
+\end{itemize}
+
+AL igual que con los sensores de corriente y posición, el modelo de este modulador en espacio de estados queda:
+\begin{align}
+	\begin{cases}
+		\begin{bmatrix}
+			\frac{d x_1(t)}{dt} \\ 
+			\frac{d x_2(t)}{dt}
+		\end{bmatrix} = 
+		\begin{bmatrix}
+			0 & 1 \\ 
+			-{\omega_n}^2 & - 2 \zeta \omega_n
+		\end{bmatrix}
+		\begin{bmatrix}
+			x_1(t) \\ 
+			x_2(t)
+		\end{bmatrix} + 
+		\begin{bmatrix}
+			0 \\
+			{\omega_n}^2
+		\end{bmatrix} u(t) \\
+		y(t) = \begin{bmatrix}
+			1 & 0
+		\end{bmatrix} 
+		\begin{bmatrix}
+			x_1(t) \\ 
+			x_2(t)
+		\end{bmatrix}
+	\end{cases}\label{ecuacion matricial de modulador de tension real}
+\end{align}
+Solo que se le incorpora la saturación en la entrada al implementarlo en el diagrama de bloques:
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Modulador_De_tension_no_ideal.pdf}}
+	\end{adjustbox}
+	\caption{Modulador no ideal de tensión}
+	\label{Modulador no ideal de tensión}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Error_posicion_modulador_de_tension_real}}
+	\end{adjustbox}
+	\caption{Diferencia entre posición consigna y medida, para modulador de tensión no ideal}
+	\label{Diferencia entre posición consigna y medida, para modulador de tensión no ideal}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Corrientes_abc_con_modulador_de_tension_real}}
+	\end{adjustbox}
+	\caption{Corrientes abc, para modulador de tensión no ideal}
+	\label{Corrientes abc, para modulador de tensión no ideal}
+\end{figure}
+Para mejorar el comportamiento del sistema, al igual que con los sensores, se duplico la frecuencia natural del modulador.
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Error_posicion_modulador_de_tension_real_2}}
+	\end{adjustbox}
+	\caption{Diferencia entre posición consigna y medida, para modulador de tensión no ideal con el doble de frecuencia natural}
+	\label{Diferencia entre posición consigna y medida, para modulador de tensión no ideal con el doble de frecuencia natural}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Corrientes_abc_con_modulador_de_tension_real_2}}
+	\end{adjustbox}
+	\caption{Corrientes abc, para modulador de tensión no ideal con el doble de frecuencia natural}
+	\label{Corrientes abc, para modulador de tensión no ideal con el doble de frecuencia natural}
+\end{figure}
+Como se observa, en este caso el desempeño no mejora demasiado al duplicar la frecuencia. Además, se observa que aparece un error de estado estacionario entre la posición consigna y la medida. Por lo que se propuso triplicar la frecuencia, obteniendo los siguientes resultados.
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Error_posicion_modulador_de_tension_real_3}}
+	\end{adjustbox}
+	\caption{Diferencia entre posición consigna y medida, para modulador de tensión no ideal con el triple de frecuencia natural}
+	\label{Diferencia entre posición consigna y medida, para modulador de tensión no ideal con el triple de frecuencia natural}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Corrientes_abc_con_modulador_de_tension_real_3}}
+	\end{adjustbox}
+	\caption{Corrientes abc, para modulador de tensión no ideal con el triple de frecuencia natural}
+	\label{Corrientes abc, para modulador de tensión no ideal con el triple de frecuencia natural}
+\end{figure}
+En este caso, se logro un comportamiento adecuado de sistema, donde el error entre la posición consigna y la mediada es nulo cuando se encuentra en reposo.Si bien este error no es nulo cuando hay movimiento del eje, es muy pequeño.
+\subsubsection{\textbf{Versión final con modelo discretizado del controlador completo}} Para concluir, se discretizó el controlador completo, utilizando el método de Tustin (integración numérica por trapecios) con periodo de muestreo $T_s$ constante y retenedores de orden cero para señales de entrada y de salida al controlador.
+Para poder aplicar el método de Tustin se utilizo la transformación bilineal que relaciona la variable $s$ con $z$ de la siguiente manera:
+\begin{equation}
+	s = \frac{2}{T_s} \frac{z-1}{z+1}
+	\label{Transformación bilineal}
+\end{equation}
+Por la tanto, al reemplazar la $s$ de un bloque integrador por esta expresión, quedo el siguiente diagrama de bloques en tiempo discreto:
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Modelo_discreto_De_integrador.pdf}}
+	\end{adjustbox}
+	\caption{Discretización de un bloque integrador}
+	\label{Discretización de un bloque integrador}
+\end{figure}
+Al reemplazar cada integrador del controlador, quedaron los siguientes diagramas:
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{PID_Discreto.pdf}}
+	\end{adjustbox}
+	\caption{Modelo discreto del PID}
+	\label{Modelo discreto del PID}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Observador_discreto.pdf}}
+	\end{adjustbox}
+	\caption{Modelo discreto del observador de estados}
+	\label{Modelo discreto del observador de estados}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Controlador_discreto.pdf}}
+	\end{adjustbox}
+	\caption{Modelo discreto del controlador completo}
+	\label{Modelo discreto del controlador completo}
+\end{figure}
+Finalmente, se hicieron pruebas con distintos valores de $T_s$ hasta dar con el correcto que fue $T_s = 10^{-4} [s]$. Los resultados fueron los siguientes:
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Tensiones_abc_discreto}}
+	\end{adjustbox}
+	\caption{Tensiones abc para modelo de controlador discreto}
+	\label{Tensiones abc para modelo de controlador discreto}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Corrientes_abc_discreto}}
+	\end{adjustbox}
+	\caption{Corrientes abc para modelo de controlador discreto}
+	\label{Corrientes abc para modelo de controlador discreto}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Torque_discreto}}
+	\end{adjustbox}
+	\caption{Consigna de torque para modelo de controlador discreto}
+	\label{Consigna de torque para modelo de controlador discreto}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Error_entre_pos_y_posConsigna_discreto}}
+	\end{adjustbox}
+	\caption{Posición consigna vs medida para modelo de controlador discreto}
+	\label{Posición consigna vs medida para modelo de controlador discreto}
+\end{figure}
+Se puede ver, que para este valor de $T_s$ todavía existe un error entre la consigna de posición y la medida, cuando el eje se encuentra en movimiento, pero es muy pequeño() en relación a la amplitud de movimiento. Por lo que se concluye que el valor de $T_s$ es adecuado 
+\section{CONCLUSIONES}
 
 \subsection{Heading 1, etc}
 

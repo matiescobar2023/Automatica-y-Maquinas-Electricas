@@ -44,6 +44,23 @@ P_o = 3200;
 Ke_theta = 3*P_o;
 Ke_omega = 3*P_o^2;
 Ke_i = P_o^3;
+
+%Sensores reales
+%Corrientes
+w_n_i = 3*6000;
+zit_i= 1;
+%Posición
+w_n_pos = 3*6000;
+zit_pos= 1;
+%Temperatura
+tau = 20;
+%Modulador de tension real
+V_max = 24*sqrt(2/3);
+w_n_v = 3*6000;
+zit_v= 1;
+%Parametros Controlador Discreto
+Ts = 1e-4;
+%Consigna
 Consigna_de_pos
 %syms dtheta_m(t) omega_m(t) J_eq domega_m(t) T_m(t) b_eq T_l(t) v_{qs}^r(t) R_s(t) i_{qs}^r(t) L_q di_{qs}^r(t) lambda_{m}^r L d_i_dsr(t) omega_r(t) v_{ds}^r(t) i_{ds}^r(t) id_s(t) Lls di0_s(t) T_perd(t) Cts dT0_s(t) Rts_amb Tamb(t) i_0s(t) i_2as(t) i_2bs(t) i_2cs(t) i_2qs(t) i_2ds(t) i_20s(t) Pp Rs_REF alpha_Cu Ts_REF;
 
