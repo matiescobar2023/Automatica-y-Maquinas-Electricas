@@ -902,12 +902,12 @@ Las matrices $A(t)$ y $B(t)$ de la \cref{modelo de pequeñas desviaciones} viene
 \begin{equation}
     A(t) = \left[ \left. \frac{\mathbf{\partial f}}{\mathbf{\partial x}} \right|_{o}(t) \right] =
     \begin{bmatrix}
-        \frac{\partial}{\partial x}\left( \frac{d \theta_m(t)}{dt}\right) \\ 
-        \frac{\partial}{\partial x}\left( \frac{d \omega_m(t)}{dt}\right) \\
-        \frac{\partial}{\partial x}\left( \frac{d i^r_{qs}(t)}{dt}\right) \\ 
-        \frac{\partial}{\partial x}\left( \frac{d i^r_{ds}(t)}{dt}\right) \\ 
-        \frac{\partial}{\partial x}\left( \frac{d i^r_{0s}(t)}{dt}\right) \\ 
-        \frac{\partial}{\partial x}\left( \frac{d T^\circ_s(t)}{dt}\right) 
+        \left.\frac{\partial}{\partial x}\left( \frac{d \theta_m(t)}{dt}\right)\right|_{o} \\ 
+        \left.\frac{\partial}{\partial x}\left( \frac{d \omega_m(t)}{dt}\right)\right|_{o} \\
+        \left.\frac{\partial}{\partial x}\left( \frac{d i^r_{qs}(t)}{dt}\right)\right|_{o} \\ 
+        \left.\frac{\partial}{\partial x}\left( \frac{d i^r_{ds}(t)}{dt}\right)\right|_{o} \\ 
+        \left.\frac{\partial}{\partial x}\left( \frac{d i^r_{0s}(t)}{dt}\right)\right|_{o} \\ 
+        \left.\frac{\partial}{\partial x}\left( \frac{d T^\circ_s(t)}{dt}\right)\right|_{o} 
     \end{bmatrix}\quad
     B(t) = \left[ \left. \frac{\mathbf{\partial f}}{\mathbf{\partial u}} \right|_{o}(t) \right] =
     \begin{bmatrix}
@@ -925,21 +925,21 @@ Los gradientes indicados para $A(t)$ en la \cref{matriz_AB} vienen dados por la 
 
 \begin{equation}
     \begin{aligned}
-        \frac{\partial}{\partial x}\left( \frac{d \theta_m(t)}{dt}\right) &= \begin{bmatrix} 0 & 1 & 0 & 0 & 0 & 0 \end{bmatrix}\\
-        \frac{\partial}{\partial x}\left( \frac{d \omega_m(t)}{dt}\right) &= \begin{bmatrix}
-        \frac{-K_{l} \cos\left(\frac{\theta_m(t)}{r}\right)}{J_{eq} r^2} & \frac{-b_{eq}}{J_{eq}} & \frac{3 P_p \left(\lambda_m+i^r_{ds}(t) \left(L_d-L_q\right)\right)}{2 J_{eq}} & \frac{3 P_p i^r_{qs}(t) \left(L_d-L_q\right)}{2 J_{eq}} & 0 & 0 
+        \left.\frac{\partial}{\partial x}\left( \frac{d \theta_m(t)}{dt}\right) \right|_{o} &= \begin{bmatrix} 0 & 1 & 0 & 0 & 0 & 0 \end{bmatrix}\\
+        \left.\frac{\partial}{\partial x}\left( \frac{d \omega_m(t)}{dt}\right) \right|_{o}&= \begin{bmatrix}
+        \frac{-K_{l} \cos\left(\frac{\theta_{m-o}}{r}\right)}{J_{eq} r^2}& \frac{-b_{eq}}{J_{eq}} & \frac{3 P_p \left(\lambda_m+i^r_{ds-o} \left(L_d-L_q\right)\right)}{2 J_{eq}} & \frac{3 P_p i^r_{qs-o} \left(L_d-L_q\right)}{2 J_{eq}} & 0 & 0 
         \end{bmatrix}\\
-        \frac{\partial}{\partial x}\left( \frac{d i^r_{qs}(t)}{dt}\right) &= \begin{bmatrix} 
-        0 & \frac{-3 P_p \left(i^r_{ds}(t) L_d+\lambda_m\right)}{2 L_q} & \frac{-R_s(t)}{L_q} & \frac{-L_d P_p \omega_m(t)}{L_q} & 0 & \frac{-R_{sREF} \alpha_{cu} i^r_{qs}(t)}{L_q} 
+        \left.\frac{\partial}{\partial x}\left( \frac{d i^r_{qs}(t)}{dt}\right) \right|_{o}&= \begin{bmatrix} 
+        0 & \frac{-P_p \left(i^r_{ds-o} L_d+\lambda_m\right)}{L_q} & \frac{-R_{s-o}}{L_q} & \frac{-L_d P_p \omega_{m-o}}{L_q} & 0 & \frac{-R_{sREF} \alpha_{cu} i^r_{qs-o}}{L_q} 
         \end{bmatrix}\\
-        \frac{\partial}{\partial x}\left( \frac{d i^r_{ds}(t)}{dt}\right) &= \begin{bmatrix} 
-        0 & \frac{L_q P_p i^r_{qs}(t)}{L_d} & \frac{L_q P_p \omega_m(t)}{L_d} & \frac{-R_s(t)}{L_d} & 0 & \frac{-R_{sREF} \alpha_{cu} i^r_{ds}(t)}{L_d} 
+        \left.\frac{\partial}{\partial x}\left( \frac{d i^r_{ds}(t)}{dt}\right) \right|_{o}&= \begin{bmatrix} 
+        0 & \frac{L_q P_p i^r_{qs-o}}{L_d} & \frac{L_q P_p \omega_{m-o}}{L_d} & \frac{-R_{s-o}}{L_d} & 0 & \frac{-R_{sREF} \alpha_{cu} i^r_{ds-o}}{L_d} 
         \end{bmatrix}\\
-        \frac{\partial}{\partial x}\left( \frac{d i_{0s}(t)}{dt}\right) &= \begin{bmatrix} 
-        0 & 0 & 0 & 0 & \frac{-R_s(t)}{L_{ls}} & \frac{-R_{sREF} \alpha_{cu} i_{0s}(t)}{L_{ls}} 
+        \left.\frac{\partial}{\partial x}\left( \frac{d i_{0s}(t)}{dt}\right) \right|_{o}&= \begin{bmatrix} 
+        0 & 0 & 0 & 0 & \frac{-R_{s-o}}{L_{ls}} & \frac{-R_{sREF} \alpha_{cu} i_{0s-o}}{L_{ls}} 
         \end{bmatrix}\\
-        \frac{\partial}{\partial x}\left( \frac{d T^\circ_s(t)}{dt}\right) &= \begin{bmatrix} 
-        0 & 0 & \frac{3 R_s(t) i^r_{qs}(t)}{C_{ts}} & \frac{3 R_s(t) i^r_{ds}(t)}{C_{ts}} & \frac{6 R_s(t) i^r_{0s}(t)}{C_{ts}} & \frac{3 R_{sREF} \alpha_{cu} \left({i^r_{ds}(t)}^2+2 {i^r_{0s}(t)}^2+{i^r_{qs}(t)}^2\right)}{2 C_{ts}} - \frac{1}{C_{ts} R_{ts}} 
+        \left.\frac{\partial}{\partial x}\left( \frac{d T^\circ_{s}(t)}{dt}\right)\right|_{o} &= \begin{bmatrix} 
+        0 & 0 & \frac{3 R_{s-o} i^r_{qs-o}}{C_{ts}} & \frac{3 R_{s-o} i^r_{ds-o}}{C_{ts}} & \frac{6 R_{s-o} i^r_{0s-o}}{C_{ts}} & \frac{3 R_{sREF} \alpha_{cu} \left({i^r_{ds-o}}^2+2 {i^r_{0s-o}}^2+{i^r_{qs-o}}^2\right)}{2 C_{ts}} - \frac{1}{C_{ts} R_{ts}} 
         \end{bmatrix}\\
     \end{aligned}
     \label{gradientesA}
@@ -978,7 +978,7 @@ $R_s(t)$ a la temperatura de referencia de $40^\circ C$ de $1.02 \Omega$, \cite{
 
 Expresándolo en forma de espacio de estados se obtienen las
 \textbf{ecuaciones matriciales LTI de estado y de salida (con estado inicial genérico)}
-como se indica en \cref{ecuacion matricial con ids=0}.
+como se indica en la \cref{ecuacion matricial con ids=0}.
 
 \begin{equation}
 	\begin{cases}
@@ -1102,17 +1102,26 @@ Para evitar esto, se puede implementar una \textbf{ley de control complementaria
  	v^r_{qs}(t)^{*} &= L_q\frac{d i^r_{qs}(t)}{dt} + R_s i^r_{qs}(t) +P_p \omega_m(t) \lambda'^r_m  \label{ley de control complementaria 3}
 \end{align}
 
-El modelo \textbf{LTI equivalente(incorporando la dinámica residual del eje $\mathbf{d}$)} queda como se indica en la \cref{equaciones modelo LTI eq} y en la \cref{diagrama de bloques modelo LTI eq}:
+El modelo \textbf{LTI equivalente(incorporando la dinámica residual del eje $\mathbf{d}$)} queda como se indica en la \cref{equaciones modelo LTI eq} y en la \cref{diagrama de bloques modelo LTI eq}. En
+las mismas también se incorpora la dinámica asociada a $i_{0s}(t)$ y se actualiza e incorpora la dinámica lineal del sub-sistema térmico, a los efectos de tener un modelo con todas las variables de estado 
+para luego poder hacer comparaciones con el modelo LPV (subsección 5.1.2.D). Sin embargo, los puntos de análisis que se detallan a continuación, y que no implican
+comparación con otros moedelos, se realizan con el estado reducido indicado en la \cref{vector de estado reducido}.
 
 \begin{equation}
 	\begin{cases}
 		\frac{d \theta_m(t)}{dt} = {\omega}_m(t)\\
 		\frac{d \omega_m(t)}{dt} = \frac{3}{2} \frac{P_p i^r_{qs}(t)\lambda^r_m}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} - \frac{T_l(t)}{r J_{eq}}\\
 		\frac{d i^r_{qs}(t)}{dt} = -\frac{R_s i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \lambda^r_m}{L_q}+ \frac{v^r_{qs}(t)}{L_q}\\
-		\frac{d i^r_{ds}(t)}{dt} = -\frac{R_s i^r_{ds}(t)}{L_d}	
+		\frac{d i^r_{ds}(t)}{dt} = -\frac{R_s i^r_{ds}(t)}{L_d}	+ v^{r*}_{ds}(t)\\
+		\frac{d i_{0s}(t)}{dt} = -\frac{R_s i_{0s}(t)}{L_{ls}}	+ v_{0s}(t)\\
+		\frac{d T^\circ_{s}(t)}{dt} = \frac{P_{perd}(t)}{R_{ts}} + \frac{1}{R_{ts}C_{ts}}\left[T^{\circ}_{amb}(t) - T_{s}^{\circ}(t)\right]
 	\end{cases}
 	\label{equaciones modelo LTI eq}
 \end{equation}
+
+En la \cref{equaciones modelo LTI eq} la $P_{perd}(t)$ viene dada según la \cref{potencia de perdidas}. En la misma incorporamos la entrada $v^{r*}_{ds}(t)$, que es $v^r_{ds}(t)$ luego de
+la ley de control mínima. Para el caso que presentamos aquí será $v^{r*}_{ds}(t) \equiv 0$ y $v_{0s}(t) \equiv0 $.
+
 
 El diagrama de bloques del \textbf{modelo NL desacoplado con ley de control NL} se observa en la \cref{Implementación de ley de control complementaria}
 
@@ -1128,13 +1137,172 @@ El diagrama de bloques del \textbf{modelo NL desacoplado con ley de control NL} 
 \begin{figure}[thpb]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
-		\framebox{\includegraphics{20-Diagrama_de_bloques_LTI_equivalente_dinamica_residual.pdf}}
+		\framebox{\includegraphics{20-Diagrama_de_bloques_LTI_equivalente_aumentado_dinamica_residual.pdf}}
 	\end{adjustbox}
 	\caption{Diagrama de bloques LTI equivalente aumentado con dinámica residual eje d}
 	\label{diagrama de bloques modelo LTI eq}
 \end{figure}
 
 \paragraph{\textbf{Comparación del modelo dinámico LTI equivalente aumentado vs. el modelo dinámico global LPV}}
+En primer lugar, en la \cref{diagrama de bloques LPV} se muestra el diagrama de bloques de estado del sistema LPV.
+En la \cref{diagrama de bloques LPV vs LTI} se muestra cómo se realizó la comparación entre los modelos. En donde, como se puede observar,
+se incorpora al modelo LPV los valores de los estados y entradas en el punto de operación.
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{LPV_diagrama_de_bloques.pdf}}
+	\end{adjustbox}
+	\caption{Diagrama de bloques LPV.}
+	\label{diagrama de bloques LPV}
+\end{figure}
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{LTI_vs_LPV_diagrama_de_bloques.pdf}}
+	\end{adjustbox}
+	\caption{Comparación de modelos LTI y LVP diagrama de bloques.}
+	\label{diagrama de bloques LPV vs LTI}
+\end{figure}
+
+Para la comparación de los modelos primero se define de forma parcial el vector de entradas y de estado del sistema en el punto de operación,
+de modo que el resto de las variables en el punto de operación queden determinadas y se obtienen de la \cref{modelo de operacion NL cuasi_estacionario desarrollado reducido}. Luego se aplican
+las mismas entradas a ambos modelos.
+
+En todos los casos, las condiciones iniciales son las dadas en la \cref{condiciones iniciales comparación} y se considera para 
+el modelo LTI el valor de $R_s$ obtenido para $T^\circ_{s-o}$.
+
+\begin{equation}
+	\begin{cases}
+		\mathbf{\delta x}(0) \equiv \mathbf{0}\\
+		\mathbf{x}(0) 
+		=
+		\begin{bmatrix} 
+			0 \\ 
+			0 \\ 
+			0 \\ 
+			0 \\ 
+			0 \\ 
+			T^\circ_{amb} = 25^\circ C
+		\end{bmatrix}
+	\end{cases}
+	\label{condiciones iniciales comparación}
+\end{equation}
+
+Se realizaron 5 simulaciones. Para todas las simulaciones se tiene 
+$\omega_{m-o} \equiv 0\,rad/s$ (solo hay puntos de operación verdaderos bajo esta condición según
+se indicó cuando se analizó el modelo global NL de puntos de operación cuasi-estacionario), $\theta_{m-o}\equiv \frac{r\pi}{12}\,rad$ (esto
+es equivalente a desplazar 15° al brazo robótico desde su posición de equilibrio estable), $v_{0s-o} \equiv 0\,V$ (lo que implica $i_{0s-o}\equiv 0\, A$), $T_{d-o} \equiv 1\, N\cdot m$
+y $T^\circ_{amb-o}\equiv 25^\circ\, C$.
+
+Para las primeras tres simulaciones se considera además  $v^r_{ds-o}\equiv 0 \,V$.
+Los resultados de la primera simulación se muestras en las \cref{simulación 1 estado} y \cref{simulación 1 entradas}.
+Para la segunda simulación se considera que las entradas se encuentran desviadas respecto de sus valores para el punto de equilibrio. Los resultados se muestran
+en las \cref{simulación 2 estado} y \cref{simulación 2 entradas}. En la tercera simulación se hizo lo mismo que para la segunda simulación, pero se consideraron desviaciones de las entradas mas
+pequeñas (\cref{simulación 3 estado}, \cref{simulación 3 entradas}).
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{LTI_vs_LPV_simulacion_2.pdf}}
+	\end{adjustbox}
+	\caption{LTI vs LPV: Simulación 1. Estado. Entradas en el punto de operación.}
+	\label{simulación 1 estado}
+\end{figure}
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{LTI_vs_LPV_simulacion_2_entradas.pdf}}
+	\end{adjustbox}
+	\caption{LTI vs LPV: Simulación 1. Entradas. Entradas en el punto de operación.}
+	\label{simulación 1 entradas}
+\end{figure}
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{LTI_vs_LPV_simulacion_3.pdf}}
+	\end{adjustbox}
+	\caption{LTI vs LPV: Simulación 2. Estado. Entradas desviadas del punto de operación.}
+	\label{simulación 2 estado}
+\end{figure}
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{LTI_vs_LPV_simulacion_3_entradas.pdf}}
+	\end{adjustbox}
+	\caption{LTI vs LPV: Simulación 2. Entradas. Entradas desviadas del punto de operación.}
+	\label{simulación 2 entradas}
+\end{figure}
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{LTI_vs_LPV_simulacion_3_1.pdf}}
+	\end{adjustbox}
+	\caption{LTI vs LPV: Simulación 3. Estado. Entradas desviadas del punto de operación, menor desviación.}
+	\label{simulación 3 estado}
+\end{figure}
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{LTI_vs_LPV_simulacion_3_1_entradas.pdf}}
+	\end{adjustbox}
+	\caption{LTI vs LPV: Simulación 3. Entradas. Entradas desviadas del punto de operación, menor desviación.}
+	\label{simulación 3 entradas}
+\end{figure}
+
+Para la simulación 4 y 5 se evalúa el efecto del reforzamiento/debilitamiento de campo y por eso no se impone $v^r_{ds-o} \equiv 0\, V$.
+En cambio, se establece que en el punto de operación, la corriente total en el plano $qd$ (suma vectorial de $i^r_{qs-o}$ e $i^r_{ds-o}$ ) formará un ángulo $\beta = 80^\circ$ con el eje d y habrá reforzamiento de campo,
+mientras que para la simulación 5 se considera  $\beta = 100^\circ$ y consigue debilitamiento de campo. Los resultados
+de la simulación 4 se muestran en las \cref{simulación 4 estado}  y \cref{simulación 4 entradas}, y los de las simulación 5 en las \cref{simulación 5 estado}, \cref{simulación 5 entradas}.
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{LTI_vs_LPV_simulacion_4_1.pdf}}
+	\end{adjustbox}
+	\caption{LTI vs LPV: Simulación 4. Estado. Entradas en el punto de operación. Reforzamiento de campo.}
+	\label{simulación 4 estado}
+\end{figure}
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{LTI_vs_LPV_simulacion_4_1_entradas.pdf}}
+	\end{adjustbox}
+	\caption{LTI vs LPV: Simulación 4. Reforzamiento de capo. Entradas}
+	\label{simulación 4 entradas}
+\end{figure}
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{LTI_vs_LPV_simulacion_4_2.pdf}}
+	\end{adjustbox}
+	\caption{LTI vs LPV: Simulación 5. Estado. Entradas en el punto de operación. Debilitamiento de campo.}
+	\label{simulación 5 estado}
+\end{figure}
+
+\begin{figure}[thpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{LTI_vs_LPV_simulacion_4_2_entradas.pdf}}
+	\end{adjustbox}
+	\caption{LTI vs LPV: Simulación 5. Entradas. Entradas en el punto de operación. Debilitamiento de campo.}
+	\label{simulación 5 entradas}
+\end{figure}
+
+Se puede observar del análisi, que los modelos tienen un comportamiento
+similar en estado permanente aun cuando existe debilitamiento o reforzamiento de campo, el que no es tenido en cuenta
+en el modelo LTI al haberse suprimido la contribución de la $i^r_{ds}(t)$ en el torque electromagnético.
+En cambio, sí se presentan diferencias mas notables en estado permanente cuando las entradas difieren de las entradas correspondientes al 
+punto de operación para el cuál se obtiene el modelo LPV.
+
 
 \paragraph{\textbf{Funciones de Transferencia}}
 para el modelo LTI equivalente aumentado, desde ambas entradas $V^r_{qs}(s)$ y $T_l(s)$ hacia la salida ${\Theta}_m(s)$.
@@ -1757,6 +1925,23 @@ Los polos para estos valores de ganancias serian los siguientes:
 	s_2 &=  -600 + j 529.15\\
 	s_3 &=  -600 - j 529.15
 \end{align}
+
+En la \cref{mapa de polos-ceros controlador-planta} se muestra el mapa de polos/zeros del controlador de movimiento
+en comparación con el mapa de polos/ceros de la planata a lazo abierto, cuando hay una variación continua de $J_l$ en todo su rango
+sin considerar la variación de $b_l$ (que se considera en su valor nominal) que no determina el valor de los polos del controlador de movimiento y tiene un 
+efecto despreciable en el cambio de polos de la planta a lazo abierto cuando varía en todo su rango.
+
+\begin{figure}[htpb]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{mapa_polos_ceros_controlador_vs_planta.pdf}}
+	\end{adjustbox}
+	\caption{Mapa de polos/zeros controlador de movimiento-planta.}
+	\label{mapa de polos-ceros controlador-planta}
+\end{figure}
+
+Se puede ver en las figura \cref{mapa de polos-ceros controlador-planta} que la frecuencia de los polos del controlador de movimiento
+es mucho menor (al menos 50 veces menor) que la frecuencia de los polos del lazo interno de corriente.
 
 \subsubsection{\textbf{Incorporación de observador de estado de orden reducido para parte mecánica}}
 Como en este controlador se ha optado por realimentar la velocidad, para evitar la utilización de derivadores, y dado que se cuenta con un encoder para medir posición del eje, fue necesario implementar un observador de estado reducido para poder realimentar la velocidad angular del motor. Se aclara que las corrientes no son observadas, ya que se cuenta con sensores de corriente.
