@@ -2484,7 +2484,7 @@ Al simular nuevamente con estos cambios, ocurrió lo siguiente.
 	\label{Temperatura, para sensores no ideales}
 \end{figure}
 
-Como se puede apreciar en las gráficas, la posición real y la estimada difieren significativamente de la consigna. Además, las corrientes presentan picos superiores a los $200 A$ y la temperatura del motor aumenta exponencialmente hasta que la simulación se detiene por divergencia. Este comportamiento se debe a los retrasos introducidos por los sensores, cuyos polos se encuentran cerca de los del controlador. Para mejorar la respuesta del sistema, se duplicaron las frecuencias de los sensores, obteniendo estos resultados.
+Como se puede apreciar en las gráficas, la posición real y la estimada difieren significativamente de la consigna. Además, las corrientes presentan picos superiores a los $200 A$ y la temperatura del motor aumenta exponencialmente hasta que la simulación se detiene por divergencia. Este comportamiento se debe a los retardos introducidos por los sensores, cuyos polos se encuentran cerca de los del controlador. Para mejorar la respuesta del sistema, se duplicaron las frecuencias de los sensores, obteniendo estos resultados.
 
 \begin{figure}[H]
 	\centering
@@ -2542,7 +2542,7 @@ Luego se propuso triplicar las frecuencias de los sensores y observar las respue
 	\caption{Temperatura, para sensores no ideales con el triple de frecuencia natural}
 	\label{Temperatura, para sensores no ideales con el triple de frecuencia natural}
 \end{figure}
-Las respuestas obtenidas son prácticamente igual que con el doble de frecuencia natural. También se observa que el sensor de temperatura o introduce errores, por lo menos a corto plazo. Si se disminuye la constante tiempo del sensor, se tendrá una mejor definición de la temperatura.
+Las respuestas obtenidas son prácticamente iguales que con el doble de frecuencia natural. También se observa que el sensor de temperatura no introduce errores, por lo menos a corto plazo. Si se disminuye la constante tiempo del sensor, se tendrá una mejor definición de la temperatura.
 
 \paragraph{\textbf{Incorporación de modulador de tensión trifásico no ideal}} Para acercar aun más la simulación a la realidad, se reemplazo el modelo ideal del modulador de tensión, por uno aproximado equivalente con saturación y características de filtro pasa bajos de segundo orden.Los parámetros del modulador son los siguientes:
 \begin{itemize}
@@ -2605,7 +2605,7 @@ Al realizar la simulación, se observa que aparecen oscilaciones en la posición
 	\caption{Corrientes abc, para modulador de tensión no ideal}
 	\label{Corrientes abc, para modulador de tensión no ideal}
 \end{figure}
-Para mejorar este comportamiento, al igual que con los sensores, se duplico la frecuencia natural del modulador.
+Para mejorar este comportamiento, al igual que con los sensores, se duplico la frecuencia natural del modulador, obteniendo los siguientes resultados.
 
 \begin{figure}[H]
 	\centering
@@ -2711,7 +2711,15 @@ Finalmente, se hicieron pruebas con distintos valores de $T_s$ hasta dar con el 
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
-		\framebox{\includegraphics{98-Error_entre_pos_y_posConsigna_discreto}}
+		\framebox{\includegraphics{98-Temperatura_discreto}}
+	\end{adjustbox}
+	\caption{$T^\circ_s(t) para modelo de controlador discreto.$}
+	\label{Consigna de torque para modelo de controlador discreto}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{99-Error_entre_pos_y_posConsigna_discreto}}
 	\end{adjustbox}
 	\caption{Posición consigna vs medida para modelo de controlador discreto}
 	\label{Posición consigna vs medida para modelo de controlador discreto}
