@@ -27,7 +27,7 @@
 % Encabezado
 \fancyhead[L]{UNCuyo -- Ing. Mecatrónica \\ Mendoza - Argentina}
 \fancyhead[C]{\textbf{311 -- AUTOMÁTICA Y MÁQUINAS ELÉCTRICAS \\ PROYECTO GLOBAL INTEGRADOR}}
-\fancyhead[R]{Año: 2024 \\ Alumnos: Borquez y Escobar\\Fecha: 06/06/2024}
+\fancyhead[R]{Año: 2024 \\ Alumnos: Borquez y Escobar\\Fecha: 28/06/2024}
 
 % Pie de página
 \fancyfoot[C]{Página \thepage\ de \pageref{LastPage}} % Muestra "Página x de xx"
@@ -1605,6 +1605,8 @@ Primero se analizo la respuesta del estado interno $\left\lbrace \theta_m(t), \o
 	T_{l}(t) = 0 \rightarrow \left(T_{lmax} = +6.98 \: Nm \  en \ t_{step2}=0.3s \right) \rightarrow \left(-T_{lmax} = -6.98 \: Nm \  en \ t_{step3}=0.5s \right)
 	 \rightarrow \left(0 \: Nm \  en \ t_{step5}=0.9s \right) 
 \end{equation}
+Se informa que se consideró una temperatura ambiente de 40 °C debido a que esta fue la que se considero al calcular la resistencias de los devanados. Las graficas de las entradas quedan entonces de la siguiente manera.
+
 
 \begin{figure}[H]
 	\centering
@@ -1614,7 +1616,35 @@ Primero se analizo la respuesta del estado interno $\left\lbrace \theta_m(t), \o
 	\caption{Consigna de tensión y torque de perturbación}
 	\label{Consigna de tensión y torque de perturbación}
 \end{figure}
+AL simular el sistema con estas entradas, se obtuvieron las siguientes respuestas para la temperatura de los devanados, posición y velocidad del motor de ambos sistemas.
 
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Posiciones_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Posición motor del sistema NL realimentado y del LTI aumentado}
+	\label{Posición motor del sistema NL realimentado y del LTI aumentado}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Velocidades_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Velocidad motor del sistema NL realimentado y del LTI aumentado}
+	\label{Velocidad motor del sistema NL realimentado y del LTI aumentado}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{Temperatura_simulacion_5_1_6.pdf}}
+	\end{adjustbox}
+	\caption{Temperatura }
+	\label{Temperatura}
+\end{figure}
+Se observa que los dos modelos se comportan prácticamente de la misma manera ya que la temperatura aumenta poco. Esto evidencia la eficacia de las compensaciones realizadas en el modelo NL realimentado.
+Luego se graficaron las tensiones y corrientes obtenidas en coordenadas abc y qd0.
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
@@ -1650,14 +1680,10 @@ Primero se analizo la respuesta del estado interno $\left\lbrace \theta_m(t), \o
 	\caption{Corrientes qd0}
 	\label{Corrientes qd0}
 \end{figure}
-\begin{figure}[H]
-	\centering
-	\begin{adjustbox}{max width=\columnwidth}
-		\framebox{\includegraphics{Temperatura_simulacion_5_1_6.pdf}}
-	\end{adjustbox}
-	\caption{Temperatura }
-	\label{Temperatura}
-\end{figure}
+Se observa que las los valores de esta tensiones y corrientes superan los limites que soportaría el motor. Mas adelante se verá como mejorar estas respuestas.
+
+Para analizar mejor el funcionamiento de la maquina eléctrica se grafico el torque electromagnético vs la velocidad del motor. 
+
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
@@ -1674,23 +1700,8 @@ Primero se analizo la respuesta del estado interno $\left\lbrace \theta_m(t), \o
 	\caption{Torque electromagnético y Velocidad del motor}
 	\label{Torque electromagnético y Velocidad del motor}
 \end{figure}
+En estas graficas se observa que la maquina se comporta como motor en unos instantes y en otros como generador haciendo uso del frenado regenerativo.
 
-\begin{figure}[H]
-	\centering
-	\begin{adjustbox}{max width=\columnwidth}
-		\framebox{\includegraphics{Posiciones_simulacion_5_1_6.pdf}}
-	\end{adjustbox}
-	\caption{Posición motor del sistema NL realimentado y del LTI aumentado}
-	\label{Posición motor del sistema NL realimentado y del LTI aumentado}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\begin{adjustbox}{max width=\columnwidth}
-		\framebox{\includegraphics{Velocidades_simulacion_5_1_6.pdf}}
-	\end{adjustbox}
-	\caption{Velocidad motor del sistema NL realimentado y del LTI aumentado}
-	\label{Velocidad motor del sistema NL realimentado y del LTI aumentado}
-\end{figure}
 \paragraph{\textbf{Determinación de las características de la respuesta}}
 Para evaluar el comportamiento del sistema, se determinaron las características de respuesta de la velocidad del motor y la corriente ante escalones de consigna y torque, específicamente: tiempo de crecimiento, tiempo de establecimiento, sobrepico y valor final de establecimiento. Estos datos se obtuvieron utilizando la función "stepinfo" de Matlab, aplicada a los resultados de las simulaciones.
 \begin{table}[H]
@@ -2050,6 +2061,7 @@ El diagrama de bloques resultante queda de la siguiente manera:
 	\caption{Diagrama de bloques del observador de estado de orden reducido}
 	\label{Diagrama de bloques del observador de estado de orden reducido}
 \end{figure}
+Donde se puede observar que se le añadió el modelo equivalente del modulador de torque.
 \subsubsection{\textbf{Simulación en tiempo continuo con modelo no lineal completo}}
 Para poder realizar la simulación en tiempo continuo, se integraron todos los bloques del controlador, en un solo diagrama de bloques, separando el controlador de la planta. Ademas se pueden visualizar el modulador de tensión y los sensores con ganancias unitarias 
 \begin{figure}[H]
@@ -2069,7 +2081,7 @@ Para poder realizar la simulación en tiempo continuo, se integraron todos los b
 	\label{Diagrama de bloques de la planta}
 \end{figure}
 \paragraph{\textbf{Seguimiento de consignas de movimiento}}
-La consigna del sistema sera la posición del brazo ${q^*}(t) \equiv \frac{1}{r} {\theta^*_m}(t)$, la cual sera un perfil trapezoidal con las siguientes características:
+La consigna del sistema sera la posición del brazo ${q^*}(t) \equiv \frac{1}{r} {\theta^*_m}(t)$, que seguirá un perfil trapezoidal con las siguientes características:
 \begin{equation}
 	{q^*}(1)=0 \: [rad] \longrightarrow {q^*}(6)=2 \pi \: [rad] \longrightarrow {q^*}(11)=2 \pi \: [rad]\longrightarrow {q^*}(16)=0 \: [rad]
 \end{equation}
@@ -2100,7 +2112,7 @@ Los resultados de la simulación fueron los siguientes:
 	\caption{Detalle del error entre posición angular consigna y medida}
 	\label{Detalle del error entre posición angular consigna y medida }
 \end{figure}
-
+Se observa que la consigna se cumple prácticamente sin errores. Sin embargo, los perfiles de velocidad presentan una forma escalonada.
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
@@ -2109,7 +2121,7 @@ Los resultados de la simulación fueron los siguientes:
 	\caption{Gráficas de velocidad del motor consigna, medida y estimada}
 	\label{Gráficas de velocidad del motor consigna, medida y estimada}
 \end{figure}
-
+Estos perfiles de velocidad implican aceleraciones impulsivas, que el sistema trata de cumplir con tensiones, corrientes y torques elevados.
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
@@ -2138,7 +2150,7 @@ Los resultados de la simulación fueron los siguientes:
 \end{figure}
 
 \paragraph{\textbf{Rechazo de perturbaciones}} 
-Se evaluó el comportamiento del sistema ante torques de perturbación del tipo escalón,considerando valores nominales y variación máxima de los parámetros de carga mecánica física.
+Se evaluó el comportamiento del sistema ante torques de perturbación del tipo escalón,como la que se observa en la siguiente figura, considerando valores nominales y variación máxima de los parámetros de carga mecánica física.
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
@@ -2147,7 +2159,7 @@ Se evaluó el comportamiento del sistema ante torques de perturbación del tipo 
 	\caption{Torque de perturbación}
 	\label{Torque de perturbación}
 \end{figure}
-
+Los resultados fueron los siguientes:
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
@@ -2165,9 +2177,9 @@ Se evaluó el comportamiento del sistema ante torques de perturbación del tipo 
 	\caption{Error entre  posición medida y estimada}
 	\label{Error entre  posición medida y estimada}
 \end{figure}
-
+Se observa que al aplicar una perturbación, apareció un error de estado estacionario entre las posiciones consigna, medida y observada.
 \subsubsection{\textbf{Verificación de desempeño y mejoras}}
-\paragraph{\textbf{Verificación de las especificaciones de operación}}Al comparar los obtenidos en las simulaciones, con los limites de operación, se obtuvieron los siguientes resultados:
+\paragraph{\textbf{Verificación de las especificaciones de operación}}Al comparar los valores obtenidos en las simulaciones, con los limites de operación dados por el fabricante de la maquina, se obtuvieron los siguientes resultados:
 
 \begin{table}[H]
 	\centering
@@ -2182,15 +2194,15 @@ Se evaluó el comportamiento del sistema ante torques de perturbación del tipo 
 	\end{tabular}
 \end{table}
 
-Se observa que los valores de tensión, corriente y torque obtenidos en la simulación superan los límites especificados en las condiciones de operación. Este comportamiento se debe a la consigna de posición que se le ha entregado al sistema. Dado que el perfil de posición es trapezoidal, se generan escalones en la velocidad, lo que implicaría aceleraciones infinitas para poder seguir dichos perfiles correctamente. Como resultado, el sistema intenta cumplir estos perfiles con torques, corrientes y tensiones elevadas.
+Se puede ver que los valores de tensión, corriente y torque obtenidos en la simulación superan los límites especificados en las condiciones de operación, debido a los impulsos de aceleraciones que requiere la consigna. 
 
-Para solucionar este problema, se propuso un perfil de posición alternativo que sigue cumpliendo con los requisitos de posicionamiento y tiempo, pero en lugar de rampas, se utilizan polinomios de quinto grado. Con esta modificación, las consignas de aceleración se transforman en funciones cúbicas en lugar de impulsos infinitos, lo que resulta en un cambio suave en la tasa de aceleración (jerk). Esto logra una reducción de vibraciones en una aplicación real y una mayor durabilidad del sistema. Para determinar los coeficientes de estos polinomios, es necesario conocer la posición, velocidad y aceleración en los puntos extremos del perfil.
+Para solucionar este problema, se propuso un perfil de posición alternativo que sigue cumpliendo con los requisitos de posicionamiento y tiempo, pero en lugar de rampas, se utilizan polinomios de quinto grado. Con esta modificación, las consignas de aceleración se transforman en funciones cúbicas en lugar de impulsos, lo que resulta en un cambio suave en la tasa de aceleración (jerk). Esto logra una reducción de vibraciones en una aplicación real y una mayor durabilidad del sistema. Para determinar los coeficientes de estos polinomios, es necesario conocer la posición, velocidad y aceleración en los puntos extremos del perfil.
 \begin{align}
 	q*(t) &= at^5 + bt^4 + ct^3 + dt^2 + et + f  \\
 	\frac{d q*(t)}{dt} &=  5at^4 + 4bt^3 + 3ct^2 + 2dt + e \\
 	\frac{d^2 q*(t)}{dt^2} &=  20at^3 + 12bt^2 + 6ct + 2d\\
 \end{align}
-Las aceleraciones y velocidades en los extremos serán cero, las posiciones serán las mismas que en la consigna anterior. Por lo que para la primer giro queda el siguiente sistema de ecuaciones
+Las aceleraciones y velocidades en los extremos serán cero, mientras que las posiciones serán las mismas que en la consigna anterior. Por lo que para la primer giro queda el siguiente sistema de ecuaciones
 \begin{align}
 	\begin{cases}
 		0[rad]  &= a_1(1 [s])^5 + b_1(1 [s])^4 + c_1(1 [s])^3 + d_1(1 [s])^2 + e_1(1 [s]) + f_1 \\
@@ -2214,13 +2226,13 @@ Y para el giro de regreso:
 	\end{cases}
 \end{align}
 
-Los polinomios resultantes al resolver los sistemas fueron:
+Al resolver estos sistemas de ecuaciones, se obtuvieron los siguientes polinomios:
 \begin{align}
 	q*_1(t) &= 0.0121t^5 - 0.2111t^4 + 1.2265t^3 - 2.5334t^2 + 2.1715t - 0.6655\\
 	q*_2(t) &= -0.0121t^5 + 0.8143t^4 - 21.7348t^3 + 286.6339t^2 - 1868.4283t + 4826.0010
 \end{align}
  
-Por lo tanto la consigna resultante fue:
+Por lo que la consigna resultante fue:
 \begin{align}
 	q*(t) =
 	\begin{cases}
@@ -2241,6 +2253,7 @@ Por lo tanto la consigna resultante fue:
 	\label{Nueva consigna de posición, velocidad, aceleración}
 \end{figure}
 
+Al realizar nuevamente la simulación con esta nueva consigna se obtuvieron las siguientes gráficas.
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
@@ -2267,10 +2280,11 @@ Por lo tanto la consigna resultante fue:
 	\caption{Torque electromagnético con consigna suave}
 	\label{Torque electromagnético con consigna suave}
 \end{figure}
-
+Se puede apreciar que los valores de las variables se encuentran dentro de los límites permitidos. Dado que estos valores están muy por debajo de los límites especificados por el fabricante, la máquina de podría exigir más, utilizando consignas más rápidas.
 \paragraph{\textbf{Mejoras en el observador de estado}} 
-En las simulaciones se observó la presencia de un error de estado estacionario entre la posición medida del motor y la estimada por el observador cuando se aplica un torque de perturbación a la planta. Este error se debe a que el observador no considera dichas perturbaciones. Si estas fueran medibles, se podrían realimentar al observador; sin embargo, la implementación de un medidor de torque sería muy costosa. Por lo tanto, se optó por agregar una acción integral al observador para eliminar este error.
+Como se observó en las simulaciones, existe un error de estado estacionario entre la posición medida del motor y la estimada por el observador cuando se aplica un torque de perturbación. Este error se debe a que el observador no considera dichas perturbaciones y además se comporta como un controlador PD. Si las perturbaciones fueran medibles, se podrían incorporar al observador como entradas; sin embargo, la implementación de un medidor de torque resultaría muy costosa. Por lo tanto, se optó por agregar una acción integral al observador para que se comporte como un PID y poder eliminar este error.
 
+El modelo del observador quedó de la siguiente forma.
 \begin{align}
 	\begin{cases}
 		\begin{bmatrix}
@@ -2308,7 +2322,7 @@ En las simulaciones se observó la presencia de un error de estado estacionario 
 		\end{bmatrix}
 	\end{cases}\label{ecuacion matricial de observador nuevo}
 \end{align}
-
+Como el modelo cambió respecto al observador PD, se calcularon nuevamente las ganancias, determinando el polinomio característico del sistema y comparándolo con el deseado. Para simplificar, el nuevo polo se coloco en la misma posición que los anteriores.
 \begin{align}
 	p(s) = det\left(s I - \left( A - KC\right)  \right) = det\left(\begin{bmatrix}
 		s + K_{\theta} & -1 & 0\\ 
@@ -2327,7 +2341,7 @@ En las simulaciones se observó la presencia de un error de estado estacionario 
 	K_{\omega} &= 3(3200)^2 seg^{-2} \label{ganacia de velocidad de observador nuevo}\\
 	K_{i} &= (3200)^3 seg^{-3} \label{ganacia integral de observador nuevo}
 \end{align}
-
+EL diagrama de bloques resultante es el siguiente.
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
@@ -2336,7 +2350,7 @@ En las simulaciones se observó la presencia de un error de estado estacionario 
 	\caption{Diagrama del bloques del observador con acción integral}
 	\label{Diagrama del bloques del observador con acción integrale}
 \end{figure}
-
+Con esta modificación, el error de estado estacionario desaparese como se muestra en las figuras.
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
@@ -2347,6 +2361,16 @@ En las simulaciones se observó la presencia de un error de estado estacionario 
 \end{figure}
 
 \paragraph{\textbf{Comportamiento térmico del motor}} 
+Para verificar que la temperatura de los devanados del motor no superan los 115°C, se realizo una simulación en donde se le dio una consigna cíclica (igual a la consigna anterior repetida cada 1 s). La simulación se paró a los 510 s ya que se vio que la temperatura estaba llegando a una asíntota en los 29.5 °C.
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{ts_500}}
+	\end{adjustbox}
+	\caption{Evolución de temperatura para ciclo de carga repetitivo}
+	\label{Evolución de temperatura para ciclo de carga repetitivo}
+\end{figure}
+Como la temperatura se establece en  29.5 °C, se concluye que el motor no corre peligro de quemarse. Se aclara que si el torque de carga es mayor, la temperatura se establece en un valor mas alto, por lo que se debe tener en cuenta a la hora de llevar la aplicación a la realidad.
 \paragraph{\textbf{Sensores y acondicionamiento de señal}} 
 Para realizar una simulación mas cercana a la realidad, se incorporaron sensores no ideales y se evaluó la degradación del desempeño del sistema.
 Primero se reemplazaron los sensores de corriente por modelos equivalentes a filtros pasa bajos de segundo orden con $\omega_n=6000\frac{rad}{s}$ y $\zeta = 1$, representados en espacio de estados.
@@ -2392,9 +2416,7 @@ El diagrama de bloques de cada sensor quedó de la siguiente forma:
 	\caption{Diagrama del bloques del sensor de corriente no ideal}
 	\label{Diagrama del bloques del sensor de corriente no ideal}
 \end{figure}
-Luego se realizo lo mismo con el sensor de posición angular, tomando $\omega_n=2000\frac{rad}{s}$ y $\zeta = 1$
-
-Para el sensor de temperatura se planteo un modelo de filtro pasa bajos de primer orden con $\tau=20 s$:
+Luego se realizo lo mismo con el sensor de posición angular, tomando $\omega_n=2000\frac{rad}{s}$ y $\zeta = 1$, y para el sensor de temperatura se planteo un modelo de filtro pasa bajos de primer orden con $\tau=20 s$:
 \begin{align}
 	G(s) = \frac{1}{\tau s + 1}\\
 	\left(\tau s + 1 \right) Y(s)=U(s)\\
@@ -2423,6 +2445,7 @@ Para el sensor de temperatura se planteo un modelo de filtro pasa bajos de prime
 		\end{bmatrix}
 	\end{cases}\label{ecuacion matricial de sensor de temperatura}
 \end{align}
+Al simular nuevamente con estos cambios, ocurrió lo siguiente.
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
@@ -2459,7 +2482,7 @@ Para el sensor de temperatura se planteo un modelo de filtro pasa bajos de prime
 	\label{Temperatura, para sensores no ideales}
 \end{figure}
 
-Como se puede observar en las gráficas, la posición real y la estimada difieren significativamente de la consigna. Además, las corrientes presentan picos superiores a los $200 A$ y la temperatura del motor aumenta exponencialmente hasta que la simulación se detiene por divergencia. Este comportamiento se debe a los retrasos introducidos por los sensores, cuyos polos se encuentran cerca de los del controlador. Para mejorar la respuesta del sistema, se duplicaron las frecuencias de los sensores.
+Como se puede apreciar en las gráficas, la posición real y la estimada difieren significativamente de la consigna. Además, las corrientes presentan picos superiores a los $200 A$ y la temperatura del motor aumenta exponencialmente hasta que la simulación se detiene por divergencia. Este comportamiento se debe a los retrasos introducidos por los sensores, cuyos polos se encuentran cerca de los del controlador. Para mejorar la respuesta del sistema, se duplicaron las frecuencias de los sensores, obteniendo estos resultados.
 
 \begin{figure}[H]
 	\centering
@@ -2488,7 +2511,7 @@ Como se puede observar en las gráficas, la posición real y la estimada difiere
 	\label{Temperatura, para sensores no ideales con el doble de frecuencia natural}
 \end{figure}
 
-Se puede observar que al haber duplicados las frecuencias, la respuesta de los sensores es mas rápida y por lo tanto el comportamiento del controlador mejora notablemente. 
+Al haber duplicado las frecuencias, la respuesta de los sensores es mas rápida y por lo tanto el comportamiento del controlador mejora notablemente. 
 Luego se propuso triplicar las frecuencias de los sensores y observar las respuestas.
 
 \begin{figure}[H]
@@ -2517,7 +2540,7 @@ Luego se propuso triplicar las frecuencias de los sensores y observar las respue
 	\caption{Temperatura, para sensores no ideales con el triple de frecuencia natural}
 	\label{Temperatura, para sensores no ideales con el triple de frecuencia natural}
 \end{figure}
-Como se observa, las respuestas obtenidas son prácticamente igual que con el doble de frecuencia natural.
+Las respuestas obtenidas son prácticamente igual que con el doble de frecuencia natural. También se observa que el sensor de temperatura o introduce errores, por lo menos a corto plazo. Si se disminuye la constante tiempo del sensor, se tendrá una mejor definición de la temperatura.
 
 \paragraph{\textbf{Incorporación de modulador de tensión trifásico no ideal}} Para acercar aun más la simulación a la realidad, se reemplazo el modelo ideal del modulador de tensión, por uno aproximado equivalente con saturación y características de filtro pasa bajos de segundo orden.Los parámetros del modulador son los siguientes:
 \begin{itemize}
@@ -2562,7 +2585,7 @@ Solo que se le incorpora la saturación en la entrada al implementarlo en el dia
 	\caption{Modulador no ideal de tensión}
 	\label{Modulador no ideal de tensión}
 \end{figure}
-
+Al realizar la simulación, se observa que aparecen oscilaciones en la posición  del brazo, y los picos máximos de corriente se disparan por encima de los limites permitidos, debido a que el modulador no consigue representar correctamente las tensiones consignas entregadas por el controlador.
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
@@ -2580,7 +2603,7 @@ Solo que se le incorpora la saturación en la entrada al implementarlo en el dia
 	\caption{Corrientes abc, para modulador de tensión no ideal}
 	\label{Corrientes abc, para modulador de tensión no ideal}
 \end{figure}
-Para mejorar el comportamiento del sistema, al igual que con los sensores, se duplico la frecuencia natural del modulador.
+Para mejorar este comportamiento, al igual que con los sensores, se duplico la frecuencia natural del modulador.
 
 \begin{figure}[H]
 	\centering
@@ -2599,7 +2622,7 @@ Para mejorar el comportamiento del sistema, al igual que con los sensores, se du
 	\caption{Corrientes abc, para modulador de tensión no ideal con el doble de frecuencia natural}
 	\label{Corrientes abc, para modulador de tensión no ideal con el doble de frecuencia natural}
 \end{figure}
-Como se observa, en este caso el desempeño no mejora demasiado al duplicar la frecuencia. Además, se observa que aparece un error de estado estacionario entre la posición consigna y la medida. Por lo que se propuso triplicar la frecuencia, obteniendo los siguientes resultados.
+En este caso el desempeño no mejora demasiado al duplicar la frecuencia. Además, se observa que aparece un error de estado estacionario entre la posición consigna y la medida. Por lo que en este caso si es necesario triplicar la frecuencia, obteniendo los siguientes resultados.
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
@@ -2617,7 +2640,7 @@ Como se observa, en este caso el desempeño no mejora demasiado al duplicar la f
 	\caption{Corrientes abc, para modulador de tensión no ideal con el triple de frecuencia natural}
 	\label{Corrientes abc, para modulador de tensión no ideal con el triple de frecuencia natural}
 \end{figure}
-En este caso, se logro un comportamiento adecuado de sistema, donde el error entre la posición consigna y la mediada es nulo cuando se encuentra en reposo.Si bien este error no es nulo cuando hay movimiento del eje, es muy pequeño.
+Con esta frecuencia, se logro un comportamiento adecuado de sistema, donde el error entre la posición consigna y la mediada es nulo cuando se encuentra en reposo.Si bien este error no es nulo cuando hay movimiento del eje, es muy pequeño.
 \subsubsection{\textbf{Versión final con modelo discretizado del controlador completo}} Para concluir, se discretizó el controlador completo, utilizando el método de Tustin (integración numérica por trapecios) con periodo de muestreo $T_s$ constante y retenedores de orden cero para señales de entrada y de salida al controlador.
 Para poder aplicar el método de Tustin se utilizo la transformación bilineal que relaciona la variable $s$ con $z$ de la siguiente manera:
 \begin{equation}
@@ -2693,7 +2716,10 @@ Finalmente, se hicieron pruebas con distintos valores de $T_s$ hasta dar con el 
 \end{figure}
 Se puede ver, que para este valor de $T_s$ todavía existe un error entre la consigna de posición y la medida, cuando el eje se encuentra en movimiento, pero es muy pequeño() en relación a la amplitud de movimiento. Por lo que se concluye que el valor de $T_s$ es adecuado 
 \section{CONCLUSIONES}
+En este trabajo final, se logró modelar un motor síncrono de imanes permanentes acoplado a un brazo, y posteriormente diseñar e implementar un controlador en cascada capaz de seguir consignas de posición, rechazando posibles perturbaciones sobre el brazo y compensando el torque debido a la gravedad. Se realizaron simulaciones de todo el sistema, pasando por todas las etapas necesarias para implementar el controlador y verificar su robustez. Además, se añadió un alto grado de realismo al trabajo mediante la incorporación de no linealidades y retardos presentes en una aplicación real.
 
+Se destaca la importancia de realizar simulaciones antes de llevar el proyecto a la práctica, ya que esto permite identificar y corregir errores potenciales, asegurando así una implementación más segura y efectiva.
+Para un trabajo futuro, se recomienda seguir con el análisis de sensores, teniendo en cuenta el ruido que podría haber en la práctica. Y evaluar distintos tipos de filtro digitales para evaluar los distintos comportamientos
 \subsection{Heading 1, etc}
 
 
