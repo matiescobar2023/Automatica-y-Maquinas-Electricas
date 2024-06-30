@@ -204,7 +204,7 @@ El problema bajo estudio se encuentra bien detallado en la guía de referencia (
 \subsection{\textbf{carga mecánica}}
 Aplicación simplificada de referencia (adaptado de \cite{c2}): control de movimiento de 1 eje (descentralizado) para articulación de brazo manipulador robótico elemental de un grado de libertad (1 g.d.l.) rotacional de eje horizontal sometido a la acción de la aceleración de gravedad (péndulo rígido actuado), con eje de rotación fijo a base en sistema de referencia inercial (\cref{brazo}); con parámetros equivalentes variables según sea la carga útil transportada en el extremo.
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
     \begin{adjustbox}{max width=0.5\columnwidth}
         \framebox{\parbox{\columnwidth}{
@@ -314,9 +314,9 @@ Reemplazando la \cref{inercia equivalente} y la \cref{amortiguamiento equivalent
     \label{subsistema mecanico con parametros equivalentes}
 \end{flalign}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
-    \begin{adjustbox}{max width=\columnwidth}
+    \begin{adjustbox}{scale=0.7,max width=\columnwidth}
         \framebox{\includegraphics{2-Subsistema_Mecánico_Completo}}
     \end{adjustbox}
     \caption{Diagrama de bloques del sub-sistema mecánico completo.}
@@ -489,7 +489,7 @@ en las \cref{diagrama de bloques I_qs}, \cref{diagrama de bloques I_ds}, \cref{d
 Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park inversa} se detallan las transformaciones de Park directa e inversa respectivamente.
 
 % Diagramas
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
         \framebox{\includegraphics{3-Planta_completa}}
@@ -498,34 +498,34 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
     \label{diagrama de bloques del sistema fisico}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
-    \begin{adjustbox}{max width=\columnwidth}
+    \begin{adjustbox}{scale=0.7,max width=\columnwidth}
         \framebox{\includegraphics{4-Subsistema_Térmico}}
     \end{adjustbox}
     \caption{Diagrama de bloques del sub-sistema térmico}
     \label{subsistema termico}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
-    \begin{adjustbox}{max width=\columnwidth}
+    \begin{adjustbox}{scale=0.7,max width=\columnwidth}
         \framebox{\includegraphics{5-Subsistema_Electromagnético}}
     \end{adjustbox}
     \caption{Diagrama de bloques del sub-sistema electromagnético}
     \label{sub-sistema electromagnetico}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
-    \begin{adjustbox}{max width=\columnwidth}
+    \begin{adjustbox}{scale=0.7,max width=\columnwidth}
         \framebox{\includegraphics{6-I_qs.pdf}}
     \end{adjustbox}
     \caption{Diagrama de bloques $I_{qs}$}
     \label{diagrama de bloques I_qs}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
         \framebox{\includegraphics{7-I_ds.pdf}}
@@ -534,7 +534,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
     \label{diagrama de bloques I_ds}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
         \framebox{\includegraphics{8-I_0s.pdf}}
@@ -543,7 +543,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
     \label{diagrama de bloques I_0s}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
         \framebox{\includegraphics{9-T_m.pdf}}
@@ -552,7 +552,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
     \label{diagrama de bloques T_m}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
         \framebox{\includegraphics{10-Transformación_de_Park.pdf}}
@@ -561,7 +561,7 @@ Finalmente, en las \cref{transformacion de Park} y \cref{transformacion de Park 
     \label{transformacion de Park}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
         \framebox{\includegraphics{11-Transformación_de_Park_Inversa.pdf}}
@@ -824,7 +824,7 @@ consideran los valores extremos de $T_{d-o}$ y un
 un valor de $k_l = 9.807 \left[N.m\right]$, ambos en los rangos
 dados en \cite{c1}.
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
     \begin{adjustbox}{scale = 0.6}
         \framebox{\includegraphics{12-T_m_vs_thetha_vd_Td.pdf}}
@@ -850,7 +850,7 @@ se muestran en la \cref{T_m respecto a i_qd0s-o} y que responden a la \cref{ecua
     \label{ecuación T_m respecto a i_qd0s-o}
 \end{equation}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
     \begin{adjustbox}{scale = 0.6}
         \framebox{\includegraphics{13-Circulos_de_corriente.pdf}}
@@ -859,7 +859,7 @@ se muestran en la \cref{T_m respecto a i_qd0s-o} y que responden a la \cref{ecua
     \label{restriccion de corriente maxima}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
     \begin{adjustbox}{scale = 0.6}
         \framebox{\includegraphics{14-T_m_vs_corriente_vs_beta.pdf}}
@@ -878,7 +878,7 @@ se grafica la $T^{\circ}_{s0}$ respecto a $i^{r}_{qd0s-o}$ con $T^{\circ}_{amb-o
     \label{T_s respecto a la corriente total}
 \end{equation}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
     \begin{adjustbox}{scale = 0.6}
         \framebox{\includegraphics{15-Temperatura_vs_corriente.pdf}}
@@ -1040,7 +1040,7 @@ dinámica de la $T^{\circ}_s(t)$, se puede observar en la \cref{diagrama de bloq
 que en la \cref{diagrama de bloques LTI equivalente i0s e ids} se muestra la dinámica de la
 $i^r_{ds}(t)$ y la $i_{0s}(t)$ bajo las especificaciones indicadas.
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
     \begin{adjustbox}{max width=\columnwidth}
         \framebox{\includegraphics{16-Diagrama_de_bloques_LTI_equivalente_aumentado.pdf}}
@@ -1049,9 +1049,9 @@ $i^r_{ds}(t)$ y la $i_{0s}(t)$ bajo las especificaciones indicadas.
     \label{diagrama de bloques LTI equivalente}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
     \centering
-    \begin{adjustbox}{max width=\columnwidth}
+    \begin{adjustbox}{scale=0.8,max width=\columnwidth}
         \framebox{\includegraphics{17-Diagrama_de_bloques_LTI_equivalente_aumentado_i0s_ids.pdf}}
     \end{adjustbox}
     \caption{Dinámica de $i^r_{ds}(t)$ e $i_{0s}(t)$.}
@@ -1070,9 +1070,9 @@ De esta manera queda determinada la ley de control mínima, que debe aplicarse p
 La \textbf{Implementación}, en el modelo global NL completo, de esta  ley de control mínima, mediante un controlador parcial incorporando el inversor (modulador de tensión trifásico equivalente), las Transformaciones de Park y los sensores de realimentación ideal de variables de estado,
 se puede observar en la \cref{Implementación de ley de control mínima}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.7,max width=\columnwidth}
 		\framebox{\includegraphics{18-Ley_de_control_minima.pdf}}
 	\end{adjustbox}
 	\caption{Implementación de ley de control mínima}
@@ -1125,16 +1125,16 @@ la ley de control mínima. Para el caso que presentamos aquí será $v^{r*}_{ds}
 
 El diagrama de bloques del \textbf{modelo NL desacoplado con ley de control NL} se observa en la \cref{Implementación de ley de control complementaria}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.7,max width=\columnwidth}
 		\framebox{\includegraphics{19-Ley_de_control_complementaria.pdf}}
 	\end{adjustbox}
 	\caption{Implementación de ley de control complementaria}
 	\label{Implementación de ley de control complementaria}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{20-Diagrama_de_bloques_LTI_equivalente_aumentado_dinamica_residual.pdf}}
@@ -1148,7 +1148,7 @@ En primer lugar, en la \cref{diagrama de bloques LPV} se muestra el diagrama de 
 En la \cref{diagrama de bloques LPV vs LTI} se muestra cómo se realizó la comparación entre los modelos. En donde, como se puede observar,
 se incorpora al modelo LPV los valores de los estados y entradas en el punto de operación.
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{21-LPV_diagrama_de_bloques.pdf}}
@@ -1157,7 +1157,7 @@ se incorpora al modelo LPV los valores de los estados y entradas en el punto de 
 	\label{diagrama de bloques LPV}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{22-LTI_vs_LPV_diagrama_de_bloques.pdf}}
@@ -1202,7 +1202,7 @@ Para la segunda simulación se considera que las entradas se encuentran desviada
 en las \cref{simulación 2 estado} y \cref{simulación 2 entradas}. En la tercera simulación se hizo lo mismo que para la segunda simulación, pero se consideraron desviaciones de las entradas mas
 pequeñas (\cref{simulación 3 estado}, \cref{simulación 3 entradas}).
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{23-LTI_vs_LPV_simulacion_2.pdf}}
@@ -1211,16 +1211,16 @@ pequeñas (\cref{simulación 3 estado}, \cref{simulación 3 entradas}).
 	\label{simulación 1 estado}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.6,max width=\columnwidth}
 		\framebox{\includegraphics{24-LTI_vs_LPV_simulacion_2_entradas.pdf}}
 	\end{adjustbox}
 	\caption{LTI vs LPV: Simulación 1. Entradas. Entradas en el punto de operación.}
 	\label{simulación 1 entradas}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{25-LTI_vs_LPV_simulacion_3.pdf}}
@@ -1229,16 +1229,16 @@ pequeñas (\cref{simulación 3 estado}, \cref{simulación 3 entradas}).
 	\label{simulación 2 estado}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.7,max width=\columnwidth}
 		\framebox{\includegraphics{26-LTI_vs_LPV_simulacion_3_entradas.pdf}}
 	\end{adjustbox}
 	\caption{LTI vs LPV: Simulación 2. Entradas. Entradas desviadas del punto de operación.}
 	\label{simulación 2 entradas}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{27-LTI_vs_LPV_simulacion_3_1.pdf}}
@@ -1247,9 +1247,9 @@ pequeñas (\cref{simulación 3 estado}, \cref{simulación 3 entradas}).
 	\label{simulación 3 estado}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.7,max width=\columnwidth}
 		\framebox{\includegraphics{28-LTI_vs_LPV_simulacion_3_1_entradas.pdf}}
 	\end{adjustbox}
 	\caption{LTI vs LPV: Simulación 3. Entradas. Entradas desviadas del punto de operación, menor desviación.}
@@ -1261,7 +1261,7 @@ En cambio, se establece que en el punto de operación, la corriente total en el 
 mientras que para la simulación 5 se considera  $\beta = 100^\circ$ y consigue debilitamiento de campo. Los resultados
 de la simulación 4 se muestran en las \cref{simulación 4 estado}  y \cref{simulación 4 entradas}, y los de las simulación 5 en las \cref{simulación 5 estado}, \cref{simulación 5 entradas}.
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{29-LTI_vs_LPV_simulacion_4_1.pdf}}
@@ -1270,16 +1270,16 @@ de la simulación 4 se muestran en las \cref{simulación 4 estado}  y \cref{simu
 	\label{simulación 4 estado}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.7,max width=\columnwidth}
 		\framebox{\includegraphics{30-LTI_vs_LPV_simulacion_4_1_entradas.pdf}}
 	\end{adjustbox}
 	\caption{LTI vs LPV: Simulación 4. Reforzamiento de capo. Entradas}
 	\label{simulación 4 entradas}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{31-LTI_vs_LPV_simulacion_4_2.pdf}}
@@ -1288,9 +1288,9 @@ de la simulación 4 se muestran en las \cref{simulación 4 estado}  y \cref{simu
 	\label{simulación 5 estado}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.7,max width=\columnwidth}
 		\framebox{\includegraphics{32-LTI_vs_LPV_simulacion_4_2_entradas.pdf}}
 	\end{adjustbox}
 	\caption{LTI vs LPV: Simulación 5. Entradas. Entradas en el punto de operación. Debilitamiento de campo.}
@@ -1392,18 +1392,18 @@ el aumento de $J_{l}$  produce un correspondiente incremento en $J_{eq}$,
 lo que a su vez produce una disminución de la frecuencia natural $\omega_n$ asociada a los polos complejos sin un apreciable
 cambio en el amortiguamiento del sistema.
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.7,max width=\columnwidth}
 		\framebox{\includegraphics{33-Mapa_de_polos.pdf}}
 	\end{adjustbox}
 	\caption{Mapa de polos completo del sistema ante variación de $J_l$ y $R_s$ con $b_l = b_{lnom}$}
 	\label{mapa de polos b_l nominal}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{34-Mapa_de_polos_complejos_migracion.pdf}}
 	\end{adjustbox}
 	\caption{Mapa de polos complejos del sistema ante variación de parametros de la carga ($R_s$ a $40^\circ C$).}
@@ -1418,18 +1418,18 @@ Es por eso que, en lugar de presentar las curvas para todo el rango de variació
 a la explicación al presentarse las gráficas superpuestas, lo que se hace es tomar $b_l = b_{lnom}$ y graficar la variación
 solo respecto a $R_s$ y $J_l$. Se puede observar que aunque $R_s$ tampoco produce demasiado efecto en $\omega_n$ si lo hace en $\zeta$.
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{35-Frecuencia_natural_migracion.pdf}}
 	\end{adjustbox}
 	\caption{Variación de la frecuencia natural (ancho de banda del sistema) $\omega_n$ ante variación de los parámetros de la carga y de $R_s$.}
 	\label{variacion de omega_n}
 \end{figure}
 
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{36-Zita_migracion.pdf}}
 	\end{adjustbox}
 	\caption{Variación de la relación de amortiguamiento crítico $\zeta$ ante variación de los parámetros de la carga y de $R_s$.}
@@ -1482,7 +1482,7 @@ manera permite reflejar el efecto del cero en la dinámica a lazo abierto.
 	\label{condiciones simulacion dinamica de ceros}
 \end{equation}
  
-\begin{figure}[thpb]
+\begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{37-Dinamica_de_los_ceros_1.pdf}}
@@ -1491,7 +1491,7 @@ manera permite reflejar el efecto del cero en la dinámica a lazo abierto.
 	\label{dinámica de cero nominal}
 \end{figure}
 
-\begin{figure}[htpb]
+\begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{38-Dinamica_de_los_ceros_2.pdf}}
@@ -1608,7 +1608,7 @@ Primero se analizo la respuesta del estado interno $\left\lbrace \theta_m(t), \o
 Se informa que se consideró una temperatura ambiente de 40 °C debido a que esta fue la que se considero al calcular la resistencias de los devanados. Las graficas de las entradas quedan entonces de la siguiente manera.
 
 
-\begin{figure}[htpb]
+\begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{39-Consignas_simulacion_5_1_6.pdf}}
@@ -1616,9 +1616,9 @@ Se informa que se consideró una temperatura ambiente de 40 °C debido a que est
 	\caption{Consigna de tensión y torque de perturbación}
 	\label{Consigna de tensión y torque de perturbación}
 \end{figure}
-AL simular el sistema con estas entradas, se obtuvieron las siguientes respuestas para la temperatura de los devanados, posición y velocidad del motor de ambos sistemas.
+Al simular el sistema con estas entradas, se obtuvieron las siguientes respuestas para la temperatura de los devanados, posición y velocidad del motor de ambos sistemas.
 
-\begin{figure}[htpb]
+\begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{40-Posiciones_simulacion_5_1_6.pdf}}
@@ -1634,7 +1634,14 @@ AL simular el sistema con estas entradas, se obtuvieron las siguientes respuesta
 	\caption{Velocidad motor del sistema NL realimentado y del LTI aumentado}
 	\label{Velocidad motor del sistema NL realimentado y del LTI aumentado}
 \end{figure}
-
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{max width=\columnwidth}
+		\framebox{\includegraphics{42-5-Error_posicion_LTI_vs_NL}}
+	\end{adjustbox}
+	\caption{Diferencia entre la posición del sistema NL con la del LTI equivalente aumentado}
+	\label{Diferencia entre la posición del sistema NL con la del LTI equivalente aumentado}
+\end{figure}
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
@@ -1942,7 +1949,7 @@ en comparación con el mapa de polos/ceros de la planata a lazo abierto, cuando 
 sin considerar la variación de $b_l$ (que se considera en su valor nominal) que no determina el valor de los polos del controlador de movimiento y tiene un 
 efecto despreciable en el cambio de polos de la planta a lazo abierto cuando varía en todo su rango.
 
-\begin{figure}[htpb]
+\begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{53-mapa_polos_ceros_controlador_vs_planta.pdf}}
@@ -1951,8 +1958,8 @@ efecto despreciable en el cambio de polos de la planta a lazo abierto cuando var
 	\label{mapa de polos-ceros controlador-planta}
 \end{figure}
 
-Se puede ver en las figura \cref{mapa de polos-ceros controlador-planta} que la frecuencia de los polos del controlador de movimiento
-es mucho menor (al menos 50 veces menor) que la frecuencia de los polos del lazo interno de corriente.
+Al comparar los polos de los lazos de corriente con los del controlador de posición, se observa que estos últimos tiene una frecuencia 6 veces menor que los primeros.
+
 
 \subsubsection{\textbf{Incorporación de observador de estado de orden reducido para parte mecánica}}
 Como en este controlador se ha optado por realimentar la velocidad, para evitar la utilización de derivadores, y dado que se cuenta con un encoder para medir posición del eje, fue necesario implementar un observador de estado reducido para poder realimentar la velocidad angular del motor. Se aclara que las corrientes no son observadas, ya que se cuenta con sensores de corriente.
@@ -2091,7 +2098,7 @@ Los resultados de la simulación fueron los siguientes:
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{56-grafica_posicion_vs_posicionconsigna}}
 	\end{adjustbox}
 	\caption{Gráfica de posición angular consigna y medida}
@@ -2099,7 +2106,7 @@ Los resultados de la simulación fueron los siguientes:
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{57-grafica_error _posicion_vs_posicionconsigna}}
 	\end{adjustbox}
 	\caption{Gráfica del error entre posición angular consigna y medida}
@@ -2108,7 +2115,7 @@ Los resultados de la simulación fueron los siguientes:
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{58-grafica__detalle_error _posicion_vs_posicionconsigna}}
 	\end{adjustbox}
 	\caption{Detalle del error entre posición angular consigna y medida}
@@ -2126,7 +2133,7 @@ Se observa que la consigna se cumple prácticamente sin errores. Sin embargo, lo
 Estos perfiles de velocidad implican aceleraciones impulsivas, que el sistema trata de cumplir con tensiones, corrientes y torques elevados.
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{60-grafica_torque_y_corriente_iqs}}
 	\end{adjustbox}
 	\caption{Gráfica de torque electromagnético y corriente $i_{qs}$}
@@ -2135,7 +2142,7 @@ Estos perfiles de velocidad implican aceleraciones impulsivas, que el sistema tr
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{61-grafica_corrientes_abc}}
 	\end{adjustbox}
 	\caption{Gráficas de corrientes abc}
@@ -2144,7 +2151,7 @@ Estos perfiles de velocidad implican aceleraciones impulsivas, que el sistema tr
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{62-grafica_tensiones_abc}}
 	\end{adjustbox}
 	\caption{Gráficas de tensiones abc}
@@ -2155,7 +2162,7 @@ Estos perfiles de velocidad implican aceleraciones impulsivas, que el sistema tr
 Se evaluó el comportamiento del sistema ante torques de perturbación del tipo escalón,como la que se observa en la siguiente figura, considerando valores nominales y variación máxima de los parámetros de carga mecánica física.
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.47,max width=\columnwidth}
 		\framebox{\includegraphics{63-Torque_de_perturbacion}}
 	\end{adjustbox}
 	\caption{Torque de perturbación}
@@ -2164,7 +2171,7 @@ Se evaluó el comportamiento del sistema ante torques de perturbación del tipo 
 Los resultados fueron los siguientes:
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.53,max width=\columnwidth}
 		\framebox{\includegraphics{64-grafica_error _posicion_vs_posicionconsigna_con_perturbacion}}
 	\end{adjustbox}
 	\caption{Error entre  posición consigna y medida}
@@ -2173,7 +2180,7 @@ Los resultados fueron los siguientes:
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.53,max width=\columnwidth}
 		\framebox{\includegraphics{65-Error_entre_posicion_medida_y_posicion_observada_ante_perturbacion}}
 	\end{adjustbox}
 	\caption{Error entre  posición medida y estimada}
@@ -2258,7 +2265,7 @@ Por lo que la consigna resultante fue:
 Al realizar nuevamente la simulación con esta nueva consigna se obtuvieron las siguientes gráficas.
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{67-grafica_tensiones_abc_nuevas}}
 	\end{adjustbox}
 	\caption{Tensiones abc con consigna suave}
@@ -2267,7 +2274,7 @@ Al realizar nuevamente la simulación con esta nueva consigna se obtuvieron las 
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{68-grafica_corrientes_abc_nueva}}
 	\end{adjustbox}
 	\caption{Corrientes abc con consigna suave}
@@ -2276,7 +2283,7 @@ Al realizar nuevamente la simulación con esta nueva consigna se obtuvieron las 
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{69-grafica_torque_nueva}}
 	\end{adjustbox}
 	\caption{Torque electromagnético con consigna suave}
@@ -2346,7 +2353,7 @@ Como el modelo cambió respecto al observador PD, se calcularon nuevamente las g
 EL diagrama de bloques resultante es el siguiente.
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{70-Observador_con_integrador.pdf}}
 	\end{adjustbox}
 	\caption{Diagrama del bloques del observador con acción integral}
@@ -2355,7 +2362,7 @@ EL diagrama de bloques resultante es el siguiente.
 Con esta modificación, el error de estado estacionario desaparese como se muestra en las figuras.
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.65,max width=\columnwidth}
 		\framebox{\includegraphics{71-Error_entre_posicion_medida_y_posicion_observada_ante_perturbacion_2}}
 	\end{adjustbox}
 	\caption{Error entre posición medida y observada}
@@ -2459,7 +2466,7 @@ Al simular nuevamente con estos cambios, ocurrió lo siguiente.
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.55,max width=\columnwidth}
 		\framebox{\includegraphics{75-Posiciones_para_Sensores_reales}}
 	\end{adjustbox}
 	\caption{Diferencia entre posición consigna,medida y observada, para sensores no ideales}
@@ -2468,7 +2475,7 @@ Al simular nuevamente con estos cambios, ocurrió lo siguiente.
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.55,max width=\columnwidth}
 		\framebox{\includegraphics{76-Corrientes_abc_con_sensores_reales}}
 	\end{adjustbox}
 	\caption{Corrientes abc, para sensores no ideales}
@@ -2477,7 +2484,7 @@ Al simular nuevamente con estos cambios, ocurrió lo siguiente.
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{77-Temperatura_con_sensores_reales}}
 	\end{adjustbox}
 	\caption{Temperatura, para sensores no ideales}
@@ -2488,7 +2495,7 @@ Como se puede apreciar en las gráficas, la posición real y la estimada difiere
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{78-Posiciones_para_Sensores_reales_2}}
 	\end{adjustbox}
 	\caption{Diferencia entre posición consigna y medida, para sensores no ideales con el doble de frecuencia natural}
@@ -2497,7 +2504,7 @@ Como se puede apreciar en las gráficas, la posición real y la estimada difiere
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.6,max width=\columnwidth}
 		\framebox{\includegraphics{79-Corrientes_abc_con_sensores_reales_2}}
 	\end{adjustbox}
 	\caption{Corrientes abc, para sensores no ideales con el doble de frecuencia natural}
@@ -2506,7 +2513,7 @@ Como se puede apreciar en las gráficas, la posición real y la estimada difiere
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.6,max width=\columnwidth}
 		\framebox{\includegraphics{80-Temperatura_con_sensores_reales_2}}
 	\end{adjustbox}
 	\caption{Temperatura, para sensores no ideales con el doble de frecuencia natural}
@@ -2518,7 +2525,7 @@ Luego se propuso triplicar las frecuencias de los sensores y observar las respue
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.55,max width=\columnwidth}
 		\framebox{\includegraphics{81-Posiciones_para_Sensores_reales_3}}
 	\end{adjustbox}
 	\caption{Diferencia entre posición consigna y medida, para sensores no ideales con el triple de frecuencia natural}
@@ -2527,7 +2534,7 @@ Luego se propuso triplicar las frecuencias de los sensores y observar las respue
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.55,max width=\columnwidth}
 		\framebox{\includegraphics{82-Corrientes_abc_con_sensores_reales_3}}
 	\end{adjustbox}
 	\caption{Corrientes abc, para sensores no ideales con el triple de frecuencia natural}
@@ -2536,7 +2543,7 @@ Luego se propuso triplicar las frecuencias de los sensores y observar las respue
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.55,max width=\columnwidth}
 		\framebox{\includegraphics{83-Temperatura_con_sensores_reales_3}}
 	\end{adjustbox}
 	\caption{Temperatura, para sensores no ideales con el triple de frecuencia natural}
@@ -2581,7 +2588,7 @@ AL igual que con los sensores de corriente y posición, el modelo de este modula
 Solo que se le incorpora la saturación en la entrada al implementarlo en el diagrama de bloques:
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{84-Modulador_De_tension_no_ideal.pdf}}
 	\end{adjustbox}
 	\caption{Modulador no ideal de tensión}
@@ -2590,7 +2597,7 @@ Solo que se le incorpora la saturación en la entrada al implementarlo en el dia
 Al realizar la simulación, se observa que aparecen oscilaciones en la posición  del brazo, y los picos máximos de corriente se disparan por encima de los limites permitidos, debido a que el modulador no consigue representar correctamente las tensiones consignas entregadas por el controlador.
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.52,max width=\columnwidth}
 		\framebox{\includegraphics{85-Error_posicion_modulador_de_tension_real}}
 	\end{adjustbox}
 	\caption{Diferencia entre posición consigna y medida, para modulador de tensión no ideal}
@@ -2599,7 +2606,7 @@ Al realizar la simulación, se observa que aparecen oscilaciones en la posición
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.52,max width=\columnwidth}
 		\framebox{\includegraphics{86-Corrientes_abc_con_modulador_de_tension_real}}
 	\end{adjustbox}
 	\caption{Corrientes abc, para modulador de tensión no ideal}
@@ -2609,7 +2616,7 @@ Para mejorar este comportamiento, al igual que con los sensores, se duplico la f
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.55,max width=\columnwidth}
 		\framebox{\includegraphics{87-Error_posicion_modulador_de_tension_real_2}}
 	\end{adjustbox}
 	\caption{Diferencia entre posición consigna y medida, para modulador de tensión no ideal con el doble de frecuencia natural}
@@ -2618,7 +2625,7 @@ Para mejorar este comportamiento, al igual que con los sensores, se duplico la f
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.55,max width=\columnwidth}
 		\framebox{\includegraphics{88-Corrientes_abc_con_modulador_de_tension_real_2}}
 	\end{adjustbox}
 	\caption{Corrientes abc, para modulador de tensión no ideal con el doble de frecuencia natural}
@@ -2627,7 +2634,7 @@ Para mejorar este comportamiento, al igual que con los sensores, se duplico la f
 En este caso el desempeño no mejora demasiado al duplicar la frecuencia. Además, se observa que aparece un error de estado estacionario entre la posición consigna y la medida. Por lo que en este caso si es necesario triplicar la frecuencia, obteniendo los siguientes resultados.
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.58,max width=\columnwidth}
 		\framebox{\includegraphics{89-Error_posicion_modulador_de_tension_real_3}}
 	\end{adjustbox}
 	\caption{Diferencia entre posición consigna y medida, para modulador de tensión no ideal con el triple de frecuencia natural}
@@ -2636,7 +2643,7 @@ En este caso el desempeño no mejora demasiado al duplicar la frecuencia. Ademá
 
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.58,max width=\columnwidth}
 		\framebox{\includegraphics{90-Corrientes_abc_con_modulador_de_tension_real_3}}
 	\end{adjustbox}
 	\caption{Corrientes abc, para modulador de tensión no ideal con el triple de frecuencia natural}
@@ -2686,7 +2693,7 @@ Al reemplazar cada integrador del controlador, quedaron los siguientes diagramas
 Finalmente, se hicieron pruebas con distintos valores de $T_s$ hasta dar con el correcto que fue $T_s = 10^{-4} [s]$. Los resultados fueron los siguientes:
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.7,max width=\columnwidth}
 		\framebox{\includegraphics{95-Tensiones_abc_discreto}}
 	\end{adjustbox}
 	\caption{Tensiones abc para modelo de controlador discreto}
@@ -2694,7 +2701,7 @@ Finalmente, se hicieron pruebas con distintos valores de $T_s$ hasta dar con el 
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.7,max width=\columnwidth}
 		\framebox{\includegraphics{96-Corrientes_abc_discreto}}
 	\end{adjustbox}
 	\caption{Corrientes abc para modelo de controlador discreto}
@@ -2702,7 +2709,7 @@ Finalmente, se hicieron pruebas con distintos valores de $T_s$ hasta dar con el 
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{97-Torque_discreto}}
 	\end{adjustbox}
 	\caption{Consigna de torque para modelo de controlador discreto}
@@ -2710,53 +2717,27 @@ Finalmente, se hicieron pruebas con distintos valores de $T_s$ hasta dar con el 
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{98-Temperatura_discreto}}
 	\end{adjustbox}
-	\caption{$T^\circ_s(t) para modelo de controlador discreto.$}
-	\label{Consigna de torque para modelo de controlador discreto}
+	\caption{${T^{\circ}_s}(t)$ para modelo de controlador discreto}
+	\label{Ts para modelo de controlador discreto}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\begin{adjustbox}{max width=\columnwidth}
+	\begin{adjustbox}{scale=0.6,max width=\columnwidth}
 		\framebox{\includegraphics{99-Error_entre_pos_y_posConsigna_discreto}}
 	\end{adjustbox}
 	\caption{Posición consigna vs medida para modelo de controlador discreto}
 	\label{Posición consigna vs medida para modelo de controlador discreto}
 \end{figure}
-Se puede ver, que para este valor de $T_s$ todavía existe un error entre la consigna de posición y la medida, cuando el eje se encuentra en movimiento, pero es muy pequeño() en relación a la amplitud de movimiento. Por lo que se concluye que el valor de $T_s$ es adecuado 
+Se puede ver, que para este valor de $T_s$ todavía existe un error entre la consigna de posición y la medida, cuando el eje se encuentra en movimiento, pero es muy pequeño en relación a la amplitud de movimiento. Por lo que se concluye que el valor de $T_s$ es adecuado 
 \section{CONCLUSIONES}
 En este trabajo final, se logró modelar un motor síncrono de imanes permanentes acoplado a un brazo, y posteriormente diseñar e implementar un controlador en cascada capaz de seguir consignas de posición, rechazando posibles perturbaciones sobre el brazo y compensando el torque debido a la gravedad. Se realizaron simulaciones de todo el sistema, pasando por todas las etapas necesarias para implementar el controlador y verificar su robustez. Además, se añadió un alto grado de realismo al trabajo mediante la incorporación de no linealidades y retardos presentes en una aplicación real.
 
 Se destaca la importancia de realizar simulaciones antes de llevar el proyecto a la práctica, ya que esto permite identificar y corregir errores potenciales, asegurando así una implementación más segura y efectiva.
 Para un trabajo futuro, se recomienda seguir con el análisis de sensores, teniendo en cuenta el ruido que podría haber en la práctica. Y evaluar distintos tipos de filtro digitales para evaluar los distintos comportamientos
-\subsection{Heading 1, etc}
 
-
-\subsection{Figures and Tables}
-
-Positioning Figures and Tables: Place figures and tables at the top and bottom of columns. Avoid placing them in the middle of columns. Large figures and tables may span across both columns. Figure captions should be below the figures; table heads should appear above the tables. Insert figures and tables after they are cited in the text. Use the abbreviation ``Fig. 1'', even at the beginning of a sentence.
-
-\begin{table}[h]
-\caption{An Example of a Table}
-\label{table_example}
-\begin{center}
-\begin{tabular}{|c||c|}
-\hline
-One & Two\\
-\hline
-Three & Four\\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-
-\section{CONCLUSIONES}
-
-%\addtolength{\textheight}{-12cm}
-\section*{APENDICE}
-
-Appendixes should appear before the acknowledgment.
 
 \begin{thebibliography}{99}
 
