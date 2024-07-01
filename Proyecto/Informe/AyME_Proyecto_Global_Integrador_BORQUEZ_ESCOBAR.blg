@@ -1,0 +1,16 @@
+[2] Config.pm:308> INFO - This is Biber 2.20
+[3] Config.pm:311> INFO - Logfile is 'AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.blg'
+[1498] biber-MSWIN64:340> INFO - === 
+[2008] Biber.pm:420> INFO - Reading 'AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bcf'
+[2414] Biber.pm:991> INFO - Using all citekeys in bib section 0
+[2526] Biber.pm:4463> INFO - Processing section 0
+[2654] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[2877] bibtex.pm:1713> INFO - LaTeX decoding ...
+[3100] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[3581] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3582] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3582] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[3595] bbl.pm:676> INFO - Writing 'AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bbl' with encoding 'UTF-8'
+[3605] bbl.pm:779> INFO - Output to AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bbl
+[3608] Biber.pm:131> WARN - legacy year field 'rev.0 2023' in entry 'c1' is not an integer - this will probably not sort properly.
+[3608] Biber.pm:133> INFO - WARNINGS: 1

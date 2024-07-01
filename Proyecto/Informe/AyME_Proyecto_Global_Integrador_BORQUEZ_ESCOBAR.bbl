@@ -1,0 +1,107 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{c1}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=605444bed0a018f6cfdf6fbe6ef334cb}{%
+           family={Julián},
+           familyi={J\bibinitperiod},
+           given={Ingeniero\bibnamedelimb Gabriel\bibnamedelima L.},
+           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {UNCUYO - Ing. Mecatrónica}%
+      }
+      \strng{namehash}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \strng{fullhash}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \strng{fullhashraw}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \strng{bibnamehash}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \strng{authorbibnamehash}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \strng{authornamehash}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \strng{authorfullhash}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \strng{authorfullhashraw}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Proyecto Global Integrador: Guía de Trabajo, Control de Accionamiento de CA con Motor Sincrónico de Imanes Permanentes}
+      \field{year}{rev.0 2023}
+    \endentry
+    \entry{c2}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=8a806fe25a4b76ffa499588f8c1fc109}{%
+           family={K.},
+           familyi={K\bibinitperiod},
+           given={Ogata},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice-Hall}%
+      }
+      \strng{namehash}{8a806fe25a4b76ffa499588f8c1fc109}
+      \strng{fullhash}{8a806fe25a4b76ffa499588f8c1fc109}
+      \strng{fullhashraw}{8a806fe25a4b76ffa499588f8c1fc109}
+      \strng{bibnamehash}{8a806fe25a4b76ffa499588f8c1fc109}
+      \strng{authorbibnamehash}{8a806fe25a4b76ffa499588f8c1fc109}
+      \strng{authornamehash}{8a806fe25a4b76ffa499588f8c1fc109}
+      \strng{authorfullhash}{8a806fe25a4b76ffa499588f8c1fc109}
+      \strng{authorfullhashraw}{8a806fe25a4b76ffa499588f8c1fc109}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5}
+      \field{title}{Ingeniería de Control Moderna}
+      \field{year}{2010}
+      \true{nocite}
+    \endentry
+    \entry{c3}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=42ba0bebc5976baec31b84460aa01725}{%
+           family={Krause},
+           familyi={K\bibinitperiod},
+           given={P.\bibnamedelimi et\bibnamedelima al},
+           giveni={P\bibinitperiod\bibinitdelim e\bibinitperiod\bibinitdelim a\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley-IEEE Press}%
+      }
+      \strng{namehash}{42ba0bebc5976baec31b84460aa01725}
+      \strng{fullhash}{42ba0bebc5976baec31b84460aa01725}
+      \strng{fullhashraw}{42ba0bebc5976baec31b84460aa01725}
+      \strng{bibnamehash}{42ba0bebc5976baec31b84460aa01725}
+      \strng{authorbibnamehash}{42ba0bebc5976baec31b84460aa01725}
+      \strng{authornamehash}{42ba0bebc5976baec31b84460aa01725}
+      \strng{authorfullhash}{42ba0bebc5976baec31b84460aa01725}
+      \strng{authorfullhashraw}{42ba0bebc5976baec31b84460aa01725}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{title}{Analysis of Electric Machinery and Drive Systems}
+      \field{year}{2013}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
