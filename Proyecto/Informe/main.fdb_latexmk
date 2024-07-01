@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1719814715.36074 "main.bcf" "main.bbl" "main" 1719818816.05825 0
-  "main.bcf" 1719818813.24238 108211 1a76c14ff189fa1101ca7324b72ec4ae "pdflatex"
-  "references.bib" 1719814485.99407 310 0221f097582760c7a4c67e9682f4fe17 ""
+["biber main"] 1719844728.23576 "main.bcf" "main.bbl" "main" 1719844805.02946 0
+  "main.bcf" 1719844802.25561 108278 735f0dc35e5c92e5bea2bf279851a02f "pdflatex"
+  "references.bib" 1719844361.09334 675 0d08494e9813c853154f45649847e41d ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1719818794.03866 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" "main.pdf" "main" 1719818816.06526 0
+["pdflatex"] 1719844782.82361 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" "main.pdf" "main" 1719844805.03447 0
   "1-Brazo.PNG" 1718289822.46398 14666 dbbf8840aa69c12071ab2a0a9be19378 ""
   "10-Transformación_de_Park.pdf" 1719776203.00221 36799 ac0becde249d7962d2b504ecfd4ed65d ""
   "11-Transformación_de_Park_Inversa.pdf" 1719776814.34474 33464 d4d7f9881d255e0b0ce70b6d3193b95f ""
@@ -107,7 +107,7 @@
   "97-Torque_discreto.png" 1719706666.93112 61473 e736552633d19a1e377d5c2bc53c968e ""
   "98-Temperatura_discreto.png" 1719706666.83606 54597 dd030fd8d74d370c0d49ea7f019a6247 ""
   "99-Error_entre_pos_y_posConsigna_discreto.png" 1719706666.33496 81398 3d533bb78ece8fe6b3ce0bc340716832 ""
-  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" 1719818763.27367 150248 4af8145d4375ca1f43dc24c11e4c3659 ""
+  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/main.tex" 1719844714.15639 150260 e4e85dda06ec6a1fa469f47e8a3c9815 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1716317108.30627 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1716319181.74555 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1716345269.78178 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -255,9 +255,9 @@
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1716357246 8225112 5de980edea79c2c299f0a161b7db1c9e ""
   "c:/texlive/2024/texmf.cnf" 1716351796.41707 713 baa45e065482d44c4cd81b98ef72c63b ""
   "ieeeconf.cls" 1716331032.00079 202025 d003ccb4b5f2978a40d92fd20a03590a ""
-  "main.aux" 1719818813.21336 59473 bb4ff5c5bcea05b9a8aea0ca6bde9e85 "pdflatex"
-  "main.bbl" 1719814722.2036 1882 75b0218a7621942844ffbf92cbcd587a "biber main"
-  "main.run.xml" 1719818813.24938 2402 33c4f11d1c2582e7b955434925489b4e "pdflatex"
+  "main.aux" 1719844802.22559 59630 3cea0995a48d3184e03da1db26772740 "pdflatex"
+  "main.bbl" 1719844736.08594 4232 a5212c4ee06ca19dfcc3f1026e1a93fc "biber main"
+  "main.run.xml" 1719844802.26362 2402 33c4f11d1c2582e7b955434925489b4e "pdflatex"
   (generated)
   "main.aux"
   "main.bcf"
