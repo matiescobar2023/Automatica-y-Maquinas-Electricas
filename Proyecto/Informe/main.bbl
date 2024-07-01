@@ -1,0 +1,51 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{c1}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=605444bed0a018f6cfdf6fbe6ef334cb}{%
+           family={Julián},
+           familyi={J\bibinitperiod},
+           given={Ingeniero\bibnamedelimb Gabriel\bibnamedelima L.},
+           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {UNCUYO - Ing. Mecatrónica}%
+      }
+      \strng{namehash}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \strng{fullhash}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \strng{fullhashraw}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \strng{bibnamehash}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \strng{authorbibnamehash}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \strng{authornamehash}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \strng{authorfullhash}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \strng{authorfullhashraw}{605444bed0a018f6cfdf6fbe6ef334cb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Proyecto Global Integrador: Guía de Trabajo, Control de Accionamiento de CA con Motor Sincrónico de Imanes Permanentes}
+      \field{year}{rev.0 2023}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
