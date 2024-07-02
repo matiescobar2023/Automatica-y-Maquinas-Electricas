@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR"] 1719846277.76988 "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bcf" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bbl" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR" 1719846370.41348 0
-  "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bcf" 1719846367.44551 108278 735f0dc35e5c92e5bea2bf279851a02f "pdflatex"
+["biber AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR"] 1719846277.76988 "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bcf" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bbl" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR" 1719934587.80711 0
+  "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bcf" 1719934584.21372 108278 735f0dc35e5c92e5bea2bf279851a02f "pdflatex"
   "references.bib" 1719844361.09334 675 0d08494e9813c853154f45649847e41d ""
   (generated)
   "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bbl"
   "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.blg"
   (rewritten before read)
-["pdflatex"] 1719846347.165 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.tex" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.pdf" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR" 1719846370.41846 0
+["pdflatex"] 1719934558.40065 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.tex" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.pdf" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR" 1719934587.81212 0
   "1-Brazo.PNG" 1718289822.46398 14666 dbbf8840aa69c12071ab2a0a9be19378 ""
   "10-Transformación_de_Park.pdf" 1719776203.00221 36799 ac0becde249d7962d2b504ecfd4ed65d ""
   "11-Transformación_de_Park_Inversa.pdf" 1719776814.34474 33464 d4d7f9881d255e0b0ce70b6d3193b95f ""
@@ -107,10 +107,10 @@
   "97-Torque_discreto.png" 1719706666.93112 61473 e736552633d19a1e377d5c2bc53c968e ""
   "98-Temperatura_discreto.png" 1719706666.83606 54597 dd030fd8d74d370c0d49ea7f019a6247 ""
   "99-Error_entre_pos_y_posConsigna_discreto.png" 1719706666.33496 81398 3d533bb78ece8fe6b3ce0bc340716832 ""
-  "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.aux" 1719846367.41248 59630 3cea0995a48d3184e03da1db26772740 "pdflatex"
+  "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.aux" 1719934584.18081 60644 025b5a623756d9c5373a8b5cc377fedb "pdflatex"
   "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bbl" 1719846295.82501 4232 a5212c4ee06ca19dfcc3f1026e1a93fc "biber AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR"
-  "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.run.xml" 1719846367.45251 2703 b21f808eb3db5554b719d4acb8e6b129 "pdflatex"
-  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.tex" 1719846336.55843 150260 e4e85dda06ec6a1fa469f47e8a3c9815 ""
+  "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.run.xml" 1719934584.21973 2703 b21f808eb3db5554b719d4acb8e6b129 "pdflatex"
+  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.tex" 1719934552.94213 150756 5b9c912ca77dc73afd926ea0df5df78b ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1716317108.30627 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1716319181.74555 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1716345269.78178 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -184,7 +184,6 @@
   "c:/texlive/2024/texmf-dist/tex/generic/babel/txtbabel.def" 1716311478.80304 6948 df63e25be1d2bc35bbad5a0141f41348 ""
   "c:/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty" 1716321538.3632 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "c:/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty" 1716321692.61967 8356 7bbb2c2373aa810be568c29e333da8ed ""
-  "c:/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty" 1716349195.55426 5412 d5a2436094cd7be85769db90f29250a6 ""
   "c:/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty" 1716327503.80394 17865 1a9bd36b4f98178fa551aca822290953 ""
   "c:/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty" 1716332448.08446 20089 80423eac55aa175305d35b49e04fe23b ""
   "c:/texlive/2024/texmf-dist/tex/generic/xkeyval/xkeyval.tex" 1716347877.69735 19231 27205ee17aaa2902aea3e0c07a3cfc65 ""
@@ -205,6 +204,7 @@
   "c:/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty" 1716349605.30311 5119 a04a8b68ab4f6ce800a41f7f8012a10e ""
   "c:/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty" 1716349605.3599 5319 2b738d02ce36ada6dcdd9534940db0ee ""
   "c:/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty" 1716349605.36139 5048 425739d70251273bf93e3d51f3c40048 ""
+  "c:/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty" 1716349605.83719 2894 fc64867f9d198785eabe71a88276a9cb ""
   "c:/texlive/2024/texmf-dist/tex/latex/biblatex-ieee/ieee.bbx" 1716312604.33517 20021 af496425072862e81e424c104c403595 ""
   "c:/texlive/2024/texmf-dist/tex/latex/biblatex-ieee/ieee.cbx" 1716312604.3508 4682 63056ede870333cd64f17ee967145cf9 ""
   "c:/texlive/2024/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx" 1716312447.36912 92 7cdbb04a1e32fba0fbb91b6e6d123497 ""
@@ -222,7 +222,6 @@
   "c:/texlive/2024/texmf-dist/tex/latex/cleveref/cleveref.sty" 1716314468.5677 329481 7fc6b003158402a4c694bc0a1b729308 ""
   "c:/texlive/2024/texmf-dist/tex/latex/collectbox/collectbox.sty" 1716314831.87357 9124 59c3b56f1a073de66e3eea35f9c173c8 ""
   "c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1716317817.30936 13886 d1306dcf79a944f6988e688c1785f9ce ""
-  "c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty" 1716317817.32499 4393 47f27fd4d95928d20b1885ba77de11d2 ""
   "c:/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1716318060.78131 46845 3b58f70c6e861a13d927bff09d35ecbc ""
   "c:/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty" 1716318420.70227 18674 2cc1c2f64272f458981b096e7600b014 ""
   "c:/texlive/2024/texmf-dist/tex/latex/float/float.sty" 1716318997.99042 6749 16d2656a1984957e674b149555f1ea1d ""
@@ -232,7 +231,7 @@
   "c:/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty" 1716320265.23989 8010 a8d949cbdbc5c983593827c9eec252e1 ""
   "c:/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty" 1716320265.24189 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "c:/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty" 1716320265.25581 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
-  "c:/texlive/2024/texmf-dist/tex/latex/grfext/grfext.sty" 1716320404.0675 7133 b94bbacbee6e4fdccdc7f810b2aec370 ""
+  "c:/texlive/2024/texmf-dist/tex/latex/hyphenat/hyphenat.sty" 1716321389.28015 5798 0437b031e663035b68539cf7ac7c8eeb ""
   "c:/texlive/2024/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty" 1716321521.7845 2142 eae42205b97b7a3ad0e58db5fe99e3e6 ""
   "c:/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty" 1716349206.70926 22555 6d8e155cfef6d82c3d5c742fea7c992e ""
   "c:/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty" 1716349213.68167 13815 760b0c02f691ea230f5359c4e1de23a7 ""
