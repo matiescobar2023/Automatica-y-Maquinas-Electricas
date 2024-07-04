@@ -306,13 +306,13 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
 %5.1.1
 \subsubsection{\textbf{Modelo sub-sistema mecánico completo referido al eje de la máquina eléctrica}}
 
-Multiplicando por $r$ ambos miembros de la \cref{subsistema mecanico maquina electrica}, sumando miembro a miembro con la \cref{carga mecanica} y tomando en cuenta $T_q(t)$ según la \cref{relacion de torque en caja} obtenemos:
+Multiplicando por $r$ ambos miembros de la \cref{subsistema mecanico maquina electrica}, sumando miembro a miembro con la \cref{carga mecanica} y tomando en cuenta $T_q(t)$ según la \cref{relacion de torque en caja} se obtiene:
 
 \begin{flalign*}
     J_{l}\,\frac{d\omega _{l}\left(t\right)}{dt} +J_{m}\,r\,\frac{d\omega _{m}\left(t\right)}{dt} =r\,T_{m}\left(t\right)-T_{l}\left(t\right)-b_{l}\,\omega _{l}\left(t\right)-b_{m}\,r\,\omega _{m}\left(t\right)
 \end{flalign*}
 
-Reemplazando en la anterior $\omega_{l}(t)$ según la \cref{relacion de velocidad en caja}, agrupando términos y diviendo entre $r$ a ambos miembros, obtenemos:
+Reemplazando en la anterior $\omega_{l}(t)$ según la \cref{relacion de velocidad en caja}, agrupando términos y diviendo entre $r$ a ambos miembros, se obtiene:
 
 \begin{flalign}
     \left(J_{m}+\frac{J_{l}}{r^2}\right)\,\frac{d \omega _{m}\left(t\right)}{dt}=T_{m}\left(t\right)-\left(b_{m}+\frac{b_{l}}{r^2}\right)\,\omega _{m}\left(t\right)-\frac{T_{l}\left(t\right)}{r}
@@ -331,7 +331,7 @@ Definimos ahora la inercia equivalente y el amortiguamiento equivalente respecti
     \label{amortiguamiento equivalente}
 \end{equation}
 
-Reemplazando la \cref{inercia equivalente} y la \cref{amortiguamiento equivalente} en la \cref{subsistema mecanico con parametros desarrollados} obtenemos el modelo matemático equivalente del sub-sistema mecánico completo con parámetros equivalentes referido al eje del motor (véase diagrama de bloques de la \cref{diagrama de bloques sub-sistema mecanico completo}):
+Reemplazando la \cref{inercia equivalente} y la \cref{amortiguamiento equivalente} en la \cref{subsistema mecanico con parametros desarrollados} se obtiene el modelo matemático equivalente del sub-sistema mecánico completo con parámetros equivalentes referido al eje del motor (véase diagrama de bloques de la \cref{diagrama de bloques sub-sistema mecanico completo}):
 \begin{flalign}
     J_{eq}\,\frac{d \omega _{m}\left(t\right)}{dt}=T_{m}\left(t\right)-b_{eq}\, \omega _{m}\left(t\right)-\frac{T_{l}\left(t\right)}{r}
     \label{subsistema mecanico con parametros equivalentes}
@@ -381,7 +381,7 @@ Teniendo en cuenta la definición del estado del sistema (\cref{vector de estado
 \cref{posicion y velocidad motor}. El acoplamiento entre el sub-sistema electromagnético y el
 mecánico de la máquina eléctrica se da a través del $T_m(t)$, dado por la \cref{torque electromagnetico}.
 Reemplazando esta ecuación en la \cref{subsistema mecanico con parametros equivalentes} y reordenando términos,
-obtenemos la segunda ecuación de estado del sistema:
+se obtiene la segunda ecuación de estado del sistema:
 
 \begin{equation}
     \frac{d \omega_m(t)}{dt} = \frac{3}{2} \frac{P_p i^r_{qs}(t)\left[\lambda'^r_m + (L_d - L_q) i^r_{ds}(t) \right]}{J_{eq}} - \frac{b_{eq}\omega_m(t)}{J_{eq}} - \frac{T_l(t)}{r J_{eq}}
@@ -390,7 +390,7 @@ obtenemos la segunda ecuación de estado del sistema:
 
 Las siguientes tres ecuaciones de estado del sistema se obtienen del balance de tensiones
 en coordenadas virtuales (\cref{balance de tensiones q} \cref{balance de tensiones d}, \cref{balance de tensiones 0}).
-Reemplazando en estas la relación entre $\omega_m(t)$ y $\omega_r(t)$ dada por la \cref{Relacion coordenadas electricas y mecanicas} obtenemos:
+Reemplazando en estas la relación entre $\omega_m(t)$ y $\omega_r(t)$ dada por la \cref{Relacion coordenadas electricas y mecanicas} se obtiene:
 \begin{align}
     \frac{d i^r_{qs}(t)}{dt} &= -\frac{R_s(t) i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \left[\lambda'^r_m + L_d i^r_{ds}(t)\right]}{L_q} + \frac{v^r_{qs}(t)}{L_q} \label{ecuacion de estado iqs}\\
     \frac{d i^r_{ds}(t)}{dt} &= -\frac{R_s(t) i^r_{ds}(t)}{L_d} + \frac{L_q P_p \omega_m(t)i^r_{qs}(t)}{L_d}  + \frac{v^r_{ds}(t)}{L_d} \label{ecuacion de estado ids}\\ 
@@ -617,7 +617,7 @@ como se indica en la \cref{ecuacion vectorial de estado jacobi}.
         \cref{relacion de velocidad en caja} \,\text{y}\, \cref{velocidad y posición de la carga}\,&\rightarrow\,\theta_l(t) = \frac{1}{r} \int_{0}^{t} \omega_m(\zeta) \, d\zeta + \theta_l(0)\\
         \cref{posicion y velocidad motor}\,&\rightarrow\,  \int_{0}^{t} \omega_m(\zeta) \, d\zeta = \theta_m(t) - \theta_m(0)\\
         \text{Reemplazando la segunda en la primera}\,&\rightarrow\,\theta_l(t) = \frac{\theta_m(t) - \theta_m(0)}{r} + \theta_l(0)\\
-        \text{Consideramos que se cumple}\,&\rightarrow\,\frac{\theta_m(0)}{r} = \theta_l(0)\\
+        \text{Se considera que se cumple}\,&\rightarrow\,\frac{\theta_m(0)}{r} = \theta_l(0)\\
         \text{Luego}\,&\rightarrow\,\theta_l(t) = \theta_m(t)/r\\
         \text{Finalmente}\,&\rightarrow\,T_l(t) = k_l\sin\left(\frac{\theta_m(t)}{r}\right) + T_d(t)
     \end{aligned}
@@ -730,14 +730,14 @@ En las mismas, el sub-indice $-o$ indica los valores de las variables en el punt
     \label{condiciones inciales cuasi-estacionario}
 \end{equation}
 
-Consideramos relevante hacer aquí un análisis al respecto
+Se considera relevante hacer aquí un análisis al respecto
 del espacio de operación global NL para este modelo del sistema físico
 en particular.
 
 Si, en lugar de la restricción débil señalada en la \cref{modelo de operacion NL cuasi-estacionario}
 se toma la restricción fuerte dada por la \cref{restriccion fuerte}, y si se toman en cuenta
 las condiciones iniciales del modelo señaladas en la \cref{condiciones inciales cuasi-estacionario} y 
-la evolución de $\theta_m(t)$ dada por la \cref{posicion y velocidad motor}, tendremos un
+la evolución de $\theta_m(t)$ dada por la \cref{posicion y velocidad motor}, se tendrá un
 punto de operación definido como en la \cref{punto de operacion}.
 
 
@@ -778,8 +778,8 @@ punto de operación definido como en la \cref{punto de operacion}.
     \label{punto de operacion}
 \end{equation}
 
-Reemplazamos lo obtenido en la \cref{punto de operacion} en la \cref{modelo de operacion NL cuasi_estacionario desarrollado}
-y destacamos la ecuación de estado asociada a $\omega_m(t)$.
+Se reemplaza lo obtenido en la \cref{punto de operacion} en la \cref{modelo de operacion NL cuasi_estacionario desarrollado}
+y se destaca la ecuación de estado asociada a $\omega_m(t)$.
 
 \begin{equation}    
     \frac{1}{J_{eq}}\left[\frac{3}{2} P_p i^r_{qs0}\left[\lambda'^r_m + (L_d - L_q) i^r_{ds0} \right] - b_{eq}\omega_{m0} - \frac{k_l}{r}\sin\left(\frac{\omega_{m0}t + \theta_{m0}}{r}\right) - \frac{1}{r}T_{d0}\right] = 0
@@ -835,7 +835,7 @@ Considerando este último caso, es interesante presentar las curvas que permitan
 de control que es necesario aplicar para obtener una posición deseada
 del brazo, dado un vector de entradas de perturbación constantes.
 
-En \cref{T_m en función de la posición y T_do} representamos
+En \cref{T_m en función de la posición y T_do} se representa
 el $T_{m-o}$ que se requiere para una preturbación $T_{d-o}$ dada,
 en función de la posición del brazo. En donde se
 consideran los valores extremos de $T_{d-o}$ y un
@@ -853,7 +853,7 @@ dados en \cite{c1}.
 
 Luego, dado un valor de corriente total $i^{r}_{qd0s-o}$ como se indica en la \cref{corriente total}, junto con un
 ángulo $\beta$, que se pueden relacionar
-gráficamente como se muestra en la \cref{restriccion de corriente maxima}, podemos expresar
+gráficamente como se muestra en la \cref{restriccion de corriente maxima}, se puede expresar
 las curvas de $T_{m-o}$ en función de $i^{r}_{qd0s-o}$ con $\beta$ como parámetro, las que
 se muestran en la \cref{T_m respecto a i_qd0s-o} y que responden a la \cref{ecuación T_m respecto a i_qd0s-o}.
 
@@ -971,8 +971,8 @@ más lenta, comparativamente, que la dinámica del resto del sistema físico, lo
 una variación relativamente lenta de la $T^{\circ}_s(t)$ y por lo tanto de la $R_s(t)$,
 en este análisis no se tendrá en cuenta el acoplamiento no lineal con el sub-sistema térmico (el que se da a través de la $R_s(t)$), 
 pero sí se considerará su dinámica lineal. Además, teniendo en cuenta que el sistema de tensiones $v_{abcs}(t)$ es un sistema
-simétrico balanceado, podemos asumir $v_{0s}(t) \equiv 0$, lo que da por resultado $i_{0s}(t) \equiv 0$ en estado permanente. Esto sumado a la especificación $i^{r}_{ds}(t)\equiv0$, 
-la que imponemos directamente, hace que se pueda considerar para el análisis, un vector de estado reducido:
+simétrico balanceado, se puede asumir $v_{0s}(t) \equiv 0$, lo que da por resultado $i_{0s}(t) \equiv 0$ en estado permanente. Esto sumado a la especificación $i^{r}_{ds}(t)\equiv0$, 
+la que se impone directamente, hace que se pueda considerar para el análisis, un vector de estado reducido:
 
 \begin{equation}
     \mathbf{x}(t) = \begin{bmatrix} \theta_m(t) \\ \omega_m(t) \\ i^r_{qs}(t)\end{bmatrix}
@@ -1097,7 +1097,7 @@ se puede observar en la \cref{Implementación de ley de control mínima}
 	\label{Implementación de ley de control mínima}
 \end{figure}
 
-Para el caso general en donde no se cumple la hipótesis $i^{r}_{ds}(0)=0$, existe una \textbf{dinámica residual} en la corriente $i^{r}_{ds}(t)$. Esta dinámica queda representada con la ecuación diferencial que obtenemos al reemplazar la ley de control mínima (\cref{ecuacion determinacion ley de control minima}) en la \cref{ecuacion de estado ids}:
+Para el caso general en donde no se cumple la hipótesis $i^{r}_{ds}(0)=0$, existe una \textbf{dinámica residual} en la corriente $i^{r}_{ds}(t)$. Esta dinámica queda representada con la ecuación diferencial que se obtiene al reemplazar la ley de control mínima (\cref{ecuacion determinacion ley de control minima}) en la \cref{ecuacion de estado ids}:
 
 \begin{equation}
 	\frac{d i^r_{ds}(t)}{dt} = -\frac{R_s i^r_{ds}(t)}{L_d} \Rightarrow L_d\frac{d i^r_{ds}(t)}{dt} + R_s i^r_{ds}(t) = 0
@@ -1138,7 +1138,7 @@ comparación con otros moedelos, se realizan con el estado reducido indicado en 
 \end{equation}
 
 En la \cref{equaciones modelo LTI eq} la $P_{sperd}(t)$ viene dada según la \cref{potencia de perdidas}. También se incorpora la entrada $v^{r*}_{ds}(t)$, que se obtiene al restar a  $v^r_{ds}(t)$
-la ley de control mínima. Para el caso que presentamos aquí será $v^{r*}_{ds}(t) \equiv 0$ y $v_{0s}(t) \equiv0 $.
+la ley de control mínima. Para el caso que se presenta aquí será $v^{r*}_{ds}(t) \equiv 0$ y $v_{0s}(t) \equiv0 $.
 
 
 El diagrama de bloques del \textbf{modelo NL desacoplado con ley de control NL} se observa en la \cref{Implementación de ley de control complementaria}
@@ -1165,7 +1165,7 @@ El diagrama de bloques del \textbf{modelo NL desacoplado con ley de control NL} 
 En primer lugar, en la \cref{diagrama de bloques LPV} se muestra el diagrama de bloques de estado del sistema LPV, en el que las ganancias $A(i, j)$ y $B(i, j)$
 son los correspondientes elementos en las matrices de la \cref{matriz_AB}.
 Por otro lado, en la \cref{diagrama de bloques LPV vs LTI} se muestra cómo se realizó la comparación entre los modelos. Como se puede observar en esta última,
-incorporamos al modelo LPV los valores de los estados y entradas en el punto de operación.
+se incorporó al modelo LPV los valores de los estados y entradas en el punto de operación.
 \label{par: LTI vs LPV}
 \begin{figure}[H]
 	\centering
@@ -1468,7 +1468,7 @@ la rectificación de la variable angular de la articulación al rango  $[0;2\pi]
 luego de los transitorios en régimen no forzado.
 
 Para el análisis de la dinámica de los ceros, primero %aca deberíamos hacer un \cite{canal del tipo de control}
-expresamos la \cref{funcion de transferencia desde T_l}
+se expresa la \cref{funcion de transferencia desde T_l}
 como:
 
 \begin{equation}
@@ -1488,8 +1488,8 @@ este cero amplifica el sobrepico en el transitorio en el punto de inflexión de 
 $G_1(s)$. Para representar este fenómeno, se simuló el sistema bajo las condiciones indicadas en la \cref{condiciones simulacion dinamica de ceros},
 primero con los parámetros nominales del sistema y luego exagerando
 el efecto del cero llevándolo hacia el eje imaginario. Los resultados se muestran en la \cref{dinámica de cero nominal} y en la \cref{dinámica de cero exagerada} respectivamente.
-Cómo se puede observar en las mismas, presentamos la evolución en el tiempo de $\omega_m(t)$ en lugar de $\theta_m(t)$.
-Hacemos esto, dado que, al ser el último un pseudo-estado, en estado permanente crece sin cota a diferencia de $\omega_m(t)$ que sí adopta un valor permanente constante ante la perturbación de tipo escalón, y de la misma
+Cómo se puede observar en las mismas, se presenta la evolución en el tiempo de $\omega_m(t)$ en lugar de $\theta_m(t)$.
+Se hace esto, dado que, al ser el último un pseudo-estado, en estado permanente crece sin cota a diferencia de $\omega_m(t)$ que sí adopta un valor permanente constante ante la perturbación de tipo escalón, y de la misma
 manera permite reflejar el efecto del cero en la dinámica a lazo abierto.
 
 
@@ -1569,7 +1569,7 @@ Se propuso tomar como salida a la velocidad ${\omega}_m(t)$ y analizar la observ
 La matriz de observabilidad se muestra en la \cref{Matriz de observabilidad desde velocidad del LTI}.
 Al calcular el determinante de esta matriz, el resultado fue 0, por lo tanto el rango es menor a 3 y el sistema no es completamente observable desde la velocidad.
 
-Esto ocurre ya que, al conocer la velocidad, no podemos determinar la posición instantánea sin conocer su valor inicial.
+Esto ocurre ya que, al conocer la velocidad, no se puede determinar la posición instantánea sin conocer su valor inicial.
 
 \begin{equation}
 	O=
@@ -1824,7 +1824,7 @@ Para lograrlo primero se analizaron las ecuaciones del modelo NL del sub-sistema
 	\end{cases}	\label{Ecuaciones NL del subsistema electromagnetico}
 \end{align}
 
-Se puede ver que del lado derecho de las ecuaciones tenemos todas las realimentaciones físicas además de las tensiones de entrada. Por lo tanto, para compensar estas realimentaciones, se propusieron las siguientes tensiones como consigna de entrada, en donde las tensiones  ${v^r_{qd0s}(t)}^*$ son las nuevas consignas con las realimentaciones ya compensadas:
+Se puede ver que del lado derecho de las ecuaciones se tienen todas las realimentaciones físicas además de las tensiones de entrada. Por lo tanto, para compensar estas realimentaciones, se propusieron las siguientes tensiones como consigna de entrada, en donde las tensiones  ${v^r_{qd0s}(t)}^*$ son las nuevas consignas con las realimentaciones ya compensadas:
  
  \begin{align}
  	v^r_{qs}(t) &= {v^r_{qs}}^*(t) + R_s(t) i^r_{qs}(t) + P_p \omega_m(t) \left[\lambda'^r_m + L_d i^r_{ds}(t)\right] \label{Ecuacion desacoplamientos en vqs}\\
@@ -1895,7 +1895,7 @@ Al posicionar los polos en $p_{i}=-5000 \, frac{rad}{s}$, se obtuvieron las sigu
 \end{align}
 
 \paragraph{\textbf{Incorporación de consigna de torque}}
-Luego de haber incorporado los lazos de control de corriente, se hizo la realimentación necesaria para pasar de consignas de corrientes a una consigna de torque. Para esto, primero se analizó la ecuación del torque electromagnético, de donde podemos despejar la consigna de corriente ${i^r_{qs}(t)}^*$:
+Luego de haber incorporado los lazos de control de corriente, se hizo la realimentación necesaria para pasar de consignas de corrientes a una consigna de torque. Para esto, primero se analizó la ecuación del torque electromagnético, de donde se puede despejar la consigna de corriente ${i^r_{qs}(t)}^*$:
 
 \begin{align}
 	T_m(t) &= \frac{3}{2} P_p [\lambda'^r_{m} {i^r_{qs}(t)}^* + (L_d - L_q) i^r_{ds}(t) {i^r_{qs}(t)}^*] \label{torque electromagnetico 2}\\
@@ -2068,7 +2068,7 @@ Al asumir un funcionamiento ideal, las ecuaciones del observador quedan similare
 		\end{bmatrix}
 	\end{cases}\label{ecuacion matricial de observador}
 \end{align}
-Al evaluar la dinámica del error de estimación obtenemos las siguientes ecuaciones: 
+Al evaluar la dinámica del error de estimación se obtienen las siguientes ecuaciones: 
 \begin{align}
 	\frac{d \mathbf{e}(t)}{dt} &= \frac{d \mathbf{x}(t)}{dt} - \frac{d \mathbf{\tilde{x}} (t)}{dt}\\
 	\frac{d \mathbf{e}(t)}{dt} &= A {\mathbf{x}(t)} + B_c {T_m(t)}^{*'} + B_d T_d(t) - \left( A \mathbf{\tilde{x} (t)} + B_c {T_m(t)}^{*'} + K C \left(\mathbf{x(t)} - \mathbf{\tilde{x} (t)} \right) \right) \\
@@ -2087,7 +2087,7 @@ Luego, se planteó el polinomio de segundo orden con polos deseados reales e igu
 \begin{align}
 	p(s) = \left( s + 3200\right) ^2 = s^2 + 6400 s + 10240000\label{polinomeo caracteristico de observador deseado}
 \end{align}
-Al comparar ambos polinomios obtenemos los valores de las ganancias del observador:
+Al comparar ambos polinomios se obtienen los valores de las ganancias del observador:
 \begin{align}
 	K_{\theta} &= 6400 \, seg^{-1}\label{ganacia de posicion de observador}\\
 	K_{\omega} &= 10240000 \, seg^{-2}\label{ganacia de velocidad de observador}
@@ -2773,7 +2773,7 @@ En este trabajo se logró modelar un motor sincrónico de imanes permanentes aco
 Se destaca la importancia de realizar simulaciones antes de llevar el proyecto a la práctica, ya que esto permite identificar y corregir errores potenciales, asegurando así una implementación más segura y efectiva.
 Para un trabajo futuro, se recomienda seguir con el análisis de sensores, teniendo en cuenta el ruido que podría haber en la práctica. Y considerar distintos tipos de filtros digitales para evaluar los distintos comportamientos.
 
-Podemos concluir además que el controlador en su versión final es implementable 
+Se puede concluir además que el controlador en su versión final es implementable 
 en un caso práctico a través de un microcontrolador comercial. Es posible utilizar
 la metodología de diseño y análisis para poder realizar el control de accionamientos electromecánicos
 similares variando los parámetros del modelo físico.
