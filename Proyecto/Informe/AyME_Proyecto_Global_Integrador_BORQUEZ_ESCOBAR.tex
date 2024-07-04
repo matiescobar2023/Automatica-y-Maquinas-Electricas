@@ -379,7 +379,7 @@ Sin embargo, se puede obtener una expresión vectorial más general del modelo m
 
 Teniendo en cuenta la definición del estado del sistema (\cref{vector de estado del sistema}), la primera ecuación a considerar en la expresión vectorial de estado del sistema es la
 \cref{posicion y velocidad motor}. El acoplamiento entre el sub-sistema electromagnético y el
-mecánico de la máquina eléctrica se da a través del $T_m(t)$, dado por la ecuación \cref{torque electromagnetico}.
+mecánico de la máquina eléctrica se da a través del $T_m(t)$, dado por la \cref{torque electromagnetico}.
 Reemplazando esta ecuación en la \cref{subsistema mecanico con parametros equivalentes} y reordenando términos,
 obtenemos la segunda ecuación de estado del sistema:
 
@@ -598,7 +598,7 @@ Se aclara aquí que, solamente para este ejercicio, se considera un vector de en
 con respecto al indicado en la \cref{vector de entradas} al considerar $T_l(t)$ desarrollado como se indica en la \cref{torque de carga}.
 Lo que se hace es reemplazar $T_l(t)$ por $T_d(t)$ en el vector de entradas de la \cref{vector de entradas de perturbacion} lo
 que cambia finalmente la definición de $\mathbf{u}(t)$. Luego, el vector
-de entradas de perturbación y el vector de entradas total del sistema, para este ejercicio, son los que se indican a continuación.
+de entradas de perturbación y el vector de entradas total del sistema, para este ejercicio, son los que se indican a continuación:
 
 \begin{equation}
     \mathbf{u_{d}}(t) = \begin{bmatrix} T_d(t) \\ T_{amb}^{\circ}(t)\end{bmatrix}\, \, \, 
@@ -661,7 +661,7 @@ como se indica en la \cref{ecuacion vectorial de estado jacobi}.
     \label{ecuacion vectorial de estado jacobi}
 \end{equation}
 
-En el modelo de pequeñas desviaciones locales $\delta \mathbf{x}(t)$ respecto de los puntos de equilibrio $\mathbf{X}_o(t)$
+En el modelo de pequeñas desviaciones locales $\delta \mathbf{x}(t)$ respecto de los puntos de operación $\mathbf{X}_o(t)$
 se hacen las siguientes consideraciones.
 
 \begin{equation}
@@ -738,7 +738,7 @@ Si, en lugar de la restricción débil señalada en la \cref{modelo de operacion
 se toma la restricción fuerte dada por la \cref{restriccion fuerte}, y si se toman en cuenta
 las condiciones iniciales del modelo señaladas en la \cref{condiciones inciales cuasi-estacionario} y 
 la evolución de $\theta_m(t)$ dada por la \cref{posicion y velocidad motor}, tendremos un
-punto de operación definido como en la \cref{punto de operacion}
+punto de operación definido como en la \cref{punto de operacion}.
 
 
 \begin{equation}
@@ -815,7 +815,7 @@ Cuando se asume la segunda condición de la \cref{condiciones de satisfaccion},
 la \cref{modelo de operacion NL cuasi_estacionario desarrollado} queda como se indica en la 
 \cref{modelo de operacion NL cuasi_estacionario desarrollado reducido}. En la que
 además se toma $v_{0s-o}(t) \equiv 0$ al tratarse de un sistema de
-tensiones trifásico simétrico balanceado. Eso da por resultado $i^r_{ds0} = 0$,
+tensiones trifásico simétrico balanceado. Eso da por resultado $i_{0s0} = 0$,
 al ser $R_{s-o} \neq 0$ para las temperaturas normales de operación, y se reemplaza directamente en la 
 ecuación de estado de la $T^{\circ}_{s}$.
 
@@ -831,7 +831,7 @@ ecuación de estado de la $T^{\circ}_{s}$.
     \label{modelo de operacion NL cuasi_estacionario desarrollado reducido}
 \end{equation}
 
-Considerando este último caso, es interesanta presentar las curvas que permitan obtener las entradas
+Considerando este último caso, es interesante presentar las curvas que permitan obtener las entradas
 de control que es necesario aplicar para obtener una posición deseada
 del brazo, dado un vector de entradas de perturbación constantes.
 
@@ -854,7 +854,7 @@ dados en \cite{c1}.
 Luego, dado un valor de corriente total $i^{r}_{qd0s-o}$ como se indica en la \cref{corriente total}, junto con un
 ángulo $\beta$, que se pueden relacionar
 gráficamente como se muestra en la \cref{restriccion de corriente maxima}, podemos expresar
-las curvas de $T_{m-o}$ en función de $i^{r}_{qd0s-o}$ con $\beta$ como parametro, las que
+las curvas de $T_{m-o}$ en función de $i^{r}_{qd0s-o}$ con $\beta$ como parámetro, las que
 se muestran en la \cref{T_m respecto a i_qd0s-o} y que responden a la \cref{ecuación T_m respecto a i_qd0s-o}.
 
 
@@ -939,7 +939,7 @@ En donde las matrices $A(t)$ y $B(t)$  vienen dadas por la siguiente:
     \label{matriz_AB}
 \end{equation}
 
-Las derivadas parciales indicados para $A(t)$ en la \cref{matriz_AB} son:
+Las derivadas parciales indicadas para $A(t)$ en la \cref{matriz_AB} son:
 
 \begin{equation}
     \begin{aligned}
@@ -1045,7 +1045,7 @@ indicada en la \cref{dinamica sub-sistema térmico},
 se obtiene al reemplazar en la ecuación de estado de la $T^{\circ}_s$
 (\cref{ecuacion vectorial de estado del sistema}) las consideraciones indicadas al inicio de este inciso al
 respecto de las corrientes. En la misma, el término $\frac{3}{2}\frac{R_{s}}{C_{ts}} {i^r_{qs}(t)}^2$ representa
-la $P_{perd}(t)$, que al considerarse como entrada junto con la $T^{\circ}_{amb}(t)$, ponen de
+la $P_{sperd}(t)$, que al considerarse como entrada junto con la $T^{\circ}_{amb}(t)$, ponen de
 manifiesto la dinámica lineal indicada.
 
 \begin{equation}
@@ -1132,12 +1132,12 @@ comparación con otros moedelos, se realizan con el estado reducido indicado en 
 		\frac{d i^r_{qs}(t)}{dt} = -\frac{R_s i^r_{qs}(t)}{L_q} - \frac{P_p \omega_m(t) \lambda^{'r}_m}{L_q}+ \frac{v^r_{qs}(t)}{L_q}\\
 		\frac{d i^r_{ds}(t)}{dt} = -\frac{R_s i^r_{ds}(t)}{L_d}	+ v^{r*}_{ds}(t)\\
 		\frac{d i_{0s}(t)}{dt} = -\frac{R_s i_{0s}(t)}{L_{ls}}	+ v_{0s}(t)\\
-		\frac{d T^\circ_{s}(t)}{dt} = \frac{P_{perd}(t)}{R_{ts}} + \frac{1}{R_{ts}C_{ts}}\left[T^{\circ}_{amb}(t) - T_{s}^{\circ}(t)\right]
+		\frac{d T^\circ_{s}(t)}{dt} = \frac{P_{sperd}(t)}{R_{ts}} + \frac{1}{R_{ts}C_{ts}}\left[T^{\circ}_{amb}(t) - T_{s}^{\circ}(t)\right]
 	\end{cases}
 	\label{equaciones modelo LTI eq}
 \end{equation}
 
-En la \cref{equaciones modelo LTI eq} la $P_{perd}(t)$ viene dada según la \cref{potencia de perdidas}. También se incorpora la entrada $v^{r*}_{ds}(t)$, que se obtiene al restar a  $v^r_{ds}(t)$
+En la \cref{equaciones modelo LTI eq} la $P_{sperd}(t)$ viene dada según la \cref{potencia de perdidas}. También se incorpora la entrada $v^{r*}_{ds}(t)$, que se obtiene al restar a  $v^r_{ds}(t)$
 la ley de control mínima. Para el caso que presentamos aquí será $v^{r*}_{ds}(t) \equiv 0$ y $v_{0s}(t) \equiv0 $.
 
 
