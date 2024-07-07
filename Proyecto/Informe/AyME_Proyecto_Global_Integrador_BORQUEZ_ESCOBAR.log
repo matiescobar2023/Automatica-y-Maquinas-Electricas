@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.22)  4 JUL 2024 17:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.22)  7 JUL 2024 10:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1562,7 +1562,7 @@ Package pdftex.def Info: 74-diagrama_sensor_ts_real.pdf  used on input line 2494
 <75-Posiciones_para_Sensores_reales.png, id=1648, 654.64575pt x 520.94624pt>
 File: 75-Posiciones_para_Sensores_reales.png Graphic file (type png)
 <use 75-Posiciones_para_Sensores_reales.png>
-Package pdftex.def Info: 75-Posiciones_para_Sensores_reales.png  used on input line 2503.
+Package pdftex.def Info: 75-Posiciones_para_Sensores_reales.png  used on input line 2505.
 (pdftex.def)             Requested size: 654.64415pt x 520.94498pt.
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -1575,12 +1575,12 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 <76-Corrientes_abc_con_sensores_reales.png, id=1658, 654.64575pt x 520.94624pt>
 File: 76-Corrientes_abc_con_sensores_reales.png Graphic file (type png)
 <use 76-Corrientes_abc_con_sensores_reales.png>
-Package pdftex.def Info: 76-Corrientes_abc_con_sensores_reales.png  used on input line 2512.
+Package pdftex.def Info: 76-Corrientes_abc_con_sensores_reales.png  used on input line 2514.
 (pdftex.def)             Requested size: 654.64415pt x 520.94498pt.
 <77-Temperatura_con_sensores_reales.png, id=1659, 654.64575pt x 520.94624pt>
 File: 77-Temperatura_con_sensores_reales.png Graphic file (type png)
 <use 77-Temperatura_con_sensores_reales.png>
-Package pdftex.def Info: 77-Temperatura_con_sensores_reales.png  used on input line 2521.
+Package pdftex.def Info: 77-Temperatura_con_sensores_reales.png  used on input line 2523.
 (pdftex.def)             Requested size: 654.64415pt x 520.94498pt.
 
 
@@ -1594,12 +1594,12 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 <78-Posiciones_para_Sensores_reales_2.png, id=1666, 654.0435pt x 477.58424pt>
 File: 78-Posiciones_para_Sensores_reales_2.png Graphic file (type png)
 <use 78-Posiciones_para_Sensores_reales_2.png>
-Package pdftex.def Info: 78-Posiciones_para_Sensores_reales_2.png  used on input line 2532.
+Package pdftex.def Info: 78-Posiciones_para_Sensores_reales_2.png  used on input line 2534.
 (pdftex.def)             Requested size: 654.0419pt x 477.58307pt.
 <79-Corrientes_abc_con_sensores_reales_2.png, id=1667, 654.64575pt x 520.94624pt>
 File: 79-Corrientes_abc_con_sensores_reales_2.png Graphic file (type png)
 <use 79-Corrientes_abc_con_sensores_reales_2.png>
-Package pdftex.def Info: 79-Corrientes_abc_con_sensores_reales_2.png  used on input line 2541.
+Package pdftex.def Info: 79-Corrientes_abc_con_sensores_reales_2.png  used on input line 2543.
 (pdftex.def)             Requested size: 654.64415pt x 520.94498pt.
 
 
@@ -1613,7 +1613,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 <80-Temperatura_con_sensores_reales_2.png, id=1673, 654.64575pt x 520.94624pt>
 File: 80-Temperatura_con_sensores_reales_2.png Graphic file (type png)
 <use 80-Temperatura_con_sensores_reales_2.png>
-Package pdftex.def Info: 80-Temperatura_con_sensores_reales_2.png  used on input line 2550.
+Package pdftex.def Info: 80-Temperatura_con_sensores_reales_2.png  used on input line 2552.
 (pdftex.def)             Requested size: 654.64415pt x 520.94498pt.
 
 
@@ -1627,17 +1627,17 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 <81-Posiciones_para_Sensores_reales_3.png, id=1679, 654.0435pt x 477.58424pt>
 File: 81-Posiciones_para_Sensores_reales_3.png Graphic file (type png)
 <use 81-Posiciones_para_Sensores_reales_3.png>
-Package pdftex.def Info: 81-Posiciones_para_Sensores_reales_3.png  used on input line 2562.
+Package pdftex.def Info: 81-Posiciones_para_Sensores_reales_3.png  used on input line 2564.
 (pdftex.def)             Requested size: 654.0419pt x 477.58307pt.
 <82-Corrientes_abc_con_sensores_reales_3.png, id=1680, 654.64575pt x 520.94624pt>
 File: 82-Corrientes_abc_con_sensores_reales_3.png Graphic file (type png)
 <use 82-Corrientes_abc_con_sensores_reales_3.png>
-Package pdftex.def Info: 82-Corrientes_abc_con_sensores_reales_3.png  used on input line 2571.
+Package pdftex.def Info: 82-Corrientes_abc_con_sensores_reales_3.png  used on input line 2573.
 (pdftex.def)             Requested size: 654.64415pt x 520.94498pt.
 <83-Temperatura_con_sensores_reales_3.png, id=1681, 654.64575pt x 520.94624pt>
 File: 83-Temperatura_con_sensores_reales_3.png Graphic file (type png)
 <use 83-Temperatura_con_sensores_reales_3.png>
-Package pdftex.def Info: 83-Temperatura_con_sensores_reales_3.png  used on input line 2580.
+Package pdftex.def Info: 83-Temperatura_con_sensores_reales_3.png  used on input line 2582.
 (pdftex.def)             Requested size: 654.64415pt x 520.94498pt.
 
 
@@ -1653,12 +1653,12 @@ pdfTeX warning: pdflatex.exe (file ./84-Modulador_De_tension_no_ideal.pdf): PDF 
 <84-Modulador_De_tension_no_ideal.pdf, id=1687, 706.5296pt x 300.10118pt>
 File: 84-Modulador_De_tension_no_ideal.pdf Graphic file (type pdf)
 <use 84-Modulador_De_tension_no_ideal.pdf>
-Package pdftex.def Info: 84-Modulador_De_tension_no_ideal.pdf  used on input line 2625.
+Package pdftex.def Info: 84-Modulador_De_tension_no_ideal.pdf  used on input line 2627.
 (pdftex.def)             Requested size: 706.52788pt x 300.10045pt.
 <85-Error_posicion_modulador_de_tension_real.png, id=1688, 654.0435pt x 477.58424pt>
 File: 85-Error_posicion_modulador_de_tension_real.png Graphic file (type png)
 <use 85-Error_posicion_modulador_de_tension_real.png>
-Package pdftex.def Info: 85-Error_posicion_modulador_de_tension_real.png  used on input line 2634.
+Package pdftex.def Info: 85-Error_posicion_modulador_de_tension_real.png  used on input line 2636.
 (pdftex.def)             Requested size: 654.0419pt x 477.58307pt.
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -1671,17 +1671,17 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 <86-Corrientes_abc_con_modulador_de_tension_real.png, id=1696, 654.64575pt x 520.94624pt>
 File: 86-Corrientes_abc_con_modulador_de_tension_real.png Graphic file (type png)
 <use 86-Corrientes_abc_con_modulador_de_tension_real.png>
-Package pdftex.def Info: 86-Corrientes_abc_con_modulador_de_tension_real.png  used on input line 2643.
+Package pdftex.def Info: 86-Corrientes_abc_con_modulador_de_tension_real.png  used on input line 2645.
 (pdftex.def)             Requested size: 654.64415pt x 520.94498pt.
 
-Overfull \hbox (5.054pt too wide) in paragraph at lines 2648--2649
+Overfull \hbox (5.054pt too wide) in paragraph at lines 2650--2651
 []\T1/ptm/m/n/10 Para me-jo-rar es-te com-por-ta-mien-to, al igual que con los sen-so-res, se du-pli-có la fre-cuen-cia na-tu-ral del mo-du-la-dor, ob-te-nién-do-se
  []
 
 <87-Error_posicion_modulador_de_tension_real_2.png, id=1697, 654.0435pt x 477.58424pt>
 File: 87-Error_posicion_modulador_de_tension_real_2.png Graphic file (type png)
 <use 87-Error_posicion_modulador_de_tension_real_2.png>
-Package pdftex.def Info: 87-Error_posicion_modulador_de_tension_real_2.png  used on input line 2653.
+Package pdftex.def Info: 87-Error_posicion_modulador_de_tension_real_2.png  used on input line 2655.
 (pdftex.def)             Requested size: 654.0419pt x 477.58307pt.
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -1694,12 +1694,12 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 <88-Corrientes_abc_con_modulador_de_tension_real_2.png, id=1703, 654.64575pt x 520.94624pt>
 File: 88-Corrientes_abc_con_modulador_de_tension_real_2.png Graphic file (type png)
 <use 88-Corrientes_abc_con_modulador_de_tension_real_2.png>
-Package pdftex.def Info: 88-Corrientes_abc_con_modulador_de_tension_real_2.png  used on input line 2662.
+Package pdftex.def Info: 88-Corrientes_abc_con_modulador_de_tension_real_2.png  used on input line 2664.
 (pdftex.def)             Requested size: 654.64415pt x 520.94498pt.
 <89-Error_posicion_modulador_de_tension_real_3.png, id=1704, 654.0435pt x 477.58424pt>
 File: 89-Error_posicion_modulador_de_tension_real_3.png Graphic file (type png)
 <use 89-Error_posicion_modulador_de_tension_real_3.png>
-Package pdftex.def Info: 89-Error_posicion_modulador_de_tension_real_3.png  used on input line 2671.
+Package pdftex.def Info: 89-Error_posicion_modulador_de_tension_real_3.png  used on input line 2673.
 (pdftex.def)             Requested size: 654.0419pt x 477.58307pt.
 
 
@@ -1713,7 +1713,7 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 <90-Corrientes_abc_con_modulador_de_tension_real_3.png, id=1711, 654.64575pt x 520.94624pt>
 File: 90-Corrientes_abc_con_modulador_de_tension_real_3.png Graphic file (type png)
 <use 90-Corrientes_abc_con_modulador_de_tension_real_3.png>
-Package pdftex.def Info: 90-Corrientes_abc_con_modulador_de_tension_real_3.png  used on input line 2680.
+Package pdftex.def Info: 90-Corrientes_abc_con_modulador_de_tension_real_3.png  used on input line 2682.
 (pdftex.def)             Requested size: 654.64415pt x 520.94498pt.
 
 
@@ -1729,7 +1729,7 @@ pdfTeX warning: pdflatex.exe (file ./91-Modelo_discreto_De_integrador.pdf): PDF 
 <91-Modelo_discreto_De_integrador.pdf, id=1718, 666.78107pt x 106.32724pt>
 File: 91-Modelo_discreto_De_integrador.pdf Graphic file (type pdf)
 <use 91-Modelo_discreto_De_integrador.pdf>
-Package pdftex.def Info: 91-Modelo_discreto_De_integrador.pdf  used on input line 2698.
+Package pdftex.def Info: 91-Modelo_discreto_De_integrador.pdf  used on input line 2700.
 (pdftex.def)             Requested size: 666.77943pt x 106.32697pt.
 
 
@@ -1737,7 +1737,7 @@ pdfTeX warning: pdflatex.exe (file ./92-PID_Discreto.pdf): PDF inclusion: found 
 <92-PID_Discreto.pdf, id=1719, 794.97pt x 293.14517pt>
 File: 92-PID_Discreto.pdf Graphic file (type pdf)
 <use 92-PID_Discreto.pdf>
-Package pdftex.def Info: 92-PID_Discreto.pdf  used on input line 2707.
+Package pdftex.def Info: 92-PID_Discreto.pdf  used on input line 2709.
 (pdftex.def)             Requested size: 794.96806pt x 293.14445pt.
 
 
@@ -1745,7 +1745,7 @@ pdfTeX warning: pdflatex.exe (file ./93-Observador_discreto.pdf): PDF inclusion:
 <93-Observador_discreto.pdf, id=1720, 794.97pt x 281.22066pt>
 File: 93-Observador_discreto.pdf Graphic file (type pdf)
 <use 93-Observador_discreto.pdf>
-Package pdftex.def Info: 93-Observador_discreto.pdf  used on input line 2715.
+Package pdftex.def Info: 93-Observador_discreto.pdf  used on input line 2717.
 (pdftex.def)             Requested size: 794.96806pt x 281.21996pt.
 
 
@@ -1753,7 +1753,7 @@ pdfTeX warning: pdflatex.exe (file ./94-Controlador_discreto.pdf): PDF inclusion
 <94-Controlador_discreto.pdf, id=1721, 794.97pt x 361.71133pt>
 File: 94-Controlador_discreto.pdf Graphic file (type pdf)
 <use 94-Controlador_discreto.pdf>
-Package pdftex.def Info: 94-Controlador_discreto.pdf  used on input line 2723.
+Package pdftex.def Info: 94-Controlador_discreto.pdf  used on input line 2725.
 (pdftex.def)             Requested size: 794.96806pt x 361.71043pt.
 
 Package fancyhdr Warning: \headheight is too small (18.0pt): 
@@ -1766,17 +1766,17 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 <95-Tensiones_abc_discreto.png, id=1736, 654.64575pt x 520.94624pt>
 File: 95-Tensiones_abc_discreto.png Graphic file (type png)
 <use 95-Tensiones_abc_discreto.png>
-Package pdftex.def Info: 95-Tensiones_abc_discreto.png  used on input line 2732.
+Package pdftex.def Info: 95-Tensiones_abc_discreto.png  used on input line 2734.
 (pdftex.def)             Requested size: 654.64415pt x 520.94498pt.
 <96-Corrientes_abc_discreto.png, id=1737, 654.64575pt x 520.94624pt>
 File: 96-Corrientes_abc_discreto.png Graphic file (type png)
 <use 96-Corrientes_abc_discreto.png>
-Package pdftex.def Info: 96-Corrientes_abc_discreto.png  used on input line 2740.
+Package pdftex.def Info: 96-Corrientes_abc_discreto.png  used on input line 2742.
 (pdftex.def)             Requested size: 654.64415pt x 520.94498pt.
 <97-Torque_discreto.png, id=1738, 654.64575pt x 520.94624pt>
 File: 97-Torque_discreto.png Graphic file (type png)
 <use 97-Torque_discreto.png>
-Package pdftex.def Info: 97-Torque_discreto.png  used on input line 2748.
+Package pdftex.def Info: 97-Torque_discreto.png  used on input line 2750.
 (pdftex.def)             Requested size: 654.64415pt x 520.94498pt.
 
 
@@ -1790,12 +1790,12 @@ Package fancyhdr Warning: \headheight is too small (18.0pt):
 <98-Temperatura_discreto.png, id=1748, 654.64575pt x 520.94624pt>
 File: 98-Temperatura_discreto.png Graphic file (type png)
 <use 98-Temperatura_discreto.png>
-Package pdftex.def Info: 98-Temperatura_discreto.png  used on input line 2756.
+Package pdftex.def Info: 98-Temperatura_discreto.png  used on input line 2758.
 (pdftex.def)             Requested size: 654.64415pt x 520.94498pt.
 <99-Error_entre_pos_y_posConsigna_discreto.png, id=1749, 654.0435pt x 477.58424pt>
 File: 99-Error_entre_pos_y_posConsigna_discreto.png Graphic file (type png)
 <use 99-Error_entre_pos_y_posConsigna_discreto.png>
-Package pdftex.def Info: 99-Error_entre_pos_y_posConsigna_discreto.png  used on input line 2764.
+Package pdftex.def Info: 99-Error_entre_pos_y_posConsigna_discreto.png  used on input line 2766.
 (pdftex.def)             Requested size: 654.0419pt x 477.58307pt.
 
 
@@ -1845,7 +1845,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  70i,22n,81p,1267b,1797s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.pdf (73 pages, 8538873 bytes).
+Output written on AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.pdf (73 pages, 8538837 bytes).
 PDF statistics:
  1868 PDF objects out of 2073 (max. 8388607)
  1511 compressed objects within 16 object streams

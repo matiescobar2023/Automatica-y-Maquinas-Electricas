@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR"] 1719846277.76988 "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bcf" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bbl" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR" 1720124460.71046 0
-  "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bcf" 1720124457.12347 108278 735f0dc35e5c92e5bea2bf279851a02f "pdflatex"
+["biber AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR"] 1719846277.76988 "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bcf" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bbl" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR" 1720359015.23664 0
+  "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bcf" 1720359012.0165 108278 735f0dc35e5c92e5bea2bf279851a02f "pdflatex"
   "references.bib" 1719844361.09334 675 0d08494e9813c853154f45649847e41d ""
   (generated)
   "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bbl"
   "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.blg"
   (rewritten before read)
-["pdflatex"] 1720124431.57933 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.tex" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.pdf" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR" 1720124460.71746 0
+["pdflatex"] 1720358990.84382 "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.tex" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.pdf" "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR" 1720359015.24859 0
   "1-Brazo.PNG" 1718289822.46398 14666 dbbf8840aa69c12071ab2a0a9be19378 ""
   "10-Transformación_de_Park.pdf" 1719776203.00221 36799 ac0becde249d7962d2b504ecfd4ed65d ""
   "11-Transformación_de_Park_Inversa.pdf" 1719776814.34474 33464 d4d7f9881d255e0b0ce70b6d3193b95f ""
@@ -107,10 +107,10 @@
   "97-Torque_discreto.png" 1719706666.93112 61473 e736552633d19a1e377d5c2bc53c968e ""
   "98-Temperatura_discreto.png" 1719706666.83606 54597 dd030fd8d74d370c0d49ea7f019a6247 ""
   "99-Error_entre_pos_y_posConsigna_discreto.png" 1719706666.33496 81398 3d533bb78ece8fe6b3ce0bc340716832 ""
-  "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.aux" 1720124457.07143 60644 025b5a623756d9c5373a8b5cc377fedb "pdflatex"
+  "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.aux" 1720359011.98748 60681 1c458f50d383a2c9999ce1b7bfe88c9c "pdflatex"
   "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.bbl" 1719846295.82501 4232 a5212c4ee06ca19dfcc3f1026e1a93fc "biber AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR"
-  "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.run.xml" 1720124457.13447 2703 b21f808eb3db5554b719d4acb8e6b129 "pdflatex"
-  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.tex" 1720124423.13824 150768 73e4a9b0a19ecfcfef40b5f7f310fe96 ""
+  "AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.run.xml" 1720359012.0235 2703 b21f808eb3db5554b719d4acb8e6b129 "pdflatex"
+  "c:/Users/Public/Documents/UNCUYO/4-Cuarto_anio/2-Octavo_Semestre/3-Automática_y_Máquinas_Eléctricas/Trabajo Integrador/Automatica-y-Maquinas-Electricas/Proyecto/Informe/AyME_Proyecto_Global_Integrador_BORQUEZ_ESCOBAR.tex" 1720358983.56597 150769 c0a1b14e5d541a3707ca3b6b6e9a1c9c ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1716317108.30627 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1716319181.74555 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1716345269.78178 2172 fd0c924230362ff848a33632ed45dc23 ""

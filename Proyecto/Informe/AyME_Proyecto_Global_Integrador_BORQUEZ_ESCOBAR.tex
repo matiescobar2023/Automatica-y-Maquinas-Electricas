@@ -62,7 +62,7 @@ Motor Sincrónico de Imanes Permanentes
 \begin{abstract}
 	Este trabajo presenta el modelado, simulación, diseño y análisis de desempeño de un sistema de control automático para un accionamiento electromecánico de cuatro cuadrantes. El sistema incluye una máquina sincrónica de imanes permanentes trifásica (PMSM), alimentada por un inversor trifásico desde una fuente de corriente continua (CC), y un reductor de velocidad planetario conectado a la carga mecánica. Se utilizan sensores de retroalimentación, incluyendo un sensor de posición en el eje del motor, tres sensores de corriente instántanea de fase en la salida del inversor al estator de la máquina y un sensor de temperatura del bobinado del estator.
 	La estrategía de control es la de control vectorial de campo orientado y se presenta la simulación y análisis del sistema físico y del controlador en tiempo continuo y la posterior discretización del controlador.
-	Se comparan distintas formas de modelar el sistema y se determinan los efectos de la variación de los parámetros en la estabilidad del sistema y el desempeño del controlador. Se simula el sistema físico individualmente y acoplado al controlador aplicando consignas consistentes y suaves.
+	Se comparan distintas formas de modelar el sistema y se determinan los efectos de la variación de los parámetros en la estabilidad del sistema y el desempeño del controlador. Se simula el sistema físico individualmente y acoplado al controlador, aplicando consignas consistentes y suaves.
 	Se determina que el controlador obtenido tiene un buen desempeño para la aplicación requerida y es implementable en una situación real.
 \end{abstract}
 
@@ -84,7 +84,7 @@ con el método de sintonía serie y se comparan los polos de los lazos de contro
 A continuación se evalúa el seguimiento de consignas de posición y se compara el desempeño en términos de las magnitudes de las acciones de control necesarias cuando estas consignas se van suavizando. Finalmente se 
 evalúa el comportamiento cuando los sensores y el modulador de tensión no son ideales, y se muestra cómo, para no perder desempeño en el control, estos deben cumplir prestaciones mínimas en cuanto al rango de frecuencias en que operan.
 
-En la parte \ref{subsubsec: Controlador discretizado} se hace el análisis y la descretización del controlador y se determina la velocidad mínima necesaria del dispositivo de control en el que se implemente para poder como se espera.
+En la parte \ref{subsubsec: Controlador discretizado} se hace el análisis y la descretización del controlador y se determina la velocidad mínima necesaria del dispositivo de control en el que se implemente para poder operar como se espera.
 
 % ECUACIONES
 \newpage
@@ -260,7 +260,7 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
     \end{equation}
     \item Vector de entradas de manipulación del sistema físico en coordenadas virtuales y reales respectivamente:
     \begin{equation}
-        \mathbf{u_{c(qd0s)}}(t) = \begin{bmatrix} v^r_{qs}(t) \\ v^r_{ds}(t) \\ v^r_{0s}(t)\end{bmatrix}
+        \mathbf{u_{c(qd0s)}}(t) = \begin{bmatrix} v^r_{qs}(t) \\ v^r_{ds}(t) \\ v_{0s}(t)\end{bmatrix}
         \mathbf{u_{c(abcs)}}(t) = \begin{bmatrix} v_{as}(t) \\ v_{bs}(t) \\ v_{cs}(t)\end{bmatrix}
         \label{vector de entradas de control}
     \end{equation}
@@ -272,7 +272,7 @@ Se detallan en esta sección las ecuaciones que modelan las distintas partes del
     \item Vector de entradas total al sistema físico:
     \begin{equation}
         \mathbf{u}(t) = \begin{bmatrix} \mathbf{u_c}(t) \\ \mathbf{u_d}(t)\end{bmatrix} \, \, \, \,
-        \mathbf{u_{(qd0s)}}(t) = \begin{bmatrix} v^r_{qs}(t) \\ v^r_{ds}(t) \\ v^r_{0s}(t) \\ T_l(t) \\ T_{amb}^{\circ}(t) \end{bmatrix}\, \, \, \,
+        \mathbf{u_{(qd0s)}}(t) = \begin{bmatrix} v^r_{qs}(t) \\ v^r_{ds}(t) \\ v_{0s}(t) \\ T_l(t) \\ T_{amb}^{\circ}(t) \end{bmatrix}\, \, \, \,
         \mathbf{u_{(abcs)}}(t) = \begin{bmatrix} v_{as}(t) \\ v_{bs}(t) \\ v_{cs}(t)\\ T_l(t) \\ T_{amb}^{\circ}(t) \end{bmatrix}
         \label{vector de entradas}
     \end{equation}
@@ -399,7 +399,7 @@ Reemplazando en estas la relación entre $\omega_m(t)$ y $\omega_r(t)$ dada por 
 
 La última ecuación de estado se obtiene relacionando las \cref{potencia de perdidas} y \cref{balance termico estator} obteniéndose:
 \begin{equation}
-    \frac{d T^\circ_s(t)}{dt} = \frac{3}{2} \frac{R_s(t) \left[ i_{qs}^2(t) + i_{ds}^2(t) + 2 i_{0s}^2(t) \right]}{C_{ts}} - \frac{\left[T_s^{\circ}(t) - T_{amb}^{\circ}(t)\right]}{R_{ts}C_{ts}} 
+    \frac{d T^\circ_s(t)}{dt} = \frac{3}{2} \frac{R_s(t) \left[ {i^r_{qs}(t)}^2+ {i^r_{ds}(t)}^2 + 2 i_{0s}^2(t) \right]}{C_{ts}} - \frac{\left[T_s^{\circ}(t) - T_{amb}^{\circ}(t)\right]}{R_{ts}C_{ts}} 
     \label{ecuacion de estado Ts}
 \end{equation}
 
@@ -602,7 +602,7 @@ de entradas de perturbación y el vector de entradas total del sistema, para est
 
 \begin{equation}
     \mathbf{u_{d}}(t) = \begin{bmatrix} T_d(t) \\ T_{amb}^{\circ}(t)\end{bmatrix}\, \, \, 
-    \mathbf{u}(t) = \begin{bmatrix} v^r_{qs}(t) \\ v^r_{ds}(t) \\ v^r_{0s}(t) \\ T_d(t) \\ T_{amb}^{\circ}(t) \end{bmatrix}
+    \mathbf{u}(t) = \begin{bmatrix} v^r_{qs}(t) \\ v^r_{ds}(t) \\ v_{0s}(t) \\ T_d(t) \\ T_{amb}^{\circ}(t) \end{bmatrix}
     \label{vector de entradas jacobi linealizado}
 \end{equation}
 
@@ -905,7 +905,7 @@ se grafica la $T^{\circ}_{s-o}$ respecto a $i^{r}_{qd0s-o}$ con $T^{\circ}_{amb-
     \label{grafica T_s respecto a la corriente}
 \end{figure}
 
-Por otro lado, el \textbf{Modelo dinámico LPV} se indica en la \cref{modelo de pequeñas desviaciones}:
+Por otro lado, el \textbf{Modelo dinámico LPV} es:
 
 \begin{equation}
     \begin{cases}
@@ -1618,7 +1618,7 @@ $v^{*r}_{ds}(t) \neq 0$ en la \cref{equaciones modelo LTI eq}.
 \subsubsection{\textbf{Simulación dinámica en dominio temporal}} 
 Se realizó una comparación entre el modelo no lineal completo desacoplado utilizando una ley de control no lineal y el modelo linealizado equivalente aumentado. En esta comparación, se analizaron dos escenarios: uno con $i^r_{ds}(0) = \pm 0.5 \, A $  y otro con $i^r_{ds}(0) = 0 \, A $ 
 \paragraph{\textbf{Respuesta del estado interno a pulso de consigna de tensión de estator en eje q}}
-Primero se analizó la respuesta del estado interno $\left\lbrace \theta_m(t), \omega_{m}(t), i^r_{qd0s}(t), T^\circ_s(t)\right\rbrace $ y $v^r_{ds}(t)$ forzada a un pulso de consigna de tensión en eje q, \cref{pulso de tensión}, superpuesto con doble pulso de torque de carga, \cref{doble pulso de torque}.
+Primero se analizó la respuesta del estado interno $\left\lbrace \theta_m(t), \omega_{m}(t), i^r_{qd0s}(t), T^\circ_s(t)\right\rbrace $ y $v^r_{qs}(t)$ forzada a un pulso de consigna de tensión, \cref{pulso de tensión}, superpuesto con doble pulso de torque de carga, \cref{doble pulso de torque}.
 
 \begin{equation}
 	{v^r_{qs}(t)}^* = 0 \rightarrow \left({v^r_{qs}}^* = +19.596 \: V_{cc} \  en \ t_{step1}=0.1s \right) \rightarrow \left(0 \: V \  en \ t_{step4}=0.7s \right)
@@ -1630,7 +1630,7 @@ Primero se analizó la respuesta del estado interno $\left\lbrace \theta_m(t), \
 	 \rightarrow \left(0 \: Nm \ ; \ t_{step5}=0.9s \right) 
 	 \label{doble pulso de torque}
 \end{equation}
-Se adopta una temperatura ambiente de 40 °C debido a que esta fue la que se consideró al calcular la resistencias de los devanados. Las graficas de las entradas quedan entonces de la siguiente manera.
+Se adopta una temperatura ambiente de 40 °C debido a que esta fue la que se consideró al calcular la resistencias de los devanados. Las gráficas de las entradas quedan entonces de la siguiente manera:
 
 
 \begin{figure}[H]
@@ -1641,7 +1641,7 @@ Se adopta una temperatura ambiente de 40 °C debido a que esta fue la que se con
 	\caption{Consigna de tensión y torque de perturbación}
 	\label{Consigna de tensión y torque de perturbación.}
 \end{figure}
-Al simular el sistema con estas entradas, se obtuvieron las siguientes respuestas para la temperatura de los devanados, posición y velocidad del motor de ambos sistemas.
+Al simular el sistema con estas entradas, se obtuvieron las siguientes respuestas para la temperatura de los devanados, posición y velocidad del motor de ambos sistemas:
 
 \begin{figure}[H]
 	\centering
@@ -1664,7 +1664,7 @@ Al simular el sistema con estas entradas, se obtuvieron las siguientes respuesta
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{42-5-Error_posicion_LTI_vs_NL}}
 	\end{adjustbox}
-	\caption{Diferencia entre la posición del sistema NL con la del LTI equivalente aumentado.}
+	\caption{Diferencia entre la posición del sistema NL realimentado con la del LTI equivalente aumentado.}
 	\label{Diferencia entre la posición del sistema NL con la del LTI equivalente aumentado}
 \end{figure}
 \begin{figure}[H]
@@ -1672,7 +1672,7 @@ Al simular el sistema con estas entradas, se obtuvieron las siguientes respuesta
 	\begin{adjustbox}{max width=\columnwidth}
 		\framebox{\includegraphics{42-Temperatura_simulacion_5_1_6.pdf}}
 	\end{adjustbox}
-	\caption{Temperatura.}
+	\caption{Temperatura sistema NL realimentado.}
 	\label{Temperatura}
 \end{figure}
 Se observa que los dos modelos se comportan prácticamente de la misma manera ya que la temperatura aumenta poco. Esto evidencia la eficacia de las compensaciones realizadas en el modelo NL realimentado.
@@ -1714,7 +1714,7 @@ Luego se graficaron las tensiones y corrientes obtenidas en coordenadas abc y qd
 \end{figure}
 Se observa que los valores de estas tensiones y corrientes superan los límites que soportaría el motor. Más adelante se verá como mejorar estas respuestas.
 
-Para analizar mejor el funcionamiento de la máquina eléctrica se graficó el torque electromagnético vs la velocidad del motor. 
+Para analizar mejor el funcionamiento de la máquina eléctrica se graficó el torque electromagnético vs la velocidad del motor:
 
 \begin{figure}[H]
 	\centering
@@ -2295,7 +2295,7 @@ Por lo que la consigna resultante fue:
 	\label{Nueva consigna de posición, velocidad, aceleración}
 \end{figure}
 
-Al realizar nuevamente la simulación con esta nueva consigna se obtuvieron las siguientes gráficas.
+Al realizar nuevamente la simulación con esta nueva consigna se obtuvieron las siguientes gráficas:
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
@@ -2471,7 +2471,7 @@ Luego se realizó lo mismo con el sensor de posición angular, tomando $\omega_n
 			\frac{d x(t)}{dt} 
 		\end{bmatrix} &= 
 		\begin{bmatrix}
-			\tau
+			-\frac{1}{\tau}
 		\end{bmatrix}
 		\begin{bmatrix}
 			x(t) 
@@ -2487,7 +2487,7 @@ Luego se realizó lo mismo con el sensor de posición angular, tomando $\omega_n
 		\end{bmatrix}
 	\end{cases}\label{ecuacion matricial de sensor de temperatura}
 \end{align}
-Al simular nuevamente con estos cambios, ocurrió lo siguiente.
+
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
@@ -2496,6 +2496,8 @@ Al simular nuevamente con estos cambios, ocurrió lo siguiente.
 	\caption{Diagrama del bloques del sensor de temperatura no ideal.}
 	\label{Diagrama del bloques del sensor de temperatura no ideal}
 \end{figure}
+
+Al simular nuevamente con estos cambios, ocurrió lo siguiente:
 
 \begin{figure}[H]
 	\centering
@@ -2553,7 +2555,7 @@ Como se puede apreciar en las gráficas, la posición real y la estimada difiere
 	\label{Temperatura, para sensores no ideales con el doble de frecuencia natural}
 \end{figure}
 
-Al haber duplicado las frecuencias, la respuesta de los sensores es mas rápida y por lo tanto el comportamiento del controlador mejora notablemente. 
+Al haber duplicado las frecuencias, la respuesta de los sensores es más rápida y por lo tanto el comportamiento del controlador mejora notablemente. 
 Luego se propuso triplicar las frecuencias de los sensores y observar las respuestas.
 
 \begin{figure}[H]
@@ -2682,7 +2684,7 @@ En este caso el desempeño no mejora demasiado al duplicar la frecuencia. Ademá
 	\caption{Corrientes abc, para modulador de tensión no ideal con el triple de frecuencia natural.}
 	\label{Corrientes abc, para modulador de tensión no ideal con el triple de frecuencia natural}
 \end{figure}
-Con esta frecuencia, se logró un comportamiento adecuado de sistema, donde el error entre la posición consigna y la medida es nulo cuando se encuentra en reposo. Si bien este error no es nulo cuando hay movimiento del eje, es muy pequeño.
+Con esta frecuencia, se logró un comportamiento adecuado del sistema, donde el error entre la posición consigna y la medida es nulo cuando se encuentra en reposo. Si bien este error no es nulo cuando hay movimiento del eje, es muy pequeño.
 
 \subsubsection{\textbf{Versión final con modelo discretizado del controlador completo}} Para concluir, se discretizó el controlador completo, utilizando el método de Tustin (integración numérica por trapecios) con periodo de muestreo $T_s$ constante y retenedores de orden cero para señales de entrada y de salida al controlador.
 Para poder aplicar el método de Tustin se utilizó la transformación bilineal que relaciona la variable $s$ con $z$ de la siguiente manera:
