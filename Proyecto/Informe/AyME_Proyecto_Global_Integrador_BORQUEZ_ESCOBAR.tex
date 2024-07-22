@@ -1215,8 +1215,8 @@ se indicó cuando se analizó el modelo global NL de puntos de operación cuasi-
 es equivalente a desplazar 15° al brazo robótico desde su posición de equilibrio estable), $v_{0s-o} \equiv 0\,\left[V\right]$ (lo que implica $i_{0s-o}\equiv 0\, \left[A\right]$), $T_{d-o} \equiv 1\, \left[N\cdot m\right]$
 y $T^\circ_{amb-o}\equiv 25^\circ\, C$.
 
-Para las primeras tres simulaciones se considera además  $v^r_{ds-o}\equiv 0 \,\left[V\right]$ y las entradas son las del punto de operación.
-Los resultados de la primera simulación se muestran en las \cref{simulación 1 estado} y \cref{simulación 1 entradas}.
+Para las primeras tres simulaciones se considera además  $v^r_{ds-o}\equiv 0 \,\left[V\right]$.
+Los resultados de la primera simulación (entradas en el punto de operación) se muestran en las \cref{simulación 1 estado} y \cref{simulación 1 entradas}.
 Para la segunda simulación se considera que las entradas se encuentran desviadas respecto de sus valores para el punto de operación y los resultados se muestran
 en las \cref{simulación 2 estado} y \cref{simulación 2 entradas}. En la tercera simulación se hizo lo mismo que para la segunda simulación, pero se consideraron desviaciones más
 pequeñas, los resultados en las \cref{simulación 3 estado} y \cref{simulación 3 entradas}.
@@ -1654,18 +1654,18 @@ Al simular el sistema con estas entradas, se obtuvieron las siguientes respuesta
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
-		\framebox{\includegraphics{41-Velocidades_simulacion_5_1_6.pdf}}
+		\framebox{\includegraphics[trim={0 0 0 250}, clip, width=\linewidth]{42-5-Error_posicion_LTI_vs_NL}}
 	\end{adjustbox}
-	\caption{Velocidad motor del sistema NL realimentado y del LTI aumentado.}
-	\label{Velocidad motor del sistema NL realimentado y del LTI aumentado}
+	\caption{Diferencia entre la posición del sistema NL realimentado con la del LTI equivalente aumentado.}
+	\label{Diferencia entre la posición del sistema NL con la del LTI equivalente aumentado}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{max width=\columnwidth}
-		\framebox{\includegraphics{42-5-Error_posicion_LTI_vs_NL}}
+		\framebox{\includegraphics{41-Velocidades_simulacion_5_1_6.pdf}}
 	\end{adjustbox}
-	\caption{Diferencia entre la posición del sistema NL realimentado con la del LTI equivalente aumentado.}
-	\label{Diferencia entre la posición del sistema NL con la del LTI equivalente aumentado}
+	\caption{Velocidad motor del sistema NL realimentado y del LTI aumentado.}
+	\label{Velocidad motor del sistema NL realimentado y del LTI aumentado}
 \end{figure}
 \begin{figure}[H]
 	\centering
@@ -1886,7 +1886,7 @@ Al observar estas funciones de transferencia, se puede ver que contienen un solo
 	\frac{L_{d}}{R_d} s + 1 &=0 \Rightarrow s = -\frac{R_d}{L_d}\\ 
 	\frac{L_{ls}}{R_0} s + 1  &=0 \Rightarrow s = -\frac{R_0}{L_{ls}}
 \end{align}
-Al posicionar los polos en $p_{i}=-5000 \, frac{rad}{s}$, se obtuvieron las siguientes ecuaciones para las ganancias:
+Al posicionar los polos en $p_{i}=-5000 \, \frac{rad}{s}$, se obtuvieron las siguientes ecuaciones para las ganancias:
 
 \begin{align}
 	R_q &= 5000 L_q = 29 \, \Omega\\
@@ -1939,7 +1939,7 @@ Para mejorar la dinámica del sistema, eliminar el error de estado estacionario 
 	\left( J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}\right) \Theta_m &=   \left( b_a s^2 + K_{sa} s + K_{sia}\right) {\Theta}_m^{*}(s)  - \frac{T_d(s)}{r} s \\ 
 	\Theta_m(s) &= \frac{ b_a s^2 + K_{sa} s + K_{sia}}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}} {\Theta}_m^{*}(s)  - \frac{s}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}} \frac{T_d(s)}{r} \\
 	G_{{\Theta}_m^{*}}(s) &= \frac{ b_a s^2 + K_{sa} s + K_{sia}}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}} \\
-	G_{T_l}(s) &= -\frac{s}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}}
+	G_{T_d}(s) &= -\frac{s}{J_{eq} s^3 + b_a s^2 + K_{sa} s +  K_{sia}}
 \end{align}
 Se puede observar, a partir del teorema del valor final, que al colocar una acción integral, desaparece el error de estado estacionario para una perturbación escalón unitario:
 
@@ -2693,6 +2693,15 @@ Para poder aplicar el método de Tustin se utilizó la transformación bilineal 
 	s = \frac{2}{T_s} \frac{z-1}{z+1}
 	\label{Transformación bilineal}
 \end{equation}
+
+%\begin{align*}
+	%\frac{1}{s} &= \frac{T_s}{2} \frac{z+1}{z-1}\\
+	%Y(s) = \frac{U(s)}{s} &\rightarrow Y(z) = \frac{T_s}{2} U(z) \frac{z+1}{z-1}\\
+	%Y(z)\left(z - 1\right) &= \frac{T_s}{2}  U(z) \left(z + 1\right)\\
+	%Y(z) - Y(z)z^{-1} &= \frac{T_s}{2}\left[ U(z) + U(z)z^{-1}\right]\\
+	%Y(z) &= Y(z)z^{-1} + \frac{T_s}{2}\left[ U(z) + U(z)z^{-1}\right]
+	%\label{Transformación bilineal}
+%\end{align*}
 Por la tanto, al reemplazar la $s$ de un bloque integrador por esta expresión, quedó el siguiente diagrama de bloques en tiempo discreto:
 \begin{figure}[H]
 	\centering
