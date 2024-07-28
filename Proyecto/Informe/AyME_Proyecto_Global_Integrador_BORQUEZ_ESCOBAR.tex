@@ -25,22 +25,19 @@
 \bibliography{references}
 
 % Configuración del encabezado y el pie de página
-\pagestyle{fancy}
-\fancyhf{}
-
-% Encabezado
-\fancyhead[L]{UNCuyo -- Ing. Mecatrónica \\ Mendoza - Argentina}
-\fancyhead[C]{\textbf{311 -- AUTOMÁTICA Y MÁQUINAS ELÉCTRICAS \\ PROYECTO GLOBAL INTEGRADOR}}
-\fancyhead[R]{Año: 2024 \\ Alumnos: Borquez y Escobar\\Fecha: 28/06/2024}
-
-% Pie de página
-\fancyfoot[C]{Página \thepage\ de \pageref{LastPage}} % Muestra "Página x de xx"
-
-% Línea en la parte superior del encabezado
-\renewcommand{\headrulewidth}{0.4pt}
-
-% Línea en la parte inferior del pie de página
-\renewcommand{\footrulewidth}{0.4pt}
+\fancypagestyle{mystyle}{
+  \fancyhf{}
+  % Encabezado
+  \fancyhead[L]{UNCuyo -- Ing. Mecatrónica \\ Mendoza - Argentina}
+  \fancyhead[C]{\textbf{311 -- AUTOMÁTICA Y MÁQUINAS ELÉCTRICAS \\ PROYECTO GLOBAL INTEGRADOR}}
+  \fancyhead[R]{Año: 2024 \\ Alumnos: Borquez y Escobar\\Fecha: 28/07/2024}
+  % Pie de página
+  \fancyfoot[C]{Página \thepage\ de \pageref{LastPage}} % Muestra "Página x de xx"
+  % Línea en la parte superior del encabezado
+  \renewcommand{\headrulewidth}{0.4pt}
+  % Línea en la parte inferior del pie de página
+  \renewcommand{\footrulewidth}{0.4pt}
+}
 
 % TÍTULO
 \title{\LARGE \bf
@@ -55,8 +52,9 @@ Motor Sincrónico de Imanes Permanentes
 \begin{document}
 
 \maketitle
-\thispagestyle{empty}
-\pagestyle{fancy}
+\thispagestyle{mystyle} % Aplica el estilo de página personalizado a la primera página
+\pagestyle{mystyle} % Asegura que fancyhdr se aplique a todas las páginas
+
 
 % RESUMEN
 \begin{abstract}
@@ -79,8 +77,8 @@ la establidad, la controlabilidad y la observabilidad y cómo cambian ante la va
 
 En la parte \ref{subsec: Diseño del controlador} se diseña el controlador en cascada comenzando por la compensación de todas las realimentaciones 
 naturales del sistema físico para control directo de los estados del mismo y asumiendo primero el acceso a todas las variables de estado a través de sensores ideales y actuación a través de modulador de torque ideal. Luego se diseñan
-los lazos de control interno de corrientes con polos pre-establecidos para obtener el modulador de tensión solo proporcional. Luego se diseña el controlador externo de posición tipo PID
-con el método de sintonía serie y se comparan los polos de los lazos de control con los de la planta. A continuación se diseña un observador de Luemberger de estado reducido para obtener una medida precisa de la velocidad angular con poco ruido para realimentar al controlador.
+los lazos de control interno de corrientes con polos pre-establecidos para obtener el modulador de torque solo proporcional. Luego se diseña el controlador externo de posición tipo PID
+con el método de sintonía serie y se comparan los polos de los lazos de control con los de la planta. A continuación se diseña un observador de Luenberger de estado reducido para obtener una medida precisa de la velocidad angular con poco ruido para realimentar al controlador.
 A continuación se evalúa el seguimiento de consignas de posición y se compara el desempeño en términos de las magnitudes de las acciones de control necesarias cuando estas consignas se van suavizando. Finalmente se 
 evalúa el comportamiento cuando los sensores y el modulador de tensión no son ideales, y se muestra cómo, para no perder desempeño en el control, estos deben cumplir prestaciones mínimas en cuanto al rango de frecuencias en que operan.
 
@@ -920,12 +918,12 @@ En donde las matrices $A(t)$ y $B(t)$  vienen dadas por la siguiente:
 \begin{equation}
     A(t) = \left[ \left. \frac{\mathbf{\partial f}}{\mathbf{\partial x}} \right|_{o}(t) \right] =
     \begin{bmatrix}
-        \left.\frac{\partial}{\partial x}\left( \frac{d \theta_m(t)}{dt}\right)\right|_{o} \\ 
-        \left.\frac{\partial}{\partial x}\left( \frac{d \omega_m(t)}{dt}\right)\right|_{o} \\
-        \left.\frac{\partial}{\partial x}\left( \frac{d i^r_{qs}(t)}{dt}\right)\right|_{o} \\ 
-        \left.\frac{\partial}{\partial x}\left( \frac{d i^r_{ds}(t)}{dt}\right)\right|_{o} \\ 
-        \left.\frac{\partial}{\partial x}\left( \frac{d i^r_{0s}(t)}{dt}\right)\right|_{o} \\ 
-        \left.\frac{\partial}{\partial x}\left( \frac{d T^\circ_s(t)}{dt}\right)\right|_{o} 
+        \left.\frac{\partial}{\partial \mathbf{x}}\left( \frac{d \theta_m(t)}{dt}\right)\right|_{o} \\ 
+        \left.\frac{\partial}{\partial \mathbf{x}}\left( \frac{d \omega_m(t)}{dt}\right)\right|_{o} \\
+        \left.\frac{\partial}{\partial \mathbf{x}}\left( \frac{d i^r_{qs}(t)}{dt}\right)\right|_{o} \\ 
+        \left.\frac{\partial}{\partial \mathbf{x}}\left( \frac{d i^r_{ds}(t)}{dt}\right)\right|_{o} \\ 
+        \left.\frac{\partial}{\partial \mathbf{x}}\left( \frac{d i^r_{0s}(t)}{dt}\right)\right|_{o} \\ 
+        \left.\frac{\partial}{\partial \mathbf{x}}\left( \frac{d T^\circ_s(t)}{dt}\right)\right|_{o} 
     \end{bmatrix}\quad
     B(t) = \left[ \left. \frac{\mathbf{\partial f}}{\mathbf{\partial u}} \right|_{o}(t) \right] =
     \begin{bmatrix}
@@ -943,31 +941,31 @@ Las derivadas parciales indicadas para $A(t)$ en la \cref{matriz_AB} son:
 
 \begin{equation}
     \begin{aligned}
-        \left.\frac{\partial}{\partial x}\left( \frac{d \theta_m(t)}{dt}\right) \right|_{o} &= \begin{bmatrix} 0 & 1 & 0 & 0 & 0 & 0 \end{bmatrix}\\
-        \left.\frac{\partial}{\partial x}\left( \frac{d \omega_m(t)}{dt}\right) \right|_{o}&= \begin{bmatrix}
+        \left.\frac{\partial}{\partial \mathbf{x}}\left( \frac{d \theta_m(t)}{dt}\right) \right|_{o} &= \begin{bmatrix} 0 & 1 & 0 & 0 & 0 & 0 \end{bmatrix}\\
+        \left.\frac{\partial}{\partial \mathbf{x}}\left( \frac{d \omega_m(t)}{dt}\right) \right|_{o}&= \begin{bmatrix}
         \frac{-K_{l} \cos\left(\frac{\theta_{m-o}}{r}\right)}{J_{eq} r^2}& \frac{-b_{eq}}{J_{eq}} & \frac{3 P_p \left(\lambda'^r_m + i^r_{ds-o} \left(L_d-L_q\right)\right)}{2 J_{eq}} & \frac{3 P_p i^r_{qs-o} \left(L_d-L_q\right)}{2 J_{eq}} & 0 & 0 
         \end{bmatrix}\\
-        \left.\frac{\partial}{\partial x}\left( \frac{d i^r_{qs}(t)}{dt}\right) \right|_{o}&= \begin{bmatrix} 
+        \left.\frac{\partial}{\partial \mathbf{x}}\left( \frac{d i^r_{qs}(t)}{dt}\right) \right|_{o}&= \begin{bmatrix} 
         0 & \frac{-P_p \left(i^r_{ds-o} L_d+\lambda'^r_m\right)}{L_q} & \frac{-R_{s-o}}{L_q} & \frac{-L_d P_p \omega_{m-o}}{L_q} & 0 & \frac{-R_{sREF} \alpha_{cu} i^r_{qs-o}}{L_q} 
         \end{bmatrix}\\
-        \left.\frac{\partial}{\partial x}\left( \frac{d i^r_{ds}(t)}{dt}\right) \right|_{o}&= \begin{bmatrix} 
+        \left.\frac{\partial}{\partial \mathbf{x}}\left( \frac{d i^r_{ds}(t)}{dt}\right) \right|_{o}&= \begin{bmatrix} 
         0 & \frac{L_q P_p i^r_{qs-o}}{L_d} & \frac{L_q P_p \omega_{m-o}}{L_d} & \frac{-R_{s-o}}{L_d} & 0 & \frac{-R_{sREF} \alpha_{cu} i^r_{ds-o}}{L_d} 
         \end{bmatrix}\\
-        \left.\frac{\partial}{\partial x}\left( \frac{d i_{0s}(t)}{dt}\right) \right|_{o}&= \begin{bmatrix} 
+        \left.\frac{\partial}{\partial \mathbf{x}}\left( \frac{d i_{0s}(t)}{dt}\right) \right|_{o}&= \begin{bmatrix} 
         0 & 0 & 0 & 0 & \frac{-R_{s-o}}{L_{ls}} & \frac{-R_{sREF} \alpha_{cu} i_{0s-o}}{L_{ls}} 
         \end{bmatrix}\\
-        \left.\frac{\partial}{\partial x}\left( \frac{d T^\circ_{s}(t)}{dt}\right)\right|_{o} &= \begin{bmatrix} 
+        \left.\frac{\partial}{\partial \mathbf{x}}\left( \frac{d T^\circ_{s}(t)}{dt}\right)\right|_{o} &= \begin{bmatrix} 
         0 & 0 & \frac{3 R_{s-o} i^r_{qs-o}}{C_{ts}} & \frac{3 R_{s-o} i^r_{ds-o}}{C_{ts}} & \frac{6 R_{s-o} i^r_{0s-o}}{C_{ts}} & \frac{3 R_{sREF} \alpha_{cu} \left({i^r_{ds-o}}^2+2 {i^r_{0s-o}}^2+{i^r_{qs-o}}^2\right)}{2 C_{ts}} - \frac{1}{C_{ts} R_{ts}} 
         \end{bmatrix}\\
     \end{aligned}
     \label{gradientesA}
 \end{equation}
 
-Nota: Por motivos de legibilidad del modelo matemático LPV completo, decidimos conservar la expresión en esta forma desagregada.
+Nota: Por motivos de legibilidad del modelo matemático LPV completo, se decidió conservar la expresión en esta forma desagregada.
 
 \paragraph{\textbf{Linealización Por Realimentación No Lineal}}
-Dado que la dinámica del sub-sistema térmico es
-más lenta, comparativamente, que la dinámica del resto del sistema físico, lo que da por resultado
+Dado que la dinámica del sub-sistema térmico es comparativamente
+más lenta que la dinámica del resto del sistema físico, lo que da por resultado
 una variación relativamente lenta de la $T^{\circ}_s(t)$ y por lo tanto de la $R_s(t)$,
 en este análisis no se tendrá en cuenta el acoplamiento no lineal con el sub-sistema térmico (el que se da a través de la $R_s(t)$), 
 pero sí se considerará su dinámica lineal. Además, teniendo en cuenta que el sistema de tensiones $v_{abcs}(t)$ es un sistema
@@ -1474,8 +1472,8 @@ como:
 \begin{equation}
     \begin{cases}
         z &= -R_s/L_q\\
-        G_1(s) &= -\frac{-\frac{L_q}{r}z}{J_{eq} L_{q} s^3 +\left( J_{eq} R_{s} + L_{q} b_{eq} \right)s^2 + \left( R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^{'r}_m}^2\right) s}\\
-	    G_{T_l}(s) &= G_1(s)\left( 1 - \frac{s}{z}\right)
+        G_1(s) &= -\frac{-\frac{L_q}{r}z}{J_{eq} L_{q} s^2 +\left( J_{eq} R_{s} + L_{q} b_{eq} \right)s + \left( R_{s} b_{eq} + \dfrac{3}{2} {P_{p}}^2 { \lambda^{'r}_m}^2\right)}\\
+	    sG_{T_l}(s) &= G_1(s)\left( 1 - \frac{s}{z}\right)
     \end{cases}
 	\label{funcion de transferencia desde T_l simplificada}
 \end{equation}
@@ -2244,7 +2242,7 @@ Para solucionar este problema, se propuso un perfil de posición alternativo que
 	\frac{d q*(t)}{dt} &=  5at^4 + 4bt^3 + 3ct^2 + 2dt + e \\
 	\frac{d^2 q*(t)}{dt^2} &=  20at^3 + 12bt^2 + 6ct + 2d\\
 \end{align}
-Las aceleraciones y velocidades en los extremos serán cero, mientras que las posiciones serán las mismas que en la consigna anterior. Por lo que para la primer giro queda el siguiente sistema de ecuaciones:
+Las aceleraciones y velocidades en los extremos serán cero, mientras que las posiciones serán las mismas que en la consigna anterior. Por lo que para el primer giro queda el siguiente sistema de ecuaciones:
 \begin{align}
 	\begin{cases}
 		0[rad]  &= a_1(1 [s])^5 + b_1(1 [s])^4 + c_1(1 [s])^3 + d_1(1 [s])^2 + e_1(1 [s]) + f_1 \\
@@ -2533,8 +2531,8 @@ Como se puede apreciar en las gráficas, la posición real y la estimada difiere
 	\begin{adjustbox}{scale=0.5,max width=\columnwidth}
 		\framebox{\includegraphics{78-Posiciones_para_Sensores_reales_2}}
 	\end{adjustbox}
-	\caption{Diferencia entre posición consigna y medida, para sensores no ideales con el doble de frecuencia natural}
-	\label{Diferencia entre posición consigna y medida, para sensores no ideales con el doble de frecuencia natural}
+	\caption{Diferencia entre posición consigna y medida, para sensores no ideales con el doble de frecuencia de corte.}
+	\label{Diferencia entre posición consigna y medida, para sensores no ideales con el doble de frecuencia de natural}
 \end{figure}
 
 \begin{figure}[H]
@@ -2542,7 +2540,7 @@ Como se puede apreciar en las gráficas, la posición real y la estimada difiere
 	\begin{adjustbox}{scale=0.6,max width=\columnwidth}
 		\framebox{\includegraphics{79-Corrientes_abc_con_sensores_reales_2}}
 	\end{adjustbox}
-	\caption{Corrientes abc, para sensores no ideales con el doble de frecuencia natural.}
+	\caption{Corrientes abc, para sensores no ideales con el doble de frecuencia de corte.}
 	\label{Corrientes abc, para sensores no ideales con el doble de frecuencia natural}
 \end{figure}
 
@@ -2551,7 +2549,7 @@ Como se puede apreciar en las gráficas, la posición real y la estimada difiere
 	\begin{adjustbox}{scale=0.6,max width=\columnwidth}
 		\framebox{\includegraphics{80-Temperatura_con_sensores_reales_2}}
 	\end{adjustbox}
-	\caption{Temperatura, para sensores no ideales con el doble de frecuencia natural.}
+	\caption{Temperatura, para sensores no ideales con el doble de frecuencia de corte.}
 	\label{Temperatura, para sensores no ideales con el doble de frecuencia natural}
 \end{figure}
 
@@ -2563,7 +2561,7 @@ Luego se propuso triplicar las frecuencias de los sensores y observar las respue
 	\begin{adjustbox}{scale=0.55,max width=\columnwidth}
 		\framebox{\includegraphics{81-Posiciones_para_Sensores_reales_3}}
 	\end{adjustbox}
-	\caption{Diferencia entre posición consigna y medida, para sensores no ideales con el triple de frecuencia natural.}
+	\caption{Diferencia entre posición consigna y medida, para sensores no ideales con el triple de frecuencia de corte.}
 	\label{Diferencia entre posición consignay medida, para sensores no ideales con el triple de frecuencia natural}
 \end{figure}
 
@@ -2572,7 +2570,7 @@ Luego se propuso triplicar las frecuencias de los sensores y observar las respue
 	\begin{adjustbox}{scale=0.55,max width=\columnwidth}
 		\framebox{\includegraphics{82-Corrientes_abc_con_sensores_reales_3}}
 	\end{adjustbox}
-	\caption{Corrientes abc, para sensores no ideales con el triple de frecuencia natural.}
+	\caption{Corrientes abc, para sensores no ideales con el triple de frecuencia de corte.}
 	\label{Corrientes abc, para sensores no ideales con el triple de frecuencia natural}
 \end{figure}
 
@@ -2581,10 +2579,10 @@ Luego se propuso triplicar las frecuencias de los sensores y observar las respue
 	\begin{adjustbox}{scale=0.55,max width=\columnwidth}
 		\framebox{\includegraphics{83-Temperatura_con_sensores_reales_3}}
 	\end{adjustbox}
-	\caption{Temperatura, para sensores no ideales con el triple de frecuencia natural.}
+	\caption{Temperatura, para sensores no ideales con el triple de frecuencia de corte.}
 	\label{Temperatura, para sensores no ideales con el triple de frecuencia natural}
 \end{figure}
-Las respuestas obtenidas son prácticamente iguales que con el doble de frecuencia natural. También se observa que el sensor de temperatura no introduce errores, por lo menos a corto plazo. Si se disminuye la constante tiempo del sensor, se tendrá una mejor definición de la temperatura.
+Las respuestas obtenidas son prácticamente iguales que con el doble de frecuencia de corte. También se observa que el sensor de temperatura no introduce errores, por lo menos a corto plazo. Si se disminuye la constante tiempo del sensor, se tendrá una mejor definición de la temperatura.
 
 \paragraph{\textbf{Incorporación de modulador de tensión trifásico no ideal}} Para acercar aún más la simulación a la realidad, se reemplazó el modelo ideal del modulador de tensión, por uno aproximado equivalente con saturación y características de filtro pasa bajos de segundo orden. Los parámetros del modulador son los siguientes:
 \begin{itemize}
@@ -2647,14 +2645,14 @@ Al realizar la simulación, se observa que aparecen oscilaciones en la posición
 	\caption{Corrientes abc, para modulador de tensión no ideal.}
 	\label{Corrientes abc, para modulador de tensión no ideal}
 \end{figure}
-Para mejorar este comportamiento, al igual que con los sensores, se duplicó la frecuencia natural del modulador, obteniéndose los siguientes resultados:
+Para mejorar este comportamiento, al igual que con los sensores, se duplicó la frecuencia de corte del modulador, obteniéndose los siguientes resultados:
 
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{scale=0.55,max width=\columnwidth}
 		\framebox{\includegraphics{87-Error_posicion_modulador_de_tension_real_2}}
 	\end{adjustbox}
-	\caption{Diferencia entre posición consigna y medida, para modulador de tensión no ideal con el doble de frecuencia natural.}
+	\caption{Diferencia entre posición consigna y medida, para modulador de tensión no ideal con el doble de frecuencia de corte.}
 	\label{Diferencia entre posición consigna y medida, para modulador de tensión no ideal con el doble de frecuencia natural}
 \end{figure}
 
@@ -2663,7 +2661,7 @@ Para mejorar este comportamiento, al igual que con los sensores, se duplicó la 
 	\begin{adjustbox}{scale=0.55,max width=\columnwidth}
 		\framebox{\includegraphics{88-Corrientes_abc_con_modulador_de_tension_real_2}}
 	\end{adjustbox}
-	\caption{Corrientes abc, para modulador de tensión no ideal con el doble de frecuencia natural.}
+	\caption{Corrientes abc, para modulador de tensión no ideal con el doble de frecuencia de corte.}
 	\label{Corrientes abc, para modulador de tensión no ideal con el doble de frecuencia natural}
 \end{figure}
 En este caso el desempeño no mejora demasiado al duplicar la frecuencia. Además, se observa que aparece un error de estado estacionario entre la posición consigna y la medida. Por lo que en este caso sí es necesario triplicar la frecuencia:
@@ -2672,7 +2670,7 @@ En este caso el desempeño no mejora demasiado al duplicar la frecuencia. Ademá
 	\begin{adjustbox}{scale=0.58,max width=\columnwidth}
 		\framebox{\includegraphics{89-Error_posicion_modulador_de_tension_real_3}}
 	\end{adjustbox}
-	\caption{Diferencia entre posición consigna y medida, para modulador de tensión no ideal con el triple de frecuencia natural.}
+	\caption{Diferencia entre posición consigna y medida, para modulador de tensión no ideal con el triple de frecuencia de corte.}
 	\label{Diferencia entre posición consigna y medida, para modulador de tensión no ideal con el triple de frecuencia natural}
 \end{figure}
 
@@ -2681,7 +2679,7 @@ En este caso el desempeño no mejora demasiado al duplicar la frecuencia. Ademá
 	\begin{adjustbox}{scale=0.58,max width=\columnwidth}
 		\framebox{\includegraphics{90-Corrientes_abc_con_modulador_de_tension_real_3}}
 	\end{adjustbox}
-	\caption{Corrientes abc, para modulador de tensión no ideal con el triple de frecuencia natural.}
+	\caption{Corrientes abc, para modulador de tensión no ideal con el triple de frecuencia de corte.}
 	\label{Corrientes abc, para modulador de tensión no ideal con el triple de frecuencia natural}
 \end{figure}
 Con esta frecuencia, se logró un comportamiento adecuado del sistema, donde el error entre la posición consigna y la medida es nulo cuando se encuentra en reposo. Si bien este error no es nulo cuando hay movimiento del eje, es muy pequeño.
