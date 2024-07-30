@@ -2627,7 +2627,7 @@ Solo que se le incorpora la saturación en la entrada al implementarlo en el dia
 	\caption{Modulador no ideal de tensión.}
 	\label{Modulador no ideal de tensión}
 \end{figure}
-Al realizar la simulación, se observa que aparecen oscilaciones en la posición  del brazo, y los picos máximos de corriente se disparan por encima de los límites permitidos debido a que el modulador no consigue representar correctamente las tensiones consignas entregadas por el controlador.
+Al realizar la simulación, se observa que aparecen oscilaciones en la posición  del brazo, y los picos máximos de corriente se disparan por encima de los límites permitidos debido a que el modulador no consigue representar correctamente las tensiones consignas entregadas por el controlador. Esto ocurre ya que el modulador filtra las altas frecuencias exigidas por el controlador y comienza a saturar como se observa en la fig 87.
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{scale=0.52,max width=\columnwidth}
@@ -2636,7 +2636,14 @@ Al realizar la simulación, se observa que aparecen oscilaciones en la posición
 	\caption{Diferencia entre posición consigna y medida, para modulador de tensión no ideal.}
 	\label{Diferencia entre posición consigna y medida, para modulador de tensión no ideal}
 \end{figure}
-
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{scale=0.52,max width=\columnwidth}
+		\framebox{\includegraphics{T}}
+	\end{adjustbox}
+	\caption{Tensiones abc, para modulador de tensión no ideal.}
+	\label{Tensiones abc, para modulador de tensión no ideal.}
+\end{figure}
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{scale=0.52,max width=\columnwidth}
@@ -2655,7 +2662,14 @@ Para mejorar este comportamiento, al igual que con los sensores, se duplicó la 
 	\caption{Diferencia entre posición consigna y medida, para modulador de tensión no ideal con el doble de frecuencia de corte.}
 	\label{Diferencia entre posición consigna y medida, para modulador de tensión no ideal con el doble de frecuencia natural}
 \end{figure}
-
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{scale=0.55,max width=\columnwidth}
+		\framebox{\includegraphics{T2}}
+	\end{adjustbox}
+	\caption{Tensiones abc, para modulador de tensión no ideal con el doble de frecuencia de corte.}
+	\label{Tensiones abc, para modulador de tensión no ideal con el doble de frecuencia natural}
+\end{figure}
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{scale=0.55,max width=\columnwidth}
@@ -2677,12 +2691,20 @@ En este caso el desempeño no mejora demasiado al duplicar la frecuencia. Ademá
 \begin{figure}[H]
 	\centering
 	\begin{adjustbox}{scale=0.58,max width=\columnwidth}
+		\framebox{\includegraphics{T3}}
+	\end{adjustbox}
+	\caption{Tensiones abc, para modulador de tensión no ideal con el triple de frecuencia de corte.}
+	\label{Tensiones abc, para modulador de tensión no ideal con el triple de frecuencia natural}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{adjustbox}{scale=0.58,max width=\columnwidth}
 		\framebox{\includegraphics{90-Corrientes_abc_con_modulador_de_tension_real_3}}
 	\end{adjustbox}
 	\caption{Corrientes abc, para modulador de tensión no ideal con el triple de frecuencia de corte.}
 	\label{Corrientes abc, para modulador de tensión no ideal con el triple de frecuencia natural}
 \end{figure}
-Con esta frecuencia, se logró un comportamiento adecuado del sistema, donde el error entre la posición consigna y la medida es nulo cuando se encuentra en reposo. Si bien este error no es nulo cuando hay movimiento del eje, es muy pequeño.
+Con esta frecuencia, se logró un comportamiento adecuado del sistema, donde el modulador no satura, y el error entre la posición consigna y la medida es nulo cuando se encuentra en reposo. Si bien este error no es nulo cuando hay movimiento del eje, es muy pequeño.
 
 \subsubsection{\textbf{Versión final con modelo discretizado del controlador completo}} Para concluir, se discretizó el controlador completo, utilizando el método de Tustin (integración numérica por trapecios) con periodo de muestreo $T_s$ constante y retenedores de orden cero para señales de entrada y de salida al controlador.
 Para poder aplicar el método de Tustin se utilizó la transformación bilineal que relaciona la variable $s$ con $z$ de la siguiente manera:
